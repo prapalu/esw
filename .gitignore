@@ -1,2 +1,5 @@
-json_resources/
-.ipnyb_checkpoints
+# remove python notebooks checkpoints
+.ipynb_checkpoints/
+
+# remove pycache
+__pycache__/
