@@ -13,7 +13,7 @@ from rdflib import Graph, Literal, RDF,RDFS,BNode, URIRef, Namespace
 from rdflib.namespace import XSD
 
 # Construct the namespaces not known by RDFlib
-    ESW = Namespace("https://w3id.org/esw/ontology#")
+ESW = Namespace("https://w3id.org/esw/ontology#")
 ESWR = Namespace("https://w3id.org/esw/resource/")
 LSQV = Namespace("http://lsq.aksw.org/vocab#")
 SP = Namespace("http://spinrdf.org/sp#")
