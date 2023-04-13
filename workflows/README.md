@@ -36,7 +36,7 @@ The structure of the query is the following:
 - `query`: is the SPARQL query text
 - `output`: is the output of the query execution. It is an array so each record of the output is an element of the array. If the output of the execution was empty then the `output` field contains an empty array, if the query was not executed or there was any problem in the execution, the `output` field is `null`
 - `parseError`: if there is any error on the execution of the query, it is reported here. If there is no error, the `parseError` field is `null`.
-- `keywords`: is a map of the SPARQL keywords in the query. The list of the SPARQL keywords is available [here](src/data/keywords.txt)
+- `keywords`: is a map of the SPARQL keywords in the query. The list of the SPARQL keywords is available [here](../src/data/keywords.txt)
 - `recall`: is the recall value associated to the query according to the ground truth. 
 - `precision`: is the precision value associated to the query according to the ground truth. 
 - `accuracy`: is the accuracy value associated to the query according to the ground truth. 
