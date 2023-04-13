@@ -1,5 +1,5 @@
 # remove python notebooks checkpoints
-src/.ipynb_checkpoints/
+.ipynb_checkpoints/
 
 # remove pycache
-src/__pycache__/  
+__pycache__/  
