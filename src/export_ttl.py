@@ -31,7 +31,8 @@ def load_json(directory,verbose = False):
     files={}
     for folder in os.listdir(directory):
         subdir = directory + os.sep + folder
-        nbks = []
+        if not os.path.isdir(subdir):
+            continue
         for file in os.listdir(subdir):
             filepath = subdir + os.sep + file
             if filepath.endswith(".json"):
