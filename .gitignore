@@ -3,3 +3,9 @@
 
 # remove pycache
 __pycache__/  
+
+#ignore icloud files
+*.icloud
+
+# ignore DStore
+*.DStore  

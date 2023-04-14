@@ -86,3 +86,5 @@ or simply
 ```bash
 python main.py
 ```
+
+The entire process should take 1-2 minutes  
