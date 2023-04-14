@@ -1,6 +1,6 @@
 # Source code
 
-This folder contains the python source code to manipulate the `Search Workflow`, evaluate them, and serialize everything in turtle files.
+This folder contains the python source code to manipulate the `Search Workflows`, evaluate them, and serialize everything in turtle files.
 
 ## Contents
 - [data](data/) folder contains the file of the SPARQL keywords and other csv files needed for the RDF serialization

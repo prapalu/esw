@@ -1,6 +1,4 @@
-# Workflows
-
-This folder contains the `Search Workflows` both the original and the evaluated.
+# Collections
 
 We have 2 collections of workflows divided in the subfolders `2021/` and `2022/`.
 Each subfolder contains the following folders:
