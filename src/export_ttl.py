@@ -7,6 +7,7 @@ import json
 import hashlib
 from jproperties import Properties
 from datetime import datetime
+import sys
 # Load the required libraries
 from rdflib import Graph, Literal, RDF,RDFS,BNode, URIRef, Namespace
 # rdflib knows about some namespaces, like XSD
@@ -290,4 +291,9 @@ def main(config_file):
     export_turtle(configs.get("keywords").data,configs.get("workers").data,configs.get("gt_map").data,rdf_folder,files,configs.get("track_type").data,configs.get("year").data)
 
 if __name__ == "__main__":
-    main('config.properties')
+    if len(sys.argv)!=2 or not sys.argv[1].endswith(".properties"):
+        print("-- ERROR --")
+        print("You must specify a .properties file in the command line. A suitable example is of execution is:\n")
+        print("python export_ttl.py config2022.properties\n")
+        exit()
+    main(sys.argv[1])

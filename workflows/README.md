@@ -26,7 +26,7 @@ The structure of the json workflow is the following:
 
 #### Search_workflow
 
-Going deeper in the `search_workflow` field of the json workflow, the queries are divided by `Search Task` in order to maintain the correct order of the queries for each task.
+Going deeper in the `search_workflow` field of the json workflow, the queries are grouped by `Search Task` in order to maintain the correct order of the queries for each task.
 
 #### Query
 

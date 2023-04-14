@@ -2,6 +2,7 @@ import resource.conversion as conv
 import resource.logs as logs
 from jproperties import Properties
 import datetime
+import sys
 
 def setup(configs, verbose = False):
     conv.setup_nb_folder(configs.get("notebook").data,verbose )
@@ -40,4 +41,9 @@ def main(config_file):
     
 
 if __name__ == "__main__":
-    main('config.properties')
+    if len(sys.argv)!=2 or not sys.argv[1].endswith(".properties"):
+        print("-- ERROR --")
+        print("You must specify a .properties file in the command line. A suitable example is of execution is:\n")
+        print("python converter.py config2022.properties\n")
+        exit()
+    main(sys.argv[1])

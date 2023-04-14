@@ -1,5 +1,6 @@
 import os
 from jproperties import Properties
+import sys
 
 def main(config_file):
     configs = Properties()
@@ -18,4 +19,9 @@ def main(config_file):
     
 # execute everything
 if __name__ == "__main__":
-    main('config.properties')
+    if len(sys.argv)!=2 or not sys.argv[1].endswith(".properties"):
+        print("-- ERROR --")
+        print("You must specify a .properties file in the command line. A suitable example is of execution is:\n")
+        print("python converter.py config2022.properties\n")
+        exit()
+    main(sys.argv[1])
