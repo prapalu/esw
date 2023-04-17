@@ -1,0 +1,518 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://w3id.org/esw/ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://w3id.org/esw/ontology">
+    <Prefix name="" IRI="https://w3id.org/esw/ontology#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="sp" IRI="http://spinrdf.org/sp#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Import>http://lsq.aksw.org/vocab#</Import>
+    <Import>http://spinrdf.org/sp</Import>
+    <Import>http://www.w3.org/1999/02/22-rdf-syntax-ns#</Import>
+    <Declaration>
+        <Class IRI="#GroundTruth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SearchJob"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SearchTask"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SearchTopic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SearchWorkflow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Track"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Worker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGroundTruth"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#implements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#performs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#queries"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#wroteBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#accuracy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fscore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#index"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#macroTopic"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#narrative"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numberOfQueries"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#precision"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#quality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#recall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdf:first"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://spinrdf.org/spin#Query"/>
+    </Declaration>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#belongsTo"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#implements"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#performs"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#wroteBy"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#SearchTask"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGroundTruth"/>
+        <Class IRI="#SearchTopic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPart"/>
+        <Class IRI="#SearchWorkflow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#implements"/>
+        <Class IRI="#SearchWorkflow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#partOf"/>
+        <Class IRI="#SearchTopic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#performs"/>
+        <Class IRI="#SearchJob"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#queries"/>
+        <Class IRI="#SearchJob"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#wroteBy"/>
+        <Class IRI="#SearchWorkflow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#SearchTopic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGroundTruth"/>
+        <Class IRI="#GroundTruth"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPart"/>
+        <Class IRI="#SearchJob"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#implements"/>
+        <Class IRI="#SearchTopic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#partOf"/>
+        <Class IRI="#Track"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#performs"/>
+        <Class IRI="#SearchTask"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#queries"/>
+        <Class abbreviatedIRI="rdf:List"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#wroteBy"/>
+        <Class IRI="#Worker"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="rdf:first"/>
+        <Class IRI="http://spinrdf.org/spin#Query"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#accuracy"/>
+        <Class IRI="http://spinrdf.org/spin#Query"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#index"/>
+        <Class IRI="http://spinrdf.org/spin#Query"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#macroTopic"/>
+        <Class IRI="#SearchTopic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#narrative"/>
+        <Class IRI="http://spinrdf.org/spin#Query"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#number"/>
+        <Class IRI="#SearchTask"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numberOfQueries"/>
+        <Class IRI="#SearchJob"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#precision"/>
+        <Class IRI="http://spinrdf.org/spin#Query"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#quality"/>
+        <Class IRI="#Worker"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#recall"/>
+        <Class IRI="http://spinrdf.org/spin#Query"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#accuracy"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fscore"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#index"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#narrative"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numberOfQueries"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#precision"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#quality"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#recall"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GroundTruth</IRI>
+        <Literal xml:lang="en">Represent the class of Ground Truth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GroundTruth</IRI>
+        <Literal xml:lang="en">Ground Truth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SearchJob</IRI>
+        <Literal xml:lang="en">Represent the class of Search Job</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SearchJob</IRI>
+        <Literal xml:lang="en">Search Job</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SearchTask</IRI>
+        <Literal xml:lang="en">Represent the class of Search Task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SearchTask</IRI>
+        <Literal xml:lang="en">Search Task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SearchTopic</IRI>
+        <Literal xml:lang="en">Represent the class of Search Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SearchTopic</IRI>
+        <Literal xml:lang="en">Search Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SearchWorkflow</IRI>
+        <Literal xml:lang="en">Represent the class of Search Workflow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SearchWorkflow</IRI>
+        <Literal xml:lang="en">Search Workflow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Track</IRI>
+        <Literal xml:lang="en">Represent the class of Track</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Track</IRI>
+        <Literal xml:lang="en">Track</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Worker</IRI>
+        <Literal xml:lang="en">Represent the class of Worker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Worker</IRI>
+        <Literal xml:lang="en">Worker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#accuracy</IRI>
+        <Literal xml:lang="en">Represents the accuracy of the query output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#accuracy</IRI>
+        <Literal xml:lang="en">accuracy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#belongsTo</IRI>
+        <Literal xml:lang="en">Represent the connection between Search Task and Search Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#belongsTo</IRI>
+        <Literal xml:lang="en">belongs to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#description</IRI>
+        <Literal xml:lang="en">Represent a textual description of the resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#description</IRI>
+        <Literal xml:lang="en">description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fscore</IRI>
+        <Literal xml:lang="en">Represent the fscore of a query or the fscore of a Search Job</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fscore</IRI>
+        <Literal xml:lang="en">fscore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGroundTruth</IRI>
+        <Literal xml:lang="en">Represent the connection between Search Topic and Ground Truth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGroundTruth</IRI>
+        <Literal xml:lang="en">has ground truth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPart</IRI>
+        <Literal xml:lang="en">Represent the connection between Search Workflow and Search Job</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPart</IRI>
+        <Literal xml:lang="en">has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#implements</IRI>
+        <Literal xml:lang="en">Represent the connection between Search Workflow and Search Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#implements</IRI>
+        <Literal xml:lang="en">implements</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#index</IRI>
+        <Literal xml:lang="en">Represents the index of the query in the Search Job</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#index</IRI>
+        <Literal xml:lang="en">index</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#macroTopic</IRI>
+        <Literal xml:lang="en">Represent the macro topic of a Search Topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#macroTopic</IRI>
+        <Literal xml:lang="en">macro topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#narrative</IRI>
+        <Literal xml:lang="en">Represents the narrative (comments) of a query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#narrative</IRI>
+        <Literal xml:lang="en">narrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#number</IRI>
+        <Literal xml:lang="en">Represent the number of a Search Task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#number</IRI>
+        <Literal xml:lang="en">number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#numberOfQueries</IRI>
+        <Literal xml:lang="en">Represent the number of queries in a Search Job</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numberOfQueries</IRI>
+        <Literal xml:lang="en">number of queries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#partOf</IRI>
+        <Literal xml:lang="en">Represent the connection between Search Topic and Track</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#partOf</IRI>
+        <Literal xml:lang="en">part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#performs</IRI>
+        <Literal xml:lang="en">Represent the connection between Search Job and Search Task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#performs</IRI>
+        <Literal xml:lang="en">performs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#precision</IRI>
+        <Literal xml:lang="en">Represents the precision of the query output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#precision</IRI>
+        <Literal xml:lang="en">precision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#quality</IRI>
+        <Literal xml:lang="en">Represent the quality of a Worker in the range [0,1]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#quality</IRI>
+        <Literal xml:lang="en">quality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#queries</IRI>
+        <Literal xml:lang="en">Represent the connection between Search Job and the list of queries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#queries</IRI>
+        <Literal xml:lang="en">queries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recall</IRI>
+        <Literal xml:lang="en">Represents the recall of the query output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#recall</IRI>
+        <Literal xml:lang="en">recall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wroteBy</IRI>
+        <Literal xml:lang="en">Represent the connection between Search Workflow and Worker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#wroteBy</IRI>
+        <Literal xml:lang="en">wrote by</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

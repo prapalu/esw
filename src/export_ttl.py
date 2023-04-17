@@ -14,8 +14,8 @@ from rdflib import Graph, Literal, RDF,RDFS,BNode, URIRef, Namespace
 from rdflib.namespace import XSD
 
 # Construct the namespaces not known by RDFlib
-ESW = Namespace("https://w3id.org/esw/ontology#")
-ESWR = Namespace("https://w3id.org/esw/resource/")
+ESW = Namespace("http://w3id.org/esw/ontology#")
+ESWR = Namespace("http://w3id.org/esw/resource/")
 LSQV = Namespace("http://lsq.aksw.org/vocab#")
 SP = Namespace("http://spinrdf.org/sp#")
 DCT = Namespace("http://purl.org/dc/terms/")
@@ -224,7 +224,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                     h.add((Query, ESW['narrative'], Literal(query['narrative'], datatype=XSD.string)))
                 # add the size of the result set if it exists
                 if 'output' in query and query['output'] is not None:
-                    h.add((Query, LSQV['resultSize'], Literal(str(len(query['output'])), datatype=XSD.long)))
+                    h.add((Query, LSQV['resultCount'], Literal(str(len(query['output'])), datatype=XSD.long)))
                 # add the index of the query if it exists
                 if 'index' in query:
                     h.add((Query, ESW['index'], Literal(query['index'], datatype=XSD.integer)))
@@ -241,8 +241,12 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                     for ex in query['execution']:
                         t_ex = datetime.strptime(ex['datetime'],'%d/%b/%Y:%H:%M:%S',).strftime('%Y-%m-%dT%H:%M:%S')
                         Execution = URIRef(ESWR['EX'+str(executions)])
-                        h.add((Execution, RDF.type, LSQV['Execution']))
-                        g.add((Query, DCT['issued'], Literal(t_ex, datatype=XSD.dateTime)))
+                        # add type execution
+                        h.add((Execution, RDF.type, LSQV['QueryExec']))
+                        # add execution timestamp
+                        h.add((Execution, DCT['issued'], Literal(t_ex, datatype=XSD.dateTime)))
+                        # add property has execution from query to its execution
+                        h.add((Query, LSQV['hasExec'], Execution))
                         executions+=1
                 ## add the keywords
                 if 'keywords' in query:
