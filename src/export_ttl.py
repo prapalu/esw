@@ -213,7 +213,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                 if 'narrative' in query:
                     narrative = query['narrative']
                 text = query['query']
-                Query = URIRef(ESWR['Q'+str(index)])
+                Query = URIRef(ESWR['Q_'+str(year)+'_'+str(index)])
                 h.add((Query, RDF.type, SP['Query']))
                 h.add((Query, SP['text'], Literal(text, datatype=XSD.string)))
                 # add the parse Error if it exists
@@ -240,7 +240,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                 if 'execution' in query:
                     for ex in query['execution']:
                         t_ex = datetime.strptime(ex['datetime'],'%d/%b/%Y:%H:%M:%S',).strftime('%Y-%m-%dT%H:%M:%S')
-                        Execution = URIRef(ESWR['EX'+str(executions)])
+                        Execution = URIRef(ESWR['EX_'+str(year)+'_'+str(executions)])
                         # add type execution
                         h.add((Execution, RDF.type, LSQV['QueryExec']))
                         # add execution timestamp
