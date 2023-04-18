@@ -1,6 +1,5 @@
 # RDF
 
-This repository contains the data and the scripts for the Exploratory Search Workflow project  
 
 ## Contents 
 - `ontology`: it contains the ontology schema, both the image and owl file.
