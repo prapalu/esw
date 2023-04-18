@@ -113,7 +113,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
     workers = []
     workers_grade = load_workers(workers_file)
     gt_map = load_gt_map(gt_map_file)
-    print(gt_map)
+    
     # create the URI for the Track
     Track = URIRef(ESWR[track_type+str(year)+"Track"])
     g.add((Track, RDF.type, ESW['Track']))
@@ -141,7 +141,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
         g.add((Topic, ESW['macroTopic'], Literal(macro_topic, datatype=XSD.string)))
         # add the link to the Track
         g.add((Topic, ESW['partOf'], Track))
-        print(topic)
+        
         if topic in gt_map:
             # add the link to the Ground Truth
             GroundTruth = URIRef(ESWR[gt_map[topic]])
@@ -190,8 +190,9 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
             h.add((Job, RDF.type, ESW['SearchJob']))
             # add the relation hasPart to the search workflow
             h.add((Workflow, ESW['hasPart'], Job))
-            # add the relation performs to the search task
-            h.add((Job, ESW['performs'], tasks[job]))
+            # add the relation performs to the search task if it is not on the 'zero task'
+            if job != '':
+                h.add((Job, ESW['performs'], tasks[job]))
                 
             # add the information of the score of the job (fscore max and #queries)
             
