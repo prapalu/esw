@@ -79,1134 +79,1197 @@ eswr:SELECT a sd:Feature ;
 eswr:SUM a sd:Feature ;
     rdfs:label "SUM"@en .
 
-eswr:TASK015a77c160 a esw:SearchTask ;
-    rdfs:label "Return the poets born in the same place of the author of The Divine Comedy who are born between 1300 and 1500 (1300 and 1500 included) (the result set must be a list of couples poets IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC11ae4b81bb ;
-    esw:description "Return the poets born in the same place of the author of The Divine Comedy who are born between 1300 and 1500 (1300 and 1500 included) (the result set must be a list of couples poets IRI and label)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK01e18b1cbc a esw:SearchTask ;
-    rdfs:label "Get the number of episodes in which the cast members played a role. Who are the most present actors? (the result set must be a list of triples actor/actress IRI, label and #episodes)"@en ;
-    esw:belongsTo eswr:TOPIC0f1acfd6a1 ;
-    esw:description "Get the number of episodes in which the cast members played a role. Who are the most present actors? (the result set must be a list of triples actor/actress IRI, label and #episodes)"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK077d6023df a esw:SearchTask ;
-    rdfs:label "Consider italian poets, their place of birth (the city) and their university education. Return for each city the number of poets who born there and who was educated there (the result set must be a list of triples city IRI, label and #poets)."@en ;
-    esw:belongsTo eswr:TOPIC11ae4b81bb ;
-    esw:description "Consider italian poets, their place of birth (the city) and their university education. Return for each city the number of poets who born there and who was educated there (the result set must be a list of triples city IRI, label and #poets)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK0917250b5a a esw:SearchTask ;
-    rdfs:label "Consider the countries that won the FIFA World Cup at least twice. Find the players of those countries won the ballon d'Or (the result set must be a list of couples player IRI and label)."@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Consider the countries that won the FIFA World Cup at least twice. Find the players of those countries won the ballon d'Or (the result set must be a list of couples player IRI and label)."^^xsd:string ;
-    esw:number "9"^^xsd:string .
-
-eswr:TASK094916e3f5 a esw:SearchTask ;
-    rdfs:label "Return all the editions of the Summer Olympic Games (do not consider future Olympic Games) with the country where they were played (the result set must be a list of elements with edition IRI and label, and country IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC3e87154a46 ;
-    esw:description "Return all the editions of the Summer Olympic Games (do not consider future Olympic Games) with the country where they were played (the result set must be a list of elements with edition IRI and label, and country IRI and label)."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK09fa06c817 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for television series"@en ;
-    esw:belongsTo eswr:TOPIC0f1acfd6a1 ;
-    esw:description "Identify the BGP for television series"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK0ae4666847 a esw:SearchTask ;
-    rdfs:label "Return the IRI and the name of all Roman emperors killed by homicide (see \"manner of death\") and, for each killed emperor, return also the IRI and name of the killer, if present in Wikidata."@en ;
-    esw:belongsTo eswr:TOPICb49898fb51 ;
-    esw:description "Return the IRI and the name of all Roman emperors killed by homicide (see \"manner of death\") and, for each killed emperor, return also the IRI and name of the killer, if present in Wikidata."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK0dd8cedda9 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for basketball player."@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
-    esw:description "Identify the BGP for basketball player."^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK0f9b02e9cd a esw:SearchTask ;
-    rdfs:label "Compare the author of The Divine Comedy with Giovanni Boccaccio. Return for these poets the number of literary work they wrote (the result set must be two triples -one for each author- author IRI, label and #literary work)."@en ;
-    esw:belongsTo eswr:TOPIC11ae4b81bb ;
-    esw:description "Compare the author of The Divine Comedy with Giovanni Boccaccio. Return for these poets the number of literary work they wrote (the result set must be two triples -one for each author- author IRI, label and #literary work)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK1253e68b96 a esw:SearchTask ;
-    rdfs:label "Find the BGP for deity."@en ;
-    esw:belongsTo eswr:TOPIC2219e9b8cb ;
-    esw:description "Find the BGP for deity."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK15f3a4e099 a esw:SearchTask ;
-    rdfs:label "Consider the players who won the NBA Most Valuable Player Award. Return for these players the number of NBA Most Valuable Player Award won in their career (the result set must be triples of player IRI, label and #victories)"@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Consider the players who won the NBA Most Valuable Player Award. Return for these players the number of NBA Most Valuable Player Award won in their career (the result set must be triples of player IRI, label and #victories)"^^xsd:string ;
-    esw:number "9"^^xsd:string .
-
-eswr:TASK1605c567f2 a esw:SearchTask ;
-    rdfs:label "Find the inventors of World Wide Web (return IRI and name)."@en ;
-    esw:belongsTo eswr:TOPICa9f3dc045f ;
-    esw:description "Find the inventors of World Wide Web (return IRI and name)."^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK176bc0c666 a esw:SearchTask ;
-    rdfs:label "Find how many company are listed in every stock exchange market (the result set must be a list of triples stock exchange IRI, label and #companies)."@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Find how many company are listed in every stock exchange market (the result set must be a list of triples stock exchange IRI, label and #companies)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK21a3913cd5 a esw:SearchTask ;
-    rdfs:label "Return the number of seasons and episodes per season of the tv series (the result set must be triples of season IRI, label and #episodes)."@en ;
-    esw:belongsTo eswr:TOPICd0ca66e38f ;
-    esw:description "Return the number of seasons and episodes per season of the tv series (the result set must be triples of season IRI, label and #episodes)."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK22a3a19763 a esw:SearchTask ;
-    rdfs:label "Find how many computer scientists there are for each continent (consider their citizenship). Return the IRI and name of the continent and the number of scientists for each continent."@en ;
-    esw:belongsTo eswr:TOPICa9f3dc045f ;
-    esw:description "Find how many computer scientists there are for each continent (consider their citizenship). Return the IRI and name of the continent and the number of scientists for each continent."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK2447755650 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Nobel Prize"@en ;
-    esw:belongsTo eswr:TOPIC2c4e57f7e5 ;
-    esw:description "Identify the BGP for Nobel Prize"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK25479127fa a esw:SearchTask ;
-    rdfs:label "Identify the BGP for films"@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Identify the BGP for films"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK2729c9c336 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for literary movement"@en ;
-    esw:belongsTo eswr:TOPIC11ae4b81bb ;
-    esw:description "Identify the BGP for literary movement"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK27ec29e4b4 a esw:SearchTask ;
-    rdfs:label "Find all the computer scientists who wrote at least 5 books (please consider only the instances of book, exclude \"literary work\" or other type of work related to books). Return the IRI and name of the computer scientist and the number of books."@en ;
-    esw:belongsTo eswr:TOPICa9f3dc045f ;
-    esw:description "Find all the computer scientists who wrote at least 5 books (please consider only the instances of book, exclude \"literary work\" or other type of work related to books). Return the IRI and name of the computer scientist and the number of books."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK2863e32d79 a esw:SearchTask ;
-    rdfs:label "Identify the BGP of the FIFA World Cup"@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Identify the BGP of the FIFA World Cup"^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK28db6561c3 a esw:SearchTask ;
-    rdfs:label "Consider only NBA (National Basketball Association) basketball teams and all basketball players who played in one of these teams at least once. Also consider the country of citizenship of the players with the related continent. Return for each continent the number of players who played in an NBA basketball teams. (the result set must be triples of continent IRI, labels and #players)"@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Consider only NBA (National Basketball Association) basketball teams and all basketball players who played in one of these teams at least once. Also consider the country of citizenship of the players with the related continent. Return for each continent the number of players who played in an NBA basketball teams. (the result set must be triples of continent IRI, labels and #players)"^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK29899edf0f a esw:SearchTask ;
-    rdfs:label "Consider only the basketball teams which Michael Jordan and Kobe Bryant played. Return the number of NBA seasons won by these teams (the result set must be a list of triples basketball team IRI, label and #victories. Return a number for each basketball team even if they never won a season)."@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
-    esw:description "Consider only the basketball teams which Michael Jordan and Kobe Bryant played. Return the number of NBA seasons won by these teams (the result set must be a list of triples basketball team IRI, label and #victories. Return a number for each basketball team even if they never won a season)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK298d616587 a esw:SearchTask ;
-    rdfs:label "Who are the players who partecipated in more than 4 world's cup editions? (the result set must be a list of triples player IRI, label and #participations)."@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Who are the players who partecipated in more than 4 world's cup editions? (the result set must be a list of triples player IRI, label and #participations)."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASK2c43c8a019 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for the NBA Defensive Player of the Year Award (see https://en.wikipedia.org/wiki/NBA_Defensive_Player_of_the_Year_Award)"@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
-    esw:description "Identify the BGP for the NBA Defensive Player of the Year Award (see https://en.wikipedia.org/wiki/NBA_Defensive_Player_of_the_Year_Award)"^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASK2cb7ed930e a esw:SearchTask ;
-    rdfs:label "Identify the BGP for basketball player."@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Identify the BGP for basketball player."^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK2cbe26d525 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for runner"@en ;
-    esw:belongsTo eswr:TOPICd7dd60c667 ;
-    esw:description "Identify the BGP for runner"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK2e8d679e7a a esw:SearchTask ;
-    rdfs:label "Return the Roman emperors who killed another Roman emperor (the result set must a list of 4-tuples with killer IRI and label, and killed IRI and label)."@en ;
-    esw:belongsTo eswr:TOPICb49898fb51 ;
-    esw:description "Return the Roman emperors who killed another Roman emperor (the result set must a list of 4-tuples with killer IRI and label, and killed IRI and label)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK2f2c5c3647 a esw:SearchTask ;
-    rdfs:label "Consider the actors who are members of the cast of HIMYM. Amongst the tv series which these actors acted return only those which received more than 2 awards (the result set must be triples of tv series IRI, label, #awards won)."@en ;
-    esw:belongsTo eswr:TOPICd0ca66e38f ;
-    esw:description "Consider the actors who are members of the cast of HIMYM. Amongst the tv series which these actors acted return only those which received more than 2 awards (the result set must be triples of tv series IRI, label, #awards won)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK2ff432aee2 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for film production company"@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Identify the BGP for film production company"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK324cc2067b a esw:SearchTask ;
-    rdfs:label "Consider marathons ran in Europe. Return the number of different runners who won a marathon group by their country of citizenship (the result set must be a triples of country IRI, label and #different runners)."@en ;
-    esw:belongsTo eswr:TOPICd7dd60c667 ;
-    esw:description "Consider marathons ran in Europe. Return the number of different runners who won a marathon group by their country of citizenship (the result set must be a triples of country IRI, label and #different runners)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK3422e524e5 a esw:SearchTask ;
-    rdfs:label "For each films created by the Walt Disney Animation Studios return the number of nomination for an Academy Awards. Return only films with at least one nomination. (the result set must be triples of films IRI, label and #nomination)."@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "For each films created by the Walt Disney Animation Studios return the number of nomination for an Academy Awards. Return only films with at least one nomination. (the result set must be triples of films IRI, label and #nomination)."^^xsd:string ;
-    esw:number "9"^^xsd:string .
-
-eswr:TASK35140140f4 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for association football club"@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Identify the BGP for association football club"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK370ed45019 a esw:SearchTask ;
-    rdfs:label "Get the number of episodes in which the cast members played a role. Who are the most present actors? (the result set must be a list of triples actor/actress IRI, label and #episodes)"@en ;
-    esw:belongsTo eswr:TOPICd0ca66e38f ;
-    esw:description "Get the number of episodes in which the cast members played a role. Who are the most present actors? (the result set must be a list of triples actor/actress IRI, label and #episodes)"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK3732c75b83 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for film"@en ;
-    esw:belongsTo eswr:TOPICb8e1c9f08d ;
-    esw:description "Identify the BGP for film"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK38b8ffaf90 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Academy Awards"@en ;
-    esw:belongsTo eswr:TOPIC22641ea06b ;
-    esw:description "Identify the BGP for Academy Awards"^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK3a0be35648 a esw:SearchTask ;
-    rdfs:label "Find the number of sculptures in the Louvre Museum belonging to Renaissance, Baroque, or Romanticism (return a number for each movement) (the result set must be a list of triples movement IRI, label and #sculptures)."@en ;
-    esw:belongsTo eswr:TOPIC586eb95a33 ;
-    esw:description "Find the number of sculptures in the Louvre Museum belonging to Renaissance, Baroque, or Romanticism (return a number for each movement) (the result set must be a list of triples movement IRI, label and #sculptures)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK3b8d755d8c a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Renassaince, Baroque and Romanticism"@en ;
-    esw:belongsTo eswr:TOPIC586eb95a33 ;
-    esw:description "Identify the BGP for Renassaince, Baroque and Romanticism"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK3c3cbe3c89 a esw:SearchTask ;
-    rdfs:label "Return the countries which currently use Euro"@en ;
-    esw:belongsTo eswr:TOPIC3525ba27d5 ;
-    esw:description "Return the countries which currently use Euro"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK3cc70b0475 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for literary work"@en ;
-    esw:belongsTo eswr:TOPIC11ae4b81bb ;
-    esw:description "Identify the BGP for literary work"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK3d60c4bb58 a esw:SearchTask ;
-    rdfs:label "Compare ancient Greece with ancient Egypt and find how many deities each one has."@en ;
-    esw:belongsTo eswr:TOPIC2219e9b8cb ;
-    esw:description "Compare ancient Greece with ancient Egypt and find how many deities each one has."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASK3fe34b2235 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for currency"@en ;
-    esw:belongsTo eswr:TOPIC3525ba27d5 ;
-    esw:description "Identify the BGP for currency"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK4098aafd25 a esw:SearchTask ;
-    rdfs:label "Return the tournaments played in the 2018 Wimbledon Championships edition with the related winners (hint: men and women do not play together, there are two distinct tournament ) (the result set must be a list of elements with tournament IRI and label, and winner IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC14fe12638d ;
-    esw:description "Return the tournaments played in the 2018 Wimbledon Championships edition with the related winners (hint: men and women do not play together, there are two distinct tournament ) (the result set must be a list of elements with tournament IRI and label, and winner IRI and label)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK46045e4419 a esw:SearchTask ;
-    rdfs:label "Consider only the basketball teams which Kevin Durant and Lebron James played. Return the number of NBA finals won by these teams (the result set must be a list of triples basketball team IRI, label and #victories. Return a number for each basketball team)."@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Consider only the basketball teams which Kevin Durant and Lebron James played. Return the number of NBA finals won by these teams (the result set must be a list of triples basketball team IRI, label and #victories. Return a number for each basketball team)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK461024ce3d a esw:SearchTask ;
-    rdfs:label "Consider countries who participated at the FIFA World Cup more than 10 times. Return these countries with the number of apparitions (the result set must be triples of country IRI, label and #apparitions)."@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Consider countries who participated at the FIFA World Cup more than 10 times. Return these countries with the number of apparitions (the result set must be triples of country IRI, label and #apparitions)."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASK4b3461d82b a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Walt Disney Animation Studios"@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "Identify the BGP for Walt Disney Animation Studios"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK4c3f00c4cc a esw:SearchTask ;
-    rdfs:label "Consider only NBA (National Basketball Association) basketball teams and all basketball players who played in one of these teams at least once. Also consider the country of citizenship of the players with the related continent. Return for each continent the number of players who played in an NBA basketball teams. (the result set must be triples of continent IRI, label and #players)"@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
-    esw:description "Consider only NBA (National Basketball Association) basketball teams and all basketball players who played in one of these teams at least once. Also consider the country of citizenship of the players with the related continent. Return for each continent the number of players who played in an NBA basketball teams. (the result set must be triples of continent IRI, label and #players)"^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK4c834f02a9 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for basketball."@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
-    esw:description "Identify the BGP for basketball."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK4f2f371afd a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Cultural Movement"@en ;
-    esw:belongsTo eswr:TOPIC586eb95a33 ;
-    esw:description "Identify the BGP for Cultural Movement"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK50a4bb45fa a esw:SearchTask ;
-    rdfs:label "Identify the BGP for tennis tournament"@en ;
-    esw:belongsTo eswr:TOPIC14fe12638d ;
-    esw:description "Identify the BGP for tennis tournament"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK50f1e862b1 a esw:SearchTask ;
-    rdfs:label "Consider all the wars participated by the Roman Empire. For each war return the number of related battles and the opponent (a war is composed of one or more battles) (the result set must be a list of 5-tuples war IRI, label, opponent IRI and label, and #battles)."@en ;
-    esw:belongsTo eswr:TOPICb49898fb51 ;
-    esw:description "Consider all the wars participated by the Roman Empire. For each war return the number of related battles and the opponent (a war is composed of one or more battles) (the result set must be a list of 5-tuples war IRI, label, opponent IRI and label, and #battles)."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASK523279d4a9 a esw:SearchTask ;
-    rdfs:label "Consider Renaissance, Baroque and Romanticism. Find how many composers, painters, sculptors and poets belong to those cultural movements (the results set must be a list of triples movement, job, #people)"@en ;
-    esw:belongsTo eswr:TOPIC586eb95a33 ;
-    esw:description "Consider Renaissance, Baroque and Romanticism. Find how many composers, painters, sculptors and poets belong to those cultural movements (the results set must be a list of triples movement, job, #people)"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK53f80e6894 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for composer"@en ;
-    esw:belongsTo eswr:TOPIC2f1241da7b ;
-    esw:description "Identify the BGP for composer"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK5559defd8f a esw:SearchTask ;
-    rdfs:label "Find the wars (note that \"war\" and \"battle\" are not the same thing) participated by the Roman Empire (return IRI and name of the war)."@en ;
-    esw:belongsTo eswr:TOPICb49898fb51 ;
-    esw:description "Find the wars (note that \"war\" and \"battle\" are not the same thing) participated by the Roman Empire (return IRI and name of the war)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK57042e4108 a esw:SearchTask ;
-    rdfs:label "Return the currencies used in at least 2 different countries (return also the number of countries using each currency)."@en ;
-    esw:belongsTo eswr:TOPIC3525ba27d5 ;
-    esw:description "Return the currencies used in at least 2 different countries (return also the number of countries using each currency)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK58ec8ad654 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for basketball team."@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Identify the BGP for basketball team."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK5d5d200671 a esw:SearchTask ;
-    rdfs:label "Return the disciplines of the long distance running (e.g. marathon) (the result set must be a list of couples discipline IRI and label)."@en ;
-    esw:belongsTo eswr:TOPICd7dd60c667 ;
-    esw:description "Return the disciplines of the long distance running (e.g. marathon) (the result set must be a list of couples discipline IRI and label)."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK5e32fe41d6 a esw:SearchTask ;
-    rdfs:label "Consider the timespan from 2001-01-01 to nowadays. Find the number of films released in this timespan divided by film genre and return only those with more than 50 films released every year (the result set must be genre IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC2f1241da7b ;
-    esw:description "Consider the timespan from 2001-01-01 to nowadays. Find the number of films released in this timespan divided by film genre and return only those with more than 50 films released every year (the result set must be genre IRI and label)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK5e4a352d40 a esw:SearchTask ;
-    rdfs:label "Return the year of publication (take the first one if there are more publication dates) for each film and television series related to the canon of Sherlock Holmes (the result set must be a list of triples film/tv series IRI, label and year)."@en ;
-    esw:belongsTo eswr:TOPICb8e1c9f08d ;
-    esw:description "Return the year of publication (take the first one if there are more publication dates) for each film and television series related to the canon of Sherlock Holmes (the result set must be a list of triples film/tv series IRI, label and year)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK5ec7ea0dd1 a esw:SearchTask ;
-    rdfs:label "Compare HIMYM with the tv series \"The Office (US)\" in terms of number of seasons, episods and cast members (the result set must be two elements -one for each tv series- of tv series IRI, label, #seasons, #episodes and #cast members)."@en ;
-    esw:belongsTo eswr:TOPICd0ca66e38f ;
-    esw:description "Compare HIMYM with the tv series \"The Office (US)\" in terms of number of seasons, episods and cast members (the result set must be two elements -one for each tv series- of tv series IRI, label, #seasons, #episodes and #cast members)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK5f81bd6811 a esw:SearchTask ;
-    rdfs:label "Who invented the theory of relativity? (return the IRI and the label of the inventor)."@en ;
-    esw:belongsTo eswr:TOPIC2c4e57f7e5 ;
-    esw:description "Who invented the theory of relativity? (return the IRI and the label of the inventor)."^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK605b058647 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Roman Empire and Roman Republic"@en ;
-    esw:belongsTo eswr:TOPICb49898fb51 ;
-    esw:description "Identify the BGP for Roman Empire and Roman Republic"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK60e4f39ba9 a esw:SearchTask ;
-    rdfs:label "Find who worked on both \"The Little Mermaid\" and \"The Lion King\" (the result set must be a list of couples worker IRI and label)."@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "Find who worked on both \"The Little Mermaid\" and \"The Lion King\" (the result set must be a list of couples worker IRI and label)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK61c1f2b7ee a esw:SearchTask ;
-    rdfs:label "Consider the tennis players born after 1975, return who won more Grand Slams and cut the result to the top-10 (the result set must be a list of triples player IRI, label and #victories)."@en ;
-    esw:belongsTo eswr:TOPIC14fe12638d ;
-    esw:description "Consider the tennis players born after 1975, return who won more Grand Slams and cut the result to the top-10 (the result set must be a list of triples player IRI, label and #victories)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK6242d704f0 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Primetime Emmy Award"@en ;
-    esw:belongsTo eswr:TOPICb8e1c9f08d ;
-    esw:description "Identify the BGP for Primetime Emmy Award"^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK62926a1680 a esw:SearchTask ;
-    rdfs:label "Consider the countries that won the FIFA World Cup at least twice. Find the association football clubs of those countries won the UEFA Champions League (the result set must be couples of clubs IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Consider the countries that won the FIFA World Cup at least twice. Find the association football clubs of those countries won the UEFA Champions League (the result set must be couples of clubs IRI and label)."^^xsd:string ;
-    esw:number "9"^^xsd:string .
-
-eswr:TASK66fefaa201 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for films"@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "Identify the BGP for films"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK68bef5e945 a esw:SearchTask ;
-    rdfs:label "Find the Ancient Egypt pharaohs born between 1500 BCE and 1000 BCE who had more than 8 child (the result set must be a list of triples pharaoh IRI,label and #children)."@en ;
-    esw:belongsTo eswr:TOPIC2219e9b8cb ;
-    esw:description "Find the Ancient Egypt pharaohs born between 1500 BCE and 1000 BCE who had more than 8 child (the result set must be a list of triples pharaoh IRI,label and #children)."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK693d99e49d a esw:SearchTask ;
-    rdfs:label "Consider the decades from 1961 to 1970, and from 2001 to 2010 and select only western films. Then, for each decade, compare the average cast members size per film (the result set must be two couples decade and average cast members size of that decade)."@en ;
-    esw:belongsTo eswr:TOPIC2f1241da7b ;
-    esw:description "Consider the decades from 1961 to 1970, and from 2001 to 2010 and select only western films. Then, for each decade, compare the average cast members size per film (the result set must be two couples decade and average cast members size of that decade)."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASK6ac5e8603d a esw:SearchTask ;
-    rdfs:label "Find all the ancient civilizations. Return the IRI and name of the civilization and also their duration (in number of years) if it is available."@en ;
-    esw:belongsTo eswr:TOPIC2219e9b8cb ;
-    esw:description "Find all the ancient civilizations. Return the IRI and name of the civilization and also their duration (in number of years) if it is available."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK6cd3912529 a esw:SearchTask ;
-    rdfs:label "Consider the country for sport property of the tennis player (NO Country of citizenship). Return the countries with at least one player who won at least one edition of each Grand Slam (the result set must be a list of country IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC14fe12638d ;
-    esw:description "Consider the country for sport property of the tennis player (NO Country of citizenship). Return the countries with at least one player who won at least one edition of each Grand Slam (the result set must be a list of country IRI and label)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK702a552c28 a esw:SearchTask ;
-    rdfs:label "Consider physicists born in Europe. For each european country return the number of physicists who won the Nobel Prize in Physics (the result set must be a list of triples country IRI, label and #physicists)."@en ;
-    esw:belongsTo eswr:TOPIC2c4e57f7e5 ;
-    esw:description "Consider physicists born in Europe. For each european country return the number of physicists who won the Nobel Prize in Physics (the result set must be a list of triples country IRI, label and #physicists)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK703555f5ea a esw:SearchTask ;
-    rdfs:label "Identify the BGP for association football player"@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Identify the BGP for association football player"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK72bd197cae a esw:SearchTask ;
-    rdfs:label "Identify the BGP of the FIFA World Cup"@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Identify the BGP of the FIFA World Cup"^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK76e588322d a esw:SearchTask ;
-    rdfs:label "Return all the types of Primetime Emmy Award (the result set must be a list of couples award IRI and label)."@en ;
-    esw:belongsTo eswr:TOPICb8e1c9f08d ;
-    esw:description "Return all the types of Primetime Emmy Award (the result set must be a list of couples award IRI and label)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK78d1d6a360 a esw:SearchTask ;
-    rdfs:label "Return the actors who are members of the cast of Without a Trace have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2 (the result set must be a list of couples actor/actress IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC0f1acfd6a1 ;
-    esw:description "Return the actors who are members of the cast of Without a Trace have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2 (the result set must be a list of couples actor/actress IRI and label)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK791ef801f7 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for television production company"@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Identify the BGP for television production company"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK7aadd53138 a esw:SearchTask ;
-    rdfs:label "Find the BGP for war"@en ;
-    esw:belongsTo eswr:TOPICb49898fb51 ;
-    esw:description "Find the BGP for war"^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK7ac8839f11 a esw:SearchTask ;
-    rdfs:label "Consider the 2008 Summer Olympic Games. For each sport return the number of different disciplines (the result set must be a list of triples sport IRI, label and #disciplines)."@en ;
-    esw:belongsTo eswr:TOPIC3e87154a46 ;
-    esw:description "Consider the 2008 Summer Olympic Games. For each sport return the number of different disciplines (the result set must be a list of triples sport IRI, label and #disciplines)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK7b4bc1c607 a esw:SearchTask ;
-    rdfs:label "Consider the countries which have at least two different clubs of their nationality who won the UEFA Champions League. Return the list of these countries with the number of different clubs who won the UEFA Champions League (the result set must be triples of country IRI, label and #clubs)."@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Consider the countries which have at least two different clubs of their nationality who won the UEFA Champions League. Return the list of these countries with the number of different clubs who won the UEFA Champions League (the result set must be triples of country IRI, label and #clubs)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK7b4ccffc76 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for the ballon d'Or award"@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Identify the BGP for the ballon d'Or award"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK7bd8a42c2e a esw:SearchTask ;
-    rdfs:label "Identify the BGP for director"@en ;
-    esw:belongsTo eswr:TOPIC22641ea06b ;
-    esw:description "Identify the BGP for director"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK8110cdc9e1 a esw:SearchTask ;
-    rdfs:label "Find all the Roman Dictators (return the IRI and the name of the dictator)"@en ;
-    esw:belongsTo eswr:TOPICb49898fb51 ;
-    esw:description "Find all the Roman Dictators (return the IRI and the name of the dictator)"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK87544f7a9f a esw:SearchTask ;
-    rdfs:label "Consider the 2008 Summer Olympic Games. Identify all the sports played in this edition (the result set must be a list of couples sport IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC3e87154a46 ;
-    esw:description "Consider the 2008 Summer Olympic Games. Identify all the sports played in this edition (the result set must be a list of couples sport IRI and label)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK892b2ac32a a esw:SearchTask ;
-    rdfs:label "Find the company (amongst television production company and film production company) which distributed more films (of any kind of film genre) that they did not produce (the result set must be a list of triples company IRI, label and #film)."@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Find the company (amongst television production company and film production company) which distributed more films (of any kind of film genre) that they did not produce (the result set must be a list of triples company IRI, label and #film)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK8ab801e190 a esw:SearchTask ;
-    rdfs:label "Compare Without a Trace with the tv series \"Cold Case\" in terms of number of seasons, episods and cast members (the result set must be two elements -one for each tv series- of tv series IRI, label, #seasons, #episodes and #cast members)."@en ;
-    esw:belongsTo eswr:TOPIC0f1acfd6a1 ;
-    esw:description "Compare Without a Trace with the tv series \"Cold Case\" in terms of number of seasons, episods and cast members (the result set must be two elements -one for each tv series- of tv series IRI, label, #seasons, #episodes and #cast members)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK8bcce274a2 a esw:SearchTask ;
-    rdfs:label "Consider films directed by Woody Allen or Quentin Tarantino separately. Return the film which won more Academy Awards for the two directors (the result set must be two elements - one related to Allen and the other related to Tarantino -  and for each element there must be present the director IRI with its label, the film IRI with its label and the number of Academy awards won)."@en ;
-    esw:belongsTo eswr:TOPIC22641ea06b ;
-    esw:description "Consider films directed by Woody Allen or Quentin Tarantino separately. Return the film which won more Academy Awards for the two directors (the result set must be two elements - one related to Allen and the other related to Tarantino -  and for each element there must be present the director IRI with its label, the film IRI with its label and the number of Academy awards won)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK8bd1afefab a esw:SearchTask ;
-    rdfs:label "Find the countries which held more than 2 Olympic Games (both Summer and Winter Games, do not consider future Olympic Games) (the result set must be a list of triples country IRI, label and #edition held)."@en ;
-    esw:belongsTo eswr:TOPIC3e87154a46 ;
-    esw:description "Find the countries which held more than 2 Olympic Games (both Summer and Winter Games, do not consider future Olympic Games) (the result set must be a list of triples country IRI, label and #edition held)."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK8e9d21b32e a esw:SearchTask ;
-    rdfs:label "Amongst the physicists who won the Nobel Prize in Physics, find who taught in the university of his/her city of birth (the result set must be a list of elements of the form physicist IRI, label, university IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC2c4e57f7e5 ;
-    esw:description "Amongst the physicists who won the Nobel Prize in Physics, find who taught in the university of his/her city of birth (the result set must be a list of elements of the form physicist IRI, label, university IRI and label)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK8f3bea3cb3 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for the film \"The Little Mermaid\""@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "Identify the BGP for the film \"The Little Mermaid\""^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK9346038e9e a esw:SearchTask ;
-    rdfs:label "Identify the BGP for films"@en ;
-    esw:belongsTo eswr:TOPIC22641ea06b ;
-    esw:description "Identify the BGP for films"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK9383970aed a esw:SearchTask ;
-    rdfs:label "List all the twelve olympian greek deities (the result set must a list of 12 elements of couples of deity IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC2219e9b8cb ;
-    esw:description "List all the twelve olympian greek deities (the result set must a list of 12 elements of couples of deity IRI and label)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK938a7d20d2 a esw:SearchTask ;
-    rdfs:label "Return all types of dollar in the world (US Dollar, Australian Dollar, ecc...)"@en ;
-    esw:belongsTo eswr:TOPIC3525ba27d5 ;
-    esw:description "Return all types of dollar in the world (US Dollar, Australian Dollar, ecc...)"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK9787b26449 a esw:SearchTask ;
-    rdfs:label "Return for each north american country the number of association football clubs"@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Return for each north american country the number of association football clubs"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK9a70c086bc a esw:SearchTask ;
-    rdfs:label "Consider only the summer olympic games of 2004-2008-2012-2016. Return the number of marathon runners who had partecipated to all these editions group by their country of citizenship (if the runner partecipated in more than one edition of the game, consider him/her only once) (the result set must be a list of country IRI, label and #marathon runners)"@en ;
-    esw:belongsTo eswr:TOPICd7dd60c667 ;
-    esw:description "Consider only the summer olympic games of 2004-2008-2012-2016. Return the number of marathon runners who had partecipated to all these editions group by their country of citizenship (if the runner partecipated in more than one edition of the game, consider him/her only once) (the result set must be a list of country IRI, label and #marathon runners)"^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK9be84508cd a esw:SearchTask ;
-    rdfs:label "Return all the NBA season (the result set must be a list of couples NBA season IRI, label)"@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
-    esw:description "Return all the NBA season (the result set must be a list of couples NBA season IRI, label)"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK9c9e279202 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for films"@en ;
-    esw:belongsTo eswr:TOPIC2f1241da7b ;
-    esw:description "Identify the BGP for films"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK9e5bf969cb a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Ancient Rome"@en ;
-    esw:belongsTo eswr:TOPICb49898fb51 ;
-    esw:description "Identify the BGP for Ancient Rome"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK9e8bf432be a esw:SearchTask ;
-    rdfs:label "Identify the BGP for composer, painter, sculptor and poet"@en ;
-    esw:belongsTo eswr:TOPIC586eb95a33 ;
-    esw:description "Identify the BGP for composer, painter, sculptor and poet"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK9f93318767 a esw:SearchTask ;
-    rdfs:label "Find all the computer scientists who thaught at the University of Cambridge (return IRI and name)"@en ;
-    esw:belongsTo eswr:TOPICa9f3dc045f ;
-    esw:description "Find all the computer scientists who thaught at the University of Cambridge (return IRI and name)"^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASKa09e4f4c7f a esw:SearchTask ;
-    rdfs:label "Find how many western films are been released in each european country from 2010-01-01 to 2015-31-12 (the result set must be country IRI, label and #films)."@en ;
-    esw:belongsTo eswr:TOPIC22641ea06b ;
-    esw:description "Find how many western films are been released in each european country from 2010-01-01 to 2015-31-12 (the result set must be country IRI, label and #films)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKa331a67fd9 a esw:SearchTask ;
-    rdfs:label "Return the number of seasons and episodes per season of the tv series (the result set must be triples of season IRI, label and #episodes)."@en ;
-    esw:belongsTo eswr:TOPIC0f1acfd6a1 ;
-    esw:description "Return the number of seasons and episodes per season of the tv series (the result set must be triples of season IRI, label and #episodes)."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKa4cc261afc a esw:SearchTask ;
-    rdfs:label "Identify the BGP for archeologist."@en ;
-    esw:belongsTo eswr:TOPIC2219e9b8cb ;
-    esw:description "Identify the BGP for archeologist."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKa4e66e8f10 a esw:SearchTask ;
+eswr:TASK015ece0bae a esw:SearchTask ;
     rdfs:label "Check who is the actor who acted in more films while working on \"How I met your mother\" (the result set must be a list of triples actor/actress IRI, label and #films)."@en ;
-    esw:belongsTo eswr:TOPICd0ca66e38f ;
+    esw:belongsTo eswr:TOPIC9700c6064e ;
     esw:description "Check who is the actor who acted in more films while working on \"How I met your mother\" (the result set must be a list of triples actor/actress IRI, label and #films)."^^xsd:string ;
     esw:number "4"^^xsd:string .
 
-eswr:TASKa7564dcfd1 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for the NBA Most Valuable Player Award (MVP) (see https://en.wikipedia.org/wiki/NBA_Most_Valuable_Player_Award)"@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Identify the BGP for the NBA Most Valuable Player Award (MVP) (see https://en.wikipedia.org/wiki/NBA_Most_Valuable_Player_Award)"^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASKa7f9079115 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Olympic Games"@en ;
-    esw:belongsTo eswr:TOPIC3e87154a46 ;
-    esw:description "Identify the BGP for Olympic Games"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKa8336d7c95 a esw:SearchTask ;
-    rdfs:label "For each ancient civilization find the number of archeologists who worked on it (return also the civilizations with no archeologists) (the result set must be triples of civilization IRI, label and #archeologist)."@en ;
-    esw:belongsTo eswr:TOPIC2219e9b8cb ;
-    esw:description "For each ancient civilization find the number of archeologists who worked on it (return also the civilizations with no archeologists) (the result set must be triples of civilization IRI, label and #archeologist)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKaa66a30027 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for NBA finals"@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Identify the BGP for NBA finals"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKb0a064731a a esw:SearchTask ;
-    rdfs:label "Return for each european country the top level league (the result set must be a list of country IRI and label, and league IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Return for each european country the top level league (the result set must be a list of country IRI and label, and league IRI and label)."^^xsd:string ;
+eswr:TASK022536669b a esw:SearchTask ;
+    rdfs:label "Identify the BGP for the film \"The Little Mermaid\""@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "Identify the BGP for the film \"The Little Mermaid\""^^xsd:string ;
     esw:number "6"^^xsd:string .
 
-eswr:TASKb4e5e29318 a esw:SearchTask ;
-    rdfs:label "Find how many films are been released in the United States of America from 2010-01-01 to 2015-31-12 for each film genre available (the result set must be genre IRI, label and #films)."@en ;
-    esw:belongsTo eswr:TOPIC2f1241da7b ;
-    esw:description "Find how many films are been released in the United States of America from 2010-01-01 to 2015-31-12 for each film genre available (the result set must be genre IRI, label and #films)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKb559811b5a a esw:SearchTask ;
-    rdfs:label "For each country that now uses Euro return which was the currencies used before"@en ;
-    esw:belongsTo eswr:TOPIC3525ba27d5 ;
-    esw:description "For each country that now uses Euro return which was the currencies used before"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKb654674751 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for film genre"@en ;
-    esw:belongsTo eswr:TOPIC22641ea06b ;
-    esw:description "Identify the BGP for film genre"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKbcb5214c59 a esw:SearchTask ;
-    rdfs:label "Consider the country for sport property of the tennis player (NO Country of citizenship). Return the countries with at least one player who was ranked 1 in the tennis ranking  (the result set must be a list of country IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC14fe12638d ;
-    esw:description "Consider the country for sport property of the tennis player (NO Country of citizenship). Return the countries with at least one player who was ranked 1 in the tennis ranking  (the result set must be a list of country IRI and label)."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASKbd4037d8f2 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for hypertext system."@en ;
-    esw:belongsTo eswr:TOPICa9f3dc045f ;
-    esw:description "Identify the BGP for hypertext system."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKbd9042e0d6 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for physicist"@en ;
-    esw:belongsTo eswr:TOPIC2c4e57f7e5 ;
-    esw:description "Identify the BGP for physicist"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKbe96581395 a esw:SearchTask ;
-    rdfs:label "Find athletes who won at least one gold medal in 4 different editions of the Summer Olympic Games (the result set must be a list of triples athlete IRI, label and #edition)."@en ;
-    esw:belongsTo eswr:TOPIC3e87154a46 ;
-    esw:description "Find athletes who won at least one gold medal in 4 different editions of the Summer Olympic Games (the result set must be a list of triples athlete IRI, label and #edition)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASKc13db61ba5 a esw:SearchTask ;
-    rdfs:label "Consider the decades from 1961 to 1970, and from 2001 to 2010 and compare the total number of western films released in each one (the result set must be two couples decade and #western films of that decade)."@en ;
-    esw:belongsTo eswr:TOPIC2f1241da7b ;
-    esw:description "Consider the decades from 1961 to 1970, and from 2001 to 2010 and compare the total number of western films released in each one (the result set must be two couples decade and #western films of that decade)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASKc1aa45a821 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for association football club"@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Identify the BGP for association football club"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKc45ca57d9e a esw:SearchTask ;
-    rdfs:label "Identify the BGP for television series"@en ;
-    esw:belongsTo eswr:TOPICb8e1c9f08d ;
-    esw:description "Identify the BGP for television series"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKc699fea486 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for association football league"@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Identify the BGP for association football league"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKc6a7669fb7 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Ancient Egypt"@en ;
-    esw:belongsTo eswr:TOPIC2219e9b8cb ;
-    esw:description "Identify the BGP for Ancient Egypt"^^xsd:string ;
+eswr:TASK03e4455b81 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for runner"@en ;
+    esw:belongsTo eswr:TOPIC9df760015e ;
+    esw:description "Identify the BGP for runner"^^xsd:string ;
     esw:number "1"^^xsd:string .
 
-eswr:TASKc75ca45486 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for association football league"@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Identify the BGP for association football league"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKc783e4243a a esw:SearchTask ;
-    rdfs:label "Consider all the edition of the Summer Olympic Games. For each sport return the athlete who won more gold medal (the result set must be a list of elements with sport IRI and label, athlete IRI and label, and #gold medal)."@en ;
-    esw:belongsTo eswr:TOPIC3e87154a46 ;
-    esw:description "Consider all the edition of the Summer Olympic Games. For each sport return the athlete who won more gold medal (the result set must be a list of elements with sport IRI and label, athlete IRI and label, and #gold medal)."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASKc79fdbd642 a esw:SearchTask ;
-    rdfs:label "Find all the hypertext systems born before the 1980 (return the IRI and name of the system and the inception date)."@en ;
-    esw:belongsTo eswr:TOPICa9f3dc045f ;
-    esw:description "Find all the hypertext systems born before the 1980 (return the IRI and name of the system and the inception date)."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKc7daebd0f9 a esw:SearchTask ;
-    rdfs:label "Who wrote The Divine Comedy? (return the IRI and the label of the author)"@en ;
-    esw:belongsTo eswr:TOPIC11ae4b81bb ;
-    esw:description "Who wrote The Divine Comedy? (return the IRI and the label of the author)"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKc94f04af6c a esw:SearchTask ;
-    rdfs:label "Consider the 2008 Summer Olympic Games. Find the top-10 people who won more gold medals (the result set must be a list of triples athlete IRI, label and #gold medal)."@en ;
-    esw:belongsTo eswr:TOPIC3e87154a46 ;
-    esw:description "Consider the 2008 Summer Olympic Games. Find the top-10 people who won more gold medals (the result set must be a list of triples athlete IRI, label and #gold medal)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASKc989540747 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Academy Awards"@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "Identify the BGP for Academy Awards"^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASKca08404f75 a esw:SearchTask ;
-    rdfs:label "Return how many of the actors who are members of the cast of the tv series have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2 (the result set must be a list of couples actor/actress IRI and label)."@en ;
-    esw:belongsTo eswr:TOPICd0ca66e38f ;
-    esw:description "Return how many of the actors who are members of the cast of the tv series have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2 (the result set must be a list of couples actor/actress IRI and label)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASKcb8ff26d98 a esw:SearchTask ;
-    rdfs:label "Return the italian poets who won the Nobel Prize in Literature (the result set must be poet IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC11ae4b81bb ;
-    esw:description "Return the italian poets who won the Nobel Prize in Literature (the result set must be poet IRI and label)."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASKcf49752586 a esw:SearchTask ;
-    rdfs:label "For each disciplines of the long distance running find who hold the World Record (the result set must be a list of elements with discipline IRI, label and athlete IRI and label)."@en ;
-    esw:belongsTo eswr:TOPICd7dd60c667 ;
-    esw:description "For each disciplines of the long distance running find who hold the World Record (the result set must be a list of elements with discipline IRI, label and athlete IRI and label)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASKcf828d37b0 a esw:SearchTask ;
-    rdfs:label "Find the top-5 companies (amongst television production company and film production company) which produced the highest number of crime films (the result set must be a list of triples company IRI, label and #crime film)."@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Find the top-5 companies (amongst television production company and film production company) which produced the highest number of crime films (the result set must be a list of triples company IRI, label and #crime film)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKcfa40eec90 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for the UEFA Champions League."@en ;
-    esw:belongsTo eswr:TOPIC299fd02c27 ;
-    esw:description "Identify the BGP for the UEFA Champions League."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKd101ff0cfb a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Netflix"@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Identify the BGP for Netflix"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKd25bdf2218 a esw:SearchTask ;
-    rdfs:label "Find the three different type of possible surfaces in a tennis court (the result set must be a list of three couples surface IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC14fe12638d ;
-    esw:description "Find the three different type of possible surfaces in a tennis court (the result set must be a list of three couples surface IRI and label)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKd2f3da4af1 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for tennis player"@en ;
-    esw:belongsTo eswr:TOPIC14fe12638d ;
-    esw:description "Identify the BGP for tennis player"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKd4a00c638a a esw:SearchTask ;
-    rdfs:label "Return all italian basketball teams born before 1945 (the result set must be a list of triples basketball team IRI, label and year of inception)."@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Return all italian basketball teams born before 1945 (the result set must be a list of triples basketball team IRI, label and year of inception)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKd7515c1df9 a esw:SearchTask ;
-    rdfs:label "Find the companies (among television and film production companies) that won at least 5 Academy Awards for Best Actress for the movies they produced (the result set must be a list of triples company IRI, label and #awards)."@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Find the companies (among television and film production companies) that won at least 5 Academy Awards for Best Actress for the movies they produced (the result set must be a list of triples company IRI, label and #awards)."^^xsd:string ;
-    esw:number "9"^^xsd:string .
-
-eswr:TASKd7c05bbe40 a esw:SearchTask ;
-    rdfs:label "Find how many sculptures were made in Italy during Renaissance, Baroque, and Romanticism movements. Please consider all the sculptures and all the sculpture subtypes. (the result set must be a list of triples movement IRI, label and #sculptures)."@en ;
-    esw:belongsTo eswr:TOPIC586eb95a33 ;
-    esw:description "Find how many sculptures were made in Italy during Renaissance, Baroque, and Romanticism movements. Please consider all the sculptures and all the sculpture subtypes. (the result set must be a list of triples movement IRI, label and #sculptures)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKd7ee80131c a esw:SearchTask ;
-    rdfs:label "Find who acted in more than one film or tv series related to the canon of Sherlock Holmes (the result set must be a list of triples actor/actress IRI, label and #film)."@en ;
-    esw:belongsTo eswr:TOPICb8e1c9f08d ;
-    esw:description "Find who acted in more than one film or tv series related to the canon of Sherlock Holmes (the result set must be a list of triples actor/actress IRI, label and #film)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKda0fbca948 a esw:SearchTask ;
-    rdfs:label "Return the four Grand Slam of tennis (hint: One of these four is Wimbledon) (the result set must be a list of four couples Grand Slam IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC14fe12638d ;
-    esw:description "Return the four Grand Slam of tennis (hint: One of these four is Wimbledon) (the result set must be a list of four couples Grand Slam IRI and label)."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKdc4e4a0948 a esw:SearchTask ;
-    rdfs:label "Find the name of the voice actors who participated in more than 5 films by the Walt Disney Animation Studios (the result set must be a list of triples voice actors IRI, label and #films)."@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "Find the name of the voice actors who participated in more than 5 films by the Walt Disney Animation Studios (the result set must be a list of triples voice actors IRI, label and #films)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKdcf770c6c5 a esw:SearchTask ;
-    rdfs:label "Consider only films directed by Woody Allen or Quentin Tarantino. Then consider the date of publication of these films (take the first one if there are more than one date of publication). Return the year with more films release for the two director (the result set must be two elements and for each element there must be present the director IRI, the label of the IRI, the year and the number of films)."@en ;
-    esw:belongsTo eswr:TOPIC22641ea06b ;
-    esw:description "Consider only films directed by Woody Allen or Quentin Tarantino. Then consider the date of publication of these films (take the first one if there are more than one date of publication). Return the year with more films release for the two director (the result set must be two elements and for each element there must be present the director IRI, the label of the IRI, the year and the number of films)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKdda8308eb6 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for poet"@en ;
-    esw:belongsTo eswr:TOPIC11ae4b81bb ;
-    esw:description "Identify the BGP for poet"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKddea21a8d9 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for film genre"@en ;
-    esw:belongsTo eswr:TOPIC2f1241da7b ;
-    esw:description "Identify the BGP for film genre"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKe0f418e584 a esw:SearchTask ;
-    rdfs:label "Consider the actors who are members of the cast of Cold Case. Amongst the tv series which these actors acted return only those which received more than 2 awards (the result set must be triples of tv series IRI, label, #awards won)."@en ;
-    esw:belongsTo eswr:TOPIC0f1acfd6a1 ;
-    esw:description "Consider the actors who are members of the cast of Cold Case. Amongst the tv series which these actors acted return only those which received more than 2 awards (the result set must be triples of tv series IRI, label, #awards won)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASKe1ddef326e a esw:SearchTask ;
-    rdfs:label "Identify the BGP for basketball team."@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
-    esw:description "Identify the BGP for basketball team."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKe233e3872d a esw:SearchTask ;
-    rdfs:label "Return the countries which won at least once all the type of Nobel Prizes with the people born there. (the result set must be a list of couples country IRI and label)."@en ;
-    esw:belongsTo eswr:TOPIC2c4e57f7e5 ;
-    esw:description "Return the countries which won at least once all the type of Nobel Prizes with the people born there. (the result set must be a list of couples country IRI and label)."^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKe2b669edc3 a esw:SearchTask ;
-    rdfs:label "Return all french basketball teams born before 1930 (the result set must be a list of triples basketball team IRI, label and year of inception)."@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
-    esw:description "Return all french basketball teams born before 1930 (the result set must be a list of triples basketball team IRI, label and year of inception)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKe4476d6d58 a esw:SearchTask ;
-    rdfs:label "Return the countries which have at least two different players of their nationality (consider the country of citizenship) who won the ballon d'Or (the result set must be a list of triples country IRI, label and #different players)."@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Return the countries which have at least two different players of their nationality (consider the country of citizenship) who won the ballon d'Or (the result set must be a list of triples country IRI, label and #different players)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASKe68096185c a esw:SearchTask ;
-    rdfs:label "List all the films created by the Walt Disney Animation Studios while Walt Disney was alive (the result set must be a list of couples films IRI and label)."@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "List all the films created by the Walt Disney Animation Studios while Walt Disney was alive (the result set must be a list of couples films IRI and label)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKe9100e4e10 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for canon of Sherlock Holmes (see https://en.wikipedia.org/wiki/Canon_of_Sherlock_Holmes)"@en ;
-    esw:belongsTo eswr:TOPICb8e1c9f08d ;
-    esw:description "Identify the BGP for canon of Sherlock Holmes (see https://en.wikipedia.org/wiki/Canon_of_Sherlock_Holmes)"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKef7cf0d267 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Academy Award"@en ;
-    esw:belongsTo eswr:TOPIC0adc5bb7ab ;
-    esw:description "Identify the BGP for Academy Award"^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASKefb468db80 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for computer scientist"@en ;
-    esw:belongsTo eswr:TOPICa9f3dc045f ;
-    esw:description "Identify the BGP for computer scientist"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKf0a53752b2 a esw:SearchTask ;
+eswr:TASK06bc4433f3 a esw:SearchTask ;
     rdfs:label "Consider the players who won the NBA Defensive Player of the Year Award. Return for these players the number of NBA Defensive Player of the Year Award won in their career (the result set must be triples of player IRI, label and #victories)"@en ;
-    esw:belongsTo eswr:TOPIC7ad6911772 ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
     esw:description "Consider the players who won the NBA Defensive Player of the Year Award. Return for these players the number of NBA Defensive Player of the Year Award won in their career (the result set must be triples of player IRI, label and #victories)"^^xsd:string ;
     esw:number "9"^^xsd:string .
 
-eswr:TASKf10d0e7b58 a esw:SearchTask ;
-    rdfs:label "For each film and television series related to the canon of Sherlock Holmes, return the number of Primetime Emmy Awards they won (return also the objects who did not win an Award) (the result set must be a list of triples film/tv series IRI, label and #award)."@en ;
-    esw:belongsTo eswr:TOPICb8e1c9f08d ;
-    esw:description "For each film and television series related to the canon of Sherlock Holmes, return the number of Primetime Emmy Awards they won (return also the objects who did not win an Award) (the result set must be a list of triples film/tv series IRI, label and #award)."^^xsd:string ;
-    esw:number "8"^^xsd:string .
-
-eswr:TASKf23e9ac293 a esw:SearchTask ;
-    rdfs:label "Consider the composers of Western films and their country of citizenship. Count the number of Western Films on which worked a composer grouped by country of citizenship and return the top-10 (the result set must be country IRI, label and #films).."@en ;
-    esw:belongsTo eswr:TOPIC2f1241da7b ;
-    esw:description "Consider the composers of Western films and their country of citizenship. Count the number of Western Films on which worked a composer grouped by country of citizenship and return the top-10 (the result set must be country IRI, label and #films).."^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASKf47b2593d0 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for basketball."@en ;
-    esw:belongsTo eswr:TOPICc3f9c130e7 ;
-    esw:description "Identify the BGP for basketball."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKf5083dd5dc a esw:SearchTask ;
-    rdfs:label "Return the countries belonging to the European Union, with a currency different from the Euro (return also their currency)."@en ;
-    esw:belongsTo eswr:TOPIC3525ba27d5 ;
-    esw:description "Return the countries belonging to the European Union, with a currency different from the Euro (return also their currency)."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKf592347a09 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for Walt Disney (person)"@en ;
-    esw:belongsTo eswr:TOPICe95cccefb6 ;
-    esw:description "Identify the BGP for Walt Disney (person)"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKf5c5ef1004 a esw:SearchTask ;
-    rdfs:label "Return for each european country the number of association football leagues (the result set must be a list of triples country IRI, label and #leagues)."@en ;
-    esw:belongsTo eswr:TOPICdb16702acd ;
-    esw:description "Return for each european country the number of association football leagues (the result set must be a list of triples country IRI, label and #leagues)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKf79387c7ce a esw:SearchTask ;
-    rdfs:label "Consider the currencies obtained in task 6, for each currency return the number of people using that currency (hint: consider the maximum popolation available for each country)."@en ;
-    esw:belongsTo eswr:TOPIC3525ba27d5 ;
-    esw:description "Consider the currencies obtained in task 6, for each currency return the number of people using that currency (hint: consider the maximum popolation available for each country)."^^xsd:string ;
+eswr:TASK06cd89f355 a esw:SearchTask ;
+    rdfs:label "Consider the actors who are members of the cast of HIMYM. Amongst the tv series which these actors acted return only those which received more than 2 awards (the result set must be triples of tv series IRI, label, #awards won)."@en ;
+    esw:belongsTo eswr:TOPIC9700c6064e ;
+    esw:description "Consider the actors who are members of the cast of HIMYM. Amongst the tv series which these actors acted return only those which received more than 2 awards (the result set must be triples of tv series IRI, label, #awards won)."^^xsd:string ;
     esw:number "7"^^xsd:string .
 
-eswr:TASKf90702e39a a esw:SearchTask ;
-    rdfs:label "For each European country find how many poets belong to Romanticism (the result set must be a list of triples country IRI, label and #poets)."@en ;
-    esw:belongsTo eswr:TOPIC586eb95a33 ;
-    esw:description "For each European country find how many poets belong to Romanticism (the result set must be a list of triples country IRI, label and #poets)."^^xsd:string ;
-    esw:number "6"^^xsd:string .
+eswr:TASK06dc4a531e a esw:SearchTask ;
+    rdfs:label "Find who acted in more than one film or tv series related to the canon of Sherlock Holmes (the result set must be a list of triples actor/actress IRI, label and #film)."@en ;
+    esw:belongsTo eswr:TOPICb473cd6e34 ;
+    esw:description "Find who acted in more than one film or tv series related to the canon of Sherlock Holmes (the result set must be a list of triples actor/actress IRI, label and #film)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
 
-eswr:TASKfaaa088fdd a esw:SearchTask ;
-    rdfs:label "Identify the BGP for long distance running"@en ;
-    esw:belongsTo eswr:TOPICd7dd60c667 ;
-    esw:description "Identify the BGP for long distance running"^^xsd:string ;
-    esw:number "2"^^xsd:string .
+eswr:TASK075d01fcc4 a esw:SearchTask ;
+    rdfs:label "Consider the country for sport property of the tennis player (NO Country of citizenship). Return the countries with at least one player who won at least one edition of each Grand Slam (the result set must be a list of country IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICee8f22a76a ;
+    esw:description "Consider the country for sport property of the tennis player (NO Country of citizenship). Return the countries with at least one player who won at least one edition of each Grand Slam (the result set must be a list of country IRI and label)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
 
-eswr:TASKfcb685ddda a esw:SearchTask ;
-    rdfs:label "Check who is the actor who acted in more films while working on \"Without a Trace\" (the result set must be a list of triples actor/actress IRI, label and #films)."@en ;
-    esw:belongsTo eswr:TOPIC0f1acfd6a1 ;
-    esw:description "Check who is the actor who acted in more films while working on \"Without a Trace\" (the result set must be a list of triples actor/actress IRI, label and #films)."^^xsd:string ;
-    esw:number "4"^^xsd:string .
+eswr:TASK0c99d33dff a esw:SearchTask ;
+    rdfs:label "Find the inventors of World Wide Web (return IRI and name)."@en ;
+    esw:belongsTo eswr:TOPICa6f1e5cbd5 ;
+    esw:description "Find the inventors of World Wide Web (return IRI and name)."^^xsd:string ;
+    esw:number "1"^^xsd:string .
 
-eswr:TASKff5def4c19 a esw:SearchTask ;
-    rdfs:label "Consider the set of films directed by Allen or Tarantino. Return for each Academy Award the total number of nomination of these films (the result set must be a list of triples Academy Award IRI, label and #nomination)."@en ;
-    esw:belongsTo eswr:TOPIC22641ea06b ;
-    esw:description "Consider the set of films directed by Allen or Tarantino. Return for each Academy Award the total number of nomination of these films (the result set must be a list of triples Academy Award IRI, label and #nomination)."^^xsd:string ;
+eswr:TASK0d1cbcb3cc a esw:SearchTask ;
+    rdfs:label "Consider the actors who are members of the cast of Cold Case. Amongst the tv series which these actors acted return only those which received more than 2 awards (the result set must be triples of tv series IRI, label, #awards won)."@en ;
+    esw:belongsTo eswr:TOPIC22fc31c7e8 ;
+    esw:description "Consider the actors who are members of the cast of Cold Case. Amongst the tv series which these actors acted return only those which received more than 2 awards (the result set must be triples of tv series IRI, label, #awards won)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK0d244ff6bf a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Academy Awards"@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "Identify the BGP for Academy Awards"^^xsd:string ;
     esw:number "8"^^xsd:string .
 
-eswr:TASKff9ba53874 a esw:SearchTask ;
+eswr:TASK0e50a2c4a0 a esw:SearchTask ;
+    rdfs:label "Find the wars (note that \"war\" and \"battle\" are not the same thing) participated by the Roman Empire (return IRI and name of the war)."@en ;
+    esw:belongsTo eswr:TOPICd5a9d471da ;
+    esw:description "Find the wars (note that \"war\" and \"battle\" are not the same thing) participated by the Roman Empire (return IRI and name of the war)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK115e6c0f17 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Cultural Movement"@en ;
+    esw:belongsTo eswr:TOPICd1c898149d ;
+    esw:description "Identify the BGP for Cultural Movement"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK1504b59db4 a esw:SearchTask ;
+    rdfs:label "Find all the computer scientists who thaught at the University of Cambridge (return IRI and name)"@en ;
+    esw:belongsTo eswr:TOPICa6f1e5cbd5 ;
+    esw:description "Find all the computer scientists who thaught at the University of Cambridge (return IRI and name)"^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK15212f2211 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for association football league"@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Identify the BGP for association football league"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK15c32a7092 a esw:SearchTask ;
+    rdfs:label "Return all the types of Primetime Emmy Award (the result set must be a list of couples award IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICb473cd6e34 ;
+    esw:description "Return all the types of Primetime Emmy Award (the result set must be a list of couples award IRI and label)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK16187f59bd a esw:SearchTask ;
+    rdfs:label "Identify the BGP for computer scientist"@en ;
+    esw:belongsTo eswr:TOPICa6f1e5cbd5 ;
+    esw:description "Identify the BGP for computer scientist"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK170b2158ab a esw:SearchTask ;
+    rdfs:label "List all the films created by the Walt Disney Animation Studios while Walt Disney was alive (the result set must be a list of couples films IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "List all the films created by the Walt Disney Animation Studios while Walt Disney was alive (the result set must be a list of couples films IRI and label)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK18665732ac a esw:SearchTask ;
+    rdfs:label "Return the number of seasons and episodes per season of the tv series (the result set must be triples of season IRI, label and #episodes)."@en ;
+    esw:belongsTo eswr:TOPIC9700c6064e ;
+    esw:description "Return the number of seasons and episodes per season of the tv series (the result set must be triples of season IRI, label and #episodes)."^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK187e1a4e0b a esw:SearchTask ;
+    rdfs:label "List all the twelve olympian greek deities (the result set must a list of 12 elements of couples of deity IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC6f762f9c07 ;
+    esw:description "List all the twelve olympian greek deities (the result set must a list of 12 elements of couples of deity IRI and label)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK1a2dc4f9f7 a esw:SearchTask ;
+    rdfs:label "Find all the computer scientists who wrote at least 5 books (please consider only the instances of book, exclude \"literary work\" or other type of work related to books). Return the IRI and name of the computer scientist and the number of books."@en ;
+    esw:belongsTo eswr:TOPICa6f1e5cbd5 ;
+    esw:description "Find all the computer scientists who wrote at least 5 books (please consider only the instances of book, exclude \"literary work\" or other type of work related to books). Return the IRI and name of the computer scientist and the number of books."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK1b48057c07 a esw:SearchTask ;
+    rdfs:label "Consider the countries that won the FIFA World Cup at least twice. Find the players of those countries won the ballon d'Or (the result set must be a list of couples player IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Consider the countries that won the FIFA World Cup at least twice. Find the players of those countries won the ballon d'Or (the result set must be a list of couples player IRI and label)."^^xsd:string ;
+    esw:number "9"^^xsd:string .
+
+eswr:TASK20f34685ba a esw:SearchTask ;
+    rdfs:label "Return how many of the actors who are members of the cast of the tv series have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2 (the result set must be a list of couples actor/actress IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC9700c6064e ;
+    esw:description "Return how many of the actors who are members of the cast of the tv series have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2 (the result set must be a list of couples actor/actress IRI and label)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK22ec213b0d a esw:SearchTask ;
+    rdfs:label "Consider the countries which have at least two different clubs of their nationality who won the UEFA Champions League. Return the list of these countries with the number of different clubs who won the UEFA Champions League (the result set must be triples of country IRI, label and #clubs)."@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Consider the countries which have at least two different clubs of their nationality who won the UEFA Champions League. Return the list of these countries with the number of different clubs who won the UEFA Champions League (the result set must be triples of country IRI, label and #clubs)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK230a4e51b5 a esw:SearchTask ;
+    rdfs:label "Consider marathons ran in Europe. Return the number of different runners who won a marathon group by their country of citizenship (the result set must be a triples of country IRI, label and #different runners)."@en ;
+    esw:belongsTo eswr:TOPIC9df760015e ;
+    esw:description "Consider marathons ran in Europe. Return the number of different runners who won a marathon group by their country of citizenship (the result set must be a triples of country IRI, label and #different runners)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK23182ad355 a esw:SearchTask ;
+    rdfs:label "Compare the author of The Divine Comedy with Giovanni Boccaccio. Return for these poets the number of literary work they wrote (the result set must be two triples -one for each author- author IRI, label and #literary work)."@en ;
+    esw:belongsTo eswr:TOPIC4144639258 ;
+    esw:description "Compare the author of The Divine Comedy with Giovanni Boccaccio. Return for these poets the number of literary work they wrote (the result set must be two triples -one for each author- author IRI, label and #literary work)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK232d3013e0 a esw:SearchTask ;
+    rdfs:label "Consider all the edition of the Summer Olympic Games. For each sport return the athlete who won more gold medal (the result set must be a list of elements with sport IRI and label, athlete IRI and label, and #gold medal)."@en ;
+    esw:belongsTo eswr:TOPIC2ae1f25eb2 ;
+    esw:description "Consider all the edition of the Summer Olympic Games. For each sport return the athlete who won more gold medal (the result set must be a list of elements with sport IRI and label, athlete IRI and label, and #gold medal)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASK236e27cf73 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Ancient Rome"@en ;
+    esw:belongsTo eswr:TOPICd5a9d471da ;
+    esw:description "Identify the BGP for Ancient Rome"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK23843186e9 a esw:SearchTask ;
+    rdfs:label "Return the poets born in the same place of the author of The Divine Comedy who are born between 1300 and 1500 (1300 and 1500 included) (the result set must be a list of couples poets IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC4144639258 ;
+    esw:description "Return the poets born in the same place of the author of The Divine Comedy who are born between 1300 and 1500 (1300 and 1500 included) (the result set must be a list of couples poets IRI and label)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK23faeeb73f a esw:SearchTask ;
+    rdfs:label "Identify the BGP for currency"@en ;
+    esw:belongsTo eswr:TOPIC7e8deb7063 ;
+    esw:description "Identify the BGP for currency"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK24aa3e8669 a esw:SearchTask ;
+    rdfs:label "Return the year of publication (take the first one if there are more publication dates) for each film and television series related to the canon of Sherlock Holmes (the result set must be a list of triples film/tv series IRI, label and year)."@en ;
+    esw:belongsTo eswr:TOPICb473cd6e34 ;
+    esw:description "Return the year of publication (take the first one if there are more publication dates) for each film and television series related to the canon of Sherlock Holmes (the result set must be a list of triples film/tv series IRI, label and year)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK257139e0a1 a esw:SearchTask ;
+    rdfs:label "Find the BGP for war"@en ;
+    esw:belongsTo eswr:TOPICd5a9d471da ;
+    esw:description "Find the BGP for war"^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK29d2b6e84c a esw:SearchTask ;
+    rdfs:label "Identify the BGP for association football club"@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Identify the BGP for association football club"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK2d5e5718f6 a esw:SearchTask ;
+    rdfs:label "Return all types of dollar in the world (US Dollar, Australian Dollar, ecc...)"@en ;
+    esw:belongsTo eswr:TOPIC7e8deb7063 ;
+    esw:description "Return all types of dollar in the world (US Dollar, Australian Dollar, ecc...)"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK2e07040115 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for poet"@en ;
+    esw:belongsTo eswr:TOPIC4144639258 ;
+    esw:description "Identify the BGP for poet"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK2e6805447e a esw:SearchTask ;
+    rdfs:label "Identify the BGP for the NBA Defensive Player of the Year Award (see https://en.wikipedia.org/wiki/NBA_Defensive_Player_of_the_Year_Award)"@en ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
+    esw:description "Identify the BGP for the NBA Defensive Player of the Year Award (see https://en.wikipedia.org/wiki/NBA_Defensive_Player_of_the_Year_Award)"^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASK2ecdb4dd7a a esw:SearchTask ;
+    rdfs:label "For each disciplines of the long distance running find who hold the World Record (the result set must be a list of elements with discipline IRI, label and athlete IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC9df760015e ;
+    esw:description "For each disciplines of the long distance running find who hold the World Record (the result set must be a list of elements with discipline IRI, label and athlete IRI and label)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK2f8d135334 a esw:SearchTask ;
     rdfs:label "Identify the BGP for Olympic Games"@en ;
-    esw:belongsTo eswr:TOPICd7dd60c667 ;
+    esw:belongsTo eswr:TOPIC9df760015e ;
     esw:description "Identify the BGP for Olympic Games"^^xsd:string ;
     esw:number "5"^^xsd:string .
 
-eswr:TASKfff8e53a8d a esw:SearchTask ;
+eswr:TASK316ccb39a1 a esw:SearchTask ;
+    rdfs:label "Find athletes who won at least one gold medal in 4 different editions of the Summer Olympic Games (the result set must be a list of triples athlete IRI, label and #edition)."@en ;
+    esw:belongsTo eswr:TOPIC2ae1f25eb2 ;
+    esw:description "Find athletes who won at least one gold medal in 4 different editions of the Summer Olympic Games (the result set must be a list of triples athlete IRI, label and #edition)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK33357b377e a esw:SearchTask ;
+    rdfs:label "Identify the BGP for basketball."@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Identify the BGP for basketball."^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK3361a84bd9 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Netflix"@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Identify the BGP for Netflix"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK3388627e25 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for canon of Sherlock Holmes (see https://en.wikipedia.org/wiki/Canon_of_Sherlock_Holmes)"@en ;
+    esw:belongsTo eswr:TOPICb473cd6e34 ;
+    esw:description "Identify the BGP for canon of Sherlock Holmes (see https://en.wikipedia.org/wiki/Canon_of_Sherlock_Holmes)"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK339dbeb1f7 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for director"@en ;
+    esw:belongsTo eswr:TOPIC6b23f3cd94 ;
+    esw:description "Identify the BGP for director"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK3560650888 a esw:SearchTask ;
+    rdfs:label "Consider only NBA (National Basketball Association) basketball teams and all basketball players who played in one of these teams at least once. Also consider the country of citizenship of the players with the related continent. Return for each continent the number of players who played in an NBA basketball teams. (the result set must be triples of continent IRI, label and #players)"@en ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
+    esw:description "Consider only NBA (National Basketball Association) basketball teams and all basketball players who played in one of these teams at least once. Also consider the country of citizenship of the players with the related continent. Return for each continent the number of players who played in an NBA basketball teams. (the result set must be triples of continent IRI, label and #players)"^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK362d013109 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Academy Award"@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Identify the BGP for Academy Award"^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASK39109bc8aa a esw:SearchTask ;
+    rdfs:label "Consider the set of films directed by Allen or Tarantino. Return for each Academy Award the total number of nomination of these films (the result set must be a list of triples Academy Award IRI, label and #nomination)."@en ;
+    esw:belongsTo eswr:TOPIC6b23f3cd94 ;
+    esw:description "Consider the set of films directed by Allen or Tarantino. Return for each Academy Award the total number of nomination of these films (the result set must be a list of triples Academy Award IRI, label and #nomination)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASK3a77c81091 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for television series"@en ;
+    esw:belongsTo eswr:TOPICb473cd6e34 ;
+    esw:description "Identify the BGP for television series"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK3abb7e6ad3 a esw:SearchTask ;
+    rdfs:label "Who wrote The Divine Comedy? (return the IRI and the label of the author)"@en ;
+    esw:belongsTo eswr:TOPIC4144639258 ;
+    esw:description "Who wrote The Divine Comedy? (return the IRI and the label of the author)"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK3b25a6a9b8 a esw:SearchTask ;
+    rdfs:label "Consider only the summer olympic games of 2004-2008-2012-2016. Return the number of marathon runners who had partecipated to all these editions group by their country of citizenship (if the runner partecipated in more than one edition of the game, consider him/her only once) (the result set must be a list of country IRI, label and #marathon runners)"@en ;
+    esw:belongsTo eswr:TOPIC9df760015e ;
+    esw:description "Consider only the summer olympic games of 2004-2008-2012-2016. Return the number of marathon runners who had partecipated to all these editions group by their country of citizenship (if the runner partecipated in more than one edition of the game, consider him/her only once) (the result set must be a list of country IRI, label and #marathon runners)"^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK40c366ae5d a esw:SearchTask ;
+    rdfs:label "Return the Roman emperors who killed another Roman emperor (the result set must a list of 4-tuples with killer IRI and label, and killed IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICd5a9d471da ;
+    esw:description "Return the Roman emperors who killed another Roman emperor (the result set must a list of 4-tuples with killer IRI and label, and killed IRI and label)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK4213f603d0 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Academy Awards"@en ;
+    esw:belongsTo eswr:TOPIC6b23f3cd94 ;
+    esw:description "Identify the BGP for Academy Awards"^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK43258727b5 a esw:SearchTask ;
+    rdfs:label "Consider the tennis players born after 1975, return who won more Grand Slams and cut the result to the top-10 (the result set must be a list of triples player IRI, label and #victories)."@en ;
+    esw:belongsTo eswr:TOPICee8f22a76a ;
+    esw:description "Consider the tennis players born after 1975, return who won more Grand Slams and cut the result to the top-10 (the result set must be a list of triples player IRI, label and #victories)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK446e3cba03 a esw:SearchTask ;
+    rdfs:label "Return the tournaments played in the 2018 Wimbledon Championships edition with the related winners (hint: men and women do not play together, there are two distinct tournament ) (the result set must be a list of elements with tournament IRI and label, and winner IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICee8f22a76a ;
+    esw:description "Return the tournaments played in the 2018 Wimbledon Championships edition with the related winners (hint: men and women do not play together, there are two distinct tournament ) (the result set must be a list of elements with tournament IRI and label, and winner IRI and label)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK4800ab1358 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for film production company"@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Identify the BGP for film production company"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK48525d7e69 a esw:SearchTask ;
+    rdfs:label "Consider the 2008 Summer Olympic Games. Identify all the sports played in this edition (the result set must be a list of couples sport IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC2ae1f25eb2 ;
+    esw:description "Consider the 2008 Summer Olympic Games. Identify all the sports played in this edition (the result set must be a list of couples sport IRI and label)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK4be80b5816 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for tennis player"@en ;
+    esw:belongsTo eswr:TOPICee8f22a76a ;
+    esw:description "Identify the BGP for tennis player"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK50a12d1baa a esw:SearchTask ;
+    rdfs:label "Consider the composers of Western films and their country of citizenship. Count the number of Western Films on which worked a composer grouped by country of citizenship and return the top-10 (the result set must be country IRI, label and #films).."@en ;
+    esw:belongsTo eswr:TOPICfe8f5f334f ;
+    esw:description "Consider the composers of Western films and their country of citizenship. Count the number of Western Films on which worked a composer grouped by country of citizenship and return the top-10 (the result set must be country IRI, label and #films).."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK51f3eeed5c a esw:SearchTask ;
+    rdfs:label "Return the currencies used in at least 2 different countries (return also the number of countries using each currency)."@en ;
+    esw:belongsTo eswr:TOPIC7e8deb7063 ;
+    esw:description "Return the currencies used in at least 2 different countries (return also the number of countries using each currency)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK529f7a0c23 a esw:SearchTask ;
+    rdfs:label "Return the number of seasons and episodes per season of the tv series (the result set must be triples of season IRI, label and #episodes)."@en ;
+    esw:belongsTo eswr:TOPIC22fc31c7e8 ;
+    esw:description "Return the number of seasons and episodes per season of the tv series (the result set must be triples of season IRI, label and #episodes)."^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK5357ddb194 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Renassaince, Baroque and Romanticism"@en ;
+    esw:belongsTo eswr:TOPICd1c898149d ;
+    esw:description "Identify the BGP for Renassaince, Baroque and Romanticism"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK5430354fe0 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Olympic Games"@en ;
+    esw:belongsTo eswr:TOPIC2ae1f25eb2 ;
+    esw:description "Identify the BGP for Olympic Games"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK546c4093c9 a esw:SearchTask ;
+    rdfs:label "Consider only the basketball teams which Michael Jordan and Kobe Bryant played. Return the number of NBA seasons won by these teams (the result set must be a list of triples basketball team IRI, label and #victories. Return a number for each basketball team even if they never won a season)."@en ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
+    esw:description "Consider only the basketball teams which Michael Jordan and Kobe Bryant played. Return the number of NBA seasons won by these teams (the result set must be a list of triples basketball team IRI, label and #victories. Return a number for each basketball team even if they never won a season)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK54d966b326 a esw:SearchTask ;
+    rdfs:label "For each ancient civilization find the number of archeologists who worked on it (return also the civilizations with no archeologists) (the result set must be triples of civilization IRI, label and #archeologist)."@en ;
+    esw:belongsTo eswr:TOPIC6f762f9c07 ;
+    esw:description "For each ancient civilization find the number of archeologists who worked on it (return also the civilizations with no archeologists) (the result set must be triples of civilization IRI, label and #archeologist)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK54e18b71e7 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Walt Disney (person)"@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "Identify the BGP for Walt Disney (person)"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK556493ebae a esw:SearchTask ;
+    rdfs:label "Find the top-5 companies (amongst television production company and film production company) which produced the highest number of crime films (the result set must be a list of triples company IRI, label and #crime film)."@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Find the top-5 companies (amongst television production company and film production company) which produced the highest number of crime films (the result set must be a list of triples company IRI, label and #crime film)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK571c79930f a esw:SearchTask ;
+    rdfs:label "Consider only films directed by Woody Allen or Quentin Tarantino. Then consider the date of publication of these films (take the first one if there are more than one date of publication). Return the year with more films release for the two director (the result set must be two elements and for each element there must be present the director IRI, the label of the IRI, the year and the number of films)."@en ;
+    esw:belongsTo eswr:TOPIC6b23f3cd94 ;
+    esw:description "Consider only films directed by Woody Allen or Quentin Tarantino. Then consider the date of publication of these films (take the first one if there are more than one date of publication). Return the year with more films release for the two director (the result set must be two elements and for each element there must be present the director IRI, the label of the IRI, the year and the number of films)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK57802c99b1 a esw:SearchTask ;
+    rdfs:label "Compare HIMYM with the tv series \"The Office (US)\" in terms of number of seasons, episods and cast members (the result set must be two elements -one for each tv series- of tv series IRI, label, #seasons, #episodes and #cast members)."@en ;
+    esw:belongsTo eswr:TOPIC9700c6064e ;
+    esw:description "Compare HIMYM with the tv series \"The Office (US)\" in terms of number of seasons, episods and cast members (the result set must be two elements -one for each tv series- of tv series IRI, label, #seasons, #episodes and #cast members)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK578be0e7c1 a esw:SearchTask ;
+    rdfs:label "Consider italian poets, their place of birth (the city) and their university education. Return for each city the number of poets who born there and who was educated there (the result set must be a list of triples city IRI, label and #poets)."@en ;
+    esw:belongsTo eswr:TOPIC4144639258 ;
+    esw:description "Consider italian poets, their place of birth (the city) and their university education. Return for each city the number of poets who born there and who was educated there (the result set must be a list of triples city IRI, label and #poets)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK599b7729c6 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for basketball."@en ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
+    esw:description "Identify the BGP for basketball."^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK5a722c38ca a esw:SearchTask ;
+    rdfs:label "Check who is the actor who acted in more films while working on \"Without a Trace\" (the result set must be a list of triples actor/actress IRI, label and #films)."@en ;
+    esw:belongsTo eswr:TOPIC22fc31c7e8 ;
+    esw:description "Check who is the actor who acted in more films while working on \"Without a Trace\" (the result set must be a list of triples actor/actress IRI, label and #films)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK5aa50d964d a esw:SearchTask ;
+    rdfs:label "Identify the BGP for composer, painter, sculptor and poet"@en ;
+    esw:belongsTo eswr:TOPICd1c898149d ;
+    esw:description "Identify the BGP for composer, painter, sculptor and poet"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK5c51ac5bb2 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for archeologist."@en ;
+    esw:belongsTo eswr:TOPIC6f762f9c07 ;
+    esw:description "Identify the BGP for archeologist."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK5d9b6f29ff a esw:SearchTask ;
+    rdfs:label "Identify the BGP for long distance running"@en ;
+    esw:belongsTo eswr:TOPIC9df760015e ;
+    esw:description "Identify the BGP for long distance running"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK5dcb5031ad a esw:SearchTask ;
+    rdfs:label "Identify the BGP for film"@en ;
+    esw:belongsTo eswr:TOPICb473cd6e34 ;
+    esw:description "Identify the BGP for film"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK5f81272cee a esw:SearchTask ;
+    rdfs:label "Find how many computer scientists there are for each continent (consider their citizenship). Return the IRI and name of the continent and the number of scientists for each continent."@en ;
+    esw:belongsTo eswr:TOPICa6f1e5cbd5 ;
+    esw:description "Find how many computer scientists there are for each continent (consider their citizenship). Return the IRI and name of the continent and the number of scientists for each continent."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK64de348793 a esw:SearchTask ;
+    rdfs:label "Consider physicists born in Europe. For each european country return the number of physicists who won the Nobel Prize in Physics (the result set must be a list of triples country IRI, label and #physicists)."@en ;
+    esw:belongsTo eswr:TOPICd724cc0bc9 ;
+    esw:description "Consider physicists born in Europe. For each european country return the number of physicists who won the Nobel Prize in Physics (the result set must be a list of triples country IRI, label and #physicists)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK69a789edd7 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for film genre"@en ;
+    esw:belongsTo eswr:TOPICfe8f5f334f ;
+    esw:description "Identify the BGP for film genre"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK6a9b65294f a esw:SearchTask ;
+    rdfs:label "For each country that now uses Euro return which was the currencies used before"@en ;
+    esw:belongsTo eswr:TOPIC7e8deb7063 ;
+    esw:description "For each country that now uses Euro return which was the currencies used before"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK6ab6a1b6d6 a esw:SearchTask ;
+    rdfs:label "Return all the editions of the Summer Olympic Games (do not consider future Olympic Games) with the country where they were played (the result set must be a list of elements with edition IRI and label, and country IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC2ae1f25eb2 ;
+    esw:description "Return all the editions of the Summer Olympic Games (do not consider future Olympic Games) with the country where they were played (the result set must be a list of elements with edition IRI and label, and country IRI and label)."^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK6cbacc1438 a esw:SearchTask ;
+    rdfs:label "Find the companies (among television and film production companies) that won at least 5 Academy Awards for Best Actress for the movies they produced (the result set must be a list of triples company IRI, label and #awards)."@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Find the companies (among television and film production companies) that won at least 5 Academy Awards for Best Actress for the movies they produced (the result set must be a list of triples company IRI, label and #awards)."^^xsd:string ;
+    esw:number "9"^^xsd:string .
+
+eswr:TASK72744dc984 a esw:SearchTask ;
+    rdfs:label "Consider the countries that won the FIFA World Cup at least twice. Find the association football clubs of those countries won the UEFA Champions League (the result set must be couples of clubs IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Consider the countries that won the FIFA World Cup at least twice. Find the association football clubs of those countries won the UEFA Champions League (the result set must be couples of clubs IRI and label)."^^xsd:string ;
+    esw:number "9"^^xsd:string .
+
+eswr:TASK736091b110 a esw:SearchTask ;
+    rdfs:label "Who invented the theory of relativity? (return the IRI and the label of the inventor)."@en ;
+    esw:belongsTo eswr:TOPICd724cc0bc9 ;
+    esw:description "Who invented the theory of relativity? (return the IRI and the label of the inventor)."^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK74e9cd0793 a esw:SearchTask ;
+    rdfs:label "Find the Ancient Egypt pharaohs born between 1500 BCE and 1000 BCE who had more than 8 child (the result set must be a list of triples pharaoh IRI,label and #children)."@en ;
+    esw:belongsTo eswr:TOPIC6f762f9c07 ;
+    esw:description "Find the Ancient Egypt pharaohs born between 1500 BCE and 1000 BCE who had more than 8 child (the result set must be a list of triples pharaoh IRI,label and #children)."^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK76accca976 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Primetime Emmy Award"@en ;
+    esw:belongsTo eswr:TOPICb473cd6e34 ;
+    esw:description "Identify the BGP for Primetime Emmy Award"^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK76b855d956 a esw:SearchTask ;
+    rdfs:label "Get the number of episodes in which the cast members played a role. Who are the most present actors? (the result set must be a list of triples actor/actress IRI, label and #episodes)"@en ;
+    esw:belongsTo eswr:TOPIC22fc31c7e8 ;
+    esw:description "Get the number of episodes in which the cast members played a role. Who are the most present actors? (the result set must be a list of triples actor/actress IRI, label and #episodes)"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK76c0722809 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for basketball player."@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Identify the BGP for basketball player."^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK787d24b45a a esw:SearchTask ;
+    rdfs:label "Find all the hypertext systems born before the 1980 (return the IRI and name of the system and the inception date)."@en ;
+    esw:belongsTo eswr:TOPICa6f1e5cbd5 ;
+    esw:description "Find all the hypertext systems born before the 1980 (return the IRI and name of the system and the inception date)."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK7ad8a0fcb0 a esw:SearchTask ;
+    rdfs:label "Return the countries which currently use Euro"@en ;
+    esw:belongsTo eswr:TOPIC7e8deb7063 ;
+    esw:description "Return the countries which currently use Euro"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK7ae04efd4a a esw:SearchTask ;
+    rdfs:label "Identify the BGP for hypertext system."@en ;
+    esw:belongsTo eswr:TOPICa6f1e5cbd5 ;
+    esw:description "Identify the BGP for hypertext system."^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK7b858cde87 a esw:SearchTask ;
+    rdfs:label "Find the number of sculptures in the Louvre Museum belonging to Renaissance, Baroque, or Romanticism (return a number for each movement) (the result set must be a list of triples movement IRI, label and #sculptures)."@en ;
+    esw:belongsTo eswr:TOPICd1c898149d ;
+    esw:description "Find the number of sculptures in the Louvre Museum belonging to Renaissance, Baroque, or Romanticism (return a number for each movement) (the result set must be a list of triples movement IRI, label and #sculptures)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK7c7f661909 a esw:SearchTask ;
+    rdfs:label "Find how many company are listed in every stock exchange market (the result set must be a list of triples stock exchange IRI, label and #companies)."@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Find how many company are listed in every stock exchange market (the result set must be a list of triples stock exchange IRI, label and #companies)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK7da60c675a a esw:SearchTask ;
+    rdfs:label "Return the four Grand Slam of tennis (hint: One of these four is Wimbledon) (the result set must be a list of four couples Grand Slam IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICee8f22a76a ;
+    esw:description "Return the four Grand Slam of tennis (hint: One of these four is Wimbledon) (the result set must be a list of four couples Grand Slam IRI and label)."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK7dc87370d5 a esw:SearchTask ;
+    rdfs:label "Find how many sculptures were made in Italy during Renaissance, Baroque, and Romanticism movements. Please consider all the sculptures and all the sculpture subtypes. (the result set must be a list of triples movement IRI, label and #sculptures)."@en ;
+    esw:belongsTo eswr:TOPICd1c898149d ;
+    esw:description "Find how many sculptures were made in Italy during Renaissance, Baroque, and Romanticism movements. Please consider all the sculptures and all the sculpture subtypes. (the result set must be a list of triples movement IRI, label and #sculptures)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK80209f5c80 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for composer"@en ;
+    esw:belongsTo eswr:TOPICfe8f5f334f ;
+    esw:description "Identify the BGP for composer"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK821d37d15c a esw:SearchTask ;
+    rdfs:label "Identify the BGP for film genre"@en ;
+    esw:belongsTo eswr:TOPIC6b23f3cd94 ;
+    esw:description "Identify the BGP for film genre"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK823c9f609d a esw:SearchTask ;
+    rdfs:label "Identify the BGP for literary movement"@en ;
+    esw:belongsTo eswr:TOPIC4144639258 ;
+    esw:description "Identify the BGP for literary movement"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK8324f78991 a esw:SearchTask ;
     rdfs:label "Identify the BGP for tv series"@en ;
-    esw:belongsTo eswr:TOPICd0ca66e38f ;
+    esw:belongsTo eswr:TOPIC9700c6064e ;
     esw:description "Identify the BGP for tv series"^^xsd:string ;
     esw:number "1"^^xsd:string .
 
-eswr:TASKfffd523133 a esw:SearchTask ;
+eswr:TASK834df8fefe a esw:SearchTask ;
+    rdfs:label "Identify the BGP of the FIFA World Cup"@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Identify the BGP of the FIFA World Cup"^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK836c0c8606 a esw:SearchTask ;
+    rdfs:label "Find the BGP for deity."@en ;
+    esw:belongsTo eswr:TOPIC6f762f9c07 ;
+    esw:description "Find the BGP for deity."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK8a332cf53a a esw:SearchTask ;
+    rdfs:label "Identify the BGP for television production company"@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Identify the BGP for television production company"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK8a86e30128 a esw:SearchTask ;
+    rdfs:label "Find who worked on both \"The Little Mermaid\" and \"The Lion King\" (the result set must be a list of couples worker IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "Find who worked on both \"The Little Mermaid\" and \"The Lion King\" (the result set must be a list of couples worker IRI and label)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK8a91ce7257 a esw:SearchTask ;
+    rdfs:label "Return the countries belonging to the European Union, with a currency different from the Euro (return also their currency)."@en ;
+    esw:belongsTo eswr:TOPIC7e8deb7063 ;
+    esw:description "Return the countries belonging to the European Union, with a currency different from the Euro (return also their currency)."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK9011b23fb0 a esw:SearchTask ;
     rdfs:label "Amongst the physicists who won the Nobel Prize in Physics, find who had discovered or invented at least 3 things (the result set must be a list of triples physicist IRI, label and #discoveries )."@en ;
-    esw:belongsTo eswr:TOPIC2c4e57f7e5 ;
+    esw:belongsTo eswr:TOPICd724cc0bc9 ;
     esw:description "Amongst the physicists who won the Nobel Prize in Physics, find who had discovered or invented at least 3 things (the result set must be a list of triples physicist IRI, label and #discoveries )."^^xsd:string ;
     esw:number "6"^^xsd:string .
+
+eswr:TASK91f07548db a esw:SearchTask ;
+    rdfs:label "Identify the BGP for tennis tournament"@en ;
+    esw:belongsTo eswr:TOPICee8f22a76a ;
+    esw:description "Identify the BGP for tennis tournament"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK9306a653a7 a esw:SearchTask ;
+    rdfs:label "Consider films directed by Woody Allen or Quentin Tarantino separately. Return the film which won more Academy Awards for the two directors (the result set must be two elements - one related to Allen and the other related to Tarantino -  and for each element there must be present the director IRI with its label, the film IRI with its label and the number of Academy awards won)."@en ;
+    esw:belongsTo eswr:TOPIC6b23f3cd94 ;
+    esw:description "Consider films directed by Woody Allen or Quentin Tarantino separately. Return the film which won more Academy Awards for the two directors (the result set must be two elements - one related to Allen and the other related to Tarantino -  and for each element there must be present the director IRI with its label, the film IRI with its label and the number of Academy awards won)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK9327e81e43 a esw:SearchTask ;
+    rdfs:label "For each film and television series related to the canon of Sherlock Holmes, return the number of Primetime Emmy Awards they won (return also the objects who did not win an Award) (the result set must be a list of triples film/tv series IRI, label and #award)."@en ;
+    esw:belongsTo eswr:TOPICb473cd6e34 ;
+    esw:description "For each film and television series related to the canon of Sherlock Holmes, return the number of Primetime Emmy Awards they won (return also the objects who did not win an Award) (the result set must be a list of triples film/tv series IRI, label and #award)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASK94c6de3ca2 a esw:SearchTask ;
+    rdfs:label "Return for each european country the number of association football leagues (the result set must be a list of triples country IRI, label and #leagues)."@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Return for each european country the number of association football leagues (the result set must be a list of triples country IRI, label and #leagues)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK94e054034a a esw:SearchTask ;
+    rdfs:label "Identify the BGP for the UEFA Champions League."@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Identify the BGP for the UEFA Champions League."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK9582846f24 a esw:SearchTask ;
+    rdfs:label "Find the name of the voice actors who participated in more than 5 films by the Walt Disney Animation Studios (the result set must be a list of triples voice actors IRI, label and #films)."@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "Find the name of the voice actors who participated in more than 5 films by the Walt Disney Animation Studios (the result set must be a list of triples voice actors IRI, label and #films)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK959a38b6b5 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for literary work"@en ;
+    esw:belongsTo eswr:TOPIC4144639258 ;
+    esw:description "Identify the BGP for literary work"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK98f51af1f0 a esw:SearchTask ;
+    rdfs:label "Return the actors who are members of the cast of Without a Trace have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2 (the result set must be a list of couples actor/actress IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC22fc31c7e8 ;
+    esw:description "Return the actors who are members of the cast of Without a Trace have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2 (the result set must be a list of couples actor/actress IRI and label)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK9982ebef60 a esw:SearchTask ;
+    rdfs:label "Consider only the basketball teams which Kevin Durant and Lebron James played. Return the number of NBA finals won by these teams (the result set must be a list of triples basketball team IRI, label and #victories. Return a number for each basketball team)."@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Consider only the basketball teams which Kevin Durant and Lebron James played. Return the number of NBA finals won by these teams (the result set must be a list of triples basketball team IRI, label and #victories. Return a number for each basketball team)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK99a64a009f a esw:SearchTask ;
+    rdfs:label "Consider all the wars participated by the Roman Empire. For each war return the number of related battles and the opponent (a war is composed of one or more battles) (the result set must be a list of 5-tuples war IRI, label, opponent IRI and label, and #battles)."@en ;
+    esw:belongsTo eswr:TOPICd5a9d471da ;
+    esw:description "Consider all the wars participated by the Roman Empire. For each war return the number of related battles and the opponent (a war is composed of one or more battles) (the result set must be a list of 5-tuples war IRI, label, opponent IRI and label, and #battles)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASK9c84e0de40 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for basketball player."@en ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
+    esw:description "Identify the BGP for basketball player."^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK9df99aa9c9 a esw:SearchTask ;
+    rdfs:label "Find the countries which held more than 2 Olympic Games (both Summer and Winter Games, do not consider future Olympic Games) (the result set must be a list of triples country IRI, label and #edition held)."@en ;
+    esw:belongsTo eswr:TOPIC2ae1f25eb2 ;
+    esw:description "Find the countries which held more than 2 Olympic Games (both Summer and Winter Games, do not consider future Olympic Games) (the result set must be a list of triples country IRI, label and #edition held)."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK9ef3685e71 a esw:SearchTask ;
+    rdfs:label "Find the three different type of possible surfaces in a tennis court (the result set must be a list of three couples surface IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICee8f22a76a ;
+    esw:description "Find the three different type of possible surfaces in a tennis court (the result set must be a list of three couples surface IRI and label)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKa1c873d31d a esw:SearchTask ;
+    rdfs:label "Identify the BGP for basketball team."@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Identify the BGP for basketball team."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKa322086fb0 a esw:SearchTask ;
+    rdfs:label "Get the number of episodes in which the cast members played a role. Who are the most present actors? (the result set must be a list of triples actor/actress IRI, label and #episodes)"@en ;
+    esw:belongsTo eswr:TOPIC9700c6064e ;
+    esw:description "Get the number of episodes in which the cast members played a role. Who are the most present actors? (the result set must be a list of triples actor/actress IRI, label and #episodes)"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKa44d4bc4dd a esw:SearchTask ;
+    rdfs:label "Amongst the physicists who won the Nobel Prize in Physics, find who taught in the university of his/her city of birth (the result set must be a list of elements of the form physicist IRI, label, university IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICd724cc0bc9 ;
+    esw:description "Amongst the physicists who won the Nobel Prize in Physics, find who taught in the university of his/her city of birth (the result set must be a list of elements of the form physicist IRI, label, university IRI and label)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASKa8ba0fbab3 a esw:SearchTask ;
+    rdfs:label "Consider the decades from 1961 to 1970, and from 2001 to 2010 and compare the total number of western films released in each one (the result set must be two couples decade and #western films of that decade)."@en ;
+    esw:belongsTo eswr:TOPICfe8f5f334f ;
+    esw:description "Consider the decades from 1961 to 1970, and from 2001 to 2010 and compare the total number of western films released in each one (the result set must be two couples decade and #western films of that decade)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASKaaf22d234b a esw:SearchTask ;
+    rdfs:label "Return all french basketball teams born before 1930 (the result set must be a list of triples basketball team IRI, label and year of inception)."@en ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
+    esw:description "Return all french basketball teams born before 1930 (the result set must be a list of triples basketball team IRI, label and year of inception)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKaeefe8f13c a esw:SearchTask ;
+    rdfs:label "Return for each north american country the number of association football clubs"@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Return for each north american country the number of association football clubs"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKb1033e6766 a esw:SearchTask ;
+    rdfs:label "Consider the 2008 Summer Olympic Games. For each sport return the number of different disciplines (the result set must be a list of triples sport IRI, label and #disciplines)."@en ;
+    esw:belongsTo eswr:TOPIC2ae1f25eb2 ;
+    esw:description "Consider the 2008 Summer Olympic Games. For each sport return the number of different disciplines (the result set must be a list of triples sport IRI, label and #disciplines)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKb107a4f747 a esw:SearchTask ;
+    rdfs:label "Return all the NBA season (the result set must be a list of couples NBA season IRI, label)"@en ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
+    esw:description "Return all the NBA season (the result set must be a list of couples NBA season IRI, label)"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKb1350d599c a esw:SearchTask ;
+    rdfs:label "Who are the players who partecipated in more than 4 world's cup editions? (the result set must be a list of triples player IRI, label and #participations)."@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Who are the players who partecipated in more than 4 world's cup editions? (the result set must be a list of triples player IRI, label and #participations)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASKb4aebd4315 a esw:SearchTask ;
+    rdfs:label "Consider the currencies obtained in task 6, for each currency return the number of people using that currency (hint: consider the maximum popolation available for each country)."@en ;
+    esw:belongsTo eswr:TOPIC7e8deb7063 ;
+    esw:description "Consider the currencies obtained in task 6, for each currency return the number of people using that currency (hint: consider the maximum popolation available for each country)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASKb4f905148c a esw:SearchTask ;
+    rdfs:label "Identify the BGP for physicist"@en ;
+    esw:belongsTo eswr:TOPICd724cc0bc9 ;
+    esw:description "Identify the BGP for physicist"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKb54e5f5895 a esw:SearchTask ;
+    rdfs:label "Return the IRI and the name of all Roman emperors killed by homicide (see \"manner of death\") and, for each killed emperor, return also the IRI and name of the killer, if present in Wikidata."@en ;
+    esw:belongsTo eswr:TOPICd5a9d471da ;
+    esw:description "Return the IRI and the name of all Roman emperors killed by homicide (see \"manner of death\") and, for each killed emperor, return also the IRI and name of the killer, if present in Wikidata."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKb5fe99202f a esw:SearchTask ;
+    rdfs:label "Identify the BGP for association football league"@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Identify the BGP for association football league"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKb9a1c85875 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for films"@en ;
+    esw:belongsTo eswr:TOPIC6b23f3cd94 ;
+    esw:description "Identify the BGP for films"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKba4a3e5ff1 a esw:SearchTask ;
+    rdfs:label "Compare ancient Greece with ancient Egypt and find how many deities each one has."@en ;
+    esw:belongsTo eswr:TOPIC6f762f9c07 ;
+    esw:description "Compare ancient Greece with ancient Egypt and find how many deities each one has."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASKbb1aaa1a62 a esw:SearchTask ;
+    rdfs:label "Find the company (amongst television production company and film production company) which distributed more films (of any kind of film genre) that they did not produce (the result set must be a list of triples company IRI, label and #film)."@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Find the company (amongst television production company and film production company) which distributed more films (of any kind of film genre) that they did not produce (the result set must be a list of triples company IRI, label and #film)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASKbb4becb851 a esw:SearchTask ;
+    rdfs:label "Return the disciplines of the long distance running (e.g. marathon) (the result set must be a list of couples discipline IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC9df760015e ;
+    esw:description "Return the disciplines of the long distance running (e.g. marathon) (the result set must be a list of couples discipline IRI and label)."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKbbe086d45a a esw:SearchTask ;
+    rdfs:label "Consider the decades from 1961 to 1970, and from 2001 to 2010 and select only western films. Then, for each decade, compare the average cast members size per film (the result set must be two couples decade and average cast members size of that decade)."@en ;
+    esw:belongsTo eswr:TOPICfe8f5f334f ;
+    esw:description "Consider the decades from 1961 to 1970, and from 2001 to 2010 and select only western films. Then, for each decade, compare the average cast members size per film (the result set must be two couples decade and average cast members size of that decade)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASKbd05d27c65 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Walt Disney Animation Studios"@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "Identify the BGP for Walt Disney Animation Studios"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKbf5457dec6 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for the ballon d'Or award"@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Identify the BGP for the ballon d'Or award"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKc2c663aa4b a esw:SearchTask ;
+    rdfs:label "Consider countries who participated at the FIFA World Cup more than 10 times. Return these countries with the number of apparitions (the result set must be triples of country IRI, label and #apparitions)."@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Consider countries who participated at the FIFA World Cup more than 10 times. Return these countries with the number of apparitions (the result set must be triples of country IRI, label and #apparitions)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASKc36e22ccb9 a esw:SearchTask ;
+    rdfs:label "Find how many films are been released in the United States of America from 2010-01-01 to 2015-31-12 for each film genre available (the result set must be genre IRI, label and #films)."@en ;
+    esw:belongsTo eswr:TOPICfe8f5f334f ;
+    esw:description "Find how many films are been released in the United States of America from 2010-01-01 to 2015-31-12 for each film genre available (the result set must be genre IRI, label and #films)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKc3fa7f8f9d a esw:SearchTask ;
+    rdfs:label "For each European country find how many poets belong to Romanticism (the result set must be a list of triples country IRI, label and #poets)."@en ;
+    esw:belongsTo eswr:TOPICd1c898149d ;
+    esw:description "For each European country find how many poets belong to Romanticism (the result set must be a list of triples country IRI, label and #poets)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASKc510aa61a5 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Roman Empire and Roman Republic"@en ;
+    esw:belongsTo eswr:TOPICd5a9d471da ;
+    esw:description "Identify the BGP for Roman Empire and Roman Republic"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKc72a922fdb a esw:SearchTask ;
+    rdfs:label "Identify the BGP for films"@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "Identify the BGP for films"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKc8f8488e9c a esw:SearchTask ;
+    rdfs:label "Find all the ancient civilizations. Return the IRI and name of the civilization and also their duration (in number of years) if it is available."@en ;
+    esw:belongsTo eswr:TOPIC6f762f9c07 ;
+    esw:description "Find all the ancient civilizations. Return the IRI and name of the civilization and also their duration (in number of years) if it is available."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKc8fff0db9e a esw:SearchTask ;
+    rdfs:label "Return all italian basketball teams born before 1945 (the result set must be a list of triples basketball team IRI, label and year of inception)."@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Return all italian basketball teams born before 1945 (the result set must be a list of triples basketball team IRI, label and year of inception)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKca25cd7b64 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for basketball team."@en ;
+    esw:belongsTo eswr:TOPIC63eed18d70 ;
+    esw:description "Identify the BGP for basketball team."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKcd2cfdf2c8 a esw:SearchTask ;
+    rdfs:label "Consider the 2008 Summer Olympic Games. Find the top-10 people who won more gold medals (the result set must be a list of triples athlete IRI, label and #gold medal)."@en ;
+    esw:belongsTo eswr:TOPIC2ae1f25eb2 ;
+    esw:description "Consider the 2008 Summer Olympic Games. Find the top-10 people who won more gold medals (the result set must be a list of triples athlete IRI, label and #gold medal)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASKcd35fe2f6c a esw:SearchTask ;
+    rdfs:label "Find how many western films are been released in each european country from 2010-01-01 to 2015-31-12 (the result set must be country IRI, label and #films)."@en ;
+    esw:belongsTo eswr:TOPIC6b23f3cd94 ;
+    esw:description "Find how many western films are been released in each european country from 2010-01-01 to 2015-31-12 (the result set must be country IRI, label and #films)."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKce431f0bba a esw:SearchTask ;
+    rdfs:label "Consider Renaissance, Baroque and Romanticism. Find how many composers, painters, sculptors and poets belong to those cultural movements (the results set must be a list of triples movement, job, #people)"@en ;
+    esw:belongsTo eswr:TOPICd1c898149d ;
+    esw:description "Consider Renaissance, Baroque and Romanticism. Find how many composers, painters, sculptors and poets belong to those cultural movements (the results set must be a list of triples movement, job, #people)"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKd56f4a34f0 a esw:SearchTask ;
+    rdfs:label "Return for each european country the top level league (the result set must be a list of country IRI and label, and league IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Return for each european country the top level league (the result set must be a list of country IRI and label, and league IRI and label)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASKd63c7533b9 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for the NBA Most Valuable Player Award (MVP) (see https://en.wikipedia.org/wiki/NBA_Most_Valuable_Player_Award)"@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Identify the BGP for the NBA Most Valuable Player Award (MVP) (see https://en.wikipedia.org/wiki/NBA_Most_Valuable_Player_Award)"^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASKde65197dff a esw:SearchTask ;
+    rdfs:label "Identify the BGP for films"@en ;
+    esw:belongsTo eswr:TOPICfe8f5f334f ;
+    esw:description "Identify the BGP for films"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKdeb3252da4 a esw:SearchTask ;
+    rdfs:label "Consider only NBA (National Basketball Association) basketball teams and all basketball players who played in one of these teams at least once. Also consider the country of citizenship of the players with the related continent. Return for each continent the number of players who played in an NBA basketball teams. (the result set must be triples of continent IRI, labels and #players)"@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Consider only NBA (National Basketball Association) basketball teams and all basketball players who played in one of these teams at least once. Also consider the country of citizenship of the players with the related continent. Return for each continent the number of players who played in an NBA basketball teams. (the result set must be triples of continent IRI, labels and #players)"^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASKe03f318438 a esw:SearchTask ;
+    rdfs:label "Consider the players who won the NBA Most Valuable Player Award. Return for these players the number of NBA Most Valuable Player Award won in their career (the result set must be triples of player IRI, label and #victories)"@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Consider the players who won the NBA Most Valuable Player Award. Return for these players the number of NBA Most Valuable Player Award won in their career (the result set must be triples of player IRI, label and #victories)"^^xsd:string ;
+    esw:number "9"^^xsd:string .
+
+eswr:TASKe1b8552386 a esw:SearchTask ;
+    rdfs:label "Identify the BGP of the FIFA World Cup"@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Identify the BGP of the FIFA World Cup"^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASKe1c24f6a52 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for NBA finals"@en ;
+    esw:belongsTo eswr:TOPICe59706882e ;
+    esw:description "Identify the BGP for NBA finals"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKe5564c6467 a esw:SearchTask ;
+    rdfs:label "Consider the country for sport property of the tennis player (NO Country of citizenship). Return the countries with at least one player who was ranked 1 in the tennis ranking  (the result set must be a list of country IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICee8f22a76a ;
+    esw:description "Consider the country for sport property of the tennis player (NO Country of citizenship). Return the countries with at least one player who was ranked 1 in the tennis ranking  (the result set must be a list of country IRI and label)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASKe8a5d4266d a esw:SearchTask ;
+    rdfs:label "Return the countries which have at least two different players of their nationality (consider the country of citizenship) who won the ballon d'Or (the result set must be a list of triples country IRI, label and #different players)."@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Return the countries which have at least two different players of their nationality (consider the country of citizenship) who won the ballon d'Or (the result set must be a list of triples country IRI, label and #different players)."^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASKeaf861d47d a esw:SearchTask ;
+    rdfs:label "Identify the BGP for association football player"@en ;
+    esw:belongsTo eswr:TOPIC29687ffa47 ;
+    esw:description "Identify the BGP for association football player"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKeb6c4f4fe7 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for films"@en ;
+    esw:belongsTo eswr:TOPIC94b40f0775 ;
+    esw:description "Identify the BGP for films"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKed05346d82 a esw:SearchTask ;
+    rdfs:label "Consider the timespan from 2001-01-01 to nowadays. Find the number of films released in this timespan divided by film genre and return only those with more than 50 films released every year (the result set must be genre IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICfe8f5f334f ;
+    esw:description "Consider the timespan from 2001-01-01 to nowadays. Find the number of films released in this timespan divided by film genre and return only those with more than 50 films released every year (the result set must be genre IRI and label)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKee7e392870 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for television series"@en ;
+    esw:belongsTo eswr:TOPIC22fc31c7e8 ;
+    esw:description "Identify the BGP for television series"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKeff9ea4cfd a esw:SearchTask ;
+    rdfs:label "For each films created by the Walt Disney Animation Studios return the number of nomination for an Academy Awards. Return only films with at least one nomination. (the result set must be triples of films IRI, label and #nomination)."@en ;
+    esw:belongsTo eswr:TOPICeb054c4b73 ;
+    esw:description "For each films created by the Walt Disney Animation Studios return the number of nomination for an Academy Awards. Return only films with at least one nomination. (the result set must be triples of films IRI, label and #nomination)."^^xsd:string ;
+    esw:number "9"^^xsd:string .
+
+eswr:TASKf4241315cf a esw:SearchTask ;
+    rdfs:label "Identify the BGP for association football club"@en ;
+    esw:belongsTo eswr:TOPIC74668806bd ;
+    esw:description "Identify the BGP for association football club"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKf75ae1253d a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Ancient Egypt"@en ;
+    esw:belongsTo eswr:TOPIC6f762f9c07 ;
+    esw:description "Identify the BGP for Ancient Egypt"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKf79091dfa9 a esw:SearchTask ;
+    rdfs:label "Find all the Roman Dictators (return the IRI and the name of the dictator)"@en ;
+    esw:belongsTo eswr:TOPICd5a9d471da ;
+    esw:description "Find all the Roman Dictators (return the IRI and the name of the dictator)"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKf9c29b1fa4 a esw:SearchTask ;
+    rdfs:label "Return the italian poets who won the Nobel Prize in Literature (the result set must be poet IRI and label)."@en ;
+    esw:belongsTo eswr:TOPIC4144639258 ;
+    esw:description "Return the italian poets who won the Nobel Prize in Literature (the result set must be poet IRI and label)."^^xsd:string ;
+    esw:number "8"^^xsd:string .
+
+eswr:TASKfdd388b53c a esw:SearchTask ;
+    rdfs:label "Return the countries which won at least once all the type of Nobel Prizes with the people born there. (the result set must be a list of couples country IRI and label)."@en ;
+    esw:belongsTo eswr:TOPICd724cc0bc9 ;
+    esw:description "Return the countries which won at least once all the type of Nobel Prizes with the people born there. (the result set must be a list of couples country IRI and label)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKff0a51156f a esw:SearchTask ;
+    rdfs:label "Identify the BGP for Nobel Prize"@en ;
+    esw:belongsTo eswr:TOPICd724cc0bc9 ;
+    esw:description "Identify the BGP for Nobel Prize"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKff631c906a a esw:SearchTask ;
+    rdfs:label "Compare Without a Trace with the tv series \"Cold Case\" in terms of number of seasons, episods and cast members (the result set must be two elements -one for each tv series- of tv series IRI, label, #seasons, #episodes and #cast members)."@en ;
+    esw:belongsTo eswr:TOPIC22fc31c7e8 ;
+    esw:description "Compare Without a Trace with the tv series \"Cold Case\" in terms of number of seasons, episods and cast members (the result set must be two elements -one for each tv series- of tv series IRI, label, #seasons, #episodes and #cast members)."^^xsd:string ;
+    esw:number "5"^^xsd:string .
 
 eswr:UNION a sd:Feature ;
     rdfs:label "UNION"@en .
 
-eswr:TOPIC0f1acfd6a1 a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Tv series Without a Trace explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Tv series Without a Trace explorative search\")"^^xsd:string ;
+eswr:workflow0_0 a esw:GroundTruth .
+
+eswr:workflow0_1 a esw:GroundTruth .
+
+eswr:workflow0_2 a esw:GroundTruth .
+
+eswr:workflow0_3 a esw:GroundTruth .
+
+eswr:workflow0_4 a esw:GroundTruth .
+
+eswr:workflow0_5 a esw:GroundTruth .
+
+eswr:workflow0_6 a esw:GroundTruth .
+
+eswr:workflow1_0 a esw:GroundTruth .
+
+eswr:workflow1_1 a esw:GroundTruth .
+
+eswr:workflow1_2 a esw:GroundTruth .
+
+eswr:workflow1_3 a esw:GroundTruth .
+
+eswr:workflow1_4 a esw:GroundTruth .
+
+eswr:workflow1_5 a esw:GroundTruth .
+
+eswr:workflow1_6 a esw:GroundTruth .
+
+eswr:workflow2_0 a esw:GroundTruth .
+
+eswr:workflow2_1 a esw:GroundTruth .
+
+eswr:workflow2_2 a esw:GroundTruth .
+
+eswr:workflow2_3 a esw:GroundTruth .
+
+eswr:workflow2_4 a esw:GroundTruth .
+
+eswr:workflow2_5 a esw:GroundTruth .
+
+eswr:workflow2_6 a esw:GroundTruth .
+
+eswr:TOPIC22fc31c7e8 a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Tv series Without a Trace explorative search)"@en ;
+    esw:description "Movie Workflow Series (Tv series Without a Trace explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow2_3 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPIC2c4e57f7e5 a esw:SearchTopic ;
-    rdfs:label "History Workflow Series (\"Literary Movements and physicists explorative search\")"@en ;
-    esw:description "History Workflow Series (\"Literary Movements and physicists explorative search\")"^^xsd:string ;
+eswr:TOPIC7e8deb7063 a esw:SearchTopic ;
+    rdfs:label "History Workflow Series (Euro explorative search)"@en ;
+    esw:description "History Workflow Series (Euro explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow1_1 ;
     esw:macroTopic "History"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPIC3525ba27d5 a esw:SearchTopic ;
-    rdfs:label "History Workflow Series (\"Euro explorative search\")"@en ;
-    esw:description "History Workflow Series (\"Euro explorative search\")"^^xsd:string ;
-    esw:macroTopic "History"^^xsd:string ;
-    esw:partOf eswr:Completeness2022Track .
-
-eswr:TOPIC586eb95a33 a esw:SearchTopic ;
-    rdfs:label "History Workflow Series (\"Cultural Movements explorative search\")"@en ;
-    esw:description "History Workflow Series (\"Cultural Movements explorative search\")"^^xsd:string ;
-    esw:macroTopic "History"^^xsd:string ;
-    esw:partOf eswr:Completeness2022Track .
-
-eswr:TOPICa9f3dc045f a esw:SearchTopic ;
-    rdfs:label "History Workflow Series (\"World Wide Web\")"@en ;
-    esw:description "History Workflow Series (\"World Wide Web\")"^^xsd:string ;
-    esw:macroTopic "History"^^xsd:string ;
-    esw:partOf eswr:Completeness2022Track .
-
-eswr:TOPICd0ca66e38f a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Tv series HIMYM explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Tv series HIMYM explorative search\")"^^xsd:string ;
+eswr:TOPIC9700c6064e a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Tv series HIMYM explorative search)"@en ;
+    esw:description "Movie Workflow Series (Tv series HIMYM explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow2_4 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPICd7dd60c667 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (\"Running explorative search\")"@en ;
-    esw:description "Sport Workflow Series (\"Running explorative search\")"^^xsd:string ;
+eswr:TOPIC9df760015e a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (Running explorative search)"@en ;
+    esw:description "Sport Workflow Series (Running explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow0_2 ;
     esw:macroTopic "Sport"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPIC11ae4b81bb a esw:SearchTopic ;
-    rdfs:label "History Workflow Series (\"Literary Movements and Divine Comedy explorative search\")"@en ;
-    esw:description "History Workflow Series (\"Literary Movements and Divine Comedy explorative search\")"^^xsd:string ;
+eswr:TOPICa6f1e5cbd5 a esw:SearchTopic ;
+    rdfs:label "History Workflow Series (World Wide Web)"@en ;
+    esw:description "History Workflow Series (World Wide Web)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow1_2 ;
     esw:macroTopic "History"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPIC14fe12638d a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (Tennis explorative search\")"@en ;
-    esw:description "Sport Workflow Series (Tennis explorative search\")"^^xsd:string ;
-    esw:macroTopic "Sport"^^xsd:string ;
-    esw:partOf eswr:Completeness2022Track .
-
-eswr:TOPIC2219e9b8cb a esw:SearchTopic ;
-    rdfs:label "History Workflow Series (\"Ancient Civilization explorative search\")"@en ;
-    esw:description "History Workflow Series (\"Ancient Civilization explorative search\")"^^xsd:string ;
+eswr:TOPICd1c898149d a esw:SearchTopic ;
+    rdfs:label "History Workflow Series (Cultural Movements explorative search)"@en ;
+    esw:description "History Workflow Series (Cultural Movements explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow1_6 ;
     esw:macroTopic "History"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPIC22641ea06b a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Film Genre and directors explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Film Genre and directors explorative search\")"^^xsd:string ;
-    esw:macroTopic "Movie"^^xsd:string ;
-    esw:partOf eswr:Completeness2022Track .
-
-eswr:TOPIC2f1241da7b a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Film Genre and composer explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Film Genre and composer explorative search\")"^^xsd:string ;
-    esw:macroTopic "Movie"^^xsd:string ;
-    esw:partOf eswr:Completeness2022Track .
-
-eswr:TOPIC3e87154a46 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (\"Olympic Games explorative search\")"@en ;
-    esw:description "Sport Workflow Series (\"Olympic Games explorative search\")"^^xsd:string ;
-    esw:macroTopic "Sport"^^xsd:string ;
-    esw:partOf eswr:Completeness2022Track .
-
-eswr:TOPICb49898fb51 a esw:SearchTopic ;
-    rdfs:label "History Workflow Series (\"Ancient Rome explorative search\")"@en ;
-    esw:description "History Workflow Series (\"Ancient Rome explorative search\")"^^xsd:string ;
+eswr:TOPICd724cc0bc9 a esw:SearchTopic ;
+    rdfs:label "History Workflow Series (Literary Movements and physicists explorative search)"@en ;
+    esw:description "History Workflow Series (Literary Movements and physicists explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow1_0 ;
     esw:macroTopic "History"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPICb8e1c9f08d a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Sherlock Holmes explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Sherlock Holmes explorative search\")"^^xsd:string ;
+eswr:TOPIC2ae1f25eb2 a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (Olympic Games explorative search)"@en ;
+    esw:description "Sport Workflow Series (Olympic Games explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow0_5 ;
+    esw:macroTopic "Sport"^^xsd:string ;
+    esw:partOf eswr:Completeness2022Track .
+
+eswr:TOPIC4144639258 a esw:SearchTopic ;
+    rdfs:label "History Workflow Series (Literary Movements and Divine Comedy explorative search)"@en ;
+    esw:description "History Workflow Series (Literary Movements and Divine Comedy explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow1_3 ;
+    esw:macroTopic "History"^^xsd:string ;
+    esw:partOf eswr:Completeness2022Track .
+
+eswr:TOPIC6b23f3cd94 a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Film Genre and directors explorative search)"@en ;
+    esw:description "Movie Workflow Series (Film Genre and directors explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow2_0 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPIC0adc5bb7ab a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Production company explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Production company explorative search\")"^^xsd:string ;
+eswr:TOPIC6f762f9c07 a esw:SearchTopic ;
+    rdfs:label "History Workflow Series (Ancient Civilization explorative search)"@en ;
+    esw:description "History Workflow Series (Ancient Civilization explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow1_4 ;
+    esw:macroTopic "History"^^xsd:string ;
+    esw:partOf eswr:Completeness2022Track .
+
+eswr:TOPICb473cd6e34 a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Sherlock Holmes explorative search)"@en ;
+    esw:description "Movie Workflow Series (Sherlock Holmes explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow2_1 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPIC299fd02c27 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (\"Association Football Club explorative search\")"@en ;
-    esw:description "Sport Workflow Series (\"Association Football Club explorative search\")"^^xsd:string ;
+eswr:TOPICd5a9d471da a esw:SearchTopic ;
+    rdfs:label "History Workflow Series (Ancient Rome explorative search)"@en ;
+    esw:description "History Workflow Series (Ancient Rome explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow1_5 ;
+    esw:macroTopic "History"^^xsd:string ;
+    esw:partOf eswr:Completeness2022Track .
+
+eswr:TOPICee8f22a76a a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (Tennis explorative search)"@en ;
+    esw:description "Sport Workflow Series (Tennis explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow0_4 ;
     esw:macroTopic "Sport"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPIC7ad6911772 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (Basketball and NBA seasons explorative search\")"@en ;
-    esw:description "Sport Workflow Series (Basketball and NBA seasons explorative search\")"^^xsd:string ;
+eswr:TOPICfe8f5f334f a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Film Genre and composer explorative search)"@en ;
+    esw:description "Movie Workflow Series (Film Genre and composer explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow2_5 ;
+    esw:macroTopic "Movie"^^xsd:string ;
+    esw:partOf eswr:Completeness2022Track .
+
+eswr:TOPIC29687ffa47 a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (Association Football Players explorative search)"@en ;
+    esw:description "Sport Workflow Series (Association Football Players explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow0_6 ;
     esw:macroTopic "Sport"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPICc3f9c130e7 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (Basketball and NBA finals explorative search\")"@en ;
-    esw:description "Sport Workflow Series (Basketball and NBA finals explorative search\")"^^xsd:string ;
+eswr:TOPIC63eed18d70 a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (Basketball and NBA seasons explorative search)"@en ;
+    esw:description "Sport Workflow Series (Basketball and NBA seasons explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow0_3 ;
     esw:macroTopic "Sport"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPICdb16702acd a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (\"Association Football Players explorative search\")"@en ;
-    esw:description "Sport Workflow Series (\"Association Football Players explorative search\")"^^xsd:string ;
+eswr:TOPIC74668806bd a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (Association Football Club explorative search)"@en ;
+    esw:description "Sport Workflow Series (Association Football Club explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow0_0 ;
     esw:macroTopic "Sport"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 
-eswr:TOPICe95cccefb6 a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Disney explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Disney explorative search\")"^^xsd:string ;
+eswr:TOPIC94b40f0775 a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Production company explorative search)"@en ;
+    esw:description "Movie Workflow Series (Production company explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow2_6 ;
+    esw:macroTopic "Movie"^^xsd:string ;
+    esw:partOf eswr:Completeness2022Track .
+
+eswr:TOPICe59706882e a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (Basketball and NBA finals explorative search)"@en ;
+    esw:description "Sport Workflow Series (Basketball and NBA finals explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow0_1 ;
+    esw:macroTopic "Sport"^^xsd:string ;
+    esw:partOf eswr:Completeness2022Track .
+
+eswr:TOPICeb054c4b73 a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Disney explorative search)"@en ;
+    esw:description "Movie Workflow Series (Disney explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow2_2 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Completeness2022Track .
 

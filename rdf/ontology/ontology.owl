@@ -1,0 +1,232 @@
+@prefix : <http://w3id.org/esw/ontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix esw: <http://w3id.org/esw/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <http://w3id.org/esw/ontology> .
+
+<http://w3id.org/esw/ontology> rdf:type owl:Ontology ;
+                                owl:imports <http://lsq.aksw.org/vocab#> ,
+                                            <http://spinrdf.org/sp> ,
+                                            rdf: .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/esw/ontology#belongsTo
+esw:belongsTo rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain esw:SearchTask ;
+              rdfs:range esw:SearchTopic ;
+              rdfs:comment "Represent the connection between Search Task and Search Topic"@en ;
+              rdfs:label "belongs to"@en .
+
+
+###  http://w3id.org/esw/ontology#hasGroundTruth
+esw:hasGroundTruth rdf:type owl:ObjectProperty ;
+                   rdfs:domain esw:SearchTopic ;
+                   rdfs:range esw:GroundTruth ;
+                   rdfs:comment "Represent the connection between Search Topic and Ground Truth"@en ;
+                   rdfs:label "has ground truth"@en .
+
+
+###  http://w3id.org/esw/ontology#hasPart
+esw:hasPart rdf:type owl:ObjectProperty ;
+            rdfs:domain esw:SearchWorkflow ;
+            rdfs:range esw:SearchJob ;
+            rdfs:comment "Represent the connection between Search Workflow and Search Job"@en ;
+            rdfs:label "has part"@en .
+
+
+###  http://w3id.org/esw/ontology#implements
+esw:implements rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain esw:SearchWorkflow ;
+               rdfs:range esw:SearchTopic ;
+               rdfs:comment "Represent the connection between Search Workflow and Search Topic"@en ;
+               rdfs:label "implements"@en .
+
+
+###  http://w3id.org/esw/ontology#partOf
+esw:partOf rdf:type owl:ObjectProperty ;
+           rdfs:domain esw:SearchTopic ;
+           rdfs:range esw:Track ;
+           rdfs:comment "Represent the connection between Search Topic and Track"@en ;
+           rdfs:label "part of"@en .
+
+
+###  http://w3id.org/esw/ontology#performs
+esw:performs rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain esw:SearchJob ;
+             rdfs:range esw:SearchTask ;
+             rdfs:comment "Represent the connection between Search Job and Search Task"@en ;
+             rdfs:label "performs"@en .
+
+
+###  http://w3id.org/esw/ontology#queries
+esw:queries rdf:type owl:ObjectProperty ;
+            rdfs:domain esw:SearchJob ;
+            rdfs:range rdf:List ;
+            rdfs:comment "Represent the connection between Search Job and the list of queries"@en ;
+            rdfs:label "queries"@en .
+
+
+###  http://w3id.org/esw/ontology#wroteBy
+esw:wroteBy rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain esw:SearchWorkflow ;
+            rdfs:range esw:Worker ;
+            rdfs:comment "Represent the connection between Search Workflow and Worker"@en ;
+            rdfs:label "wrote by"@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#first
+rdf:first rdf:type owl:ObjectProperty ;
+          rdfs:range <http://spinrdf.org/spin#Query> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/esw/ontology#accuracy
+esw:accuracy rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://spinrdf.org/spin#Query> ;
+             rdfs:range xsd:float ;
+             rdfs:comment "Represents the accuracy of the query output"@en ;
+             rdfs:label "accuracy"@en .
+
+
+###  http://w3id.org/esw/ontology#description
+esw:description rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Represent a textual description of the resource"@en ;
+                rdfs:label "description"@en .
+
+
+###  http://w3id.org/esw/ontology#fscore
+esw:fscore rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:float ;
+           rdfs:comment "Represent the fscore of a query or the fscore of a Search Job"@en ;
+           rdfs:label "fscore"@en .
+
+
+###  http://w3id.org/esw/ontology#index
+esw:index rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://spinrdf.org/spin#Query> ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "Represents the index of the query in the Search Job"@en ;
+          rdfs:label "index"@en .
+
+
+###  http://w3id.org/esw/ontology#macroTopic
+esw:macroTopic rdf:type owl:DatatypeProperty ;
+               rdfs:domain esw:SearchTopic ;
+               rdfs:comment "Represent the macro topic of a Search Topic"@en ;
+               rdfs:label "macro topic"@en .
+
+
+###  http://w3id.org/esw/ontology#narrative
+esw:narrative rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://spinrdf.org/spin#Query> ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Represents the narrative (comments) of a query"@en ;
+              rdfs:label "narrative"@en .
+
+
+###  http://w3id.org/esw/ontology#number
+esw:number rdf:type owl:DatatypeProperty ;
+           rdfs:domain esw:SearchTask ;
+           rdfs:comment "Represent the number of a Search Task"@en ;
+           rdfs:label "number"@en .
+
+
+###  http://w3id.org/esw/ontology#numberOfQueries
+esw:numberOfQueries rdf:type owl:DatatypeProperty ;
+                    rdfs:domain esw:SearchJob ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Represent the number of queries in a Search Job"@en ;
+                    rdfs:label "number of queries"@en .
+
+
+###  http://w3id.org/esw/ontology#precision
+esw:precision rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://spinrdf.org/spin#Query> ;
+              rdfs:range xsd:float ;
+              rdfs:comment "Represents the precision of the query output"@en ;
+              rdfs:label "precision"@en .
+
+
+###  http://w3id.org/esw/ontology#quality
+esw:quality rdf:type owl:DatatypeProperty ;
+            rdfs:domain esw:Worker ;
+            rdfs:range xsd:float ;
+            rdfs:comment "Represent the quality of a Worker in the range [0,1]"@en ;
+            rdfs:label "quality"@en .
+
+
+###  http://w3id.org/esw/ontology#recall
+esw:recall rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://spinrdf.org/spin#Query> ;
+           rdfs:range xsd:float ;
+           rdfs:comment "Represents the recall of the query output"@en ;
+           rdfs:label "recall"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://spinrdf.org/spin#Query
+<http://spinrdf.org/spin#Query> rdf:type owl:Class .
+
+
+###  http://w3id.org/esw/ontology#GroundTruth
+esw:GroundTruth rdf:type owl:Class ;
+                rdfs:comment "Represent the class of Ground Truth"@en ;
+                rdfs:label "Ground Truth"@en .
+
+
+###  http://w3id.org/esw/ontology#SearchJob
+esw:SearchJob rdf:type owl:Class ;
+              rdfs:comment "Represent the class of Search Job"@en ;
+              rdfs:label "Search Job"@en .
+
+
+###  http://w3id.org/esw/ontology#SearchTask
+esw:SearchTask rdf:type owl:Class ;
+               rdfs:comment "Represent the class of Search Task"@en ;
+               rdfs:label "Search Task"@en .
+
+
+###  http://w3id.org/esw/ontology#SearchTopic
+esw:SearchTopic rdf:type owl:Class ;
+                rdfs:comment "Represent the class of Search Topic"@en ;
+                rdfs:label "Search Topic"@en .
+
+
+###  http://w3id.org/esw/ontology#SearchWorkflow
+esw:SearchWorkflow rdf:type owl:Class ;
+                   rdfs:comment "Represent the class of Search Workflow"@en ;
+                   rdfs:label "Search Workflow"@en .
+
+
+###  http://w3id.org/esw/ontology#Track
+esw:Track rdf:type owl:Class ;
+          rdfs:comment "Represent the class of Track"@en ;
+          rdfs:label "Track"@en .
+
+
+###  http://w3id.org/esw/ontology#Worker
+esw:Worker rdf:type owl:Class ;
+           rdfs:comment "Represent the class of Worker"@en ;
+           rdfs:label "Worker"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -68,8 +68,8 @@ def load_gt_map(file,verbose = False):
     gts = {}
     for w in lines:
         spl = w.split(",")
-        gt = spl[0]
-        topic = spl[1]
+        gt = spl[0].replace(".json","")
+        topic = spl[1][1:-1].replace("\"","")
         gts[topic] = gt
     if verbose:
         print("Successfully loaded ground truths map from",file)
@@ -113,7 +113,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
     workers = []
     workers_grade = load_workers(workers_file)
     gt_map = load_gt_map(gt_map_file)
-
+    print(gt_map)
     # create the URI for the Track
     Track = URIRef(ESWR[track_type+str(year)+"Track"])
     g.add((Track, RDF.type, ESW['Track']))
@@ -123,7 +123,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
     index=0
     executions = 0
     for filename in files:
-        topic = files[filename]['topic']
+        topic = files[filename]['topic'].replace("\"","")
         name = files[filename]['name']
         worker = files[filename]['worker']
         macro_topic = files[filename]['macro_topic']
@@ -141,7 +141,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
         g.add((Topic, ESW['macroTopic'], Literal(macro_topic, datatype=XSD.string)))
         # add the link to the Track
         g.add((Topic, ESW['partOf'], Track))
-        
+        print(topic)
         if topic in gt_map:
             # add the link to the Ground Truth
             GroundTruth = URIRef(ESWR[gt_map[topic]])
@@ -191,7 +191,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
             # add the relation hasPart to the search workflow
             h.add((Workflow, ESW['hasPart'], Job))
             # add the relation performs to the search task
-            h.add((Job, ESW['performs'], tasks[goal]))
+            h.add((Job, ESW['performs'], tasks[job]))
                 
             # add the information of the score of the job (fscore max and #queries)
             

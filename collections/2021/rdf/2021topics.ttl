@@ -79,1190 +79,1202 @@ eswr:SELECT a sd:Feature ;
 eswr:SUM a sd:Feature ;
     rdfs:label "SUM"@en .
 
-eswr:TASK0454414438 a esw:SearchTask ;
-    rdfs:label "Did the authors published a book in the same year? What is the longest period without publishing a book for the two authors?"@en ;
-    esw:belongsTo eswr:TOPICc3e24625ed ;
-    esw:description "Did the authors published a book in the same year? What is the longest period without publishing a book for the two authors?"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK0782f33371 a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve other types of an archaeological site, e.g., human settlement or theatre"@en ;
-    esw:belongsTo eswr:TOPIC52b648f5d3 ;
-    esw:description "Identify the BGP to retrieve other types of an archaeological site, e.g., human settlement or theatre"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK07ab525333 a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve E.U. countries and their politicians"@en ;
-    esw:belongsTo eswr:TOPICf56c859554 ;
-    esw:description "Identify the BGP to retrieve E.U. countries and their politicians"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK0d589bf235 a esw:SearchTask ;
-    rdfs:label "Compare number of participations and winning events across different dimensions"@en ;
-    esw:belongsTo eswr:TOPIC91f8a3dff8 ;
-    esw:description "Compare number of participations and winning events across different dimensions"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK0d6721df42 a esw:SearchTask ;
-    rdfs:label "Compare number of participants and winners of different world cups"@en ;
-    esw:belongsTo eswr:TOPICc038158e52 ;
-    esw:description "Compare number of participants and winners of different world cups"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK0f6775d3a9 a esw:SearchTask ;
-    rdfs:label "Which country has the most diverse set of civilizations or cultures across its sites?"@en ;
-    esw:belongsTo eswr:TOPIC52b648f5d3 ;
-    esw:description "Which country has the most diverse set of civilizations or cultures across its sites?"^^xsd:string ;
-    esw:number "4.3"^^xsd:string .
-
-eswr:TASK118063156c a esw:SearchTask ;
-    rdfs:label "Analyze the number of countries that were monarchies"@en ;
-    esw:belongsTo eswr:TOPICada93bfc22 ;
-    esw:description "Analyze the number of countries that were monarchies"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK128702f1ef a esw:SearchTask ;
-    rdfs:label "Identify the BGP for connecting national football teams with the participations in the finals or in the world cups"@en ;
-    esw:belongsTo eswr:TOPICc038158e52 ;
-    esw:description "Identify the BGP for connecting national football teams with the participations in the finals or in the world cups"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK1296d0eb8d a esw:SearchTask ;
-    rdfs:label "Identify the BGP to obtain the country in which a place is located"@en ;
-    esw:belongsTo eswr:TOPIC908fac5518 ;
-    esw:description "Identify the BGP to obtain the country in which a place is located"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK12d79091c2 a esw:SearchTask ;
-    rdfs:label "How many world records are held across genders"@en ;
-    esw:belongsTo eswr:TOPICa113f2ed80 ;
-    esw:description "How many world records are held across genders"^^xsd:string ;
-    esw:number "4.2"^^xsd:string .
-
-eswr:TASK14a498a78a a esw:SearchTask ;
-    rdfs:label "Are there countries that did not sign a treaty with the U.S. but signed a treaty with Germany?"@en ;
-    esw:belongsTo eswr:TOPICd5309f1daa ;
-    esw:description "Are there countries that did not sign a treaty with the U.S. but signed a treaty with Germany?"^^xsd:string ;
-    esw:number "5.3"^^xsd:string .
-
-eswr:TASK154dd943a1 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for directors"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Identify the BGP for directors"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK158081bf87 a esw:SearchTask ;
-    rdfs:label "laureates"@en ;
-    esw:belongsTo eswr:TOPIC2e068c1749 ;
-    esw:description "laureates"^^xsd:string ;
-    esw:number "nobel"^^xsd:string .
-
-eswr:TASK16e0d5de04 a esw:SearchTask ;
-    rdfs:label "Find the related subproperties"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Find the related subproperties"^^xsd:string ;
-    esw:number "7.2"^^xsd:string .
-
-eswr:TASK1754e504a4 a esw:SearchTask ;
-    rdfs:label "Which cities host the place of birth of the larger number of poets or writers across the two countries?"@en ;
-    esw:belongsTo eswr:TOPIC908fac5518 ;
-    esw:description "Which cities host the place of birth of the larger number of poets or writers across the two countries?"^^xsd:string ;
-    esw:number "4.2"^^xsd:string .
-
-eswr:TASK17ffbb3782 a esw:SearchTask ;
-    rdfs:label "Which architect is the most prolific in the U.S. and outside?"@en ;
-    esw:belongsTo eswr:TOPIC31f2e5a366 ;
-    esw:description "Which architect is the most prolific in the U.S. and outside?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK19b77724e5 a esw:SearchTask ;
-    rdfs:label "Check who was the most famous actor/actress on Halloween and Friday the 13th at the time of the release (e.g., the actor/actress who acted in more movies before and/or the actor/actress who won more academy awards)"@en ;
-    esw:belongsTo eswr:TOPIC0a47d1b8cc ;
-    esw:description "Check who was the most famous actor/actress on Halloween and Friday the 13th at the time of the release (e.g., the actor/actress who acted in more movies before and/or the actor/actress who won more academy awards)"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK1e6fb55598 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for participating or winning some competition"@en ;
-    esw:belongsTo eswr:TOPIC91f8a3dff8 ;
-    esw:description "Identify the BGP for participating or winning some competition"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK1f164aa2c9 a esw:SearchTask ;
-    rdfs:label "Investigate the workers of the two original movies and check any commonality"@en ;
-    esw:belongsTo eswr:TOPIC0a47d1b8cc ;
-    esw:description "Investigate the workers of the two original movies and check any commonality"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK1ff1c22f5c a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining which countries or people signed the treaties"@en ;
-    esw:belongsTo eswr:TOPICd5309f1daa ;
-    esw:description "Identify the BGP for obtaining which countries or people signed the treaties"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK218cb61b11 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for the company or person related to a given trademark"@en ;
-    esw:belongsTo eswr:TOPICa11de666ca ;
-    esw:description "Identify the BGP for the company or person related to a given trademark"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK2432f1e3bb a esw:SearchTask ;
-    rdfs:label "Is there a country that had at some point a woman as a president?"@en ;
-    esw:belongsTo eswr:TOPICe8efbc40f7 ;
-    esw:description "Is there a country that had at some point a woman as a president?"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK25a3c1ad9a a esw:SearchTask ;
-    rdfs:label "What are the top 3 cities in each country that you could visit? Based on what criteria?"@en ;
-    esw:belongsTo eswr:TOPIC908fac5518 ;
-    esw:description "What are the top 3 cities in each country that you could visit? Based on what criteria?"^^xsd:string ;
-    esw:number "4.3"^^xsd:string .
-
-eswr:TASK25f3d8282a a esw:SearchTask ;
-    rdfs:label "Which politicians had a spouse that was also a politician? How many in each country?"@en ;
-    esw:belongsTo eswr:TOPICf56c859554 ;
-    esw:description "Which politicians had a spouse that was also a politician? How many in each country?"^^xsd:string ;
-    esw:number "5.3"^^xsd:string .
-
-eswr:TASK286089d0d1 a esw:SearchTask ;
-    rdfs:label "Did the authors produced, acted or directed a film? If so, did they write the screenplay?"@en ;
-    esw:belongsTo eswr:TOPICc3e24625ed ;
-    esw:description "Did the authors produced, acted or directed a film? If so, did they write the screenplay?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK28ed4e12a5 a esw:SearchTask ;
-    rdfs:label "Which country has more archaeological sites? Which country has the most  human settlements?"@en ;
-    esw:belongsTo eswr:TOPIC52b648f5d3 ;
-    esw:description "Which country has more archaeological sites? Which country has the most  human settlements?"^^xsd:string ;
-    esw:number "4.1"^^xsd:string .
-
-eswr:TASK297d909ea6 a esw:SearchTask ;
-    rdfs:label "Investigate which franchise is highly regarded by the critics overall"@en ;
-    esw:belongsTo eswr:TOPIC0a47d1b8cc ;
-    esw:description "Investigate which franchise is highly regarded by the critics overall"^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK2be840f627 a esw:SearchTask ;
-    rdfs:label "How many films were derived from the books of these two authors?"@en ;
-    esw:belongsTo eswr:TOPICc3e24625ed ;
-    esw:description "How many films were derived from the books of these two authors?"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK2c0a4a4225 a esw:SearchTask ;
-    rdfs:label "How many times each country participated in a world cup?"@en ;
-    esw:belongsTo eswr:TOPICc038158e52 ;
-    esw:description "How many times each country participated in a world cup?"^^xsd:string ;
-    esw:number "4.1"^^xsd:string .
-
-eswr:TASK2c22f9e34e a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining other occupations and properties of politicians"@en ;
-    esw:belongsTo eswr:TOPICf56c859554 ;
-    esw:description "Identify the BGP for obtaining other occupations and properties of politicians"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK2cc9def80c a esw:SearchTask ;
-    rdfs:label "Are there books from Litarature Nobel Award winners which are not present in the Vatican Library? (if so, who is the author with more books not in the Vatical Library)?"@en ;
-    esw:belongsTo eswr:TOPIC2e068c1749 ;
-    esw:description "Are there books from Litarature Nobel Award winners which are not present in the Vatican Library? (if so, who is the author with more books not in the Vatical Library)?"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK2e8f188f69 a esw:SearchTask ;
-    rdfs:label "Get the number of Italian, French and Iranian winners and check which nation won more awards in the last twenty years."@en ;
-    esw:belongsTo eswr:TOPIC2e068c1749 ;
-    esw:description "Get the number of Italian, French and Iranian winners and check which nation won more awards in the last twenty years."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK3167a9d2b9 a esw:SearchTask ;
-    rdfs:label ""@en ;
-    esw:belongsTo eswr:TOPIC91f8a3dff8 ;
-    esw:description ""^^xsd:string ;
-    esw:number "c"^^xsd:string .
-
-eswr:TASK33bee40f8d a esw:SearchTask ;
-    rdfs:label "Investigate which franchise costed more"@en ;
-    esw:belongsTo eswr:TOPIC0a47d1b8cc ;
-    esw:description "Investigate which franchise costed more"^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK34d32a3488 a esw:SearchTask ;
-    rdfs:label "Return the number of seasons and episodes per season of the tv series"@en ;
-    esw:belongsTo eswr:TOPICd8fb308be8 ;
-    esw:description "Return the number of seasons and episodes per season of the tv series"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK35378a50e0 a esw:SearchTask ;
-    rdfs:label "How many poets and writers  have a place of birth, death, or burial in Germany and France?"@en ;
-    esw:belongsTo eswr:TOPIC908fac5518 ;
-    esw:description "How many poets and writers  have a place of birth, death, or burial in Germany and France?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK382be77cc9 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining C.E.O., managers, directors, or founders of German companies"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "Identify the BGP for obtaining C.E.O., managers, directors, or founders of German companies"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK3882468d8f a esw:SearchTask ;
-    rdfs:label "Who participated in the most world cups among Italy, France, Spain, and Germany?"@en ;
-    esw:belongsTo eswr:TOPICc038158e52 ;
-    esw:description "Who participated in the most world cups among Italy, France, Spain, and Germany?"^^xsd:string ;
-    esw:number "4.3"^^xsd:string .
-
-eswr:TASK399d500a1b a esw:SearchTask ;
-    rdfs:label "Are there people related to multiple german companies?"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "Are there people related to multiple german companies?"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK39dbfb8a2e a esw:SearchTask ;
-    rdfs:label "Get the name of notable employees working for The New Yorker and any other political magazine published in the US. Check if these employees have witten any book and if so get the title."@en ;
-    esw:belongsTo eswr:TOPIC3eb669b2e6 ;
-    esw:description "Get the name of notable employees working for The New Yorker and any other political magazine published in the US. Check if these employees have witten any book and if so get the title."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK3c38b0bf1c a esw:SearchTask ;
-    rdfs:label "Who is most involved in a franchise (who did something in the movies, e.g., writer, director, producer)?"@en ;
-    esw:belongsTo eswr:TOPIC0a47d1b8cc ;
-    esw:description "Who is most involved in a franchise (who did something in the movies, e.g., writer, director, producer)?"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK3e50e94311 a esw:SearchTask ;
-    rdfs:label "Return some numerical comparison between the two directors (e.g., how many workers in Tarantino's movies who also worked in Allen's films?, what is the film with the highest number of shared actors? Who is the most used actor by both the directors? etc. )"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Return some numerical comparison between the two directors (e.g., how many workers in Tarantino's movies who also worked in Allen's films?, what is the film with the highest number of shared actors? Who is the most used actor by both the directors? etc. )"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK3e8c3de651 a esw:SearchTask ;
-    rdfs:label "Who has the highest number of female winners"@en ;
-    esw:belongsTo eswr:TOPIC91f8a3dff8 ;
-    esw:description "Who has the highest number of female winners"^^xsd:string ;
-    esw:number "4.2"^^xsd:string .
-
-eswr:TASK3fa24ca70e a esw:SearchTask ;
-    rdfs:label "Identify the BGP that connect each cathedreal to other relevant entities, e.g., architectural style and city"@en ;
-    esw:belongsTo eswr:TOPICa69add8b9f ;
-    esw:description "Identify the BGP that connect each cathedreal to other relevant entities, e.g., architectural style and city"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK416c851568 a esw:SearchTask ;
-    rdfs:label "Who has films with more nominations for Academy Awards and who won more Academy Awards (with his films not only personal awards)."@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Who has films with more nominations for Academy Awards and who won more Academy Awards (with his films not only personal awards)."^^xsd:string ;
-    esw:number "7"^^xsd:string .
-
-eswr:TASK438980b0eb a esw:SearchTask ;
-    rdfs:label "Is there any relevant numerical attribute that describes these sites, e.g., number visitors?"@en ;
-    esw:belongsTo eswr:TOPIC52b648f5d3 ;
-    esw:description "Is there any relevant numerical attribute that describes these sites, e.g., number visitors?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK44209740f2 a esw:SearchTask ;
-    rdfs:label "Analyze the number of trademarks across types, companies, and countries"@en ;
-    esw:belongsTo eswr:TOPICa11de666ca ;
-    esw:description "Analyze the number of trademarks across types, companies, and countries"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK44497b1c80 a esw:SearchTask ;
-    rdfs:label "Check who is the actor who acted in more films while working on \"How I met your mother\" and who is the actor who participated in more films after the end of the tv series."@en ;
-    esw:belongsTo eswr:TOPICd8fb308be8 ;
-    esw:description "Check who is the actor who acted in more films while working on \"How I met your mother\" and who is the actor who participated in more films after the end of the tv series."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK44a9b12bcc a esw:SearchTask ;
-    rdfs:label "Which business in each country owns more businesses in other E.U. countries?"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "Which business in each country owns more businesses in other E.U. countries?"^^xsd:string ;
-    esw:number "5.3"^^xsd:string .
-
-eswr:TASK455b46d42f a esw:SearchTask ;
-    rdfs:label "Compare number of world records held across different dimensions"@en ;
-    esw:belongsTo eswr:TOPICa113f2ed80 ;
-    esw:description "Compare number of world records held across different dimensions"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK458f73231f a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve states that were monarchies and have been replaced by some other state"@en ;
-    esw:belongsTo eswr:TOPICada93bfc22 ;
-    esw:description "Identify the BGP to retrieve states that were monarchies and have been replaced by some other state"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK4962a6f69f a esw:SearchTask ;
-    rdfs:label "Identify the BGP for the types of competitions in which a world record is classified"@en ;
-    esw:belongsTo eswr:TOPICa113f2ed80 ;
-    esw:description "Identify the BGP for the types of competitions in which a world record is classified"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK496a596a30 a esw:SearchTask ;
-    rdfs:label "Identify the BGP to obtain the notable works of an architect and their location"@en ;
-    esw:belongsTo eswr:TOPIC31f2e5a366 ;
-    esw:description "Identify the BGP to obtain the notable works of an architect and their location"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK497bba7bf7 a esw:SearchTask ;
-    rdfs:label "Are there german companies with C.E.O., managers, or founders that are not German?"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "Are there german companies with C.E.O., managers, or founders that are not German?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK49b0a7c176 a esw:SearchTask ;
-    rdfs:label "What are the top-10 companies for a given attribute?"@en ;
-    esw:belongsTo eswr:TOPIC12873ae598 ;
-    esw:description "What are the top-10 companies for a given attribute?"^^xsd:string ;
-    esw:number "5.1"^^xsd:string .
-
-eswr:TASK4b08d19684 a esw:SearchTask ;
-    rdfs:label "What companies have the largest number of trademarks?"@en ;
-    esw:belongsTo eswr:TOPICa11de666ca ;
-    esw:description "What companies have the largest number of trademarks?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK4ba4fad68d a esw:SearchTask ;
-    rdfs:label "Identify the BGP for films"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Identify the BGP for films"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK4be4f30eaf a esw:SearchTask ;
-    rdfs:label "How many sub-types of monarchy exist?  How many instances of exist of each one?"@en ;
-    esw:belongsTo eswr:TOPICada93bfc22 ;
-    esw:description "How many sub-types of monarchy exist?  How many instances of exist of each one?"^^xsd:string ;
-    esw:number "5.1"^^xsd:string .
-
-eswr:TASK4d98d184f1 a esw:SearchTask ;
-    rdfs:label "How many Literature Nobel awards won authors from Italy and from the Kingdom of Italy?"@en ;
-    esw:belongsTo eswr:TOPIC09951848c9 ;
-    esw:description "How many Literature Nobel awards won authors from Italy and from the Kingdom of Italy?"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK503b168c4d a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve countries with  had at least once had a president"@en ;
-    esw:belongsTo eswr:TOPICe8efbc40f7 ;
-    esw:description "Identify the BGP to retrieve countries with  had at least once had a president"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK50517fc089 a esw:SearchTask ;
-    rdfs:label "What if you consider only politicians for which we don't have a date of death?"@en ;
-    esw:belongsTo eswr:TOPICf56c859554 ;
-    esw:description "What if you consider only politicians for which we don't have a date of death?"^^xsd:string ;
-    esw:number "5.2"^^xsd:string .
-
-eswr:TASK515877fa39 a esw:SearchTask ;
-    rdfs:label "Compare the workers amongst the films directed by the two directors"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Compare the workers amongst the films directed by the two directors"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK51dad49dda a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining the books (with publishing date and genre) published by the two authors"@en ;
-    esw:belongsTo eswr:TOPICc3e24625ed ;
-    esw:description "Identify the BGP for obtaining the books (with publishing date and genre) published by the two authors"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK53ac75b0e4 a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve gender and profession of people and industry of companies"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "Identify the BGP to retrieve gender and profession of people and industry of companies"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK54fd17cdc3 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining the team of a given  F1 driver  and also the F1 competitions in which they participated"@en ;
-    esw:belongsTo eswr:TOPIC540e87f614 ;
-    esw:description "Identify the BGP for obtaining the team of a given  F1 driver  and also the F1 competitions in which they participated"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK56304da5df a esw:SearchTask ;
-    rdfs:label "Get the number of episodes in which the cast members played a role. Who are the most present actors?"@en ;
-    esw:belongsTo eswr:TOPICd8fb308be8 ;
-    esw:description "Get the number of episodes in which the cast members played a role. Who are the most present actors?"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK582d3be315 a esw:SearchTask ;
-    rdfs:label "where is the largest cathedral, or the oldest?"@en ;
-    esw:belongsTo eswr:TOPICa69add8b9f ;
-    esw:description "where is the largest cathedral, or the oldest?"^^xsd:string ;
-    esw:number "4.2"^^xsd:string .
-
-eswr:TASK59e6403e30 a esw:SearchTask ;
-    rdfs:label "Which business in each country owns more businesses in other countries?"@en ;
-    esw:belongsTo eswr:TOPIC12873ae598 ;
-    esw:description "Which business in each country owns more businesses in other countries?"^^xsd:string ;
-    esw:number "5.3"^^xsd:string .
-
-eswr:TASK5ca3a2f2fd a esw:SearchTask ;
-    rdfs:label "Compare the ratings of the single movies and of the series. Indentify the movie with highest rating from the critics and the \"best\" series overall"@en ;
-    esw:belongsTo eswr:TOPICe9659f9e88 ;
-    esw:description "Compare the ratings of the single movies and of the series. Indentify the movie with highest rating from the critics and the \"best\" series overall"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK602664fdf3 a esw:SearchTask ;
+eswr:TASK0031f89ddd a esw:SearchTask ;
     rdfs:label "Identify the BGP for different sports or types of competitions"@en ;
-    esw:belongsTo eswr:TOPIC91f8a3dff8 ;
+    esw:belongsTo eswr:TOPIC9875ddb387 ;
     esw:description "Identify the BGP for different sports or types of competitions"^^xsd:string ;
     esw:number "2"^^xsd:string .
 
-eswr:TASK647f089ede a esw:SearchTask ;
-    rdfs:label "For which companies is defined some form of income or market capitalization or total assets? What is the min, max, and average in each category and country?"@en ;
-    esw:belongsTo eswr:TOPIC12873ae598 ;
-    esw:description "For which companies is defined some form of income or market capitalization or total assets? What is the min, max, and average in each category and country?"^^xsd:string ;
-    esw:number "5.2"^^xsd:string .
-
-eswr:TASK64bede00dc a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve all companies owned by a company"@en ;
-    esw:belongsTo eswr:TOPIC12873ae598 ;
-    esw:description "Identify the BGP to retrieve all companies owned by a company"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK67490036b5 a esw:SearchTask ;
-    rdfs:label "How many world records are held by Italian athletes"@en ;
-    esw:belongsTo eswr:TOPICa113f2ed80 ;
-    esw:description "How many world records are held by Italian athletes"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK679b34766d a esw:SearchTask ;
-    rdfs:label "Investigate the works (aka derivative works) related to the Batman and individuate the movies. Return the movies along with the year of production and the director."@en ;
-    esw:belongsTo eswr:TOPICe9659f9e88 ;
-    esw:description "Investigate the works (aka derivative works) related to the Batman and individuate the movies. Return the movies along with the year of production and the director."^^xsd:string ;
+eswr:TASK027f92f957 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for films"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Identify the BGP for films"^^xsd:string ;
     esw:number "1"^^xsd:string .
 
-eswr:TASK68efc66e7f a esw:SearchTask ;
-    rdfs:label "Which country participated in the most finals? Which country won the most finals?"@en ;
-    esw:belongsTo eswr:TOPICc038158e52 ;
-    esw:description "Which country participated in the most finals? Which country won the most finals?"^^xsd:string ;
-    esw:number "4.2"^^xsd:string .
-
-eswr:TASK6bd767b533 a esw:SearchTask ;
-    rdfs:label "Analyze the number of politicians in each country by occupation, for instance"@en ;
-    esw:belongsTo eswr:TOPICf56c859554 ;
-    esw:description "Analyze the number of politicians in each country by occupation, for instance"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK6fd36ff2e4 a esw:SearchTask ;
-    rdfs:label "How many treaties have been published per year?"@en ;
-    esw:belongsTo eswr:TOPICd5309f1daa ;
-    esw:description "How many treaties have been published per year?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK703739adc7 a esw:SearchTask ;
-    rdfs:label "Which countries have Ancient Rome sites, which other \"archaeological cultures\" are described?"@en ;
-    esw:belongsTo eswr:TOPIC52b648f5d3 ;
-    esw:description "Which countries have Ancient Rome sites, which other \"archaeological cultures\" are described?"^^xsd:string ;
-    esw:number "4.2"^^xsd:string .
-
-eswr:TASK717c873847 a esw:SearchTask ;
-    rdfs:label "Determine how many Literature nobel laureates have the following contries: Italy, Germany, France, Romania, Denmark, Iran, and China"@en ;
-    esw:belongsTo eswr:TOPIC2e068c1749 ;
-    esw:description "Determine how many Literature nobel laureates have the following contries: Italy, Germany, France, Romania, Denmark, Iran, and China"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK719ec9838b a esw:SearchTask ;
-    rdfs:label "Are there alternative queries to get the same result?"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Are there alternative queries to get the same result?"^^xsd:string ;
-    esw:number "7.4"^^xsd:string .
-
-eswr:TASK719ee732b0 a esw:SearchTask ;
-    rdfs:label "Is there some French or German Athlete participating to any olympic event with double citizenship?"@en ;
-    esw:belongsTo eswr:TOPIC91f8a3dff8 ;
-    esw:description "Is there some French or German Athlete participating to any olympic event with double citizenship?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK7373f7d1d3 a esw:SearchTask ;
-    rdfs:label "For each country , which are the teams and drivers with the highest number of F1 race participations"@en ;
-    esw:belongsTo eswr:TOPIC540e87f614 ;
-    esw:description "For each country , which are the teams and drivers with the highest number of F1 race participations"^^xsd:string ;
-    esw:number "4.3"^^xsd:string .
-
-eswr:TASK75d82d094a a esw:SearchTask ;
-    rdfs:label "In which sectors are important german business people working?"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "In which sectors are important german business people working?"^^xsd:string ;
-    esw:number "5.3"^^xsd:string .
-
-eswr:TASK7672c1ab5e a esw:SearchTask ;
-    rdfs:label "Compare HIMYM with the tv series \"The Office (US)\" in terms of number of seasons, episods and cast members."@en ;
-    esw:belongsTo eswr:TOPICd8fb308be8 ;
-    esw:description "Compare HIMYM with the tv series \"The Office (US)\" in terms of number of seasons, episods and cast members."^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK78d2e5e719 a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve all companies owned by a company located in a EU country"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "Identify the BGP to retrieve all companies owned by a company located in a EU country"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK7a15274638 a esw:SearchTask ;
-    rdfs:label "How many F1 drivers and F1 teams exist in each country?"@en ;
-    esw:belongsTo eswr:TOPIC540e87f614 ;
-    esw:description "How many F1 drivers and F1 teams exist in each country?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK7d0d5cb21e a esw:SearchTask ;
-    rdfs:label "Compare the number of followers with the top three US magazines writing mainly about sports"@en ;
-    esw:belongsTo eswr:TOPIC3eb669b2e6 ;
-    esw:description "Compare the number of followers with the top three US magazines writing mainly about sports"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK8b9908a889 a esw:SearchTask ;
-    rdfs:label "If you had to pick a city or a country to visit some cathedrals? Which one would you choose?  Based on what criteria?"@en ;
-    esw:belongsTo eswr:TOPICa69add8b9f ;
-    esw:description "If you had to pick a city or a country to visit some cathedrals? Which one would you choose?  Based on what criteria?"^^xsd:string ;
-    esw:number "4.3"^^xsd:string .
-
-eswr:TASK8bb3170cd7 a esw:SearchTask ;
-    rdfs:label "Analyze the number of countries and how many treaties they have signed and their causes"@en ;
-    esw:belongsTo eswr:TOPICd5309f1daa ;
-    esw:description "Analyze the number of countries and how many treaties they have signed and their causes"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK8bc85be390 a esw:SearchTask ;
-    rdfs:label "Companies have different 'legal forms', compare the number of companies divided in different legal forms"@en ;
-    esw:belongsTo eswr:TOPIC12873ae598 ;
-    esw:description "Companies have different 'legal forms', compare the number of companies divided in different legal forms"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASK8c8b4f75b3 a esw:SearchTask ;
-    rdfs:label "In which specific sport France has more winners than Germany"@en ;
-    esw:belongsTo eswr:TOPIC91f8a3dff8 ;
-    esw:description "In which specific sport France has more winners than Germany"^^xsd:string ;
-    esw:number "4.1"^^xsd:string .
-
-eswr:TASK8ce43dd70e a esw:SearchTask ;
-    rdfs:label "What are the top-5 countries for number of presidents? Which countries had the least?"@en ;
-    esw:belongsTo eswr:TOPICe8efbc40f7 ;
-    esw:description "What are the top-5 countries for number of presidents? Which countries had the least?"^^xsd:string ;
-    esw:number "5.1"^^xsd:string .
-
-eswr:TASK9038e0f5ed a esw:SearchTask ;
-    rdfs:label "Which is or was  the country with the highest population?"@en ;
-    esw:belongsTo eswr:TOPICada93bfc22 ;
-    esw:description "Which is or was  the country with the highest population?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK9054a86de3 a esw:SearchTask ;
-    rdfs:label "What are the top-3 legal form in E.U.?"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "What are the top-3 legal form in E.U.?"^^xsd:string ;
-    esw:number "5.1"^^xsd:string .
-
-eswr:TASK905535d86f a esw:SearchTask ;
-    rdfs:label "Identify the BGP that connect a building with its architect, type, and architectural style"@en ;
-    esw:belongsTo eswr:TOPIC31f2e5a366 ;
-    esw:description "Identify the BGP that connect a building with its architect, type, and architectural style"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK9124c80b2a a esw:SearchTask ;
-    rdfs:label "Which are the top-3 monarchies with the earliest inception and still existing?"@en ;
-    esw:belongsTo eswr:TOPICada93bfc22 ;
-    esw:description "Which are the top-3 monarchies with the earliest inception and still existing?"^^xsd:string ;
-    esw:number "5.3"^^xsd:string .
-
-eswr:TASK91a7ac3029 a esw:SearchTask ;
-    rdfs:label "In which U.S. states there are more notable buildings?"@en ;
-    esw:belongsTo eswr:TOPIC31f2e5a366 ;
-    esw:description "In which U.S. states there are more notable buildings?"^^xsd:string ;
-    esw:number "4.2"^^xsd:string .
-
-eswr:TASK91f9204503 a esw:SearchTask ;
-    rdfs:label "Return the main Batman movie series produced in the last four decades and compare them in terms of length, number of actors involved and costs."@en ;
-    esw:belongsTo eswr:TOPICe9659f9e88 ;
-    esw:description "Return the main Batman movie series produced in the last four decades and compare them in terms of length, number of actors involved and costs."^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASK9219cbbbb1 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining important attributes for people, e.g., date of birth/death, gender, profession"@en ;
-    esw:belongsTo eswr:TOPICe8efbc40f7 ;
-    esw:description "Identify the BGP for obtaining important attributes for people, e.g., date of birth/death, gender, profession"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASK930dd5e77f a esw:SearchTask ;
-    rdfs:label "Which author won more literature-related awards? Have they ever being nominated for a Nobel award?"@en ;
-    esw:belongsTo eswr:TOPICc3e24625ed ;
-    esw:description "Which author won more literature-related awards? Have they ever being nominated for a Nobel award?"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASK96556ec368 a esw:SearchTask ;
-    rdfs:label "Is the maximum budget for a Tarantino's movie higher of the max budget of an Allen's movie?"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Is the maximum budget for a Tarantino's movie higher of the max budget of an Allen's movie?"^^xsd:string ;
-    esw:number "6"^^xsd:string .
-
-eswr:TASK98f8ba261a a esw:SearchTask ;
-    rdfs:label "Which sport has the highest number of world records"@en ;
-    esw:belongsTo eswr:TOPICa113f2ed80 ;
-    esw:description "Which sport has the highest number of world records"^^xsd:string ;
-    esw:number "4.3"^^xsd:string .
-
-eswr:TASK99039230c9 a esw:SearchTask ;
-    rdfs:label "How many politicians are recorder for each E.U. country?"@en ;
-    esw:belongsTo eswr:TOPICf56c859554 ;
-    esw:description "How many politicians are recorder for each E.U. country?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASK9c722c7963 a esw:SearchTask ;
-    rdfs:label "Which U.S. state contains the largest number of building designed by U.S. architects"@en ;
-    esw:belongsTo eswr:TOPIC31f2e5a366 ;
-    esw:description "Which U.S. state contains the largest number of building designed by U.S. architects"^^xsd:string ;
-    esw:number "4.3"^^xsd:string .
-
-eswr:TASK9d8d86947f a esw:SearchTask ;
-    rdfs:label "What can we say about industry sectors in various countries?"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "What can we say about industry sectors in various countries?"^^xsd:string ;
-    esw:number "5.4"^^xsd:string .
-
-eswr:TASK9f10dcbfbc a esw:SearchTask ;
-    rdfs:label "Count how many books written by Italian authors are now released with a \"public domain\" copyright form"@en ;
-    esw:belongsTo eswr:TOPIC09951848c9 ;
-    esw:description "Count how many books written by Italian authors are now released with a \"public domain\" copyright form"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKa0166e3c00 a esw:SearchTask ;
-    rdfs:label "Which styles exists in the U.S.? Which type of building?"@en ;
-    esw:belongsTo eswr:TOPIC31f2e5a366 ;
-    esw:description "Which styles exists in the U.S.? Which type of building?"^^xsd:string ;
-    esw:number "4.1"^^xsd:string .
-
-eswr:TASKa18df08072 a esw:SearchTask ;
-    rdfs:label "In which countries took place a FIFA world cup or world cup final? With how many participants?"@en ;
-    esw:belongsTo eswr:TOPICc038158e52 ;
-    esw:description "In which countries took place a FIFA world cup or world cup final? With how many participants?"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKa1fbaa33b0 a esw:SearchTask ;
-    rdfs:label "Find the BGP for Academy Awards"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Find the BGP for Academy Awards"^^xsd:string ;
-    esw:number "7.1"^^xsd:string .
-
-eswr:TASKa387996b15 a esw:SearchTask ;
-    rdfs:label "What are the top-3 occupations for a politician in Italy and France?"@en ;
-    esw:belongsTo eswr:TOPICf56c859554 ;
-    esw:description "What are the top-3 occupations for a politician in Italy and France?"^^xsd:string ;
-    esw:number "5.1"^^xsd:string .
-
-eswr:TASKa4ba23f131 a esw:SearchTask ;
-    rdfs:label "Identify the BGP that connects a country with a national footbal team or as a location to a world cup"@en ;
-    esw:belongsTo eswr:TOPICc038158e52 ;
-    esw:description "Identify the BGP that connects a country with a national footbal team or as a location to a world cup"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKa538032006 a esw:SearchTask ;
-    rdfs:label "Is there any poet for which the birth place and the place of burial are located in the same city either in Germany or France?"@en ;
-    esw:belongsTo eswr:TOPIC908fac5518 ;
-    esw:description "Is there any poet for which the birth place and the place of burial are located in the same city either in Germany or France?"^^xsd:string ;
-    esw:number "4.1"^^xsd:string .
-
-eswr:TASKa5e921dc6b a esw:SearchTask ;
-    rdfs:label "How many people hold or are connected to trademarks? In which role?"@en ;
-    esw:belongsTo eswr:TOPICa11de666ca ;
-    esw:description "How many people hold or are connected to trademarks? In which role?"^^xsd:string ;
-    esw:number "5.2"^^xsd:string .
-
-eswr:TASKa7d866bb1c a esw:SearchTask ;
-    rdfs:label "In which specific sport France has the most world records"@en ;
-    esw:belongsTo eswr:TOPICa113f2ed80 ;
-    esw:description "In which specific sport France has the most world records"^^xsd:string ;
-    esw:number "4.1"^^xsd:string .
-
-eswr:TASKa832d499f9 a esw:SearchTask ;
-    rdfs:label "Are there companies with multiple german people having important roles?"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "Are there companies with multiple german people having important roles?"^^xsd:string ;
-    esw:number "5.2"^^xsd:string .
-
-eswr:TASKa8d022b43d a esw:SearchTask ;
-    rdfs:label "Analyze cathedrals across architectural styles in each city"@en ;
-    esw:belongsTo eswr:TOPICa69add8b9f ;
-    esw:description "Analyze cathedrals across architectural styles in each city"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKaa59a5ed0e a esw:SearchTask ;
+eswr:TASK04bae680c2 a esw:SearchTask ;
     rdfs:label "Identify the BGP for workers in a films"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
     esw:description "Identify the BGP for workers in a films"^^xsd:string ;
     esw:number "3"^^xsd:string .
 
-eswr:TASKac1ea30013 a esw:SearchTask ;
-    rdfs:label "Analyze the number of archaeological sites per type and country"@en ;
-    esw:belongsTo eswr:TOPIC52b648f5d3 ;
-    esw:description "Analyze the number of archaeological sites per type and country"^^xsd:string ;
-    esw:number "4"^^xsd:string .
+eswr:TASK04bd6491ca a esw:SearchTask ;
+    rdfs:label "Is there some company that owns companies in other countries?"@en ;
+    esw:belongsTo eswr:TOPIC3d2f057a32 ;
+    esw:description "Is there some company that owns companies in other countries?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
 
-eswr:TASKac4e3c2c8a a esw:SearchTask ;
+eswr:TASK0770dd5b06 a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve all companies owned by a company located in a EU country"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "Identify the BGP to retrieve all companies owned by a company located in a EU country"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK0b0a775c88 a esw:SearchTask ;
+    rdfs:label "Is the maximum budget for a Tarantino's movie higher of the max budget of an Allen's movie?"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Is the maximum budget for a Tarantino's movie higher of the max budget of an Allen's movie?"^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK0bc0dfcbbb a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining the team of a given  F1 driver  and also the F1 competitions in which they participated"@en ;
+    esw:belongsTo eswr:TOPIC25ae40a165 ;
+    esw:description "Identify the BGP for obtaining the team of a given  F1 driver  and also the F1 competitions in which they participated"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK0d04aac476 a esw:SearchTask ;
+    rdfs:label "Analyze the number of countries and how many treaties they have signed and their causes"@en ;
+    esw:belongsTo eswr:TOPIC621f1920a2 ;
+    esw:description "Analyze the number of countries and how many treaties they have signed and their causes"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK0da7f1029b a esw:SearchTask ;
     rdfs:label "Compare the number of books written by Italian and French writers"@en ;
-    esw:belongsTo eswr:TOPIC09951848c9 ;
+    esw:belongsTo eswr:TOPICedaaf64f26 ;
     esw:description "Compare the number of books written by Italian and French writers"^^xsd:string ;
     esw:number "2"^^xsd:string .
 
-eswr:TASKad2e1ca1f3 a esw:SearchTask ;
-    rdfs:label "Which are the treaties with most signatories? Which country signed the most treaties?"@en ;
-    esw:belongsTo eswr:TOPICd5309f1daa ;
-    esw:description "Which are the treaties with most signatories? Which country signed the most treaties?"^^xsd:string ;
-    esw:number "5.2"^^xsd:string .
-
-eswr:TASKaf63a583a7 a esw:SearchTask ;
-    rdfs:label "Check which actor/actress did more movies after the release of these two films (consider the films separately)"@en ;
-    esw:belongsTo eswr:TOPIC0a47d1b8cc ;
-    esw:description "Check which actor/actress did more movies after the release of these two films (consider the films separately)"^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKb159a3c934 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining the nobel laureates and the nominees with their relevant attributes"@en ;
-    esw:belongsTo eswr:TOPIC2e068c1749 ;
-    esw:description "Identify the BGP for obtaining the nobel laureates and the nominees with their relevant attributes"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKb1f676c9b4 a esw:SearchTask ;
-    rdfs:label "Identify the BGP that connect people to their place of birth or place, death, or burial"@en ;
-    esw:belongsTo eswr:TOPIC908fac5518 ;
-    esw:description "Identify the BGP that connect people to their place of birth or place, death, or burial"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKb390c270fd a esw:SearchTask ;
-    rdfs:label "How many people for each role and gender are there in Germany?"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "How many people for each role and gender are there in Germany?"^^xsd:string ;
-    esw:number "5.1"^^xsd:string .
-
-eswr:TASKb58fa1bf18 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining the type, legal form, and industry of a company"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "Identify the BGP for obtaining the type, legal form, and industry of a company"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKb67cd08508 a esw:SearchTask ;
-    rdfs:label "Analyze the number of business people per role, type of company, and gender"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "Analyze the number of business people per role, type of company, and gender"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKb830d97db3 a esw:SearchTask ;
-    rdfs:label "Are there two countries that signed many common treaties?"@en ;
-    esw:belongsTo eswr:TOPICd5309f1daa ;
-    esw:description "Are there two countries that signed many common treaties?"^^xsd:string ;
-    esw:number "5.1"^^xsd:string .
-
-eswr:TASKb8a5e84717 a esw:SearchTask ;
-    rdfs:label "For which companies is defined some form of income or market capitalization or total assets? What is the min, max, and average in each country for a given legal form?"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "For which companies is defined some form of income or market capitalization or total assets? What is the min, max, and average in each country for a given legal form?"^^xsd:string ;
-    esw:number "5.2"^^xsd:string .
-
-eswr:TASKbb2556fe5a a esw:SearchTask ;
-    rdfs:label "Identify the BGP to obtain relevant attributes of a cathedral, e.g., the inception or the height"@en ;
-    esw:belongsTo eswr:TOPICa69add8b9f ;
-    esw:description "Identify the BGP to obtain relevant attributes of a cathedral, e.g., the inception or the height"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKbd8c7b6c8a a esw:SearchTask ;
-    rdfs:label "Analyze the number of employees  and other relevant numeric attributes"@en ;
-    esw:belongsTo eswr:TOPIC12873ae598 ;
-    esw:description "Analyze the number of employees  and other relevant numeric attributes"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKbdd27c213c a esw:SearchTask ;
-    rdfs:label "Companies have different 'legal forms', compare the number of companies divided in different legal forms"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "Companies have different 'legal forms', compare the number of companies divided in different legal forms"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKbdf3bbf6a5 a esw:SearchTask ;
-    rdfs:label "Are there politicians with double citizenship?"@en ;
-    esw:belongsTo eswr:TOPICf56c859554 ;
-    esw:description "Are there politicians with double citizenship?"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKbef2018e66 a esw:SearchTask ;
-    rdfs:label "Analyze cities across the two countries"@en ;
-    esw:belongsTo eswr:TOPIC908fac5518 ;
-    esw:description "Analyze cities across the two countries"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKc06332bdcd a esw:SearchTask ;
-    rdfs:label "Compare the number of social media followers and get the top five magazines along with main properties as the place of publication and subfields of work"@en ;
-    esw:belongsTo eswr:TOPIC3eb669b2e6 ;
-    esw:description "Compare the number of social media followers and get the top five magazines along with main properties as the place of publication and subfields of work"^^xsd:string ;
+eswr:TASK0dea8b70a6 a esw:SearchTask ;
+    rdfs:label "Get the number of Italian, French and Iranian winners and check which nation won more awards in the last twenty years."@en ;
+    esw:belongsTo eswr:TOPIC134748adf0 ;
+    esw:description "Get the number of Italian, French and Iranian winners and check which nation won more awards in the last twenty years."^^xsd:string ;
     esw:number "2"^^xsd:string .
 
-eswr:TASKc0a5b0d20e a esw:SearchTask ;
-    rdfs:label "Which are the professions of different presidents? How many presidents had a specific profession?"@en ;
-    esw:belongsTo eswr:TOPICe8efbc40f7 ;
-    esw:description "Which are the professions of different presidents? How many presidents had a specific profession?"^^xsd:string ;
-    esw:number "5.3"^^xsd:string .
+eswr:TASK0f6ba282c7 a esw:SearchTask ;
+    rdfs:label "Which architect is the most prolific in the U.S. and outside?"@en ;
+    esw:belongsTo eswr:TOPICea24d6d109 ;
+    esw:description "Which architect is the most prolific in the U.S. and outside?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
 
-eswr:TASKc54422c0fb a esw:SearchTask ;
+eswr:TASK10bf2bf780 a esw:SearchTask ;
+    rdfs:label "Return some numerical comparison between the two directors (e.g., how many workers in Tarantino's movies who also worked in Allen's films?, what is the film with the highest number of shared actors? Who is the most used actor by both the directors? etc. )"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Return some numerical comparison between the two directors (e.g., how many workers in Tarantino's movies who also worked in Allen's films?, what is the film with the highest number of shared actors? Who is the most used actor by both the directors? etc. )"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK112327c140 a esw:SearchTask ;
+    rdfs:label "Are there german companies with C.E.O., managers, or founders that are not German?"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "Are there german companies with C.E.O., managers, or founders that are not German?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK113b84f8dd a esw:SearchTask ;
+    rdfs:label "What companies have the largest number of trademarks?"@en ;
+    esw:belongsTo eswr:TOPICc3819647eb ;
+    esw:description "What companies have the largest number of trademarks?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK116570d284 a esw:SearchTask ;
     rdfs:label "Identify the BGP for obtaining the US magazines that write about politics"@en ;
-    esw:belongsTo eswr:TOPIC3eb669b2e6 ;
+    esw:belongsTo eswr:TOPIC10a10a1675 ;
     esw:description "Identify the BGP for obtaining the US magazines that write about politics"^^xsd:string ;
     esw:number "1"^^xsd:string .
 
-eswr:TASKc7c2fcf8b3 a esw:SearchTask ;
-    rdfs:label "Compare number of F1 drivers to their nationality"@en ;
-    esw:belongsTo eswr:TOPIC540e87f614 ;
-    esw:description "Compare number of F1 drivers to their nationality"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKc7cab36615 a esw:SearchTask ;
-    rdfs:label "Analyze the number of companies per type, legal form, and industry in each state"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "Analyze the number of companies per type, legal form, and industry in each state"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKc91df7aa2f a esw:SearchTask ;
-    rdfs:label "Which styles exists in each country, and how many cathedrals for each one?"@en ;
-    esw:belongsTo eswr:TOPICa69add8b9f ;
-    esw:description "Which styles exists in each country, and how many cathedrals for each one?"^^xsd:string ;
-    esw:number "4.1"^^xsd:string .
-
-eswr:TASKc970bf82fe a esw:SearchTask ;
-    rdfs:label "Identify the BGP that connect an archaeological site to the country, the continent, and the culture"@en ;
-    esw:belongsTo eswr:TOPIC52b648f5d3 ;
-    esw:description "Identify the BGP that connect an archaeological site to the country, the continent, and the culture"^^xsd:string ;
+eswr:TASK11719a0099 a esw:SearchTask ;
+    rdfs:label "Identify the BGP that connect people to their place of birth or place, death, or burial"@en ;
+    esw:belongsTo eswr:TOPIC9072ec0845 ;
+    esw:description "Identify the BGP that connect people to their place of birth or place, death, or burial"^^xsd:string ;
     esw:number "1"^^xsd:string .
 
-eswr:TASKd0119afdd1 a esw:SearchTask ;
+eswr:TASK11e39790b2 a esw:SearchTask ;
+    rdfs:label "How many times each country participated in a world cup?"@en ;
+    esw:belongsTo eswr:TOPICe336784d56 ;
+    esw:description "How many times each country participated in a world cup?"^^xsd:string ;
+    esw:number "4.1"^^xsd:string .
+
+eswr:TASK122eae3d64 a esw:SearchTask ;
+    rdfs:label "Which country hosts the largest number of cathedrals?"@en ;
+    esw:belongsTo eswr:TOPICdb42349c69 ;
+    esw:description "Which country hosts the largest number of cathedrals?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK13ba88eb26 a esw:SearchTask ;
+    rdfs:label "How many Literature Nobel award winners have a PhD (aka Doctorate of Philosophy) (you may check if they have a doctoral advisor)?"@en ;
+    esw:belongsTo eswr:TOPIC134748adf0 ;
+    esw:description "How many Literature Nobel award winners have a PhD (aka Doctorate of Philosophy) (you may check if they have a doctoral advisor)?"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK15a6a10e8b a esw:SearchTask ;
+    rdfs:label "Compare the workers amongst the films directed by the two directors"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Compare the workers amongst the films directed by the two directors"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK16eb92610b a esw:SearchTask ;
+    rdfs:label "What are the top-3 occupations for a politician in Italy and France?"@en ;
+    esw:belongsTo eswr:TOPIC5cada94306 ;
+    esw:description "What are the top-3 occupations for a politician in Italy and France?"^^xsd:string ;
+    esw:number "5.1"^^xsd:string .
+
+eswr:TASK16eded2f98 a esw:SearchTask ;
+    rdfs:label "Compare HIMYM with the tv series \"The Office (US)\" in terms of number of seasons, episods and cast members."@en ;
+    esw:belongsTo eswr:TOPIC1aadd27945 ;
+    esw:description "Compare HIMYM with the tv series \"The Office (US)\" in terms of number of seasons, episods and cast members."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK16fde971ad a esw:SearchTask ;
+    rdfs:label "Identify the BGP that connect each cathedreal to other relevant entities, e.g., architectural style and city"@en ;
+    esw:belongsTo eswr:TOPICdb42349c69 ;
+    esw:description "Identify the BGP that connect each cathedreal to other relevant entities, e.g., architectural style and city"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK176fd0614f a esw:SearchTask ;
+    rdfs:label "Are there two countries that signed many common treaties?"@en ;
+    esw:belongsTo eswr:TOPIC621f1920a2 ;
+    esw:description "Are there two countries that signed many common treaties?"^^xsd:string ;
+    esw:number "5.1"^^xsd:string .
+
+eswr:TASK17dbb0f51e a esw:SearchTask ;
+    rdfs:label "Compare number of world records held across different dimensions"@en ;
+    esw:belongsTo eswr:TOPIC5cf855d633 ;
+    esw:description "Compare number of world records held across different dimensions"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK18a56410a0 a esw:SearchTask ;
+    rdfs:label "For which companies is defined some form of income or market capitalization or total assets? What is the min, max, and average in each country for a given legal form?"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "For which companies is defined some form of income or market capitalization or total assets? What is the min, max, and average in each country for a given legal form?"^^xsd:string ;
+    esw:number "5.2"^^xsd:string .
+
+eswr:TASK1b1d354956 a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve types or categories for a given trademark"@en ;
+    esw:belongsTo eswr:TOPICc3819647eb ;
+    esw:description "Identify the BGP to retrieve types or categories for a given trademark"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK1d3f74bfd8 a esw:SearchTask ;
+    rdfs:label "What can we say about industry sectors in various countries?"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "What can we say about industry sectors in various countries?"^^xsd:string ;
+    esw:number "5.4"^^xsd:string .
+
+eswr:TASK1d8606a306 a esw:SearchTask ;
+    rdfs:label "Which company has the largest presence in E.U.?"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "Which company has the largest presence in E.U.?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK1d8af5d539 a esw:SearchTask ;
+    rdfs:label "Determine how many Literature nobel laureates have the following contries: Italy, Germany, France, Romania, Denmark, Iran, and China"@en ;
+    esw:belongsTo eswr:TOPIC134748adf0 ;
+    esw:description "Determine how many Literature nobel laureates have the following contries: Italy, Germany, France, Romania, Denmark, Iran, and China"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK1db127db30 a esw:SearchTask ;
+    rdfs:label "How many treaties have been published per year?"@en ;
+    esw:belongsTo eswr:TOPIC621f1920a2 ;
+    esw:description "How many treaties have been published per year?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK1dbb94b248 a esw:SearchTask ;
+    rdfs:label "Identify the BGP that connect a building with its architect, type, and architectural style"@en ;
+    esw:belongsTo eswr:TOPICea24d6d109 ;
+    esw:description "Identify the BGP that connect a building with its architect, type, and architectural style"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK21063f8d70 a esw:SearchTask ;
+    rdfs:label "Analyze the number of countries that were monarchies"@en ;
+    esw:belongsTo eswr:TOPIC6113250ba0 ;
+    esw:description "Analyze the number of countries that were monarchies"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK2106550191 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining the Italian and French writers who published a book in the last 50 years"@en ;
+    esw:belongsTo eswr:TOPICedaaf64f26 ;
+    esw:description "Identify the BGP for obtaining the Italian and French writers who published a book in the last 50 years"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK218d156dde a esw:SearchTask ;
+    rdfs:label ""@en ;
+    esw:belongsTo eswr:TOPIC9875ddb387 ;
+    esw:description ""^^xsd:string ;
+    esw:number "c"^^xsd:string .
+
+eswr:TASK24db48d693 a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve all companies owned by a company"@en ;
+    esw:belongsTo eswr:TOPIC3d2f057a32 ;
+    esw:description "Identify the BGP to retrieve all companies owned by a company"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK27289d57ec a esw:SearchTask ;
+    rdfs:label "Are there books from Litarature Nobel Award winners which are not present in the Vatican Library? (if so, who is the author with more books not in the Vatical Library)?"@en ;
+    esw:belongsTo eswr:TOPICedaaf64f26 ;
+    esw:description "Are there books from Litarature Nobel Award winners which are not present in the Vatican Library? (if so, who is the author with more books not in the Vatical Library)?"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK293606bc3a a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve E.U. countries and their politicians"@en ;
+    esw:belongsTo eswr:TOPIC5cada94306 ;
+    esw:description "Identify the BGP to retrieve E.U. countries and their politicians"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK29a278fd2e a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining the books (with publishing date and genre) published by the two authors"@en ;
+    esw:belongsTo eswr:TOPIC1883d3c41a ;
+    esw:description "Identify the BGP for obtaining the books (with publishing date and genre) published by the two authors"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK2a78ac2cfa a esw:SearchTask ;
+    rdfs:label "Analyze the number of employees  and other relevant numeric attributes"@en ;
+    esw:belongsTo eswr:TOPIC3d2f057a32 ;
+    esw:description "Analyze the number of employees  and other relevant numeric attributes"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK2aca914efd a esw:SearchTask ;
+    rdfs:label "Are there german business people related to non german companies? How many?"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "Are there german business people related to non german companies? How many?"^^xsd:string ;
+    esw:number "5.4"^^xsd:string .
+
+eswr:TASK2ae59e8645 a esw:SearchTask ;
+    rdfs:label "Investigate which franchise costed more"@en ;
+    esw:belongsTo eswr:TOPICddde7987fe ;
+    esw:description "Investigate which franchise costed more"^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK2b698b3846 a esw:SearchTask ;
+    rdfs:label "Who has the highest number of female winners"@en ;
+    esw:belongsTo eswr:TOPIC9875ddb387 ;
+    esw:description "Who has the highest number of female winners"^^xsd:string ;
+    esw:number "4.2"^^xsd:string .
+
+eswr:TASK2c74495e8a a esw:SearchTask ;
+    rdfs:label "Which U.S. state contains the largest number of building designed by U.S. architects"@en ;
+    esw:belongsTo eswr:TOPICea24d6d109 ;
+    esw:description "Which U.S. state contains the largest number of building designed by U.S. architects"^^xsd:string ;
+    esw:number "4.3"^^xsd:string .
+
+eswr:TASK2d5a9495d6 a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve states that were monarchies and have been replaced by some other state"@en ;
+    esw:belongsTo eswr:TOPIC6113250ba0 ;
+    esw:description "Identify the BGP to retrieve states that were monarchies and have been replaced by some other state"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK2f961b51f0 a esw:SearchTask ;
+    rdfs:label "Analyze the number of business people per role, type of company, and gender"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "Analyze the number of business people per role, type of company, and gender"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK3459f8d2fa a esw:SearchTask ;
+    rdfs:label "How many poets and writers  have a place of birth, death, or burial in Germany and France?"@en ;
+    esw:belongsTo eswr:TOPIC9072ec0845 ;
+    esw:description "How many poets and writers  have a place of birth, death, or burial in Germany and France?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK362291c658 a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve gender and profession of people and industry of companies"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "Identify the BGP to retrieve gender and profession of people and industry of companies"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK3a0801ef39 a esw:SearchTask ;
+    rdfs:label "Investigate the workers of the two original movies and check any commonality"@en ;
+    esw:belongsTo eswr:TOPICddde7987fe ;
+    esw:description "Investigate the workers of the two original movies and check any commonality"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK3a3b52dcbb a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve treaties that took place in E.U. countries"@en ;
+    esw:belongsTo eswr:TOPIC621f1920a2 ;
+    esw:description "Identify the BGP to retrieve treaties that took place in E.U. countries"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK3ae34d1a5d a esw:SearchTask ;
+    rdfs:label "Did the authors produced, acted or directed a film? If so, did they write the screenplay?"@en ;
+    esw:belongsTo eswr:TOPIC1883d3c41a ;
+    esw:description "Did the authors produced, acted or directed a film? If so, did they write the screenplay?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK3bfaae0885 a esw:SearchTask ;
+    rdfs:label "For how many presidents we know a date of death in each country?"@en ;
+    esw:belongsTo eswr:TOPICae76c29fdf ;
+    esw:description "For how many presidents we know a date of death in each country?"^^xsd:string ;
+    esw:number "5.2"^^xsd:string .
+
+eswr:TASK3c3210a496 a esw:SearchTask ;
+    rdfs:label "Compare the number of followers with the top three US magazines writing mainly about sports"@en ;
+    esw:belongsTo eswr:TOPIC10a10a1675 ;
+    esw:description "Compare the number of followers with the top three US magazines writing mainly about sports"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK3df5defead a esw:SearchTask ;
+    rdfs:label "Identify the BGP that connects a country with a national footbal team or as a location to a world cup"@en ;
+    esw:belongsTo eswr:TOPICe336784d56 ;
+    esw:description "Identify the BGP that connects a country with a national footbal team or as a location to a world cup"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK3ff05000aa a esw:SearchTask ;
+    rdfs:label "Compare the ratings of the single movies and of the series. Indentify the movie with highest rating from the critics and the \"best\" series overall"@en ;
+    esw:belongsTo eswr:TOPIC92d217266f ;
+    esw:description "Compare the ratings of the single movies and of the series. Indentify the movie with highest rating from the critics and the \"best\" series overall"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK41e53ee14a a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining statistical information of monarchies, e.g., poluation or inception date"@en ;
+    esw:belongsTo eswr:TOPIC6113250ba0 ;
+    esw:description "Identify the BGP for obtaining statistical information of monarchies, e.g., poluation or inception date"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK46204c0e56 a esw:SearchTask ;
+    rdfs:label "Get the name of notable employees working for The New Yorker and any other political magazine published in the US. Check if these employees have witten any book and if so get the title."@en ;
+    esw:belongsTo eswr:TOPIC10a10a1675 ;
+    esw:description "Get the name of notable employees working for The New Yorker and any other political magazine published in the US. Check if these employees have witten any book and if so get the title."^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK4739c9b2e2 a esw:SearchTask ;
+    rdfs:label "Are there people related to multiple german companies?"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "Are there people related to multiple german companies?"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK481acd9c34 a esw:SearchTask ;
+    rdfs:label "Find how they are related to the directors"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Find how they are related to the directors"^^xsd:string ;
+    esw:number "7.3"^^xsd:string .
+
+eswr:TASK4caaa95d4e a esw:SearchTask ;
+    rdfs:label "Who has films with more nominations for Academy Awards and who won more Academy Awards (with his films not only personal awards)."@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Who has films with more nominations for Academy Awards and who won more Academy Awards (with his films not only personal awards)."^^xsd:string ;
+    esw:number "7"^^xsd:string .
+
+eswr:TASK5371e3006e a esw:SearchTask ;
     rdfs:label "When was the first president of each country born? How many presidents each country had?"@en,
         "When was the first president of each country born? How many presidents each country had?   **Primo punto forse no... Secondo OK**"@en ;
-    esw:belongsTo eswr:TOPICe8efbc40f7 ;
+    esw:belongsTo eswr:TOPICae76c29fdf ;
     esw:description "When was the first president of each country born? How many presidents each country had?"^^xsd:string,
         "When was the first president of each country born? How many presidents each country had?   **Primo punto forse no... Secondo OK**"^^xsd:string ;
     esw:number "3"^^xsd:string .
 
-eswr:TASKd4f13e1c0c a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve treaties that took place in E.U. countries"@en ;
-    esw:belongsTo eswr:TOPICd5309f1daa ;
-    esw:description "Identify the BGP to retrieve treaties that took place in E.U. countries"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKd60ca31dc7 a esw:SearchTask ;
-    rdfs:label "Return how many actors who are members of the cast of the \"Dark Knight Trilogy\" by Christopher Nolan have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2"@en ;
-    esw:belongsTo eswr:TOPICe9659f9e88 ;
-    esw:description "Return how many actors who are members of the cast of the \"Dark Knight Trilogy\" by Christopher Nolan have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKd866041f91 a esw:SearchTask ;
-    rdfs:label "Are there books from Litarature Nobel Award winners which are not present in the Vatican Library? (if so, who is the author with more books not in the Vatical Library)?"@en ;
-    esw:belongsTo eswr:TOPIC09951848c9 ;
-    esw:description "Are there books from Litarature Nobel Award winners which are not present in the Vatican Library? (if so, who is the author with more books not in the Vatical Library)?"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKdba15b7d5d a esw:SearchTask ;
-    rdfs:label "Analyze the location of the buildings designed by the american architects"@en ;
-    esw:belongsTo eswr:TOPIC31f2e5a366 ;
-    esw:description "Analyze the location of the buildings designed by the american architects"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKdfe47b080c a esw:SearchTask ;
-    rdfs:label "If you are interested in visiting some sites, which country would you pick? Based on what criteria?"@en ;
-    esw:belongsTo eswr:TOPIC52b648f5d3 ;
-    esw:description "If you are interested in visiting some sites, which country would you pick? Based on what criteria?"^^xsd:string ;
-    esw:number "4.4"^^xsd:string .
-
-eswr:TASKe0811d52ac a esw:SearchTask ;
-    rdfs:label "Return how many of the actors who are members of the cast of the tv series have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2"@en ;
-    esw:belongsTo eswr:TOPICd8fb308be8 ;
-    esw:description "Return how many of the actors who are members of the cast of the tv series have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKe11a1c5496 a esw:SearchTask ;
-    rdfs:label "How many Literature Nobel award winners have a PhD (aka Doctorate of Philosophy) (you may check if they have a doctoral advisor)?"@en ;
-    esw:belongsTo eswr:TOPIC2e068c1749 ;
-    esw:description "How many Literature Nobel award winners have a PhD (aka Doctorate of Philosophy) (you may check if they have a doctoral advisor)?"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKe4e4ef45f2 a esw:SearchTask ;
-    rdfs:label "What are the types of trademarks, how many trademarks exist for each type?"@en ;
-    esw:belongsTo eswr:TOPICa11de666ca ;
-    esw:description "What are the types of trademarks, how many trademarks exist for each type?"^^xsd:string ;
-    esw:number "4"^^xsd:string .
-
-eswr:TASKe5fb36a8e9 a esw:SearchTask ;
-    rdfs:label "Which team employed the larger number of drivers?"@en ;
-    esw:belongsTo eswr:TOPIC540e87f614 ;
-    esw:description "Which team employed the larger number of drivers?"^^xsd:string ;
-    esw:number "4.2"^^xsd:string .
-
-eswr:TASKe70b36c738 a esw:SearchTask ;
-    rdfs:label "Identify the BGP to retrieve types or categories for a given trademark"@en ;
-    esw:belongsTo eswr:TOPICa11de666ca ;
-    esw:description "Identify the BGP to retrieve types or categories for a given trademark"^^xsd:string ;
-    esw:number "2"^^xsd:string .
-
-eswr:TASKe7467e9fc7 a esw:SearchTask ;
-    rdfs:label "Analyze the number of presidents per country through time"@en ;
-    esw:belongsTo eswr:TOPICe8efbc40f7 ;
-    esw:description "Analyze the number of presidents per country through time"^^xsd:string ;
-    esw:number "5"^^xsd:string .
-
-eswr:TASKe7bda38bc6 a esw:SearchTask ;
-    rdfs:label "In which sector there is the highest number of trademarks?"@en ;
-    esw:belongsTo eswr:TOPICa11de666ca ;
-    esw:description "In which sector there is the highest number of trademarks?"^^xsd:string ;
-    esw:number "5.3"^^xsd:string .
-
-eswr:TASKe9c6ae007b a esw:SearchTask ;
-    rdfs:label "Investigate what are the workers (writers, actors, etc.) who had a role in more Batman movies so far."@en ;
-    esw:belongsTo eswr:TOPICe9659f9e88 ;
-    esw:description "Investigate what are the workers (writers, actors, etc.) who had a role in more Batman movies so far."^^xsd:string ;
-    esw:number "3"^^xsd:string .
-
-eswr:TASKea17c7ec67 a esw:SearchTask ;
+eswr:TASK54af6a7342 a esw:SearchTask ;
     rdfs:label "Get all the movies of the two franchises (return year and director)"@en ;
-    esw:belongsTo eswr:TOPIC0a47d1b8cc ;
+    esw:belongsTo eswr:TOPICddde7987fe ;
     esw:description "Get all the movies of the two franchises (return year and director)"^^xsd:string ;
     esw:number "4"^^xsd:string .
 
-eswr:TASKed2713484b a esw:SearchTask ;
-    rdfs:label "For how many treaties we know causes or effects?"@en ;
-    esw:belongsTo eswr:TOPICd5309f1daa ;
-    esw:description "For how many treaties we know causes or effects?"^^xsd:string ;
+eswr:TASK5511bd0aee a esw:SearchTask ;
+    rdfs:label "Compare number of F1 drivers to their nationality"@en ;
+    esw:belongsTo eswr:TOPIC25ae40a165 ;
+    esw:description "Compare number of F1 drivers to their nationality"^^xsd:string ;
     esw:number "4"^^xsd:string .
 
-eswr:TASKed2875d84b a esw:SearchTask ;
-    rdfs:label "Are there german business people related to non german companies? How many?"@en ;
-    esw:belongsTo eswr:TOPICb863fbf5d4 ;
-    esw:description "Are there german business people related to non german companies? How many?"^^xsd:string ;
-    esw:number "5.4"^^xsd:string .
+eswr:TASK587dbac539 a esw:SearchTask ;
+    rdfs:label "In which specific sport France has more winners than Germany"@en ;
+    esw:belongsTo eswr:TOPIC9875ddb387 ;
+    esw:description "In which specific sport France has more winners than Germany"^^xsd:string ;
+    esw:number "4.1"^^xsd:string .
 
-eswr:TASKed2c2d6024 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining statistical information of monarchies, e.g., poluation or inception date"@en ;
-    esw:belongsTo eswr:TOPICada93bfc22 ;
-    esw:description "Identify the BGP for obtaining statistical information of monarchies, e.g., poluation or inception date"^^xsd:string ;
-    esw:number "2"^^xsd:string .
+eswr:TASK59fb28f718 a esw:SearchTask ;
+    rdfs:label "Which country has more archaeological sites? Which country has the most  human settlements?"@en ;
+    esw:belongsTo eswr:TOPIC181495838f ;
+    esw:description "Which country has more archaeological sites? Which country has the most  human settlements?"^^xsd:string ;
+    esw:number "4.1"^^xsd:string .
 
-eswr:TASKefc55d2878 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining the Italian and French writers who published a book in the last 50 years"@en ;
-    esw:belongsTo eswr:TOPIC09951848c9 ;
-    esw:description "Identify the BGP for obtaining the Italian and French writers who published a book in the last 50 years"^^xsd:string ;
-    esw:number "1"^^xsd:string .
-
-eswr:TASKf0e1b85730 a esw:SearchTask ;
-    rdfs:label "Which company has the largest presence in E.U.?"@en ;
-    esw:belongsTo eswr:TOPIC1ef58bebef ;
-    esw:description "Which company has the largest presence in E.U.?"^^xsd:string ;
+eswr:TASK5d2908e7ea a esw:SearchTask ;
+    rdfs:label "Is there any relevant numerical attribute that describes these sites, e.g., number visitors?"@en ;
+    esw:belongsTo eswr:TOPIC181495838f ;
+    esw:description "Is there any relevant numerical attribute that describes these sites, e.g., number visitors?"^^xsd:string ;
     esw:number "3"^^xsd:string .
 
-eswr:TASKf23c25c237 a esw:SearchTask ;
-    rdfs:label "Is there some company that owns companies in other countries?"@en ;
-    esw:belongsTo eswr:TOPIC12873ae598 ;
-    esw:description "Is there some company that owns companies in other countries?"^^xsd:string ;
+eswr:TASK5d6cb03de0 a esw:SearchTask ;
+    rdfs:label "Investigate which franchise is highly regarded by the critics overall"@en ;
+    esw:belongsTo eswr:TOPICddde7987fe ;
+    esw:description "Investigate which franchise is highly regarded by the critics overall"^^xsd:string ;
+    esw:number "6"^^xsd:string .
+
+eswr:TASK5daee1a8c4 a esw:SearchTask ;
+    rdfs:label "How many world records are held by Italian athletes"@en ;
+    esw:belongsTo eswr:TOPIC5cf855d633 ;
+    esw:description "How many world records are held by Italian athletes"^^xsd:string ;
     esw:number "3"^^xsd:string .
 
-eswr:TASKf57160acfe a esw:SearchTask ;
-    rdfs:label "For each country , which are the atheletes with the highest number of participations"@en ;
-    esw:belongsTo eswr:TOPIC91f8a3dff8 ;
-    esw:description "For each country , which are the atheletes with the highest number of participations"^^xsd:string ;
-    esw:number "4.3"^^xsd:string .
+eswr:TASK5f5367bc64 a esw:SearchTask ;
+    rdfs:label "How many Literature Nobel awards won authors from Italy and from the Kingdom of Italy?"@en ;
+    esw:belongsTo eswr:TOPICedaaf64f26 ;
+    esw:description "How many Literature Nobel awards won authors from Italy and from the Kingdom of Italy?"^^xsd:string ;
+    esw:number "4"^^xsd:string .
 
-eswr:TASKf60b26f8aa a esw:SearchTask ;
-    rdfs:label "Identify the BGP that connects a F1 team to a parent company"@en ;
-    esw:belongsTo eswr:TOPIC540e87f614 ;
-    esw:description "Identify the BGP that connects a F1 team to a parent company"^^xsd:string ;
-    esw:number "2"^^xsd:string .
+eswr:TASK5fb0b8bd43 a esw:SearchTask ;
+    rdfs:label "Which styles exists in the U.S.? Which type of building?"@en ;
+    esw:belongsTo eswr:TOPICea24d6d109 ;
+    esw:description "Which styles exists in the U.S.? Which type of building?"^^xsd:string ;
+    esw:number "4.1"^^xsd:string .
 
-eswr:TASKf777f8c220 a esw:SearchTask ;
-    rdfs:label "Identify the BGP for detaining a world record"@en ;
-    esw:belongsTo eswr:TOPICa113f2ed80 ;
-    esw:description "Identify the BGP for detaining a world record"^^xsd:string ;
+eswr:TASK6113212a49 a esw:SearchTask ;
+    rdfs:label "In which countries took place a FIFA world cup or world cup final? With how many participants?"@en ;
+    esw:belongsTo eswr:TOPICe336784d56 ;
+    esw:description "In which countries took place a FIFA world cup or world cup final? With how many participants?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK62abf68272 a esw:SearchTask ;
+    rdfs:label "laureates"@en ;
+    esw:belongsTo eswr:TOPIC134748adf0 ;
+    esw:description "laureates"^^xsd:string ;
+    esw:number "nobel"^^xsd:string .
+
+eswr:TASK6afdcaa0b3 a esw:SearchTask ;
+    rdfs:label "Return the number of seasons and episodes per season of the tv series"@en ;
+    esw:belongsTo eswr:TOPIC1aadd27945 ;
+    esw:description "Return the number of seasons and episodes per season of the tv series"^^xsd:string ;
     esw:number "1"^^xsd:string .
 
-eswr:TASKf854d8bba4 a esw:SearchTask ;
-    rdfs:label "How many U.S. companies hold trademarks? In which sectors?"@en ;
-    esw:belongsTo eswr:TOPICa11de666ca ;
-    esw:description "How many U.S. companies hold trademarks? In which sectors?"^^xsd:string ;
-    esw:number "5.1"^^xsd:string .
+eswr:TASK6b3bc998ac a esw:SearchTask ;
+    rdfs:label "In which sectors are important german business people working?"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "In which sectors are important german business people working?"^^xsd:string ;
+    esw:number "5.3"^^xsd:string .
 
-eswr:TASKf869786dc1 a esw:SearchTask ;
-    rdfs:label "Is any employee of The New Yorker ever been nominated for a prize or award?"@en ;
-    esw:belongsTo eswr:TOPIC3eb669b2e6 ;
-    esw:description "Is any employee of The New Yorker ever been nominated for a prize or award?"^^xsd:string ;
+eswr:TASK6c5e21fcc8 a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve countries with  had at least once had a president"@en ;
+    esw:belongsTo eswr:TOPICae76c29fdf ;
+    esw:description "Identify the BGP to retrieve countries with  had at least once had a president"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK6d155045f0 a esw:SearchTask ;
+    rdfs:label "Analyze the number of politicians in each country by occupation, for instance"@en ;
+    esw:belongsTo eswr:TOPIC5cada94306 ;
+    esw:description "Analyze the number of politicians in each country by occupation, for instance"^^xsd:string ;
     esw:number "5"^^xsd:string .
 
-eswr:TASKf94b44d1d7 a esw:SearchTask ;
-    rdfs:label "For how many presidents we know a date of death in each country?"@en ;
-    esw:belongsTo eswr:TOPICe8efbc40f7 ;
-    esw:description "For how many presidents we know a date of death in each country?"^^xsd:string ;
-    esw:number "5.2"^^xsd:string .
+eswr:TASK6e32da4ef9 a esw:SearchTask ;
+    rdfs:label "Which team employed the larger number of drivers?"@en ;
+    esw:belongsTo eswr:TOPIC25ae40a165 ;
+    esw:description "Which team employed the larger number of drivers?"^^xsd:string ;
+    esw:number "4.2"^^xsd:string .
 
-eswr:TASKfb1cf26e7b a esw:SearchTask ;
+eswr:TASK6e34cb03a6 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for connecting national football teams with the participations in the finals or in the world cups"@en ;
+    esw:belongsTo eswr:TOPICe336784d56 ;
+    esw:description "Identify the BGP for connecting national football teams with the participations in the finals or in the world cups"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK70a5425e0c a esw:SearchTask ;
     rdfs:label "How many countries are or have been monarchies across continents?"@en ;
-    esw:belongsTo eswr:TOPICada93bfc22 ;
+    esw:belongsTo eswr:TOPIC6113250ba0 ;
     esw:description "How many countries are or have been monarchies across continents?"^^xsd:string ;
     esw:number "4"^^xsd:string .
 
-eswr:TASKfb57d5021c a esw:SearchTask ;
-    rdfs:label "Identify the BGP for obtaining number of employees of a company and other relevant numerical attributes"@en ;
-    esw:belongsTo eswr:TOPIC12873ae598 ;
-    esw:description "Identify the BGP for obtaining number of employees of a company and other relevant numerical attributes"^^xsd:string ;
+eswr:TASK72697bde6a a esw:SearchTask ;
+    rdfs:label "Identify the BGP for the company or person related to a given trademark"@en ;
+    esw:belongsTo eswr:TOPICc3819647eb ;
+    esw:description "Identify the BGP for the company or person related to a given trademark"^^xsd:string ;
     esw:number "1"^^xsd:string .
 
-eswr:TASKfd27091930 a esw:SearchTask ;
-    rdfs:label "Which country hosts the largest number of cathedrals?"@en ;
-    esw:belongsTo eswr:TOPICa69add8b9f ;
-    esw:description "Which country hosts the largest number of cathedrals?"^^xsd:string ;
+eswr:TASK731a05b396 a esw:SearchTask ;
+    rdfs:label "Analyze cathedrals across architectural styles in each city"@en ;
+    esw:belongsTo eswr:TOPICdb42349c69 ;
+    esw:description "Analyze cathedrals across architectural styles in each city"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK76baaafef1 a esw:SearchTask ;
+    rdfs:label "Check who is the actor who acted in more films while working on \"How I met your mother\" and who is the actor who participated in more films after the end of the tv series."@en ;
+    esw:belongsTo eswr:TOPIC1aadd27945 ;
+    esw:description "Check who is the actor who acted in more films while working on \"How I met your mother\" and who is the actor who participated in more films after the end of the tv series."^^xsd:string ;
     esw:number "3"^^xsd:string .
 
-eswr:TASKfe9e512127 a esw:SearchTask ;
-    rdfs:label "Find how they are related to the directors"@en ;
-    esw:belongsTo eswr:TOPIC9f8bbcdf1f ;
-    esw:description "Find how they are related to the directors"^^xsd:string ;
-    esw:number "7.3"^^xsd:string .
+eswr:TASK76d54decd8 a esw:SearchTask ;
+    rdfs:label "Companies have different 'legal forms', compare the number of companies divided in different legal forms"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "Companies have different 'legal forms', compare the number of companies divided in different legal forms"^^xsd:string ;
+    esw:number "4"^^xsd:string .
 
-eswr:TASKff15062c85 a esw:SearchTask ;
+eswr:TASK78d69f1ebb a esw:SearchTask ;
+    rdfs:label "Are there politicians with double citizenship?"@en ;
+    esw:belongsTo eswr:TOPIC5cada94306 ;
+    esw:description "Are there politicians with double citizenship?"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK7ad4475078 a esw:SearchTask ;
+    rdfs:label "Which author won more literature-related awards? Have they ever being nominated for a Nobel award?"@en ;
+    esw:belongsTo eswr:TOPIC1883d3c41a ;
+    esw:description "Which author won more literature-related awards? Have they ever being nominated for a Nobel award?"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK7c7e6ccd28 a esw:SearchTask ;
+    rdfs:label "Analyze the number of archaeological sites per type and country"@en ;
+    esw:belongsTo eswr:TOPIC181495838f ;
+    esw:description "Analyze the number of archaeological sites per type and country"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASK7e39a5e622 a esw:SearchTask ;
+    rdfs:label "Identify the BGP that connects a F1 team to a parent company"@en ;
+    esw:belongsTo eswr:TOPIC25ae40a165 ;
+    esw:description "Identify the BGP that connects a F1 team to a parent company"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK82f92a09b7 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining other occupations and properties of politicians"@en ;
+    esw:belongsTo eswr:TOPIC5cada94306 ;
+    esw:description "Identify the BGP for obtaining other occupations and properties of politicians"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK83eb3ac178 a esw:SearchTask ;
+    rdfs:label "Which styles exists in each country, and how many cathedrals for each one?"@en ;
+    esw:belongsTo eswr:TOPICdb42349c69 ;
+    esw:description "Which styles exists in each country, and how many cathedrals for each one?"^^xsd:string ;
+    esw:number "4.1"^^xsd:string .
+
+eswr:TASK86dc6a37cb a esw:SearchTask ;
     rdfs:label "Are there cities that have been capital of multiple kingdoms?"@en ;
-    esw:belongsTo eswr:TOPICada93bfc22 ;
+    esw:belongsTo eswr:TOPIC6113250ba0 ;
     esw:description "Are there cities that have been capital of multiple kingdoms?"^^xsd:string ;
     esw:number "5.2"^^xsd:string .
 
-eswr:TASKff8e9c1463 a esw:SearchTask ;
+eswr:TASK87f77a8010 a esw:SearchTask ;
+    rdfs:label "Return how many actors who are members of the cast of the \"Dark Knight Trilogy\" by Christopher Nolan have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2"@en ;
+    esw:belongsTo eswr:TOPIC92d217266f ;
+    esw:description "Return how many actors who are members of the cast of the \"Dark Knight Trilogy\" by Christopher Nolan have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASK8888ac8805 a esw:SearchTask ;
+    rdfs:label "In which sector there is the highest number of trademarks?"@en ;
+    esw:belongsTo eswr:TOPICc3819647eb ;
+    esw:description "In which sector there is the highest number of trademarks?"^^xsd:string ;
+    esw:number "5.3"^^xsd:string .
+
+eswr:TASK8a4d2b4d32 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for participating or winning some competition"@en ;
+    esw:belongsTo eswr:TOPIC9875ddb387 ;
+    esw:description "Identify the BGP for participating or winning some competition"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK8ac2edbf85 a esw:SearchTask ;
+    rdfs:label "What are the top-10 companies for a given attribute?"@en ;
+    esw:belongsTo eswr:TOPIC3d2f057a32 ;
+    esw:description "What are the top-10 companies for a given attribute?"^^xsd:string ;
+    esw:number "5.1"^^xsd:string .
+
+eswr:TASK8b51679be5 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining important attributes for people, e.g., date of birth/death, gender, profession"@en ;
+    esw:belongsTo eswr:TOPICae76c29fdf ;
+    esw:description "Identify the BGP for obtaining important attributes for people, e.g., date of birth/death, gender, profession"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK8b5b38523c a esw:SearchTask ;
+    rdfs:label "Which cities host the place of birth of the larger number of poets or writers across the two countries?"@en ;
+    esw:belongsTo eswr:TOPIC9072ec0845 ;
+    esw:description "Which cities host the place of birth of the larger number of poets or writers across the two countries?"^^xsd:string ;
+    esw:number "4.2"^^xsd:string .
+
+eswr:TASK8b9d4e2a42 a esw:SearchTask ;
+    rdfs:label "Which business in each country owns more businesses in other E.U. countries?"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "Which business in each country owns more businesses in other E.U. countries?"^^xsd:string ;
+    esw:number "5.3"^^xsd:string .
+
+eswr:TASK8d7826c38d a esw:SearchTask ;
+    rdfs:label "How many world records are held across genders"@en ;
+    esw:belongsTo eswr:TOPIC5cf855d633 ;
+    esw:description "How many world records are held across genders"^^xsd:string ;
+    esw:number "4.2"^^xsd:string .
+
+eswr:TASK8e67d01743 a esw:SearchTask ;
+    rdfs:label "Check which actor/actress did more movies after the release of these two films (consider the films separately)"@en ;
+    esw:belongsTo eswr:TOPICddde7987fe ;
+    esw:description "Check which actor/actress did more movies after the release of these two films (consider the films separately)"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASK93d3b1ebb0 a esw:SearchTask ;
+    rdfs:label "In which U.S. states there are more notable buildings?"@en ;
+    esw:belongsTo eswr:TOPICea24d6d109 ;
+    esw:description "In which U.S. states there are more notable buildings?"^^xsd:string ;
+    esw:number "4.2"^^xsd:string .
+
+eswr:TASK960131d4ad a esw:SearchTask ;
+    rdfs:label "Are there countries that did not sign a treaty with the U.S. but signed a treaty with Germany?"@en ;
+    esw:belongsTo eswr:TOPIC621f1920a2 ;
+    esw:description "Are there countries that did not sign a treaty with the U.S. but signed a treaty with Germany?"^^xsd:string ;
+    esw:number "5.3"^^xsd:string .
+
+eswr:TASK962d9fdfd6 a esw:SearchTask ;
+    rdfs:label "Which business in each country owns more businesses in other countries?"@en ;
+    esw:belongsTo eswr:TOPIC3d2f057a32 ;
+    esw:description "Which business in each country owns more businesses in other countries?"^^xsd:string ;
+    esw:number "5.3"^^xsd:string .
+
+eswr:TASK96ceb54a9b a esw:SearchTask ;
+    rdfs:label "Identify the BGP to obtain relevant attributes of a cathedral, e.g., the inception or the height"@en ;
+    esw:belongsTo eswr:TOPICdb42349c69 ;
+    esw:description "Identify the BGP to obtain relevant attributes of a cathedral, e.g., the inception or the height"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK970db893fb a esw:SearchTask ;
+    rdfs:label "If you are interested in visiting some sites, which country would you pick? Based on what criteria?"@en ;
+    esw:belongsTo eswr:TOPIC181495838f ;
+    esw:description "If you are interested in visiting some sites, which country would you pick? Based on what criteria?"^^xsd:string ;
+    esw:number "4.4"^^xsd:string .
+
+eswr:TASK9907eb1ca7 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining which countries or people signed the treaties"@en ;
+    esw:belongsTo eswr:TOPIC621f1920a2 ;
+    esw:description "Identify the BGP for obtaining which countries or people signed the treaties"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASK99b118fa9f a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining the nobel laureates and the nominees with their relevant attributes"@en ;
+    esw:belongsTo eswr:TOPIC134748adf0 ;
+    esw:description "Identify the BGP for obtaining the nobel laureates and the nominees with their relevant attributes"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASK9bcac37491 a esw:SearchTask ;
+    rdfs:label "Which are the top-3 monarchies with the earliest inception and still existing?"@en ;
+    esw:belongsTo eswr:TOPIC6113250ba0 ;
+    esw:description "Which are the top-3 monarchies with the earliest inception and still existing?"^^xsd:string ;
+    esw:number "5.3"^^xsd:string .
+
+eswr:TASK9f5f8c4732 a esw:SearchTask ;
+    rdfs:label "Is there a country that had at some point a woman as a president?"@en ;
+    esw:belongsTo eswr:TOPICae76c29fdf ;
+    esw:description "Is there a country that had at some point a woman as a president?"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKa0babb70eb a esw:SearchTask ;
+    rdfs:label "Find the related subproperties"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Find the related subproperties"^^xsd:string ;
+    esw:number "7.2"^^xsd:string .
+
+eswr:TASKa0d6a03405 a esw:SearchTask ;
+    rdfs:label "If you had to pick a city or a country to visit some cathedrals? Which one would you choose?  Based on what criteria?"@en ;
+    esw:belongsTo eswr:TOPICdb42349c69 ;
+    esw:description "If you had to pick a city or a country to visit some cathedrals? Which one would you choose?  Based on what criteria?"^^xsd:string ;
+    esw:number "4.3"^^xsd:string .
+
+eswr:TASKa11387df97 a esw:SearchTask ;
+    rdfs:label "Investigate what are the workers (writers, actors, etc.) who had a role in more Batman movies so far."@en ;
+    esw:belongsTo eswr:TOPIC92d217266f ;
+    esw:description "Investigate what are the workers (writers, actors, etc.) who had a role in more Batman movies so far."^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKa5496491b7 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for the types of competitions in which a world record is classified"@en ;
+    esw:belongsTo eswr:TOPIC5cf855d633 ;
+    esw:description "Identify the BGP for the types of competitions in which a world record is classified"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKa679872702 a esw:SearchTask ;
+    rdfs:label "Compare the number of social media followers and get the top five magazines along with main properties as the place of publication and subfields of work"@en ;
+    esw:belongsTo eswr:TOPIC10a10a1675 ;
+    esw:description "Compare the number of social media followers and get the top five magazines along with main properties as the place of publication and subfields of work"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKa6af7e1da0 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining number of employees of a company and other relevant numerical attributes"@en ;
+    esw:belongsTo eswr:TOPIC3d2f057a32 ;
+    esw:description "Identify the BGP for obtaining number of employees of a company and other relevant numerical attributes"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKa6d7a938ca a esw:SearchTask ;
+    rdfs:label "How many F1 drivers and F1 teams exist in each country?"@en ;
+    esw:belongsTo eswr:TOPIC25ae40a165 ;
+    esw:description "How many F1 drivers and F1 teams exist in each country?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKa81c26b81e a esw:SearchTask ;
+    rdfs:label "How many sub-types of monarchy exist?  How many instances of exist of each one?"@en ;
+    esw:belongsTo eswr:TOPIC6113250ba0 ;
+    esw:description "How many sub-types of monarchy exist?  How many instances of exist of each one?"^^xsd:string ;
+    esw:number "5.1"^^xsd:string .
+
+eswr:TASKaa0d74b3b4 a esw:SearchTask ;
+    rdfs:label "Get the number of episodes in which the cast members played a role. Who are the most present actors?"@en ;
+    esw:belongsTo eswr:TOPIC1aadd27945 ;
+    esw:description "Get the number of episodes in which the cast members played a role. Who are the most present actors?"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKac0e58d65b a esw:SearchTask ;
+    rdfs:label "Which politicians had a spouse that was also a politician? How many in each country?"@en ;
+    esw:belongsTo eswr:TOPIC5cada94306 ;
+    esw:description "Which politicians had a spouse that was also a politician? How many in each country?"^^xsd:string ;
+    esw:number "5.3"^^xsd:string .
+
+eswr:TASKae9cdd884b a esw:SearchTask ;
+    rdfs:label "Identify the BGP to obtain the country in which a place is located"@en ;
+    esw:belongsTo eswr:TOPIC9072ec0845 ;
+    esw:description "Identify the BGP to obtain the country in which a place is located"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKb0f9bf1239 a esw:SearchTask ;
+    rdfs:label "Who is most involved in a franchise (who did something in the movies, e.g., writer, director, producer)?"@en ;
+    esw:belongsTo eswr:TOPICddde7987fe ;
+    esw:description "Who is most involved in a franchise (who did something in the movies, e.g., writer, director, producer)?"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKb5134d9354 a esw:SearchTask ;
+    rdfs:label "How many people for each role and gender are there in Germany?"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "How many people for each role and gender are there in Germany?"^^xsd:string ;
+    esw:number "5.1"^^xsd:string .
+
+eswr:TASKb53d006106 a esw:SearchTask ;
+    rdfs:label "Identify the BGP to obtain the notable works of an architect and their location"@en ;
+    esw:belongsTo eswr:TOPICea24d6d109 ;
+    esw:description "Identify the BGP to obtain the notable works of an architect and their location"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKb5c98d90ae a esw:SearchTask ;
+    rdfs:label "Identify the BGP for detaining a world record"@en ;
+    esw:belongsTo eswr:TOPIC5cf855d633 ;
+    esw:description "Identify the BGP for detaining a world record"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKb62e620b11 a esw:SearchTask ;
+    rdfs:label "What are the top 3 cities in each country that you could visit? Based on what criteria?"@en ;
+    esw:belongsTo eswr:TOPIC9072ec0845 ;
+    esw:description "What are the top 3 cities in each country that you could visit? Based on what criteria?"^^xsd:string ;
+    esw:number "4.3"^^xsd:string .
+
+eswr:TASKb8e213c8b9 a esw:SearchTask ;
+    rdfs:label "Analyze cities across the two countries"@en ;
+    esw:belongsTo eswr:TOPIC9072ec0845 ;
+    esw:description "Analyze cities across the two countries"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKbbd5410bad a esw:SearchTask ;
+    rdfs:label "Compare number of participations and winning events across different dimensions"@en ;
+    esw:belongsTo eswr:TOPIC9875ddb387 ;
+    esw:description "Compare number of participations and winning events across different dimensions"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKc3f04c3155 a esw:SearchTask ;
+    rdfs:label "Which are the professions of different presidents? How many presidents had a specific profession?"@en ;
+    esw:belongsTo eswr:TOPICae76c29fdf ;
+    esw:description "Which are the professions of different presidents? How many presidents had a specific profession?"^^xsd:string ;
+    esw:number "5.3"^^xsd:string .
+
+eswr:TASKc4da274eca a esw:SearchTask ;
+    rdfs:label "Find the BGP for Academy Awards"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Find the BGP for Academy Awards"^^xsd:string ;
+    esw:number "7.1"^^xsd:string .
+
+eswr:TASKc70890e147 a esw:SearchTask ;
+    rdfs:label "Which are the treaties with most signatories? Which country signed the most treaties?"@en ;
+    esw:belongsTo eswr:TOPIC621f1920a2 ;
+    esw:description "Which are the treaties with most signatories? Which country signed the most treaties?"^^xsd:string ;
+    esw:number "5.2"^^xsd:string .
+
+eswr:TASKc8ae5d00d5 a esw:SearchTask ;
+    rdfs:label "Which countries have Ancient Rome sites, which other \"archaeological cultures\" are described?"@en ;
+    esw:belongsTo eswr:TOPIC181495838f ;
+    esw:description "Which countries have Ancient Rome sites, which other \"archaeological cultures\" are described?"^^xsd:string ;
+    esw:number "4.2"^^xsd:string .
+
+eswr:TASKcbb6fc51b1 a esw:SearchTask ;
+    rdfs:label "Which country has the most diverse set of civilizations or cultures across its sites?"@en ;
+    esw:belongsTo eswr:TOPIC181495838f ;
+    esw:description "Which country has the most diverse set of civilizations or cultures across its sites?"^^xsd:string ;
+    esw:number "4.3"^^xsd:string .
+
+eswr:TASKcd8e0483c8 a esw:SearchTask ;
+    rdfs:label "Is there some French or German Athlete participating to any olympic event with double citizenship?"@en ;
+    esw:belongsTo eswr:TOPIC9875ddb387 ;
+    esw:description "Is there some French or German Athlete participating to any olympic event with double citizenship?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKce85296ad2 a esw:SearchTask ;
+    rdfs:label "Investigate the works (aka derivative works) related to the Batman and individuate the movies. Return the movies along with the year of production and the director."@en ;
+    esw:belongsTo eswr:TOPIC92d217266f ;
+    esw:description "Investigate the works (aka derivative works) related to the Batman and individuate the movies. Return the movies along with the year of production and the director."^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKd2251884e2 a esw:SearchTask ;
+    rdfs:label "For how many treaties we know causes or effects?"@en ;
+    esw:belongsTo eswr:TOPIC621f1920a2 ;
+    esw:description "For how many treaties we know causes or effects?"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKd30a9f3af6 a esw:SearchTask ;
+    rdfs:label "Analyze the number of presidents per country through time"@en ;
+    esw:belongsTo eswr:TOPICae76c29fdf ;
+    esw:description "Analyze the number of presidents per country through time"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKd40fecf788 a esw:SearchTask ;
+    rdfs:label "For each country , which are the atheletes with the highest number of participations"@en ;
+    esw:belongsTo eswr:TOPIC9875ddb387 ;
+    esw:description "For each country , which are the atheletes with the highest number of participations"^^xsd:string ;
+    esw:number "4.3"^^xsd:string .
+
+eswr:TASKd473894872 a esw:SearchTask ;
+    rdfs:label "Did the authors published a book in the same year? What is the longest period without publishing a book for the two authors?"@en ;
+    esw:belongsTo eswr:TOPIC1883d3c41a ;
+    esw:description "Did the authors published a book in the same year? What is the longest period without publishing a book for the two authors?"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKd4b1fc9060 a esw:SearchTask ;
+    rdfs:label "Analyze the number of companies per type, legal form, and industry in each state"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "Analyze the number of companies per type, legal form, and industry in each state"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKd5203cafed a esw:SearchTask ;
+    rdfs:label "Are there alternative queries to get the same result?"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Are there alternative queries to get the same result?"^^xsd:string ;
+    esw:number "7.4"^^xsd:string .
+
+eswr:TASKd5f081671c a esw:SearchTask ;
+    rdfs:label "Compare number of participants and winners of different world cups"@en ;
+    esw:belongsTo eswr:TOPICe336784d56 ;
+    esw:description "Compare number of participants and winners of different world cups"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKd72bff11e1 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining the type, legal form, and industry of a company"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "Identify the BGP for obtaining the type, legal form, and industry of a company"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKd88e2295b0 a esw:SearchTask ;
+    rdfs:label "What if you consider only politicians for which we don't have a date of death?"@en ;
+    esw:belongsTo eswr:TOPIC5cada94306 ;
+    esw:description "What if you consider only politicians for which we don't have a date of death?"^^xsd:string ;
+    esw:number "5.2"^^xsd:string .
+
+eswr:TASKd8980fd5e3 a esw:SearchTask ;
+    rdfs:label "Count how many books written by Italian authors are now released with a \"public domain\" copyright form"@en ;
+    esw:belongsTo eswr:TOPICedaaf64f26 ;
+    esw:description "Count how many books written by Italian authors are now released with a \"public domain\" copyright form"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKd8aade9610 a esw:SearchTask ;
     rdfs:label "Is there some driver that joined a team in their own country?"@en ;
-    esw:belongsTo eswr:TOPIC540e87f614 ;
+    esw:belongsTo eswr:TOPIC25ae40a165 ;
     esw:description "Is there some driver that joined a team in their own country?"^^xsd:string ;
     esw:number "4.1"^^xsd:string .
+
+eswr:TASKda1d9ad84a a esw:SearchTask ;
+    rdfs:label "Analyze the location of the buildings designed by the american architects"@en ;
+    esw:belongsTo eswr:TOPICea24d6d109 ;
+    esw:description "Analyze the location of the buildings designed by the american architects"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKdd38064041 a esw:SearchTask ;
+    rdfs:label "Return how many of the actors who are members of the cast of the tv series have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2"@en ;
+    esw:belongsTo eswr:TOPIC1aadd27945 ;
+    esw:description "Return how many of the actors who are members of the cast of the tv series have [Kavin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#:~:text=Kevin%20Bacon%20himself%20has%20a,Bacon%20number%20is%20N%2B1.) equal to 2"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKe0cac18bd1 a esw:SearchTask ;
+    rdfs:label "How many people hold or are connected to trademarks? In which role?"@en ;
+    esw:belongsTo eswr:TOPICc3819647eb ;
+    esw:description "How many people hold or are connected to trademarks? In which role?"^^xsd:string ;
+    esw:number "5.2"^^xsd:string .
+
+eswr:TASKe10a9ef4ea a esw:SearchTask ;
+    rdfs:label "Are there companies with multiple german people having important roles?"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "Are there companies with multiple german people having important roles?"^^xsd:string ;
+    esw:number "5.2"^^xsd:string .
+
+eswr:TASKe27375c201 a esw:SearchTask ;
+    rdfs:label "Return the main Batman movie series produced in the last four decades and compare them in terms of length, number of actors involved and costs."@en ;
+    esw:belongsTo eswr:TOPIC92d217266f ;
+    esw:description "Return the main Batman movie series produced in the last four decades and compare them in terms of length, number of actors involved and costs."^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKe3645556b9 a esw:SearchTask ;
+    rdfs:label "Identify the BGP that connect an archaeological site to the country, the continent, and the culture"@en ;
+    esw:belongsTo eswr:TOPIC181495838f ;
+    esw:description "Identify the BGP that connect an archaeological site to the country, the continent, and the culture"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKe58cb369a0 a esw:SearchTask ;
+    rdfs:label "Are there books from Litarature Nobel Award winners which are not present in the Vatican Library? (if so, who is the author with more books not in the Vatical Library)?"@en ;
+    esw:belongsTo eswr:TOPIC134748adf0 ;
+    esw:description "Are there books from Litarature Nobel Award winners which are not present in the Vatican Library? (if so, who is the author with more books not in the Vatical Library)?"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKe8957f0314 a esw:SearchTask ;
+    rdfs:label "Is there any poet for which the birth place and the place of burial are located in the same city either in Germany or France?"@en ;
+    esw:belongsTo eswr:TOPIC9072ec0845 ;
+    esw:description "Is there any poet for which the birth place and the place of burial are located in the same city either in Germany or France?"^^xsd:string ;
+    esw:number "4.1"^^xsd:string .
+
+eswr:TASKe8a93744a0 a esw:SearchTask ;
+    rdfs:label "where is the largest cathedral, or the oldest?"@en ;
+    esw:belongsTo eswr:TOPICdb42349c69 ;
+    esw:description "where is the largest cathedral, or the oldest?"^^xsd:string ;
+    esw:number "4.2"^^xsd:string .
+
+eswr:TASKe993267399 a esw:SearchTask ;
+    rdfs:label "What are the top-5 countries for number of presidents? Which countries had the least?"@en ;
+    esw:belongsTo eswr:TOPICae76c29fdf ;
+    esw:description "What are the top-5 countries for number of presidents? Which countries had the least?"^^xsd:string ;
+    esw:number "5.1"^^xsd:string .
+
+eswr:TASKea10d86c17 a esw:SearchTask ;
+    rdfs:label "How many politicians are recorder for each E.U. country?"@en ;
+    esw:belongsTo eswr:TOPIC5cada94306 ;
+    esw:description "How many politicians are recorder for each E.U. country?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKea170fa12e a esw:SearchTask ;
+    rdfs:label "Which is or was  the country with the highest population?"@en ;
+    esw:belongsTo eswr:TOPIC6113250ba0 ;
+    esw:description "Which is or was  the country with the highest population?"^^xsd:string ;
+    esw:number "3"^^xsd:string .
+
+eswr:TASKea9872622d a esw:SearchTask ;
+    rdfs:label "Check who was the most famous actor/actress on Halloween and Friday the 13th at the time of the release (e.g., the actor/actress who acted in more movies before and/or the actor/actress who won more academy awards)"@en ;
+    esw:belongsTo eswr:TOPICddde7987fe ;
+    esw:description "Check who was the most famous actor/actress on Halloween and Friday the 13th at the time of the release (e.g., the actor/actress who acted in more movies before and/or the actor/actress who won more academy awards)"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKeb4aab2a55 a esw:SearchTask ;
+    rdfs:label "For which companies is defined some form of income or market capitalization or total assets? What is the min, max, and average in each category and country?"@en ;
+    esw:belongsTo eswr:TOPIC3d2f057a32 ;
+    esw:description "For which companies is defined some form of income or market capitalization or total assets? What is the min, max, and average in each category and country?"^^xsd:string ;
+    esw:number "5.2"^^xsd:string .
+
+eswr:TASKef1c27ce03 a esw:SearchTask ;
+    rdfs:label "How many U.S. companies hold trademarks? In which sectors?"@en ;
+    esw:belongsTo eswr:TOPICc3819647eb ;
+    esw:description "How many U.S. companies hold trademarks? In which sectors?"^^xsd:string ;
+    esw:number "5.1"^^xsd:string .
+
+eswr:TASKef8fa368ad a esw:SearchTask ;
+    rdfs:label "Analyze the number of trademarks across types, companies, and countries"@en ;
+    esw:belongsTo eswr:TOPICc3819647eb ;
+    esw:description "Analyze the number of trademarks across types, companies, and countries"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKf185f99e9a a esw:SearchTask ;
+    rdfs:label "Identify the BGP for obtaining C.E.O., managers, directors, or founders of German companies"@en ;
+    esw:belongsTo eswr:TOPICd87ec55cae ;
+    esw:description "Identify the BGP for obtaining C.E.O., managers, directors, or founders of German companies"^^xsd:string ;
+    esw:number "1"^^xsd:string .
+
+eswr:TASKf2e6b0eb60 a esw:SearchTask ;
+    rdfs:label "What are the top-3 legal form in E.U.?"@en ;
+    esw:belongsTo eswr:TOPIC97c622f1ce ;
+    esw:description "What are the top-3 legal form in E.U.?"^^xsd:string ;
+    esw:number "5.1"^^xsd:string .
+
+eswr:TASKf41d61faaa a esw:SearchTask ;
+    rdfs:label "Identify the BGP to retrieve other types of an archaeological site, e.g., human settlement or theatre"@en ;
+    esw:belongsTo eswr:TOPIC181495838f ;
+    esw:description "Identify the BGP to retrieve other types of an archaeological site, e.g., human settlement or theatre"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKf49a36dc88 a esw:SearchTask ;
+    rdfs:label "Which country participated in the most finals? Which country won the most finals?"@en ;
+    esw:belongsTo eswr:TOPICe336784d56 ;
+    esw:description "Which country participated in the most finals? Which country won the most finals?"^^xsd:string ;
+    esw:number "4.2"^^xsd:string .
+
+eswr:TASKf7309dccf9 a esw:SearchTask ;
+    rdfs:label "Who participated in the most world cups among Italy, France, Spain, and Germany?"@en ;
+    esw:belongsTo eswr:TOPICe336784d56 ;
+    esw:description "Who participated in the most world cups among Italy, France, Spain, and Germany?"^^xsd:string ;
+    esw:number "4.3"^^xsd:string .
+
+eswr:TASKf8754ce97a a esw:SearchTask ;
+    rdfs:label "What are the types of trademarks, how many trademarks exist for each type?"@en ;
+    esw:belongsTo eswr:TOPICc3819647eb ;
+    esw:description "What are the types of trademarks, how many trademarks exist for each type?"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKf93ab1f7a1 a esw:SearchTask ;
+    rdfs:label "In which specific sport France has the most world records"@en ;
+    esw:belongsTo eswr:TOPIC5cf855d633 ;
+    esw:description "In which specific sport France has the most world records"^^xsd:string ;
+    esw:number "4.1"^^xsd:string .
+
+eswr:TASKfb04a99027 a esw:SearchTask ;
+    rdfs:label "Identify the BGP for directors"@en ;
+    esw:belongsTo eswr:TOPIC5c2cbb34bd ;
+    esw:description "Identify the BGP for directors"^^xsd:string ;
+    esw:number "2"^^xsd:string .
+
+eswr:TASKfb68a16af7 a esw:SearchTask ;
+    rdfs:label "Is any employee of The New Yorker ever been nominated for a prize or award?"@en ;
+    esw:belongsTo eswr:TOPIC10a10a1675 ;
+    esw:description "Is any employee of The New Yorker ever been nominated for a prize or award?"^^xsd:string ;
+    esw:number "5"^^xsd:string .
+
+eswr:TASKfcf85437ce a esw:SearchTask ;
+    rdfs:label "For each country , which are the teams and drivers with the highest number of F1 race participations"@en ;
+    esw:belongsTo eswr:TOPIC25ae40a165 ;
+    esw:description "For each country , which are the teams and drivers with the highest number of F1 race participations"^^xsd:string ;
+    esw:number "4.3"^^xsd:string .
+
+eswr:TASKfdec7c8946 a esw:SearchTask ;
+    rdfs:label "How many films were derived from the books of these two authors?"@en ;
+    esw:belongsTo eswr:TOPIC1883d3c41a ;
+    esw:description "How many films were derived from the books of these two authors?"^^xsd:string ;
+    esw:number "4"^^xsd:string .
+
+eswr:TASKfe0f4cff2b a esw:SearchTask ;
+    rdfs:label "Which sport has the highest number of world records"@en ;
+    esw:belongsTo eswr:TOPIC5cf855d633 ;
+    esw:description "Which sport has the highest number of world records"^^xsd:string ;
+    esw:number "4.3"^^xsd:string .
+
+eswr:TASKfec11c805d a esw:SearchTask ;
+    rdfs:label "Companies have different 'legal forms', compare the number of companies divided in different legal forms"@en ;
+    esw:belongsTo eswr:TOPIC3d2f057a32 ;
+    esw:description "Companies have different 'legal forms', compare the number of companies divided in different legal forms"^^xsd:string ;
+    esw:number "4"^^xsd:string .
 
 eswr:UNION a sd:Feature ;
     rdfs:label "UNION"@en .
 
-eswr:TOPIC09951848c9 a esw:SearchTopic ;
-    rdfs:label "Book Workflow Series (\"Author comparison explorative search\")"@en ;
-    esw:description "Book Workflow Series (\"Author comparison explorative search\")"^^xsd:string ;
+eswr:workflow5_0 a esw:GroundTruth .
+
+eswr:workflow5_1 a esw:GroundTruth .
+
+eswr:workflow5_2 a esw:GroundTruth .
+
+eswr:workflow5_3 a esw:GroundTruth .
+
+eswr:TOPIC10a10a1675 a esw:SearchTopic ;
+    rdfs:label "Book Workflow Series (Political Magazines explorative search)"@en ;
+    esw:description "Book Workflow Series (Political Magazines explorative search)"^^xsd:string ;
     esw:macroTopic "Book"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPIC3eb669b2e6 a esw:SearchTopic ;
-    rdfs:label "Book Workflow Series (\"Political Magazines explorative search\")"@en ;
-    esw:description "Book Workflow Series (\"Political Magazines explorative search\")"^^xsd:string ;
+eswr:TOPIC1883d3c41a a esw:SearchTopic ;
+    rdfs:label "Book Workflow Series (Authors comparison explorative search)"@en ;
+    esw:description "Book Workflow Series (Authors comparison explorative search)"^^xsd:string ;
     esw:macroTopic "Book"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPICc3e24625ed a esw:SearchTopic ;
-    rdfs:label "Book Workflow Series (\"Authors comparison explorative search\")"@en ;
-    esw:description "Book Workflow Series (\"Authors comparison explorative search\")"^^xsd:string ;
-    esw:macroTopic "Book"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPICd8fb308be8 a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Tv series explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Tv series explorative search\")"^^xsd:string ;
+eswr:TOPIC1aadd27945 a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Tv series explorative search)"@en ;
+    esw:description "Movie Workflow Series (Tv series explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow5_3 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPICe9659f9e88 a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"The Batman movies explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"The Batman movies explorative search\")"^^xsd:string ;
+eswr:TOPIC92d217266f a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (The Batman movies explorative search)"@en ;
+    esw:description "Movie Workflow Series (The Batman movies explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow5_1 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPIC2e068c1749 a esw:SearchTopic ;
-    rdfs:label "Book Workflow Series (\"Nobel laureates explorative search\")"@en ;
-    esw:description "Book Workflow Series (\"Nobel laureates explorative search\")"^^xsd:string ;
+eswr:TOPICedaaf64f26 a esw:SearchTopic ;
+    rdfs:label "Book Workflow Series (Author comparison explorative search)"@en ;
+    esw:description "Book Workflow Series (Author comparison explorative search)"^^xsd:string ;
     esw:macroTopic "Book"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPIC0a47d1b8cc a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Horror Franchises explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Horror Franchises explorative search\")"^^xsd:string ;
+eswr:TOPIC134748adf0 a esw:SearchTopic ;
+    rdfs:label "Book Workflow Series (Nobel laureates explorative search)"@en ;
+    esw:description "Book Workflow Series (Nobel laureates explorative search)"^^xsd:string ;
+    esw:macroTopic "Book"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPIC25ae40a165 a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (F1 pilots explorative search)"@en ;
+    esw:description "Sport Workflow Series (F1 pilots explorative search)"^^xsd:string ;
+    esw:macroTopic "Sport"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPIC5cf855d633 a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (World Records explorative search)"@en ;
+    esw:description "Sport Workflow Series (World Records explorative search)"^^xsd:string ;
+    esw:macroTopic "Sport"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPIC9072ec0845 a esw:SearchTopic ;
+    rdfs:label "GEO Workflow Series (Place of Birth, Death, and Burial)"@en ;
+    esw:description "GEO Workflow Series (Place of Birth, Death, and Burial)"^^xsd:string ;
+    esw:macroTopic "GEO"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPICdb42349c69 a esw:SearchTopic ;
+    rdfs:label "GEO Workflow Series (European Cathedrals)"@en ;
+    esw:description "GEO Workflow Series (European Cathedrals)"^^xsd:string ;
+    esw:macroTopic "GEO"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPICddde7987fe a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Horror Franchises explorative search)"@en ;
+    esw:description "Movie Workflow Series (Horror Franchises explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow5_2 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPIC31f2e5a366 a esw:SearchTopic ;
-    rdfs:label "GEO Workflow Series (\"American Architects\")"@en ;
-    esw:description "GEO Workflow Series (\"American Architects\")"^^xsd:string ;
-    esw:macroTopic "GEO"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPIC540e87f614 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (\"F1 pilots explorative search\")"@en ;
-    esw:description "Sport Workflow Series (\"F1 pilots explorative search\")"^^xsd:string ;
+eswr:TOPICe336784d56 a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (FIFA World Cup events explorative search)"@en ;
+    esw:description "Sport Workflow Series (FIFA World Cup events explorative search)"^^xsd:string ;
     esw:macroTopic "Sport"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPIC908fac5518 a esw:SearchTopic ;
-    rdfs:label "GEO Workflow Series (\"Place of Birth, Death, and Burial\")"@en ;
-    esw:description "GEO Workflow Series (\"Place of Birth, Death, and Burial\")"^^xsd:string ;
+eswr:TOPICea24d6d109 a esw:SearchTopic ;
+    rdfs:label "GEO Workflow Series (American Architects)"@en ;
+    esw:description "GEO Workflow Series (American Architects)"^^xsd:string ;
     esw:macroTopic "GEO"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPICa113f2ed80 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (\"World Records explorative search\")"@en ;
-    esw:description "Sport Workflow Series (\"World Records explorative search\")"^^xsd:string ;
-    esw:macroTopic "Sport"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPICa69add8b9f a esw:SearchTopic ;
-    rdfs:label "GEO Workflow Series (\"European Cathedrals\")"@en ;
-    esw:description "GEO Workflow Series (\"European Cathedrals\")"^^xsd:string ;
+eswr:TOPIC181495838f a esw:SearchTopic ;
+    rdfs:label "GEO Workflow Series (archaeological sites)"@en ;
+    esw:description "GEO Workflow Series (archaeological sites)"^^xsd:string ;
     esw:macroTopic "GEO"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPICc038158e52 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (\"FIFA World Cup events explorative search\")"@en ;
-    esw:description "Sport Workflow Series (\"FIFA World Cup events explorative search\")"^^xsd:string ;
+eswr:TOPIC3d2f057a32 a esw:SearchTopic ;
+    rdfs:label "Companies Workflow Series (IT Companies explorative search)"@en ;
+    esw:description "Companies Workflow Series (IT Companies explorative search)"^^xsd:string ;
+    esw:macroTopic "Companies"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPIC5cada94306 a esw:SearchTopic ;
+    rdfs:label "Politics Workflow Series (Politicians in E.U.)"@en ;
+    esw:description "Politics Workflow Series (Politicians in E.U.)"^^xsd:string ;
+    esw:macroTopic "Politics"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPIC6113250ba0 a esw:SearchTopic ;
+    rdfs:label "Politics Workflow Series (Monarchies)"@en ;
+    esw:description "Politics Workflow Series (Monarchies)"^^xsd:string ;
+    esw:macroTopic "Politics"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPIC621f1920a2 a esw:SearchTopic ;
+    rdfs:label "Politics Workflow Series (International Treaties)"@en ;
+    esw:description "Politics Workflow Series (International Treaties)"^^xsd:string ;
+    esw:macroTopic "Politics"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPIC9875ddb387 a esw:SearchTopic ;
+    rdfs:label "Sport Workflow Series (Olympic explorative search)"@en ;
+    esw:description "Sport Workflow Series (Olympic explorative search)"^^xsd:string ;
     esw:macroTopic "Sport"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPIC12873ae598 a esw:SearchTopic ;
-    rdfs:label "Companies Workflow Series (\"IT Companies explorative search\")"@en ;
-    esw:description "Companies Workflow Series (\"IT Companies explorative search\")"^^xsd:string ;
-    esw:macroTopic "Companies"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPIC52b648f5d3 a esw:SearchTopic ;
-    rdfs:label "GEO Workflow Series (\"archaeological sites\")"@en ;
-    esw:description "GEO Workflow Series (\"archaeological sites\")"^^xsd:string ;
-    esw:macroTopic "GEO"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPIC91f8a3dff8 a esw:SearchTopic ;
-    rdfs:label "Sport Workflow Series (\"Olympic explorative search\")"@en ;
-    esw:description "Sport Workflow Series (\"Olympic explorative search\")"^^xsd:string ;
-    esw:macroTopic "Sport"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPICa11de666ca a esw:SearchTopic ;
-    rdfs:label "Companies Workflow Series (\"Trademarks across the world\")"@en ;
-    esw:description "Companies Workflow Series (\"Trademarks across the world\")"^^xsd:string ;
-    esw:macroTopic "Companies"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPICada93bfc22 a esw:SearchTopic ;
-    rdfs:label "Politics Workflow Series (\"Monarchies\")"@en ;
-    esw:description "Politics Workflow Series (\"Monarchies\")"^^xsd:string ;
+eswr:TOPICae76c29fdf a esw:SearchTopic ;
+    rdfs:label "Politics Workflow Series (Presidents of countries)"@en ;
+    esw:description "Politics Workflow Series (Presidents of countries)"^^xsd:string ;
     esw:macroTopic "Politics"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPICd5309f1daa a esw:SearchTopic ;
-    rdfs:label "Politics Workflow Series (\"International Treaties\")"@en ;
-    esw:description "Politics Workflow Series (\"International Treaties\")"^^xsd:string ;
-    esw:macroTopic "Politics"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPICe8efbc40f7 a esw:SearchTopic ;
-    rdfs:label "Politics Workflow Series (\"Presidents of countries\")"@en ;
-    esw:description "Politics Workflow Series (\"Presidents of countries\")"^^xsd:string ;
-    esw:macroTopic "Politics"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPICf56c859554 a esw:SearchTopic ;
-    rdfs:label "Politics Workflow Series (\"Politicians in E.U.\")"@en ;
-    esw:description "Politics Workflow Series (\"Politicians in E.U.\")"^^xsd:string ;
-    esw:macroTopic "Politics"^^xsd:string ;
-    esw:partOf eswr:Informative2021Track .
-
-eswr:TOPIC1ef58bebef a esw:SearchTopic ;
-    rdfs:label "Companies Workflow Series (\"Economy of EU States\")"@en ;
-    esw:description "Companies Workflow Series (\"Economy of EU States\")"^^xsd:string ;
+eswr:TOPICc3819647eb a esw:SearchTopic ;
+    rdfs:label "Companies Workflow Series (Trademarks across the world)"@en ;
+    esw:description "Companies Workflow Series (Trademarks across the world)"^^xsd:string ;
     esw:macroTopic "Companies"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPICb863fbf5d4 a esw:SearchTopic ;
-    rdfs:label "Companies Workflow Series (\"Business People in Germany\")"@en ;
-    esw:description "Companies Workflow Series (\"Business People in Germany\")"^^xsd:string ;
+eswr:TOPIC97c622f1ce a esw:SearchTopic ;
+    rdfs:label "Companies Workflow Series (Economy of EU States)"@en ;
+    esw:description "Companies Workflow Series (Economy of EU States)"^^xsd:string ;
     esw:macroTopic "Companies"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
-eswr:TOPIC9f8bbcdf1f a esw:SearchTopic ;
-    rdfs:label "Movie Workflow Series (\"Directors explorative search\")"@en ;
-    esw:description "Movie Workflow Series (\"Directors explorative search\")"^^xsd:string ;
+eswr:TOPICd87ec55cae a esw:SearchTopic ;
+    rdfs:label "Companies Workflow Series (Business People in Germany)"@en ;
+    esw:description "Companies Workflow Series (Business People in Germany)"^^xsd:string ;
+    esw:macroTopic "Companies"^^xsd:string ;
+    esw:partOf eswr:Informative2021Track .
+
+eswr:TOPIC5c2cbb34bd a esw:SearchTopic ;
+    rdfs:label "Movie Workflow Series (Directors explorative search)"@en ;
+    esw:description "Movie Workflow Series (Directors explorative search)"^^xsd:string ;
+    esw:hasGroundTruth eswr:workflow5_0 ;
     esw:macroTopic "Movie"^^xsd:string ;
     esw:partOf eswr:Informative2021Track .
 
