@@ -2,7 +2,7 @@
 Try yourself the queries in the SPARQL endpoint http://w3id.org/esw/sparql
 
 1. Get the best workflow for topics of which there is a ground truth
-The query returns a list of 4-tuple elements of (workflow IRI, topic IRI, score, ground truth IRI)
+The query returns a list of 4-tuples (workflow IRI, topic IRI, score, ground truth IRI)
 
 Query text:
 
@@ -49,7 +49,7 @@ SELECT ?w ?t ?fs ?gt WHERE{
    and the total number of queries. (For the example we use the topic 
    History Workflow Series (Cultural Movements explorative search) 
    with IRI http://w3id.org/esw/resource/TOPICd1c898149d)
-The query returns a list of 3-tuple elements of (workflow IRI, score, numberOfQueries)
+The query returns a list of 3-tuples (workflow IRI, score, numberOfQueries)
 
 Query text:
 
@@ -64,7 +64,7 @@ SELECT DISTINCT ?work (AVG(?fscore) AS ?fs) (SUM(?numQueries) AS ?totQueries) wh
 }GROUP BY ?work
 
 3. Return the tasks with more queries
-   The query returns a list 4-tuple (task IRI, task label, numberOfQueries, numberOfWorkflows)
+   The query returns a list 4-tuples (task IRI, task label, numberOfQueries, numberOfWorkflows)
 
 Query text:
 
