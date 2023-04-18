@@ -91,3 +91,44 @@ SELECT DISTINCT ?task ?label (SUM(?numQueries) AS ?totQueries) (COUNT(DISTINCT ?
 ORDER BY DESC(?totQueries)
 LIMIT 10
 ```
+
+4. Return the top-10 workflows with more query executions
+The query returns a list of 3-tuples (workflow IRI, numberOfQueries, numberOfExecutions)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ftask+%3Flabel+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+%28COUNT%28DISTINCT+%3Fjob%29+AS+%3Fworks%29+where%7B%0D%0A++++%3Fjob+a+esw%3ASearchJob%3B%0D%0A+++++++++esw%3Aperforms+%3Ftask%3B%0D%0A+++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A+++++%3Ftask+rdfs%3Alabel+%3Flabel.%0D%0A%7DGROUP+BY+%3Ftask+%3Flabel%0D%0AORDER+BY+DESC%28%3FtotQueries%29%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+
+SELECT DISTINCT ?work (COUNT( DISTINCT ?query) AS ?totQueries) (COUNT( ?exec) AS ?totExecs) where{
+    ?work a esw:SearchWorkflow;
+         esw:hasPart ?job.
+    ?job esw:queries ?queries.
+    ?queries rdf:rest*/rdf:first  ?query.
+    ?query lsqv:hasExec ?exec.
+}GROUP BY ?work
+ORDER BY DESC(?totExecs)
+LIMIT 10
+```
+
+5.  Return the keywords usage for the 2022 collection.
+   The query returns a list of couples (keyword IRI, frequency).
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Fcount%29+where%7B%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7DGROUP+BY+%3Fkeyword%0D%0AORDER+BY+DESC+%28%3Fcount%29&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX eswr: <http://w3id.org/esw/resource/>
+
+SELECT ?keyword (COUNT(*) AS ?count) where{
+    ?topic esw:partOf eswr:Completeness2022Track.
+    ?work esw:implements ?topic;
+          esw:hasPart ?job.
+    ?job esw:queries ?queries.
+    ?queries rdf:rest*/rdf:first  ?query.
+    ?query lsqv:usesFeature ?keyword.
+}GROUP BY ?keyword
+ORDER BY DESC (?count)
+```
