@@ -58,7 +58,7 @@ SELECT ?w ?topicLabel ?fs ?gt WHERE{
 2. Given a specific topic, return the workflows on that topic with their average fscore 
    and the total number of queries. (For the example we use the topic 
    History Workflow Series (Cultural Movements explorative search) 
-   with IRI http://w3id.org/esw/resource/TOPICd1c898149d)
+   with IRI http://w3id.org/esw/resource/TOPICd1c898149d).
 The query returns a list of 3-tuples (workflow IRI, score, numberOfQueries).
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fwork+%28AVG%28%3Ffscore%29+AS+%3Ffs%29+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+where%7B%0D%0A++++%3Fwork+esw%3Aimplements+eswr%3ATOPICd1c898149d%3B%0D%0A++++%09++esw%3AhasPart+%3Fpart.%0D%0A+++%09%3Fpart+esw%3Afscore+%3Ffscore%3B%0D%0A++++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A%7DGROUP+BY+%3Fwork&format=text%2Fhtml&timeout=0&signal_void=on)
 
@@ -92,8 +92,8 @@ ORDER BY DESC(?totQueries)
 LIMIT 10
 ```
 
-4. Return the top-10 workflows with more query executions
-The query returns a list of 3-tuples (workflow IRI, numberOfQueries, numberOfExecutions)
+4. Return the top-10 workflows with more query executions.
+The query returns a list of 3-tuples (workflow IRI, numberOfQueries, numberOfExecutions).
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ftask+%3Flabel+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+%28COUNT%28DISTINCT+%3Fjob%29+AS+%3Fworks%29+where%7B%0D%0A++++%3Fjob+a+esw%3ASearchJob%3B%0D%0A+++++++++esw%3Aperforms+%3Ftask%3B%0D%0A+++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A+++++%3Ftask+rdfs%3Alabel+%3Flabel.%0D%0A%7DGROUP+BY+%3Ftask+%3Flabel%0D%0AORDER+BY+DESC%28%3FtotQueries%29%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL

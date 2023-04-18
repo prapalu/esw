@@ -13,6 +13,40 @@ For convenience we put all the information about topics,tasks,workflows and the 
 
 
 ## Contents 
-- `src`: the folder with the source code to handle the workflows. More details [here](src/README.md)
+- `src`: the folder with the source code to parse, to evaluate and to serialize the workflows. More details [here](src/README.md)
 - `rdf`: the folder that contains the information about the RDF Graph (ontology, turtle files, useful queries)
-- `workflows`: the folder that contains the main data of this project. More details on how this folder is structured [here](workflows/README.md)
+- `collections`: the folder that contains the main data of this project. More details [here](collections/README.md)
+
+## Definitions
+
+### Search Topic and Search Task
+
+A Search Topic has the aim of investigate a specific portion of a Knowledge Base (e.g. Basketball Players). It is a collection of questions (also called Search Task) that guide the exploration. Usually, there are some given URIs related to the Search Topic in order to provide a starting point for the exploration.
+
+### Search Workflow
+
+A Search Workflow is an implementation of a Search Topic. Given the Search Topic, the worker has to write a sequence of queries to give an answer to the Search Tasks provided.
+
+### Ground Truth
+
+A Ground Truth is a special Search Workflow that in our opinion solves in the best way the Search Tasks of the Search Topic. Ground Truth is used to evaluate the performance of the Search Workflows.
+
+## Inside the resource
+
+We have two separate collections of Search Workflows.
+
+About 2021 collection:
+- 6 macro topic (Geography, Politics, Movies, Book, Sport, Companies)
+- 21 workers
+- 24 Search Topics
+- 126 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
+
+About 2022 collection:
+- 3 macro topic (Movies, Sport, History)
+- 41 workers
+- 21 Search Topics
+- 123 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
+
+
+
+
