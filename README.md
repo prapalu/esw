@@ -33,7 +33,10 @@ A Ground Truth is a special Search Workflow that in our opinion solves in the be
 
 ## Inside the resource
 
-We have two separate collections of Search Workflows.
+The Search Workflows were collected during the Graph Database course thaught in the University of Padua during the Master Degree in Computer Engineering in the Academic Years 2021 and 2022. For this reason we have two collections, once per Academic Year. 
+Also, the Search Topics in the 2021 collection include very general tasks that can have multiple valid answers (e.g. Return some numerical comparisons between Woody Allen and Quentin Tarantino) thus it is more "Information Retrival" oriented.
+On the contrary the Search Topics in the 2022 collection include very specific tasks, that usually specify the format of the final answer output (e.g. Return for each country the number of appearances in the FIFA World Cup: the output format should be a list of triples (Country IRI, Country label, #appearances))
+
 
 About 2021 collection:
 - 6 macro topic (Geography, Politics, Movies, Book, Sport, Companies)
@@ -50,3 +53,7 @@ About 2022 collection:
 
 
 
+
+
+| Search Topic    | #Search Workflow  |
+| -----------   | ----------- |
