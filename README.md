@@ -4,7 +4,7 @@ This repository contains the data and the scripts for the Exploratory Search Wor
 
 ## Scope
 
-The main goal of the project is to create a new benchamrk for exploratory search workflow. 
+This resource provides a new benchamrk for exploratory search workflow. 
 For this purpose we created some ``Search Topic`` with 5 to 10 ``Search Task`` each.
 We assigned from 4 to 6 different workers the same ``Search Topic``, in order to collect different results and different points of view.
 After that we analyzed each ``Search Workflow`` and amongst those of the same ``Search Topic`` we built a ``Ground Truth`` for the ``Search Topic``.
