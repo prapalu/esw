@@ -1,5 +1,5 @@
 ## Useful queries 
-Try yourself the queries below on http://grace.dei.unipd.it/sparql/
+Try yourself the queries in the SPARQL endpoint http://w3id.org/esw/sparql/
 
 1. Get the best workflow for topics of which there is a ground truth
 The query returns a list of 4-tuple elements of (workflow IRI, topic IRI, score, ground truth IRI)
