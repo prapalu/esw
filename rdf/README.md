@@ -17,7 +17,7 @@ The query returns a list of 4-tuples (workflow IRI, topic IRI, score, ground tru
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
 
-SELECT ?w ?t ?fs ?gt WHERE{
+SELECT ?w ?topicLabel ?fs ?gt WHERE{
     
     {
         SELECT ?topic ?macro (MAX(?fscore) AS ?max_score) WHERE
@@ -51,6 +51,43 @@ SELECT ?w ?t ?fs ?gt WHERE{
     FILTER(?fs = ?max_score).
     FILTER(?t = ?topic).
     ?t esw:hasGroundTruth ?gt;
-        esw:description ?m.
+        rdfs:label ?topicLabel.
 }
+```
+
+2. Given a specific topic, return the workflows on that topic with their average fscore 
+   and the total number of queries. (For the example we use the topic 
+   History Workflow Series (Cultural Movements explorative search) 
+   with IRI http://w3id.org/esw/resource/TOPICd1c898149d)
+The query returns a list of 3-tuples (workflow IRI, score, numberOfQueries).
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fwork+%28AVG%28%3Ffscore%29+AS+%3Ffs%29+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+where%7B%0D%0A++++%3Fwork+esw%3Aimplements+eswr%3ATOPICd1c898149d%3B%0D%0A++++%09++esw%3AhasPart+%3Fpart.%0D%0A+++%09%3Fpart+esw%3Afscore+%3Ffscore%3B%0D%0A++++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A%7DGROUP+BY+%3Fwork&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX eswr: <http://w3id.org/esw/resource/>
+
+SELECT DISTINCT ?work (AVG(?fscore) AS ?fs) (SUM(?numQueries) AS ?totQueries) where{
+    ?work esw:implements eswr:TOPICd1c898149d;
+    	  esw:hasPart ?part.
+   	?part esw:fscore ?fscore;
+          esw:numberOfQueries ?numQueries.
+}GROUP BY ?work
+```
+
+3. Return the tasks with more queries.
+   The query returns a list 4-tuples (task IRI, task label, numberOfQueries, numberOfWorkflows).
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ftask+%3Flabel+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+%28COUNT%28DISTINCT+%3Fjob%29+AS+%3Fworks%29+where%7B%0D%0A++++%3Fjob+a+esw%3ASearchJob%3B%0D%0A+++++++++esw%3Aperforms+%3Ftask%3B%0D%0A+++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A+++++%3Ftask+rdfs%3Alabel+%3Flabel.%0D%0A%7DGROUP+BY+%3Ftask+%3Flabel%0D%0AORDER+BY+DESC%28%3FtotQueries%29%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?task ?label (SUM(?numQueries) AS ?totQueries) (COUNT(DISTINCT ?job) AS ?works) where{
+    ?job a esw:SearchJob;
+         esw:performs ?task;
+         esw:numberOfQueries ?numQueries.
+     ?task rdfs:label ?label.
+}GROUP BY ?task ?label
+ORDER BY DESC(?totQueries)
+LIMIT 10
 ```
