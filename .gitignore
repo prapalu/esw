@@ -9,3 +9,6 @@ __pycache__/
 
 # ignore DStore
 *.DStore  
+
+# ignore old python resources
+old_res/  

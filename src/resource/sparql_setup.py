@@ -1,4 +1,3 @@
-import resource.notebooks as nbks
 ## SETUP used later
 
 from SPARQLWrapper import SPARQLWrapper, JSON
