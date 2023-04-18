@@ -79,3 +79,45 @@ SELECT DISTINCT ?task ?label (SUM(?numQueries) AS ?totQueries) (COUNT(DISTINCT ?
 }GROUP BY ?task ?label
 ORDER BY DESC(?totQueries)
 LIMIT 10
+
+4. Return the top-10 workflows with more query executions
+The query returns a list of 3-tuples (workflow IRI, numberOfQueries, numberOfExecutions)
+
+Query text:
+
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+
+SELECT DISTINCT ?work (COUNT( DISTINCT ?query) AS ?totQueries) (COUNT( ?exec) AS ?totExecs) where{
+    ?work a esw:SearchWorkflow;
+         esw:hasPart ?job.
+    ?job esw:queries ?queries.
+    ?queries rdf:rest*/rdf:first  ?query.
+    ?query lsqv:hasExec ?exec.
+}GROUP BY ?work
+ORDER BY DESC(?totExecs)
+LIMIT 10
+
+
+5. Return the keywords usage for the 2022 collection
+   The query returns a list of couples (keyword IRI, frequency) 
+
+Query text:
+
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX eswr: <http://w3id.org/esw/resource/>
+
+SELECT ?keyword (COUNT(*) AS ?count) where{
+    ?topic esw:partOf eswr:Completeness2022Track.
+    ?work esw:implements ?topic;
+          esw:hasPart ?job.
+    ?job esw:queries ?queries.
+    ?queries rdf:rest*/rdf:first  ?query.
+    ?query lsqv:usesFeature ?keyword.
+}GROUP BY ?keyword
+ORDER BY DESC (?count)
+
+
