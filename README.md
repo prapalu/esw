@@ -21,7 +21,7 @@ For convenience we put all the information about topics,tasks,workflows and the 
 
 ### Search Topic and Search Task
 
-A Search Topic has the aim of investigate a specific portion of a Knowledge Base (e.g. Basketball Players). It is a collection of questions (also called Search Task) that guide the exploration. Usually, there are some given URIs related to the Search Topic in order to provide a starting point for the exploration.
+A Search Topic investigates a specific portion of a Knowledge Base (e.g. Basketball Players). It is a collection of questions (also called Search Task) that guide the exploration. Usually, there are some given URIs related to the Search Topic in order to provide a starting point for the exploration.
 
 ### Search Workflow
 
