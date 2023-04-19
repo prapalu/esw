@@ -4,7 +4,7 @@ This repository contains the data and the scripts for the Exploratory Search Wor
 
 ## Scope
 
-This resource provides a new benchamrk for exploratory search workflow. 
+This resource provides a new benchmark for exploratory search workflow. 
 For this purpose we created some ``Search Topic`` with 5 to 10 ``Search Task`` each.
 We assigned from 4 to 6 different workers the same ``Search Topic``, in order to collect different results and different points of view.
 After that we analyzed each ``Search Workflow`` and amongst those of the same ``Search Topic`` we built a ``Ground Truth`` for the ``Search Topic``.
@@ -39,14 +39,14 @@ On the contrary the Search Topics in the 2022 collection include very specific t
 Ground Truths are available for all the Search Topics of the 2022 collection, while for the 2021 collection the Ground Truths available are the ones of the Movie macro topic thus it is more completeness.
 
 
-About 2021 collection:
+About 2021 collection (more information [here](collections/2021)):
 - 6 macro topic (Geography, Politics, Movies, Book, Sport, Companies)
 - 21 workers
 - 24 Search Topics
 - 126 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
 - 5803 queries
 
-About 2022 collection:
+About 2022 collection (more information [here](collections/2021)):
 - 3 macro topic (Movies, Sport, History)
 - 41 workers
 - 21 Search Topics

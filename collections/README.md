@@ -1,6 +1,6 @@
 # Collections
 
-We have 2 collections of workflows divided in the subfolders `2021/` and `2022/`.
+We have 2 collections of workflows divided in the subfolders [2021](2021/) and [2022](2022/).
 Each subfolder contains the following folders:
 - `notebooks`: it contains the original `Search Workflows` wrote through python notebook. In this folder each worker has its own folder with the notebooks he/she wrote
 - `workflows_json`: it contains the json representation of the workflows. More information about the standard we used to represent the workflow are written below. Like the `notebook` folder each worker has its own folder with his/her workflows
