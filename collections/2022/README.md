@@ -6,10 +6,10 @@ In this folder there are everything about the 2022 collection.
 
 The 2022 collection is composed of:
 - 3 macro topic (Movies, Sport, History)
-- 41 workers
+- 36 workers
 - 21 Search Topics
-- 123 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
-- 4862 queries
+- 108 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
+- 5786 queries
 
 ### Search Workflows
 

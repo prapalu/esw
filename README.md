@@ -44,14 +44,14 @@ About 2021 collection (more information [here](collections/2021)):
 - 21 workers
 - 24 Search Topics
 - 126 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
-- 5803 queries
-
-About 2022 collection (more information [here](collections/2021)):
-- 3 macro topic (Movies, Sport, History)
-- 41 workers
-- 21 Search Topics
-- 123 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
 - 4862 queries
+
+About 2022 collection (more information [here](collections/2022)):
+- 3 macro topic (Movies, Sport, History)
+- 36 workers
+- 21 Search Topics
+- 108 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
+- 5786 queries
 
 
 

@@ -5,11 +5,11 @@ In this folder there are everything about the 2021 collection.
 ## Statistics
 
 The 2021 collection is composed of:
-- 6 macro topic: Geography, Politics, Movies, Book, Sport, Companies
+- 6 macro topic (Geography, Politics, Movies, Book, Sport, Companies)
 - 21 workers
 - 24 Search Topics
 - 126 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
-- 5803 queries
+- 4862 queries
 
 ### Search Workflows
 
