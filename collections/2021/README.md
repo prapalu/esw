@@ -20,3 +20,4 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 |Geography  |
 | ------------- | -----------|
 |Prova          | 7         |  
+|Prova          | 7         |  
