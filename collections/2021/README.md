@@ -17,14 +17,6 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 
 | Search Topic | #Workflows |
 | ------------- | -----------|
-|```start-multi-column
-ID: ColTest1
-number of columns: 1
-column size: medium
-column position: left
-```
-Geography
-
-=== end-multi-colum|
+|Geography  |
 | ------------- | -----------|
 |Prova          | 7         |  
