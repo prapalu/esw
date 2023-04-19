@@ -64,8 +64,8 @@ eswr:NOTEXISTS a sd:Feature ;
 eswr:OFFSET a sd:Feature ;
     rdfs:label "OFFSET"@en .
 
-eswr:OPT a sd:Feature ;
-    rdfs:label "OPT"@en .
+eswr:OPTIONAL a sd:Feature ;
+    rdfs:label "OPTIONAL"@en .
 
 eswr:ORDERBY a sd:Feature ;
     rdfs:label "ORDER BY"@en .
