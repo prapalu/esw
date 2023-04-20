@@ -32,7 +32,8 @@ SELECT ?track (COUNT (DISTINCT ?macro) AS ?macroTopics)
           esw:hasPart ?part.
     ?part esw:queries ?q.
     ?q rdf:rest*/rdf:first ?query.
-}GROUP BY ?track
+}
+GROUP BY ?track
 ```
 
 2. Get the best workflow for topics of which there is a ground truth
@@ -95,7 +96,8 @@ SELECT DISTINCT ?work (AVG(?fscore) AS ?fs) (SUM(?numQueries) AS ?totQueries) wh
     	  esw:hasPart ?part.
    	?part esw:fscore ?fscore;
           esw:numberOfQueries ?numQueries.
-}GROUP BY ?work
+}
+GROUP BY ?work
 ```
 
 4. Return the tasks with more queries.
@@ -111,7 +113,8 @@ SELECT DISTINCT ?task ?label (SUM(?numQueries) AS ?totQueries) (COUNT(DISTINCT ?
          esw:performs ?task;
          esw:numberOfQueries ?numQueries.
      ?task rdfs:label ?label.
-}GROUP BY ?task ?label
+}
+GROUP BY ?task ?label
 ORDER BY DESC(?totQueries)
 LIMIT 10
 ```
@@ -131,13 +134,15 @@ SELECT DISTINCT ?work (COUNT( DISTINCT ?query) AS ?totQueries) (COUNT( ?exec) AS
     ?job esw:queries ?queries.
     ?queries rdf:rest*/rdf:first  ?query.
     ?query lsqv:hasExec ?exec.
-}GROUP BY ?work
+}
+GROUP BY ?work
 ORDER BY DESC(?totExecs)
 LIMIT 10
 ```
 
 6.  Return the keywords usage for the 2022 collection.
    The query returns a list of couples (keyword IRI, frequency).
+
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Fcount%29+where%7B%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7DGROUP+BY+%3Fkeyword%0D%0AORDER+BY+DESC+%28%3Fcount%29&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
@@ -153,11 +158,13 @@ SELECT ?keyword (COUNT(*) AS ?count) where{
     ?job esw:queries ?queries.
     ?queries rdf:rest*/rdf:first  ?query.
     ?query lsqv:usesFeature ?keyword.
-}GROUP BY ?keyword
+}
+GROUP BY ?keyword
 ORDER BY DESC (?count)
 ```
 
-7. Get for each topic the average fscore of the workflows 
+7. Get for each topic the average fscore of the workflows, the average number of queries per workflow and the total number of queries.
+   The query returns a list of 5-tuples (topic IRI, topic label, AVG(fscore), AVG(queries), #queries).
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0A%0D%0ASELECT+%3Ftopic+%3Flab+%28AVG%28%3Ffs%29+AS+%3FavgFscore%29+%28ROUND%28AVG%28%3Fqs%29%29+AS+%3FavgQueries%29+%28SUM%28%3Fqs%29+AS+%3FtotQueries%29+WHERE%7B+%0D%0A++++%23%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fwork+%28AVG%28%3Ffscore%29+AS+%3Ffs%29+%28SUM%28%3Fqueries%29+AS+%3Fqs%29+WHERE%7B%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ft%3B%0D%0A++++++++++++++++++esw%3AwroteBy+%3Fworker%3B%0D%0A++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fpart+esw%3Afscore+%3Ffscore%3B%0D%0A++++++++++++++++++esw%3AnumberOfQueries+%3Fqueries.%0D%0A++++++++%7DGROUP+BY+%3Fwork%0D%0A++++%7D%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Ftopic+rdfs%3Alabel+%3Flab.%0D%0A%7D%0D%0AGROUP+BY+%3Ftopic+%3Flab%0D%0AHAVING+%28AVG%28%3Ffs%29%3E+0.0%29%0D%0AORDER+BY+%3Flab&format=text%2Fhtml&timeout=0&signal_void=on)
 
@@ -165,7 +172,6 @@ ORDER BY DESC (?count)
 PREFIX esw: <http://w3id.org/esw/ontology#>
 
 SELECT ?topic ?lab (AVG(?fs) AS ?avgFscore) (ROUND(AVG(?qs)) AS ?avgQueries) (SUM(?qs) AS ?totQueries) WHERE{ 
-    #?topic esw:partOf ?track.
     {
         SELECT ?work (AVG(?fscore) AS ?fs) (SUM(?queries) AS ?qs) WHERE{
             ?work esw:implements ?t;
