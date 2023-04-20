@@ -156,3 +156,29 @@ SELECT ?keyword (COUNT(*) AS ?count) where{
 }GROUP BY ?keyword
 ORDER BY DESC (?count)
 ```
+
+7. Get for each topic the average fscore of the workflows 
+
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0A%0D%0ASELECT+%3Ftopic+%3Flab+%28AVG%28%3Ffs%29+AS+%3FavgFscore%29+%28ROUND%28AVG%28%3Fqs%29%29+AS+%3FavgQueries%29+%28SUM%28%3Fqs%29+AS+%3FtotQueries%29+WHERE%7B+%0D%0A++++%23%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fwork+%28AVG%28%3Ffscore%29+AS+%3Ffs%29+%28SUM%28%3Fqueries%29+AS+%3Fqs%29+WHERE%7B%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ft%3B%0D%0A++++++++++++++++++esw%3AwroteBy+%3Fworker%3B%0D%0A++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fpart+esw%3Afscore+%3Ffscore%3B%0D%0A++++++++++++++++++esw%3AnumberOfQueries+%3Fqueries.%0D%0A++++++++%7DGROUP+BY+%3Fwork%0D%0A++++%7D%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Ftopic+rdfs%3Alabel+%3Flab.%0D%0A%7D%0D%0AGROUP+BY+%3Ftopic+%3Flab%0D%0AHAVING+%28AVG%28%3Ffs%29%3E+0.0%29%0D%0AORDER+BY+%3Flab&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```SPARQL 
+PREFIX esw: <http://w3id.org/esw/ontology#>
+
+SELECT ?topic ?lab (AVG(?fs) AS ?avgFscore) (ROUND(AVG(?qs)) AS ?avgQueries) (SUM(?qs) AS ?totQueries) WHERE{ 
+    #?topic esw:partOf ?track.
+    {
+        SELECT ?work (AVG(?fscore) AS ?fs) (SUM(?queries) AS ?qs) WHERE{
+            ?work esw:implements ?t;
+                  esw:wroteBy ?worker;
+                  esw:hasPart ?part.
+            ?part esw:fscore ?fscore;
+                  esw:numberOfQueries ?queries.
+        }GROUP BY ?work
+    }
+    ?work esw:implements ?topic.
+    ?topic rdfs:label ?lab.
+}
+GROUP BY ?topic ?lab
+HAVING (AVG(?fs)> 0.0)
+ORDER BY ?lab
+```

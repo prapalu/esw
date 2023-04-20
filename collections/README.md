@@ -8,6 +8,7 @@ Each subfolder contains the following folders:
 - `workflows_evaluated`: it contains the workflows evaluated using the ground truths.
 - `querylogs`: it contains the logs of the executed queries by the workers.
 - `rdf`: it contains the turtle files to populate the RDF Graph.
+- `empty_notebooks`: it contains the template notebooks for each Search Topic, which you can reuse to do your own workflow.
 
 ### JSON representation of the workflows
 
