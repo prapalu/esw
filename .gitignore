@@ -12,3 +12,6 @@ __pycache__/
 
 # ignore old python resources
 old_res/  
+
+# ignore Papers
+Papers/
