@@ -57,6 +57,3 @@ About 2022 collection (more information [here](collections/2022)):
 
 
 
-
-| Search Topic    | #Search Workflows  |
-| -----------   | ----------- |
