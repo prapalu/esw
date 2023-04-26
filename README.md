@@ -1,6 +1,6 @@
 # Exploratory Search Workloads collection (ESW)
 
-This repository contains the data and the scripts for the Exploratory Search Workloads project  
+This repository contains the data and the scripts for the Exploratory Search Workloads collection  
 
 ## Scope
 
@@ -15,7 +15,7 @@ For convenience we put all the information about topics,tasks,workflows and the 
 ## Contents 
 - [src](src): the folder with the source code to parse, to evaluate and to serialize the workflows. 
 - [rdf](rdf): the folder that contains the information about the RDF Graph (ontology, turtle files, useful queries)
-- [collections](collections): the folder that contains the main data of this project. 
+- [tracks](tracks): the folder that contains the main data of this project. 
 
 ## Definitions
 
@@ -33,20 +33,20 @@ A Ground Truth is a special Search Workflow that in our opinion solves in the be
 
 ## Inside the resource
 
-The Search Workflows were collected during the Graph Database course taught in the University of Padua during the Master Degree in Computer Engineering in the Academic Years 2021 and 2022. For this reason we have two collections, once per Academic Year. 
-Also, the Search Topics in the 2021 collection include very general tasks that can have multiple valid answers (e.g. Return some numerical comparisons between Woody Allen and Quentin Tarantino) thus it is more "Information Retrival" oriented.
-On the contrary the Search Topics in the 2022 collection include very specific tasks, that usually specify the format of the final answer output (e.g. Return for each country the number of appearances in the FIFA World Cup: the output format should be a list of triples (Country IRI, Country label, #appareances)).
-Ground Truths are available for all the Search Topics of the 2022 collection, while for the 2021 collection the Ground Truths available are the ones of the Movie macro topic thus it is more completeness.
+The Search Workflows were collected during the Graph Database course taught in the University of Padua during the Master Degree in Computer Engineering in the Academic Years 2021 and 2022. For this reason we have two tracks, once per Academic Year. 
+Also, the Search Topics in the 2021 track include very general tasks that can have multiple valid answers (e.g. Return some numerical comparisons between Woody Allen and Quentin Tarantino) thus it is more "Information Retrival" oriented.
+On the contrary the Search Topics in the 2022 track include very specific tasks, that usually specify the format of the final answer output (e.g. Return for each country the number of appearances in the FIFA World Cup: the output format should be a list of triples (Country IRI, Country label, #appareances)).
+Ground Truths are available for all the Search Topics of the 2022 track, while for the 2021 track the Ground Truths available are the ones of the Movie macro topic thus it is more completeness.
 
 
-About 2021 collection (more information [here](collections/2021)):
+About 2021 track (more information [here](tracks/2021)):
 - 6 macro topic (Geography, Politics, Movies, Book, Sport, Companies)
 - 21 workers
 - 24 Search Topics
 - 126 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
 - 4862 queries
 
-About 2022 collection (more information [here](collections/2022)):
+About 2022 track (more information [here](tracks/2022)):
 - 3 macro topic (Movies, Sport, History)
 - 36 workers
 - 21 Search Topics
