@@ -13,9 +13,9 @@ For convenience we put all the information about topics,tasks,workflows and the 
 
 
 ## Contents 
-- `src`: the folder with the source code to parse, to evaluate and to serialize the workflows. More details [here](src/README.md)
-- `rdf`: the folder that contains the information about the RDF Graph (ontology, turtle files, useful queries)
-- `collections`: the folder that contains the main data of this project. More details [here](collections/README.md)
+- [src](src): the folder with the source code to parse, to evaluate and to serialize the workflows. 
+- [rdf](rdf): the folder that contains the information about the RDF Graph (ontology, turtle files, useful queries)
+- [collections](collections): the folder that contains the main data of this project. 
 
 ## Definitions
 

@@ -2,8 +2,8 @@
 
 
 ## Contents 
-- `ontology`: it contains the ontology schema, both the image and owl file.
-- `ttl_files`: it contains the turtle files, used to populate the RDF graph.
+- [ontology](ontology): it contains the ontology schema, both the image and owl file.
+- [ttl_files](ttl_files): it contains the turtle files, used to populate the RDF graph.
 
 
 ### Useful Queries
