@@ -145,3 +145,49 @@ SELECT ?keyword (COUNT(*) AS ?count) where{
 ORDER BY DESC (?count)
 
 
+
+7. Get for each topic the average fscore of the workflows, the average number of queries per workflow and the total number of queries.
+   The query returns a list of 5-tuples (topic IRI, topic label, AVG(fscore), AVG(queries), #queries).
+
+Query Text:
+
+PREFIX esw: <http://w3id.org/esw/ontology#>
+
+SELECT ?topic ?lab (AVG(?fs) AS ?avgFscore) (ROUND(AVG(?qs)) AS ?avgQueries) (SUM(?qs) AS ?totQueries) WHERE{ 
+    {
+        SELECT ?work (AVG(?fscore) AS ?fs) (SUM(?queries) AS ?qs) WHERE{
+            ?work esw:implements ?t;
+                  esw:wroteBy ?worker;
+                  esw:hasPart ?part.
+            ?part esw:fscore ?fscore;
+                  esw:numberOfQueries ?queries.
+        }GROUP BY ?work
+    }
+    ?work esw:implements ?topic.
+    ?topic rdfs:label ?lab.
+}
+GROUP BY ?topic ?lab
+HAVING (AVG(?fs)> 0.0)
+ORDER BY ?lab
+
+8. Workers statistics
+
+   The query returns a list of 5-tuples (worker IRI, quality, #workflows, #jobs, AVG(fscore)).
+
+Query Text:
+
+PREFIX esw: <http://w3id.org/esw/ontology#>
+SELECT ?worker ?quality ?workflows ?jobs ?avgFScore WHERE{
+    {
+        SELECT ?worker (COUNT(DISTINCT ?workflow) AS ?workflows) 
+        (COUNT(DISTINCT ?job) AS ?jobs)  (AVG(?fscore) AS ?avgFScore)  WHERE{
+            ?workflow esw:wroteBy ?worker;
+                      esw:hasPart ?job.
+            ?job esw:fscore ?fscore;
+                 esw:numberOfQueries ?numQueries.
+        }
+        GROUP BY ?worker
+    }
+    ?worker esw:quality ?quality.
+}
+ORDER BY ?worker
