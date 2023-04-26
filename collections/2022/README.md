@@ -15,9 +15,11 @@ The 2022 collection is composed of:
 
 Each Search Topic was implemented from 4 to 6 workers in order to obtain different points of view. The table below shows the distribution of the Search Workflows.
 
+You can get the statistics below querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3FtLab+%28COUNT%28DISTINCT+%3Fwork%29+AS+%3Fworks%29++%28COUNT%28DISTINCT+%3Fquery%29+AS+%3FnQueries%29+where%7B%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A%3Ftopic+rdfs%3Alabel+%3FtLab.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A%7D%0D%0AGROUP+BY+%3FtLab%0D%0AORDER+BY+%3FtLab&format=text%2Fhtml&timeout=0&signal_void=on)
+
 | Search Topic | #Workflows | # queries|
 | -------------| -----------| -----------|
-| **History** ||
+| **History** | **36** | **1831**|
 | Literary Movements and Divine Comedy  | 5 | 265 |
 | Euro  | 6 | 323 |
 | World Wide Web | 5 | 158 |
@@ -25,7 +27,7 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 | Cultural Movements  | 5 | 174 |
 | Ancient Rome  | 4 | 186 |
 | Literary Movements and physicists  | 5 | 186 |
-| **Movies** ||
+| **Movies** | **36** | **1636**|
 | Tv series Without a Trace  | 5 | 284 |
 | Disney  | 5 | 171 |
 | Film Genre and directors  | 5 | 253 |
@@ -33,7 +35,7 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 | Tv series HIMYM  | 6 | 368 |
 | Sherlock Holmes  | 6 | 232 |
 | Film Genre and composer  | 4 | 144 |
-| **Sport** ||
+| **Sport** | **36** | **2319**|
 | Association Football Players  | 5 | 195 |
 | Olympic Games  | 4 | 186 |
 | Running  | 5 | 221 |
@@ -43,6 +45,10 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 | Basketball and NBA finals  | 6 | 383 |
 
 ### Keywords Analysis
+
+The table below shows the distribution of the SPARQL keywords in the collection.
+
+You can get the statistics below querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Fcount%29+where%7B%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7D%0D%0AGROUP+BY+%3Fkeyword%0D%0AORDER+BY+DESC+%28%3Fcount%29&format=text%2Fhtml&timeout=0&signal_void=on)
 
 | Keyword | Frequency|
 | -------------| -----------| 
