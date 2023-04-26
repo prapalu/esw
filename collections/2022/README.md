@@ -17,7 +17,7 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 
 | Search Topic | #Workflows | # queries|
 | -------------| -----------| -----------|
-| History ||
+| **History** ||
 | Literary Movements and Divine Comedy  | 5 | 265 |
 | Euro  | 6 | 323 |
 | World Wide Web | 5 | 158 |
@@ -25,7 +25,7 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 | Cultural Movements  | 5 | 174 |
 | Ancient Rome  | 4 | 186 |
 | Literary Movements and physicists  | 5 | 186 |
-| Movies ||
+| **Movies** ||
 | Tv series Without a Trace  | 5 | 284 |
 | Disney  | 5 | 171 |
 | Film Genre and directors  | 5 | 253 |
@@ -33,7 +33,7 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 | Tv series HIMYM  | 6 | 368 |
 | Sherlock Holmes  | 6 | 232 |
 | Film Genre and composer  | 4 | 144 |
-| Sport ||
+| **Sport** ||
 | Association Football Players  | 5 | 195 |
 | Olympic Games  | 4 | 186 |
 | Running  | 5 | 221 |

@@ -17,32 +17,32 @@ Each Search Topic was implemented from 4 to 6 workers in order to obtain differe
 
 | Search Topic | #Workflows | # queries|
 | -------------| -----------| -----------|
-|Book  ||
+| **Book**  ||
 |Political Magazines     | 4         |  144 |
 |Nobel laureates         | 6         |  274 |
 |Authors comparison     | 6         |  253 |
 |Author comparison         | 5         |  260 |
-|Companies ||
+| **Companies** ||
 |IT Companies        |    6         |  186 |
 |Economy of EU States       |    6         |  242 |
 |Trademarks across the world        |    5        |  171 |
 |Business People in Germany        |    4         |  113 |
-|Geography ||
+| **Geography** ||
 |American Architects        |    5         |  186 |
 |European Cathedrals       |    4         |  242 |
 |archaeological sites        |    6        |  171 |
 |Place of Birth, Death, and Burial        |    6        |  113 |
-|Movies ||
+| **Movies** ||
 |Tv Series        |    5         |  251 |
 |Directors       |    6         |  331 |
 |The Batman movies        |    4        |  193 |
 |Horror Franchises        |    6        |  211 |
-|Politics ||
+| **Politics** ||
 |International Treaties        |    4         |  87 |
 |Monarchies       |    5         |  257 |
 |Politicians in E.U.        |    6        |  164 |
 |Presidents of countries       |    6        |  251 |
-|Sport ||
+| **Sport** ||
 |F1 pilots        |    6         |  276 |
 |Olympic       |    6         |  213 |
 |World Records        |    4        |  193 |
