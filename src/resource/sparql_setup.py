@@ -18,7 +18,7 @@ def run_query(queryString, verbose = False):
         
     to_run = prefixString + "\n" + queryString
     
-    sparql = SPARQLWrapper("http://a256-gc1-02.srv.aau.dk:5820/sparql")
+    sparql = SPARQLWrapper("https://grace.dei.unipd.it/sparql")
     sparql.setTimeout(300)
     sparql.setReturnFormat(JSON)
     sparql.setQuery(to_run)

@@ -29,14 +29,22 @@ def analyze_query(query, verbose = False):
     for actual_key in no_space:
         index = 0
         while actual_key in query.upper()[index:]:
-            if verbose and actual_key == "GROUP_CONCAT":
-                print(query.upper()[index:].index(actual_key))
             offset = query.upper()[index:].index(actual_key)
             if query[index+offset-1] != "?":
-                if verbose:
-                    print(keywords.index(actual_key))
-                bitmap[keywords.index(actual_key)] = 1
-                break
+                if actual_key.upper() == "EXISTS":
+                    tmp = query[:(index+offset+len(actual_key))]
+                    if tmp.split()[-1][0] != "?" and tmp.split()[-1].upper() == "EXISTS" and tmp.split()[-2].upper() != "NOT":
+                        if verbose:
+                            print(keywords.index(actual_key))
+                        bitmap[keywords.index(actual_key)] = 1
+                        break
+                else:
+                    tmp = query[:(index+offset+len(actual_key))]
+                    if tmp.split()[-1][0] == actual_key:
+                        if verbose:
+                            print(keywords.index(actual_key))
+                        bitmap[keywords.index(actual_key)] = 1
+                        break
             index = query.upper()[index:].index(actual_key)+index+len(actual_key)
     if verbose:
         print(bitmap)
