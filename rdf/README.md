@@ -188,3 +188,28 @@ GROUP BY ?topic ?lab
 HAVING (AVG(?fs)> 0.0)
 ORDER BY ?lab
 ```
+
+8. Workers statistics
+
+   The query returns a list of 5-tuples (worker IRI, quality, #workflows, #jobs, AVG(fscore)).
+
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0ASELECT+%3Fworker+%3Fquality+%3Fworkflows+%3Fjobs+%3FavgFScore+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fworker+%28COUNT%28DISTINCT+%3Fworkflow%29+AS+%3Fworkflows%29+%0D%0A++++++++%28COUNT%28DISTINCT+%3Fjob%29+AS+%3Fjobs%29++%28AVG%28%3Ffscore%29+AS+%3FavgFScore%29++WHERE%7B%0D%0A++++++++++++%3Fworkflow+esw%3AwroteBy+%3Fworker%3B%0D%0A++++++++++++++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++++++++++%3Fjob+esw%3Afscore+%3Ffscore%3B%0D%0A+++++++++++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Fworker%0D%0A++++%7D%0D%0A++++%3Fworker+esw%3Aquality+%3Fquality.%0D%0A%7D%0D%0AORDER+BY+%3Fworker%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on)
+
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+SELECT ?worker ?quality ?workflows ?jobs ?avgFScore WHERE{
+    {
+        SELECT ?worker (COUNT(DISTINCT ?workflow) AS ?workflows) 
+        (COUNT(DISTINCT ?job) AS ?jobs)  (AVG(?fscore) AS ?avgFScore)  WHERE{
+            ?workflow esw:wroteBy ?worker;
+                      esw:hasPart ?job.
+            ?job esw:fscore ?fscore;
+                 esw:numberOfQueries ?numQueries.
+        }
+        GROUP BY ?worker
+    }
+    ?worker esw:quality ?quality.
+}
+ORDER BY ?worker
+```
