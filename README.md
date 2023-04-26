@@ -1,4 +1,4 @@
-# Exploratory Search Workflow (ESW)
+# Exploratory Search Workloads collection (ESW)
 
 This repository contains the data and the scripts for the Exploratory Search Workflow project  
 
