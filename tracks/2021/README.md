@@ -1,8 +1,16 @@
 # 2021 Track
 
 This folder contains the 2021 track.
+Furthermore we report here some statistics for this track.
 
-## Statistics
+## Content
+
+- [general statistics](#statistics)
+- [search workflows](#search_workflows)
+- [keywords analysis](#keywords_analysis)
+- [evaluation results](#evaluation_results)
+
+### Statistics
 
 The 2021 track is composed of:
 - 6 macro topic (Geography, Politics, Movies, Book, Sport, Companies)
@@ -92,7 +100,11 @@ For more statistics on the SPARQL keywords usage in specific Search Workflows, S
 
 ### Evaluation Results
 
-| Topic   | Avg Fscore | Avg queries | Tot queries |
+The table below shows, for each topic of the track, the average Fscore obtained by the Search Workflows, the average queries and the total number of queries.
+
+You can get these statistics querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3FtopicLabel+%28AVG%28%3Ffscore%29+AS+%3FavgFscore%29+%28ROUND%28AVG%28%3Fqs%29%29+AS+%3FavgQueries%29+%28SUM%28%3Fqs%29+AS+%3FtotQueries%29+WHERE%7B+%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fworkflow+%28AVG%28%3Ffs%29+AS+%3Ffscore%29+%28SUM%28%3Fqueries%29+AS+%3Fqs%29+WHERE%7B%0D%0A++++++++++++%3Fworkflow+esw%3Aimplements+%3Ft%3B%0D%0A++++++++++++++++++esw%3AwroteBy+%3Fworker%3B%0D%0A++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fpart+esw%3Afscore+%3Ffs%3B%0D%0A++++++++++++++++++esw%3AnumberOfQueries+%3Fqueries.%0D%0A++++++++%7DGROUP+BY+%3Fworkflow%0D%0A++++%7D%0D%0A%3Ftopic+esw%3ApartOf+eswr%3AInformative2021Track.%0D%0A++++%3Fworkflow+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Ftopic+esw%3Adescription+%3FtopicLabel.%0D%0A%7D%0D%0AGROUP+BY+%3FtopicLabel%0D%0AHAVING+%28AVG%28%3Ffscore%29%3E+0.0%29%0D%0AORDER+BY+ASC+%28%3FtopicLabel%29&format=text%2Fhtml&timeout=0&signal_void=on)
+
+| Search Topic   | Avg Fscore | Avg queries | Tot queries |
 | ----------| --------- | -------- |  -------- | 
 | Tv series  | 0.13 | 50 | 251 |
 | Directors  | 0.17 | 55 | 331 |
