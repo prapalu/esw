@@ -11,8 +11,9 @@
 Using the [SPARQL endpoint](http://w3id.org/esw/sparql) it is possible to queries the RDF graph.
 Some useful queries are given below with both the SPARQL code and a direct link to its execution.
 
-1. Get general statistics for the Tracks
-The query returns a list of 5-tuples (track IRI, #macroTopics, #topics, #workflows, #workers, #queries)
+1. Get general statistics for the Tracks.
+
+The query returns a list of 5-tuples (track IRI, #macroTopics, #topics, #workflows, #workers, #queries).
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0ASELECT+%3Ftrack+%28COUNT+%28DISTINCT+%3Fmacro%29+AS+%3FmacroTopics%29+%0D%0A+%28COUNT+%28DISTINCT+%3Ftopic%29+AS+%3Ftopics%29+%0D%0A+%28COUNT+%28DISTINCT+%3Fwork%29+AS+%3Fworkflows%29+%0D%0A+%28COUNT+%28DISTINCT+%3Fworker%29+AS+%3Fworkers%29+%0D%0A+%28COUNT+%28DISTINCT+%3Fquery%29+AS+%3Fqueries%29+WHERE%7B%0D%0A++++%3Ftopic+esw%3AmacroTopic+%3Fmacro%3B%0D%0A++++++++++++++++esw%3ApartOf+%3Ftrack.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AwroteBy+%3Fworker%3B%0D%0A++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++%3Fpart+esw%3Aqueries+%3Fq.%0D%0A++++%3Fq+rdf%3Arest*%2Frdf%3Afirst+%3Fquery.%0D%0A%7DGROUP+BY+%3Ftrack&format=text%2Fhtml&timeout=0&signal_void=on)
 
@@ -36,8 +37,10 @@ SELECT ?track (COUNT (DISTINCT ?macro) AS ?macroTopics)
 GROUP BY ?track
 ```
 
-2. Get the best workflow for topics of which there is a ground truth
+2. Get the best workflow for topics of which there is a ground truth.
+
 The query returns a list of 4-tuples (workflow IRI, topic IRI, score, ground truth IRI).
+
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0A%0D%0ASELECT+%3Fw+%3Ft+%3Ffs+%3Fgt+WHERE%7B%0D%0A++++%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftopic+%3Fmacro+%28MAX%28%3Ffscore%29+AS+%3Fmax_score%29+WHERE%0D%0A++++++++%7B%0D%0A++++++++++++%7B%0D%0A++++++++++++++++select+%3Fwork+%28AVG%28%3Fscore%29+AS+%3Ffscore%29+WHERE%7B%0D%0A++++++++++++++++++++%3Fwork+a+esw%3ASearchWorkflow%3B%0D%0A++++++++++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++++++++++%3Fpart+esw%3Afscore+%3Fscore.%0D%0A++++++++++++++++%7D%0D%0A++++++++++++++++GROUP+BY+%3Fwork+%0D%0A++++++++++++%7D%0D%0A++++++++++++FILTER%28%3Ffscore+%3E+0.1%29.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Ftopic+esw%3Adescription+%3Fmacro.%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Ftopic+%3Fmacro%0D%0A%0D%0A++++++++%7D%0D%0A++++%0D%0A++++%7B%0D%0A++++++++select+%3Fw+%3Ft+%28AVG%28%3Fs%29+AS+%3Ffs%29+WHERE%7B%0D%0A++++++++++++%3Fw+a+esw%3ASearchWorkflow%3B%0D%0A++++++++++++++++esw%3AhasPart+%3Fp.%0D%0A++++++++++++++++%3Fp+esw%3Afscore+%3Fs.%0D%0A++++++++++++%3Fw+esw%3Aimplements+%3Ft.%0D%0A++++++++++++%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Fw+%3Ft+%0D%0A++++%7D%0D%0A++++FILTER%28%3Ffs+%3D+%3Fmax_score%29.%0D%0A++++FILTER%28%3Ft+%3D+%3Ftopic%29.%0D%0A++++%3Ft+esw%3AhasGroundTruth+%3Fgt%3B%0D%0A++++++++esw%3Adescription+%3Fm.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
@@ -84,7 +87,9 @@ SELECT ?w ?topicLabel ?fs ?gt WHERE{
    and the total number of queries. (For the example we use the topic 
    History Workflow Series (Cultural Movements explorative search) 
    with IRI http://w3id.org/esw/resource/TOPICd1c898149d).
+
 The query returns a list of 3-tuples (workflow IRI, score, numberOfQueries).
+
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fwork+%28AVG%28%3Ffscore%29+AS+%3Ffs%29+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+where%7B%0D%0A++++%3Fwork+esw%3Aimplements+eswr%3ATOPICd1c898149d%3B%0D%0A++++%09++esw%3AhasPart+%3Fpart.%0D%0A+++%09%3Fpart+esw%3Afscore+%3Ffscore%3B%0D%0A++++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A%7DGROUP+BY+%3Fwork&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
@@ -101,7 +106,9 @@ GROUP BY ?work
 ```
 
 4. Return the tasks with more queries.
+
    The query returns a list 4-tuples (task IRI, task label, numberOfQueries, numberOfWorkflows).
+
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ftask+%3Flabel+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+%28COUNT%28DISTINCT+%3Fjob%29+AS+%3Fworks%29+where%7B%0D%0A++++%3Fjob+a+esw%3ASearchJob%3B%0D%0A+++++++++esw%3Aperforms+%3Ftask%3B%0D%0A+++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A+++++%3Ftask+rdfs%3Alabel+%3Flabel.%0D%0A%7DGROUP+BY+%3Ftask+%3Flabel%0D%0AORDER+BY+DESC%28%3FtotQueries%29%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
@@ -120,7 +127,9 @@ LIMIT 10
 ```
 
 5. Return the top-10 workflows with more query executions.
+
 The query returns a list of 3-tuples (workflow IRI, numberOfQueries, numberOfExecutions).
+
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Ftask+%3Flabel+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+%28COUNT%28DISTINCT+%3Fjob%29+AS+%3Fworks%29+where%7B%0D%0A++++%3Fjob+a+esw%3ASearchJob%3B%0D%0A+++++++++esw%3Aperforms+%3Ftask%3B%0D%0A+++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A+++++%3Ftask+rdfs%3Alabel+%3Flabel.%0D%0A%7DGROUP+BY+%3Ftask+%3Flabel%0D%0AORDER+BY+DESC%28%3FtotQueries%29%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
@@ -141,6 +150,7 @@ LIMIT 10
 ```
 
 6.  Return the keywords usage for the 2022 collection.
+
    The query returns a list of couples (keyword IRI, frequency).
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Fcount%29+where%7B%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7DGROUP+BY+%3Fkeyword%0D%0AORDER+BY+DESC+%28%3Fcount%29&format=text%2Fhtml&timeout=0&signal_void=on)
@@ -164,6 +174,7 @@ ORDER BY DESC (?count)
 ```
 
 7. Get for each topic the average fscore of the workflows, the average number of queries per workflow and the total number of queries.
+
    The query returns a list of 5-tuples (topic IRI, topic label, AVG(fscore), AVG(queries), #queries).
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0A%0D%0ASELECT+%3Ftopic+%3Flab+%28AVG%28%3Ffs%29+AS+%3FavgFscore%29+%28ROUND%28AVG%28%3Fqs%29%29+AS+%3FavgQueries%29+%28SUM%28%3Fqs%29+AS+%3FtotQueries%29+WHERE%7B+%0D%0A++++%23%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fwork+%28AVG%28%3Ffscore%29+AS+%3Ffs%29+%28SUM%28%3Fqueries%29+AS+%3Fqs%29+WHERE%7B%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ft%3B%0D%0A++++++++++++++++++esw%3AwroteBy+%3Fworker%3B%0D%0A++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fpart+esw%3Afscore+%3Ffscore%3B%0D%0A++++++++++++++++++esw%3AnumberOfQueries+%3Fqueries.%0D%0A++++++++%7DGROUP+BY+%3Fwork%0D%0A++++%7D%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Ftopic+rdfs%3Alabel+%3Flab.%0D%0A%7D%0D%0AGROUP+BY+%3Ftopic+%3Flab%0D%0AHAVING+%28AVG%28%3Ffs%29%3E+0.0%29%0D%0AORDER+BY+%3Flab&format=text%2Fhtml&timeout=0&signal_void=on)
