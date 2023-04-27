@@ -76,4 +76,26 @@ You can get the statistics below querying the RDF Graph. [Execute query](http://
 | AVG	 | 6 |
 | DESCRIBE	 | 1 |
 
+| SELECT	 | 5783 |
+| DISTINCT	 | 5319 |
+| LIMIT	 | 5234 |
+| FILTER	 | 1557 |
+| COUNT	 | 876 |
+| GROUPBY	 | 864 |
+| ORDERBY	 | 746 |
+| REGEX	 | 671 |
+| OPTIONAL	 | 348 |
+| HAVING	 | 250 |
+| NESTEDQUERY	 | 243 |
+| UNION	 | 198 |
+| NOTEXISTS	 | 82 |
+| MIN	 | 77 |
+| GROUP_CONCAT	 | 71 |
+| MAX	 | 46 |
+| MINUS	 | 42 |
+| SUM	 | 31 |
+| EXISTS	 | 22 |
+| AVG	 | 6 |
+| DESCRIBE	 | 1 |
+
 For more statistics on the SPARQL keywords usage in specific Search Workflows, Search Topics, Macro Topics, you can query the [SPARQL endpoint](http://w3id.org/esw/sparql) binding the variables you want.
