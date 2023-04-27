@@ -110,3 +110,17 @@ You can get these statistics querying the RDF Graph. [Execute query](http://grac
 | Directors  | 0.17 | 55 | 331 |
 | The Batman movies  | 0.23 | 48 | 193 |
 | Horror Franchises  | 0.13 | 35 | 211 |
+
+
+The table below shows, for each topic of the track, the best Search Workflows, with its Fscore, the number of queries and the realted ground truth.
+
+The search Workflows and the Ground Truths links to the real resource.
+
+You can get these statistics querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=%0D%0APREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fworkflow+%3FtopicLabel+%3FavgFscore+%3FnumQueries+%3FgroundTruth+WHERE%7B%0D%0A++++%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftopic+%3Fmacro+%28MAX%28%3Ffscore%29+AS+%3Fmax_score%29+WHERE%0D%0A++++++++%7B%0D%0A++++++++++++%7B%0D%0A++++++++++++++++select+%3Fwork+%28AVG%28%3Fscore%29+AS+%3Ffscore%29+WHERE%7B%0D%0A++++++++++++++++++++%3Fwork+a+esw%3ASearchWorkflow%3B%0D%0A++++++++++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++++++++++%3Fpart+esw%3Afscore+%3Fscore.%0D%0A++++++++++++++++%7D%0D%0A++++++++++++++++GROUP+BY+%3Fwork+%0D%0A++++++++++++%7D%0D%0A++++++++++++FILTER%28%3Ffscore+%3E+0.1%29.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Ftopic+esw%3Adescription+%3Fmacro.%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Ftopic+%3Fmacro%0D%0A%0D%0A++++++++%7D%0D%0A++++%0D%0A++++%7B%0D%0A++++++++select+%3Fworkflow+%3Ft+%28AVG%28%3Fs%29+AS+%3FavgFscore%29+%28SUM%28%3Fnq%29+AS+%3FnumQueries%29+WHERE%7B%0D%0A++++++++++++%3Fworkflow+a+esw%3ASearchWorkflow%3B%0D%0A++++++++++++++++esw%3AhasPart+%3Fp.%0D%0A++++++++++++++++%3Fp+esw%3Afscore+%3Fs.%0D%0A++++++++++++++++%3Fp+esw%3AnumberOfQueries+%3Fnq.%0D%0A++++++++++++%3Fworkflow+esw%3Aimplements+%3Ft.%0D%0A++++++++++++%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Fworkflow+%3Ft+%0D%0A++++%7D%0D%0A++++FILTER%28%3FavgFscore+%3D+%3Fmax_score%29.%0D%0A++++FILTER%28%3Ft+%3D+%3Ftopic%29.%0D%0A++++%3Ft+esw%3AhasGroundTruth+%3FgroundTruth%3B%0D%0A+++++++esw%3ApartOf+eswr%3AInformative2021Track%3B%0D%0A++++++++rdfs%3Alabel+%3FtopicLabel.%0D%0A%7D%0D%0AORDER+BY+%3FtopicLabel&format=text%2Fhtml&timeout=0&signal_void=on)
+
+| Search Workflow|Search Topic | Fscore | queries | Ground Truth |
+| ---------- | ---------- | --------- | -------- |  -------- | 
+| [8f65f028f0](http://w3id.org/esw/resource/8f65f028f0) | Tv series  | 0.39 | 37 | [workflow5_3](http://w3id.org/esw/resource/workflow5_3) |
+| [daa4ae72bf](http://w3id.org/esw/resource/daa4ae72bf) | Directors  | 0.29 | 83 | [workflow5_0](http://w3id.org/esw/resource/workflow5_0) |
+| [d000799b39](http://w3id.org/esw/resource/d000799b39) | The Batman movies  | 0.34 | 12 | [workflow5_1](http://w3id.org/esw/resource/workflow5_1) |
+| [28dde04e63](http://w3id.org/esw/resource/28dde04e63) | Horror Franchises  | 0.38 | 53 | [workflow5_2](http://w3id.org/esw/resource/workflow5_2) |
