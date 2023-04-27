@@ -88,3 +88,13 @@ You can get the statistics below querying the RDF Graph. [Execute query](http://
 
 For more statistics on the SPARQL keywords usage in specific Search Workflows, Search Topics, Macro Topics, you can query the [SPARQL endpoint](http://w3id.org/esw/sparql) binding the variables you want.
 
+
+
+### Evaluation Results
+
+| Topic   | Avg Fscore | Avg queries | Tot queries |
+| ----------| --------- | -------- |  -------- | 
+| Tv series  | 0.13 | 50 | 251 |
+| Directors  | 0.17 | 55 | 331 |
+| The Batman movies  | 0.23 | 48 | 193 |
+| Horror Franchises  | 0.13 | 35 | 211 |

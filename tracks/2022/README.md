@@ -77,3 +77,29 @@ You can get the statistics below querying the RDF Graph. [Execute query](http://
 | TOTAL     | 4862      | 100%  | 
 
 For more statistics on the SPARQL keywords usage in specific Search Workflows, Search Topics, Macro Topics, you can query the [SPARQL endpoint](http://w3id.org/esw/sparql) binding the variables you want.
+
+### Evaluation Results
+
+| Topic   | Avg Fscore | Avg queries | Tot queries |
+| ----------| --------- | -------- |  -------- | 
+| Literary Movements and Divine Comedy  | 0.73 | 53 | 265 |
+| Euro  | 0.7 | 54 | 323 |
+| World Wide Web | 0.64 | 32 | 158 |
+| Ancient Civilization  | 0.64 | 90 | 539 |
+| Cultural Movements  | 0.48 | 35 | 174 |
+| Ancient Rome  | 0.74 | 47 | 186 |
+| Literary Movements and physicists  | 0.62 | 37 | 186 |
+| Tv series Without a Trace  | 0.58 | 57 | 284 |
+| Disney  | 0.6 | 34 | 171 |
+| Film Genre and directors  | 0.23 | 51 | 253 |
+| Production company  | 0.52 | 37 | 184 |
+| Tv series HIMYM  | 0.19 | 61 | 368 |
+| Sherlock Holmes  | 0.73 | 39 | 232 |
+| Film Genre and composer  | 0.42 | 36 | 144 |
+| Association Football Players  | 0.58 | 39 | 195 |
+| Olympic Games  | 0.58 | 47 | 186 |
+| Running  | 0.3 | 44 | 221 |
+| Tennis  | 0.58 | 104 | 626 |
+| Basketball and NBA seasons  | 0.75 | 65 | 326 |
+| Association Football Club  | 0.72 | 76 | 382 |
+| Basketball and NBA finals  | 0.75 | 64 | 383 |
