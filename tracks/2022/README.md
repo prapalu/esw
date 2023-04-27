@@ -115,3 +115,33 @@ You can get these statistics querying the RDF Graph. [Execute query](http://grac
 | Basketball and NBA seasons  | 0.75 | 65 | 326 |
 | Association Football Club  | 0.72 | 76 | 382 |
 | Basketball and NBA finals  | 0.75 | 64 | 383 |
+
+The table below shows, for each topic of the track, the best Search Workflows, with its Fscore, the number of queries and the realted ground truth.
+
+The search Workflows and the Ground Truths links to the real resource.
+
+You can get these statistics querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fworkflow+%3FtopicLabel+%3FavgFscore+%3FnumQueries+%3FgroundTruth+WHERE%7B%0D%0A++++%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftopic+%3Fmacro+%28MAX%28%3Ffscore%29+AS+%3Fmax_score%29+WHERE%0D%0A++++++++%7B%0D%0A++++++++++++%7B%0D%0A++++++++++++++++select+%3Fwork+%28AVG%28%3Fscore%29+AS+%3Ffscore%29+WHERE%7B%0D%0A++++++++++++++++++++%3Fwork+a+esw%3ASearchWorkflow%3B%0D%0A++++++++++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++++++++++%3Fpart+esw%3Afscore+%3Fscore.%0D%0A++++++++++++++++%7D%0D%0A++++++++++++++++GROUP+BY+%3Fwork+%0D%0A++++++++++++%7D%0D%0A++++++++++++FILTER%28%3Ffscore+%3E+0.1%29.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Ftopic+esw%3Adescription+%3Fmacro.%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Ftopic+%3Fmacro%0D%0A%0D%0A++++++++%7D%0D%0A++++%0D%0A++++%7B%0D%0A++++++++select+%3Fworkflow+%3Ft+%28AVG%28%3Fs%29+AS+%3FavgFscore%29+%28SUM%28%3Fnq%29+AS+%3FnumQueries%29+WHERE%7B%0D%0A++++++++++++%3Fworkflow+a+esw%3ASearchWorkflow%3B%0D%0A++++++++++++++++esw%3AhasPart+%3Fp.%0D%0A++++++++++++++++%3Fp+esw%3Afscore+%3Fs.%0D%0A++++++++++++++++%3Fp+esw%3AnumberOfQueries+%3Fnq.%0D%0A++++++++++++%3Fworkflow+esw%3Aimplements+%3Ft.%0D%0A++++++++++++%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Fworkflow+%3Ft+%0D%0A++++%7D%0D%0A++++FILTER%28%3FavgFscore+%3D+%3Fmax_score%29.%0D%0A++++FILTER%28%3Ft+%3D+%3Ftopic%29.%0D%0A++++%3Ft+esw%3AhasGroundTruth+%3FgroundTruth%3B%0D%0A+++++++esw%3ApartOf+eswr%3ACompleteness2022Track%3B%0D%0A++++++++rdfs%3Alabel+%3FtopicLabel.%0D%0A%7D%0D%0AORDER+BY+%3FtopicLabel&format=text%2Fhtml&timeout=0&signal_void=on)
+
+| Search Workflow|Search Topic | Fscore | queries | Ground Truth |
+| ---------- | ---------- | --------- | -------- |  -------- | 
+| [841f86edd2](http://w3id.org/esw/resource/841f86edd2) | Literary Movements and Divine Comedy  | 0.87 | 98 | [workflow1_3](http://w3id.org/esw/resource/workflow1_3) |
+| [8d34e4f344](http://w3id.org/esw/resource/8d34e4f344) | Euro  | 0.9 | 157 | [workflow1_1](http://w3id.org/esw/resource/workflow1_1) |
+| [cbba0a4300](http://w3id.org/esw/resource/cbba0a4300) | World Wide Web | 0.74 | 20 | [workflow1_2](http://w3id.org/esw/resource/workflow1_2) |
+| [4bb8191b56](http://w3id.org/esw/resource/4bb8191b56) | Ancient Civilization  | 0.76 | 115 | [workflow1_4](http://w3id.org/esw/resource/workflow1_4) |
+| [3cae106501](http://w3id.org/esw/resource/3cae106501) | Cultural Movements  | 0.75 | 54 | [workflow1_6](http://w3id.org/esw/resource/workflow1_6) |
+| [d47addd645](http://w3id.org/esw/resource/d47addd645) | Ancient Rome  | 0.92 | 68 | [workflow1_5](http://w3id.org/esw/resource/workflow1_5) |
+| [df6ce197ae](http://w3id.org/esw/resource/df6ce197ae) | Literary Movements and physicists  | 0.71 | 35 | [workflow1_0](http://w3id.org/esw/resource/workflow1_0) |
+| [106b3c299a](http://w3id.org/esw/resource/106b3c299a) | Tv series Without a Trace  | 0.66 | 126 | [workflow2_3](http://w3id.org/esw/resource/workflow2_3) |
+| [3568e26c20](http://w3id.org/esw/resource/3568e26c20) | Disney  | 0.84 | 56 | [workflow2_2](http://w3id.org/esw/resource/workflow2_2) |
+| [4ddda0dbce](http://w3id.org/esw/resource/4ddda0dbce) | Film Genre and directors  | 0.28 | 31 | [workflow2_0](http://w3id.org/esw/resource/workflow2_0) |
+| [54f5b7e1cb](http://w3id.org/esw/resource/54f5b7e1cb) | Production company  | 0.86 | 44 | [workflow2_6](http://w3id.org/esw/resource/workflow2_6) |
+| [2621f41178](http://w3id.org/esw/resource/2621f41178) | Tv series HIMYM  | 0.29 | 54 | [workflow2_4](http://w3id.org/esw/resource/workflow2_4) |
+| [06c22cdbe2](http://w3id.org/esw/resource/06c22cdbe2) | Sherlock Holmes  | 0.94 | 36 | [workflow2_1](http://w3id.org/esw/resource/workflow2_1) |
+| [4b3c2739ac](http://w3id.org/esw/resource/4b3c2739ac) | Film Genre and composer  | 0.69 | 47 | [workflow2_5](http://w3id.org/esw/resource/workflow2_5) |
+| [2c1bc38aaa](http://w3id.org/esw/resource/2c1bc38aaa) | Association Football Players  | 1.0 | 53 | [workflow0_6](http://w3id.org/esw/resource/workflow0_6) |
+| [35c2113d62](http://w3id.org/esw/resource/35c2113d62) | Olympic Games  | 0.82 | 78 | [workflow0_5](http://w3id.org/esw/resource/workflow0_5) |
+| [830baa5607](http://w3id.org/esw/resource/830baa5607) | Running  | 0.41 | 102 | [workflow0_2](http://w3id.org/esw/resource/workflow0_2) |
+| [616ea09c9e](http://w3id.org/esw/resource/616ea09c9e) | Tennis  | 0.67 | 341 | [workflow0_4](http://w3id.org/esw/resource/workflow0_4) |
+| [080ba229ef](http://w3id.org/esw/resource/080ba229ef) | Basketball and NBA seasons  | 0.96 | 91 | [workflow0_3](http://w3id.org/esw/resource/workflow0_3) |
+| [c19f714ccc](http://w3id.org/esw/resource/c19f714ccc) | Association Football Club  | 0.93 | 49 | [workflow0_0](http://w3id.org/esw/resource/workflow0_0) |
+| [95820d24bc](http://w3id.org/esw/resource/95820d24bc) | Basketball and NBA finals  | 0.99 | 43 | [workflow0_1](http://w3id.org/esw/resource/workflow0_1) |
