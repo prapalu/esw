@@ -83,6 +83,7 @@ You can get the statistics below querying the RDF Graph. [Execute query](http://
 | AND 	    | 6 	| 0.12% |
 | DESCRIBE 	| 1 	| 0.02% |
 | CONSTRUCT | 1 	| 0.02% |
+| ----------| --------- | -------- | 
 | TOTAL     | 4862  | 100%  | 
 
 For more statistics on the SPARQL keywords usage in specific Search Workflows, Search Topics, Macro Topics, you can query the [SPARQL endpoint](http://w3id.org/esw/sparql) binding the variables you want.

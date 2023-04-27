@@ -50,52 +50,30 @@ The table below shows the distribution of the SPARQL keywords in the track.
 
 You can get the statistics below querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Fcount%29+where%7B%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7D%0D%0AGROUP+BY+%3Fkeyword%0D%0AORDER+BY+DESC+%28%3Fcount%29&format=text%2Fhtml&timeout=0&signal_void=on)
 
-| Keyword | Frequency|
-| -------------| -----------| 
-| SELECT	 | 5783 |
-| DISTINCT	 | 5319 |
-| LIMIT	 | 5234 |
-| FILTER	 | 1557 |
-| COUNT	 | 917 |
-| GROUPBY	 | 864 |
-| ORDERBY	 | 746 |
-| REGEX	 | 671 |
-| OPTIONAL	 | 348 |
-| HAVING	 | 250 |
-| NESTEDQUERY	 | 243 |
-| UNION	 | 199 |
-| MIN	 | 97 |
-| EXISTS	 | 94 |
-| NOTEXISTS	 | 82 |
-| GROUP_CONCAT	 | 71 |
-| AND	 | 55 |
-| SUM	 | 49 |
-| MAX	 | 46 |
-| MINUS	 | 42 |
-| ASK	 | 9 |
-| AVG	 | 6 |
-| DESCRIBE	 | 1 |
-
-| SELECT	 | 5783 |
-| DISTINCT	 | 5319 |
-| LIMIT	 | 5234 |
-| FILTER	 | 1557 |
-| COUNT	 | 876 |
-| GROUPBY	 | 864 |
-| ORDERBY	 | 746 |
-| REGEX	 | 671 |
-| OPTIONAL	 | 348 |
-| HAVING	 | 250 |
-| NESTEDQUERY	 | 243 |
-| UNION	 | 198 |
-| NOTEXISTS	 | 82 |
-| MIN	 | 77 |
-| GROUP_CONCAT	 | 71 |
-| MAX	 | 46 |
-| MINUS	 | 42 |
-| SUM	 | 31 |
-| EXISTS	 | 22 |
-| AVG	 | 6 |
-| DESCRIBE	 | 1 |
+| Keyword   | # queries | %queries |
+| ----------| --------- | -------- | 
+| SELECT 	| 5783 	    | 118.94% |
+| DISTINCT 	| 5319 	    | 109.39% |
+| LIMIT 	| 5234 	    | 107.65% |
+| FILTER 	| 1557 	    | 32.02% |
+| COUNT 	| 881 	    | 18.12% |
+| GROUPBY 	| 864 	    | 17.77% |
+| ORDERBY 	| 746 	    | 15.34% |
+| REGEX 	| 671 	    | 13.8% |
+| OPTIONAL 	| 348 	    | 7.15% |
+| HAVING 	| 250 	    | 5.14% |
+| NESTEDQUERY 	| 243 	| 4.99% |
+| UNION 	| 199 	    | 4.09% |
+| NOTEXISTS 	| 82 	| 1.68% |
+| GROUP_CONCAT 	| 71 	| 1.46% |
+| MAX 	    | 46 	    | 0.94% |
+| MINUS 	| 42 	    | 0.86% |
+| MIN   	| 35 	    | 0.71% |
+| SUM 	    | 34 	    | 0.69% |
+| EXISTS 	| 22 	    | 0.45% |
+| AVG 	    | 6 	    | 0.12% |
+| DESCRIBE 	| 1 	    | 0.02% |
+| ----------| --------- | -------- | 
+| TOTAL     | 4862      | 100%  | 
 
 For more statistics on the SPARQL keywords usage in specific Search Workflows, Search Topics, Macro Topics, you can query the [SPARQL endpoint](http://w3id.org/esw/sparql) binding the variables you want.
