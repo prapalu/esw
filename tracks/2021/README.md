@@ -6,9 +6,9 @@ Furthermore we report here some statistics for this track.
 ## Content
 
 - [general statistics](#statistics)
-- [search workflows](#search_workflows)
-- [keywords analysis](#keywords_analysis)
-- [evaluation results](#evaluation_results)
+- [search workflows](#search-workflows)
+- [keywords analysis](#keywords-analysis)
+- [evaluation results](#evaluation-results)
 
 ### Statistics
 
