@@ -52,27 +52,27 @@ You can get the statistics below querying the RDF Graph. [Execute query](http://
 
 | Keyword   | # queries | %queries |
 | ----------| --------- | -------- | 
-| SELECT 	| 5783 	    | 118.94% |
-| DISTINCT 	| 5319 	    | 109.39% |
-| LIMIT 	| 5234 	    | 107.65% |
-| FILTER 	| 1557 	    | 32.02% |
-| COUNT 	| 881 	    | 18.12% |
-| GROUPBY 	| 864 	    | 17.77% |
-| ORDERBY 	| 746 	    | 15.34% |
-| REGEX 	| 671 	    | 13.8% |
-| OPTIONAL 	| 348 	    | 7.15% |
-| HAVING 	| 250 	    | 5.14% |
-| NESTEDQUERY 	| 243 	| 4.99% |
-| UNION 	| 199 	    | 4.09% |
-| NOTEXISTS 	| 82 	| 1.68% |
-| GROUP_CONCAT 	| 71 	| 1.46% |
-| MAX 	    | 46 	    | 0.94% |
-| MINUS 	| 42 	    | 0.86% |
-| MIN   	| 35 	    | 0.71% |
-| SUM 	    | 34 	    | 0.69% |
-| EXISTS 	| 22 	    | 0.45% |
-| AVG 	    | 6 	    | 0.12% |
-| DESCRIBE 	| 1 	    | 0.02% |
+| SELECT 	| 5783 	    | 99.94% |
+| DISTINCT 	| 5319 	    | 91.92% |
+| LIMIT 	| 5234 	    | 90.45% |
+| FILTER 	| 1557 	    | 26.9%  |
+| COUNT 	| 881 	    | 15.22% |
+| GROUPBY 	| 864 	    | 14.93% |
+| ORDERBY 	| 746 	    | 12.89% |
+| REGEX 	| 671 	    | 11.59% |
+| OPTIONAL 	| 348 	    | 6.01% |
+| HAVING 	| 250 	    | 4.32% |
+| NESTEDQUERY 	| 243 	| 4.19% |
+| UNION 	| 199 	| 3.43% |
+| NOTEXISTS 	| 82 	| 1.41% |
+| GROUP_CONCAT 	| 71 	| 1.22% |
+| MAX 	    | 46 	    | 0.79% |
+| MINUS 	| 42 	    | 0.72% |
+| MIN 	    | 35 	    | 0.6% |
+| SUM 	    | 34 	    | 0.58% |
+| EXISTS 	| 22 	    | 0.38% |
+| AVG 	    | 6 	    | 0.1% |
+| DESCRIBE 	| 1 	    | 0.01% |
 | ----------| --------- | -------- | 
 | TOTAL     | 4862      | 100%  | 
 
