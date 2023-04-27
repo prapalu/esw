@@ -15,3 +15,6 @@ old_res/
 
 # ignore Papers
 Papers/
+
+# ignore folder with all json
+json_resources/
