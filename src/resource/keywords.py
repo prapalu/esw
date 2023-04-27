@@ -15,6 +15,13 @@ def setup_keywords(filepath,verbose = False):
     if verbose:
         print(keywords)
 
+def isValidAfterBefore(before,after):
+    valid_chars = [' ','{','}','(',')','!']
+    for x in [before,after]:
+        if x not in valid_chars:
+            return False
+    return True
+
 def analyze_query(query, verbose = False):
     query = query.strip()
     global keywords
@@ -29,14 +36,24 @@ def analyze_query(query, verbose = False):
     for actual_key in no_space:
         index = 0
         while actual_key in query.upper()[index:]:
-            if verbose and actual_key == "GROUP_CONCAT":
-                print(query.upper()[index:].index(actual_key))
             offset = query.upper()[index:].index(actual_key)
-            if query[index+offset-1] != "?":
-                if verbose:
-                    print(keywords.index(actual_key))
-                bitmap[keywords.index(actual_key)] = 1
-                break
+            char_before = query[index+offset-1]
+            char_after = query[index+offset+len(actual_key)] 
+            if char_before != "?":
+                tmp = query[:(index+offset+len(actual_key))]
+                # if the keyword is exists, I always enter this if clause
+                if actual_key.upper() == "EXISTS":
+                    if "EXISTS" in tmp.split()[-1].upper() and "NOT" not in tmp.split()[-2].upper():
+                        if verbose:
+                            print(keywords.index(actual_key))
+                        bitmap[keywords.index(actual_key)] = 1
+                        break
+                else:
+                    if tmp.split()[-1] == actual_key or isValidAfterBefore(char_before,char_after):
+                        if verbose:
+                            print(keywords.index(actual_key))
+                        bitmap[keywords.index(actual_key)] = 1
+                        break
             index = query.upper()[index:].index(actual_key)+index+len(actual_key)
     if verbose:
         print(bitmap)
