@@ -55,7 +55,7 @@ def analyze_query(query, verbose = False):
                         bitmap[keywords.index(actual_key)] = 1
                         break
                 else:
-                    if tmp.split()[-1] == actual_key or isValidAfterBefore(char_before,char_after):
+                    if tmp.split()[-1].upper() == actual_key.upper() or isValidAfterBefore(char_before,char_after):
                         if verbose:
                             print(keywords.index(actual_key))
                         bitmap[keywords.index(actual_key)] = 1
