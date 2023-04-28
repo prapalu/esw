@@ -7,6 +7,7 @@ Each subfolder contains the following folders:
 - `ground_truths`: it contains the ground truths for the `Search Topic`.
 - `workflows_evaluated`: it contains the workflows evaluated using the ground truths.
 - `querylogs`: it contains the logs of the executed queries by the workers.
+- `workflows_executed`: it contains the workflows re-executed in our [SPARQL endpoint](htt://grace.dei.unipd.it/sparql) to collect the duration of the queries' execution .
 - `rdf`: it contains the turtle files to populate the RDF Graph.
 - `empty_notebooks`: it contains the template notebooks for each Search Topic, which you can reuse to do your own Search Workflow.
 
