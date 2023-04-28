@@ -218,9 +218,16 @@ def get_query_text(lines, variable):
             if lines[ind].find("#") == -1:
                 ret+=" "+lines[ind].strip()
             else:
-                remain = lines[ind][:lines[ind].find("#")].strip()
-                if remain != "":
-                    ret+=" "+remain
+                ## need to check if it is a PREFIX line
+                split_sharp = lines[ind].split("#")
+                # PREFIX condition
+                if lines[ind].strip().upper().startswith("PREFIX") and (split_sharp[1].strip())[0] == ">":
+                    # it is a prefix, so keep the entire line
+                    ret+=" "+lines[ind].strip()
+                else:
+                    remain = lines[ind][:lines[ind].find("#")].strip()
+                    if remain != "":
+                        ret+=" "+remain
             ind+=1
         #append the last line if there is something
         ret+=" "+lines[ind].replace("\"\"\"","").strip()

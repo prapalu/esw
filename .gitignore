@@ -18,3 +18,6 @@ Papers/
 
 # ignore folder with all json
 json_resources/
+
+# ignore workflows executed
+workflows_executed/

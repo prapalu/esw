@@ -215,8 +215,8 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                     narrative = query['narrative']
                 text = query['query']
                 Query = URIRef(ESWR['Q_'+str(year)+'_'+str(index)])
-                h.add((Query, RDF.type, SP['Query']))
-                h.add((Query, SP['text'], Literal(text, datatype=XSD.string)))
+                h.add((Query, RDF.type, LSQV['Query']))
+                h.add((Query, LSQV['text'], Literal(text, datatype=XSD.string)))
                 # add the parse Error if it exists
                 if 'parseError' in query and query['parseError'] is not None:
                     h.add((Query, LSQV['parseError'], Literal(query['parseError'], datatype=XSD.string)))
