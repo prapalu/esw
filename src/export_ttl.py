@@ -17,7 +17,6 @@ from rdflib.namespace import XSD
 ESW = Namespace("http://w3id.org/esw/ontology#")
 ESWR = Namespace("http://w3id.org/esw/resource/")
 LSQV = Namespace("http://lsq.aksw.org/vocab#")
-SP = Namespace("http://spinrdf.org/sp#")
 DCT = Namespace("http://purl.org/dc/terms/")
 SD = Namespace("http://www.w3.org/ns/sparql-service-description#")
 
@@ -85,7 +84,6 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
     g.bind("esw", ESW)
     g.bind("eswr", ESWR)
     g.bind("lsqv", LSQV)
-    g.bind("sp", SP)
     g.bind("sd",SD)
 
     #create the graph for the search workflows
@@ -96,7 +94,6 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
     h.bind("esw", ESW)
     h.bind("eswr", ESWR)
     h.bind("lsqv", LSQV)
-    h.bind("sp", SP)
     h.bind("dct",DCT)
     h.bind("sd",SD)
     
@@ -246,6 +243,9 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                         h.add((Execution, RDF.type, LSQV['QueryExec']))
                         # add execution timestamp
                         h.add((Execution, DCT['issued'], Literal(t_ex, datatype=XSD.dateTime)))
+                        # add execution duration if it exists
+                        if 'duration' in ex:
+                            h.add((Execution, LSQV['evalDuration'], Literal(ex['duration'], datatype=XSD.decimal)))
                         # add property has execution from query to its execution
                         h.add((Query, LSQV['hasExec'], Execution))
                         executions+=1

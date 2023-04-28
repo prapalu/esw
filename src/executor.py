@@ -52,7 +52,7 @@ def execute_file(f,worker_path):
             # response is a dictionary containing "time", "output", "error","timestamp"
             resp = sparql.run_query(query['query'])
             # create the execution object
-            execu = {'execution_time':resp["time"],'execution_output':resp["output"],'execution_error':resp["error"]}
+            execu = {'execution_time':resp["time"],'execution_output':resp["output"],'execution_error':resp["error"],'execution_timestamp':resp["timestamp"]}
             # add the object in the query dictionary
             new_query['execution'] = execu
             run_wf['search_workflow'][g].append(new_query)

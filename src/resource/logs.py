@@ -47,9 +47,16 @@ def clean_query(query):
         if line.find("#") == -1:
             new+=" "+line.strip()
         else:
-            remain = line[:line.find("#")].strip()
-            if remain != "":
-                new+=" "+remain
+            ## need to check if it is a PREFIX line
+            split_sharp = line.split("#")
+            # PREFIX condition
+            if line.strip().upper().startswith("PREFIX") and (split_sharp[1].strip())[0] == ">":
+                # it is a prefix, so keep the entire line
+                ret+=" "+line.strip()
+            else:
+                remain = line[:line.find("#")].strip()
+                if remain != "":
+                    ret+=" "+remain
     return new.strip()
 
 # function to get the total number of query executed given the notebook's code
