@@ -413,10 +413,13 @@ def associate_execution(execution_dir,verbose = False):
                             notc+=1
                             new_obj = {'datetime':execu['execution_timestamp']}
                         f['search_workflow'][g][index]['execution'].append(new_obj)
-                        f['search_workflow'][g][index]['execution_error'] = execu['execution_error']
+                        if execu['execution_error'] is not None:
+                            f['search_workflow'][g][index]['parseError'] = execu['execution_error']
+                        else:
+                            f['search_workflow'][g][index]['parseError'] = None
                         f['search_workflow'][g][index]['execution_output'] = execu['execution_output']
             filepath = json_dir+os.sep+worker+os.sep+f['name']+".json"
             fd = open(filepath,"w")
             json.dump(f, fd)
             fd.close()
-    print(c,notc)
+    #sprint(c,notc)

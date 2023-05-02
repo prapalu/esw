@@ -226,7 +226,7 @@ SELECT ?worker ?quality ?workflows ?jobs ?avgFScore ?totQueries  WHERE{
 ORDER BY ?worker
 ```
 
-9. 
+9. Queries execution statistics by tracks
 
 
 ```SPARQL
@@ -235,9 +235,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX lsqv: <http://lsq.aksw.org/vocab#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?track ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?parseErrors WHERE{
+SELECT ?track ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?maxTrackDuration ?parseErrors WHERE{
     {
-        SELECT ?track (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) where { 
+        SELECT ?track (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) (MAX(?dur) AS ?maxTrackDuration) where { 
             ?topic esw:partOf ?track.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
@@ -266,6 +266,54 @@ SELECT ?track ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance)
     ?exec lsqv:evalDuration ?dur.
     BIND(xsd:float(xsd:float(?dur) - xsd:float(?avgTrackDuration))*(xsd:float(?dur) - xsd:float(?avgTrackDuration)) AS ?thisVar)
 }
-GROUP BY ?track ?avgTrackDuration ?numTrackDuration ?parseErrors
+GROUP BY ?track ?avgTrackDuration ?numTrackDuration ?parseErrors ?maxTrackDuration
+
+```
+
+
+10. Queries execution statistics by tracks
+
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?track ?macro ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?maxTrackDuration ?parseErrors WHERE{
+    {
+        SELECT ?track ?macro (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) (MAX(?dur) AS ?maxTrackDuration) where { 
+            ?topic esw:partOf ?track.
+            ?topic esw:macroTopic ?macro.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:hasExec ?exec.
+            ?exec lsqv:evalDuration ?dur.
+        } GROUP BY ?track ?macro
+    }
+    {
+        SELECT ?track ?macro (COUNT(*) AS ?parseErrors) where { 
+            ?topic esw:partOf ?track.
+            ?topic esw:macroTopic ?macro.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:parseError ?pErr.
+        } GROUP BY ?track ?macro
+    }
+	?topic esw:partOf ?track.
+    ?topic esw:macroTopic ?macro.
+    ?work esw:hasPart ?part.
+    ?work esw:implements ?topic.
+    ?part esw:queries ?o .
+    ?o rdf:rest*/rdf:first  ?query.
+    ?query lsqv:hasExec ?exec.
+    ?exec lsqv:evalDuration ?dur.
+    BIND(xsd:float(xsd:float(?dur) - xsd:float(?avgTrackDuration))*(xsd:float(?dur) - xsd:float(?avgTrackDuration)) AS ?thisVar)
+}
+GROUP BY ?track ?macro ?avgTrackDuration ?numTrackDuration ?parseErrors ?maxTrackDuration
 
 ```
