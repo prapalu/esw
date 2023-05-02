@@ -164,7 +164,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
 
         ## add the search workflow
         Workflow = URIRef(ESWR[name])
-        h.add((Workflow, RDF.type, ESW['SearchWorkflow']))
+        h.add((Workflow, RDF.type, ESW['ExploratoryWorkflow']))
         # add the related topic
         h.add((Workflow, ESW['implements'], Topic))
 
@@ -180,8 +180,8 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
             h.add((Worker, ESW['quality'], Literal(workers_grade[worker], datatype=XSD.float)))
             ## add also the score of the worker given is exam score
 
-        search_workflow = files[filename]['search_workflow']
-        for job in search_workflow:
+        exploratory_workflow = files[filename]['exploratory_workflow']
+        for job in exploratory_workflow:
             # the Job's URI is the concatenation of [JOB, number of the task, W, name of the file]
             Job = URIRef(ESWR['JOB'+str(job).replace(".","")+'W'+name])
             h.add((Job, RDF.type, ESW['SearchJob']))
@@ -193,9 +193,9 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                 
             # add the information of the score of the job (fscore max and #queries)
             
-            max_fscore = max([ q['fscore'] if 'fscore' in q else 0.0 for q in search_workflow[job] ])
+            max_fscore = max([ q['fscore'] if 'fscore' in q else 0.0 for q in exploratory_workflow[job] ])
             h.add((Job, ESW['fscore'], Literal(max_fscore, datatype=XSD.float)))
-            h.add((Job, ESW['numberOfQueries'], Literal(len(search_workflow[job]), datatype=XSD.integer)))
+            h.add((Job, ESW['numberOfQueries'], Literal(len(exploratory_workflow[job]), datatype=XSD.integer)))
                 
                 
             # add the query list
@@ -206,8 +206,8 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
 
             ## create the list of the query
 
-            for i in range(len(search_workflow[job])):
-                query = search_workflow[job][i]
+            for i in range(len(exploratory_workflow[job])):
+                query = exploratory_workflow[job][i]
                 if 'narrative' in query:
                     narrative = query['narrative']
                 text = query['query']
@@ -258,7 +258,7 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                             h.add((Query, LSQV['usesFeature'], Keyword))
 
                 h.add((Queries, RDF.first, Query))
-                if i < len(search_workflow[job])-1:
+                if i < len(exploratory_workflow[job])-1:
                     Next = BNode()
                     h.add((Next, RDF.type, RDF.List))
                     h.add((Queries, RDF.rest, Next))

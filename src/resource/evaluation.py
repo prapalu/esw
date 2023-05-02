@@ -281,12 +281,12 @@ def evaluate_notebook(nb,eval_dir,want_execution = False,verbose = False):
     # ground truth
     
     # iterate trough the goals
-    for goal in file['search_workflow']:
+    for goal in file['exploratory_workflow']:
         # first compute the keywords and the indexes
-        for i_q in range(len(file['search_workflow'][goal])):
-            query = file['search_workflow'][goal][i_q]
-            file['search_workflow'][goal][i_q]['keywords'] = keywords.convert_bitmap(keywords.analyze_query(query['query']))
-            file['search_workflow'][goal][i_q]['index'] = i_q
+        for i_q in range(len(file['exploratory_workflow'][goal])):
+            query = file['exploratory_workflow'][goal][i_q]
+            file['exploratory_workflow'][goal][i_q]['keywords'] = keywords.convert_bitmap(keywords.analyze_query(query['query']))
+            file['exploratory_workflow'][goal][i_q]['index'] = i_q
             
         # skip the evaluation if the goal is not in the ground truth
         if file['topic'] not in ground_truth or goal not in ground_truth[file['topic']]:
@@ -297,10 +297,10 @@ def evaluate_notebook(nb,eval_dir,want_execution = False,verbose = False):
         if verbose:
             print("Doing task",goal)
         # for each query evaluate the output
-        for i_q in range(len(file['search_workflow'][goal])):
-            query = file['search_workflow'][goal][i_q]
-            file['search_workflow'][goal][i_q]['keywords'] = keywords.convert_bitmap(keywords.analyze_query(query['query']))
-            file['search_workflow'][goal][i_q]['index'] = i_q
+        for i_q in range(len(file['exploratory_workflow'][goal])):
+            query = file['exploratory_workflow'][goal][i_q]
+            file['exploratory_workflow'][goal][i_q]['keywords'] = keywords.convert_bitmap(keywords.analyze_query(query['query']))
+            file['exploratory_workflow'][goal][i_q]['index'] = i_q
             
             if verbose:
                 print("Running query #"+str(i_q))
@@ -368,13 +368,13 @@ def evaluate_notebook(nb,eval_dir,want_execution = False,verbose = False):
                     print("Student find the result after",i_q,"queries in a set of",len(res),"elements")
                     
             ## append the value of recall/precision/accuracy for the query
-            file['search_workflow'][goal][i_q]['recall'] = recall
-            file['search_workflow'][goal][i_q]['precision'] = precision
-            file['search_workflow'][goal][i_q]['accuracy'] = accuracy
+            file['exploratory_workflow'][goal][i_q]['recall'] = recall
+            file['exploratory_workflow'][goal][i_q]['precision'] = precision
+            file['exploratory_workflow'][goal][i_q]['accuracy'] = accuracy
             f_score = 0.0
             if recall+precision>0.0:
                 f_score = 2*(recall*precision)/(recall+precision)
-            file['search_workflow'][goal][i_q]['fscore'] = f_score
+            file['exploratory_workflow'][goal][i_q]['fscore'] = f_score
             
     ## store the new file with the information about the evaluation of each query
     
