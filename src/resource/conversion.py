@@ -95,7 +95,7 @@ def convert_nb(verbose = False):
             #json_obj["query_log"] = get_num_query_log(nb)
             #json_obj["filepath"] = j
             json_obj["name"] = nb_name
-            json_obj["search_workflow"] = dictionary
+            json_obj["exploratory_workflow"] = dictionary
 
             filename = stud_dir+os.sep+nb_name+".json"
             fd = open(filename,"w")
@@ -120,12 +120,12 @@ def associate_logs(people_dir,code_list,verbose):
                 continue
             map_ = logs.map_query_into_dict(code_list[file["name"]])
             check = []
-            for goal in file["search_workflow"]:
-                #check+=[query['query'] in map_ for query in file["search_workflow"][goal]]
-                for index in range(len(file["search_workflow"][goal])):
-                    if file["search_workflow"][goal][index]['query'] in map_:
+            for goal in file["exploratory_workflow"]:
+                #check+=[query['query'] in map_ for query in file["exploratory_workflow"][goal]]
+                for index in range(len(file["exploratory_workflow"][goal])):
+                    if file["exploratory_workflow"][goal][index]['query'] in map_:
                         ## add the execution
-                        file["search_workflow"][goal][index]['execution'] = [{'datetime':d} for d in map_[file["search_workflow"][goal][index]['query']]]
+                        file["exploratory_workflow"][goal][index]['execution'] = [{'datetime':d} for d in map_[file["exploratory_workflow"][goal][index]['query']]]
                     #print(query['query'] in map_)
                     #print(query['query'])
                 #break
@@ -399,12 +399,12 @@ def associate_execution(execution_dir,verbose = False):
                     if x['name'] == f['name']:
                         ref = x
 
-            for g in f['search_workflow']:
-                for index in range(len(f['search_workflow'][g])):
-                    if 'execution' not in f['search_workflow'][g][index]:
-                        f['search_workflow'][g][index]['execution'] = []
+            for g in f['exploratory_workflow']:
+                for index in range(len(f['exploratory_workflow'][g])):
+                    if 'execution' not in f['exploratory_workflow'][g][index]:
+                        f['exploratory_workflow'][g][index]['execution'] = []
                         
-                    if ref is not None and ref['search_workflow'][g][index]['query'] == f['search_workflow'][g][index]['query']:
+                    if ref is not None and ref['search_workflow'][g][index]['query'] == f['exploratory_workflow'][g][index]['query']:
                         execu = ref['search_workflow'][g][index]['execution']
                         if execu['execution_time'] > 0.0:
                             c+=1
@@ -412,12 +412,12 @@ def associate_execution(execution_dir,verbose = False):
                         else:
                             notc+=1
                             new_obj = {'datetime':execu['execution_timestamp']}
-                        f['search_workflow'][g][index]['execution'].append(new_obj)
+                        f['exploratory_workflow'][g][index]['execution'].append(new_obj)
                         if execu['execution_error'] is not None:
-                            f['search_workflow'][g][index]['parseError'] = execu['execution_error']
+                            f['exploratory_workflow'][g][index]['parseError'] = execu['execution_error']
                         else:
-                            f['search_workflow'][g][index]['parseError'] = None
-                        f['search_workflow'][g][index]['execution_output'] = execu['execution_output']
+                            f['exploratory_workflow'][g][index]['parseError'] = None
+                        f['exploratory_workflow'][g][index]['execution_output'] = execu['execution_output']
             filepath = json_dir+os.sep+worker+os.sep+f['name']+".json"
             fd = open(filepath,"w")
             json.dump(f, fd)

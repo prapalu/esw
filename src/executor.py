@@ -41,12 +41,12 @@ def execute_file(f,worker_path):
     run_wf['worker'] = f['worker']
     run_wf['macro_topic'] = f['macro_topic']
     # initialize search workflow dictionary 
-    run_wf['search_workflow']={}
+    run_wf['exploratory_workflow']={}
     # iterate over goals
-    for g in f['search_workflow']:
-        run_wf['search_workflow'][g] = []
+    for g in f['exploratory_workflow']:
+        run_wf['exploratory_workflow'][g] = []
         # execute the queries
-        for query in f['search_workflow'][g]:
+        for query in f['exploratory_workflow'][g]:
             # copy main fields of the query
             new_query = {'query':query['query']}
             # response is a dictionary containing "time", "output", "error","timestamp"
@@ -55,7 +55,7 @@ def execute_file(f,worker_path):
             execu = {'execution_time':resp["time"],'execution_output':resp["output"],'execution_error':resp["error"],'execution_timestamp':resp["timestamp"]}
             # add the object in the query dictionary
             new_query['execution'] = execu
-            run_wf['search_workflow'][g].append(new_query)
+            run_wf['exploratory_workflow'][g].append(new_query)
     print("Save Workflow",f['name'])
     if not os.path.exists(worker_path):
         os.makedirs(worker_path)

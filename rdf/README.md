@@ -41,7 +41,7 @@ GROUP BY ?track
 
 The query returns a list of 4-tuples (workflow IRI, topic IRI, score, ground truth IRI).
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0A%0D%0ASELECT+%3Fworkflow+%3FtopicLabel+%3FavgFscore+%3FgroundTruth+WHERE%7B%0D%0A++++%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftopic+%3Fmacro+%28MAX%28%3Ffscore%29+AS+%3Fmax_score%29+WHERE%0D%0A++++++++%7B%0D%0A++++++++++++%7B%0D%0A++++++++++++++++select+%3Fwork+%28AVG%28%3Fscore%29+AS+%3Ffscore%29+WHERE%7B%0D%0A++++++++++++++++++++%3Fwork+a+esw%3ASearchWorkflow%3B%0D%0A++++++++++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++++++++++%3Fpart+esw%3Afscore+%3Fscore.%0D%0A++++++++++++++++%7D%0D%0A++++++++++++++++GROUP+BY+%3Fwork+%0D%0A++++++++++++%7D%0D%0A++++++++++++FILTER%28%3Ffscore+%3E+0.1%29.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Ftopic+esw%3Adescription+%3Fmacro.%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Ftopic+%3Fmacro%0D%0A%0D%0A++++++++%7D%0D%0A++++%0D%0A++++%7B%0D%0A++++++++select+%3Fworkflow+%3Ft+%28AVG%28%3Fs%29+AS+%3FavgFscore%29+WHERE%7B%0D%0A++++++++++++%3Fworkflow+a+esw%3ASearchWorkflow%3B%0D%0A++++++++++++++++esw%3AhasPart+%3Fp.%0D%0A++++++++++++++++%3Fp+esw%3Afscore+%3Fs.%0D%0A++++++++++++%3Fworkflow+esw%3Aimplements+%3Ft.%0D%0A++++++++++++%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Fworkflow+%3Ft+%0D%0A++++%7D%0D%0A++++FILTER%28%3FavgFscore+%3D+%3Fmax_score%29.%0D%0A++++FILTER%28%3Ft+%3D+%3Ftopic%29.%0D%0A++++%3Ft+esw%3AhasGroundTruth+%3FgroundTruth%3B%0D%0A++++++++rdfs%3Alabel+%3FtopicLabel.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0A%0D%0ASELECT+%3Fworkflow+%3FtopicLabel+%3FavgFscore+%3FgroundTruth+WHERE%7B%0D%0A++++%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftopic+%3Fmacro+%28MAX%28%3Ffscore%29+AS+%3Fmax_score%29+WHERE%0D%0A++++++++%7B%0D%0A++++++++++++%7B%0D%0A++++++++++++++++select+%3Fwork+%28AVG%28%3Fscore%29+AS+%3Ffscore%29+WHERE%7B%0D%0A++++++++++++++++++++%3Fwork+a+esw%3AExploratoryWorkflow%3B%0D%0A++++++++++++++++++++++++++esw%3AhasPart+%3Fpart.%0D%0A++++++++++++++++++++%3Fpart+esw%3Afscore+%3Fscore.%0D%0A++++++++++++++++%7D%0D%0A++++++++++++++++GROUP+BY+%3Fwork+%0D%0A++++++++++++%7D%0D%0A++++++++++++FILTER%28%3Ffscore+%3E+0.1%29.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Ftopic+esw%3Adescription+%3Fmacro.%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Ftopic+%3Fmacro%0D%0A%0D%0A++++++++%7D%0D%0A++++%0D%0A++++%7B%0D%0A++++++++select+%3Fworkflow+%3Ft+%28AVG%28%3Fs%29+AS+%3FavgFscore%29+WHERE%7B%0D%0A++++++++++++%3Fworkflow+a+esw%3AExploratoryWorkflow%3B%0D%0A++++++++++++++++esw%3AhasPart+%3Fp.%0D%0A++++++++++++++++%3Fp+esw%3Afscore+%3Fs.%0D%0A++++++++++++%3Fworkflow+esw%3Aimplements+%3Ft.%0D%0A++++++++++++%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Fworkflow+%3Ft+%0D%0A++++%7D%0D%0A++++FILTER%28%3FavgFscore+%3D+%3Fmax_score%29.%0D%0A++++FILTER%28%3Ft+%3D+%3Ftopic%29.%0D%0A++++%3Ft+esw%3AhasGroundTruth+%3FgroundTruth%3B%0D%0A++++++++rdfs%3Alabel+%3FtopicLabel.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
@@ -53,7 +53,7 @@ SELECT ?workflow ?topicLabel ?avgFscore ?groundTruth WHERE{
         {
             {
                 select ?work (AVG(?score) AS ?fscore) WHERE{
-                    ?work a esw:SearchWorkflow;
+                    ?work a esw:ExploratoryWorkflow;
                           esw:hasPart ?part.
                     ?part esw:fscore ?score.
                 }
@@ -69,7 +69,7 @@ SELECT ?workflow ?topicLabel ?avgFscore ?groundTruth WHERE{
     
     {
         select ?workflow ?t (AVG(?s) AS ?avgFscore) WHERE{
-            ?workflow a esw:SearchWorkflow;
+            ?workflow a esw:ExploratoryWorkflow;
                 esw:hasPart ?p.
                 ?p esw:fscore ?s.
             ?workflow esw:implements ?t.
@@ -131,7 +131,7 @@ LIMIT 10
 
 The query returns a list of 3-tuples (workflow IRI, numberOfQueries, numberOfExecutions).
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fworkflow+%28COUNT%28+DISTINCT+%3Fquery%29+AS+%3FtotQueries%29+%28COUNT%28+%3Fexecution%29+AS+%3FtotExecutions%29+where%7B%0D%0A++++%3Fworkflow+a+esw%3ASearchWorkflow%3B%0D%0A+++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexecution.%0D%0A%7D%0D%0AGROUP+BY+%3Fworkflow%0D%0AORDER+BY+DESC%28%3FtotExecutions%29%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fworkflow+%28COUNT%28+DISTINCT+%3Fquery%29+AS+%3FtotQueries%29+%28COUNT%28+%3Fexecution%29+AS+%3FtotExecutions%29+where%7B%0D%0A++++%3Fworkflow+a+esw%3AExploratoryWorkflow%3B%0D%0A+++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexecution.%0D%0A%7D%0D%0AGROUP+BY+%3Fworkflow%0D%0AORDER+BY+DESC%28%3FtotExecutions%29%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
@@ -139,7 +139,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX lsqv: <http://lsq.aksw.org/vocab#>
 
 SELECT DISTINCT ?workflow (COUNT( DISTINCT ?query) AS ?totQueries) (COUNT( ?execution) AS ?totExecutions) where{
-    ?workflow a esw:SearchWorkflow;
+    ?workflow a esw:ExploratoryWorkflow;
          esw:hasPart ?job.
     ?job esw:queries ?queries.
     ?queries rdf:rest*/rdf:first  ?query.
