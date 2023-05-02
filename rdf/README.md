@@ -203,17 +203,17 @@ ORDER BY ?topicLabel
 
 8. Workers statistics
 
-   The query returns a list of 5-tuples (worker IRI, quality, #workflows, #jobs, AVG(fscore)).
+   The query returns a list of 6-tuples (worker IRI, quality, #workflows, #jobs, AVG(fscore), #queries).
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0ASELECT+%3Fworker+%3Fquality+%3Fworkflows+%3Fjobs+%3FavgFScore+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fworker+%28COUNT%28DISTINCT+%3Fworkflow%29+AS+%3Fworkflows%29+%0D%0A++++++++%28COUNT%28DISTINCT+%3Fjob%29+AS+%3Fjobs%29++%28AVG%28%3Ffscore%29+AS+%3FavgFScore%29++WHERE%7B%0D%0A++++++++++++%3Fworkflow+esw%3AwroteBy+%3Fworker%3B%0D%0A++++++++++++++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++++++++++%3Fjob+esw%3Afscore+%3Ffscore%3B%0D%0A+++++++++++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Fworker%0D%0A++++%7D%0D%0A++++%3Fworker+esw%3Aquality+%3Fquality.%0D%0A%7D%0D%0AORDER+BY+%3Fworker%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0ASELECT+%3Fworker+%3Fquality+%3Fworkflows+%3Fjobs+%3FavgFScore+%3FtotQueries++WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fworker+%28COUNT%28DISTINCT+%3Fworkflow%29+AS+%3Fworkflows%29+%0D%0A++++++++%28COUNT%28DISTINCT+%3Fjob%29+AS+%3Fjobs%29++%28AVG%28%3Ffscore%29+AS+%3FavgFScore%29+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29++WHERE%7B%0D%0A++++++++++++%3Fworkflow+esw%3AwroteBy+%3Fworker%3B%0D%0A++++++++++++++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++++++++++%3Fjob+esw%3Afscore+%3Ffscore%3B%0D%0A+++++++++++++++++esw%3AnumberOfQueries+%3FnumQueries.%0D%0A++++++++%7D%0D%0A++++++++GROUP+BY+%3Fworker%0D%0A++++%7D%0D%0A++++%3Fworker+esw%3Aquality+%3Fquality.%0D%0A%7D%0D%0AORDER+BY+%3Fworker&format=text%2Fhtml&timeout=0&signal_void=on)
 
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
-SELECT ?worker ?quality ?workflows ?jobs ?avgFScore WHERE{
+SELECT ?worker ?quality ?workflows ?jobs ?avgFScore ?totQueries  WHERE{
     {
         SELECT ?worker (COUNT(DISTINCT ?workflow) AS ?workflows) 
-        (COUNT(DISTINCT ?job) AS ?jobs)  (AVG(?fscore) AS ?avgFScore)  WHERE{
+        (COUNT(DISTINCT ?job) AS ?jobs)  (AVG(?fscore) AS ?avgFScore) (SUM(?numQueries) AS ?totQueries)  WHERE{
             ?workflow esw:wroteBy ?worker;
                       esw:hasPart ?job.
             ?job esw:fscore ?fscore;
@@ -224,4 +224,96 @@ SELECT ?worker ?quality ?workflows ?jobs ?avgFScore WHERE{
     ?worker esw:quality ?quality.
 }
 ORDER BY ?worker
+```
+
+9. Queries execution statistics by tracks
+
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?track ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?maxTrackDuration ?parseErrors WHERE{
+    {
+        SELECT ?track (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) (MAX(?dur) AS ?maxTrackDuration) where { 
+            ?topic esw:partOf ?track.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:hasExec ?exec.
+            ?exec lsqv:evalDuration ?dur.
+        } GROUP BY ?track
+    }
+    {
+        SELECT ?track (COUNT(*) AS ?parseErrors) where { 
+            ?topic esw:partOf ?track.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:parseError ?pErr.
+        } GROUP BY ?track
+    }
+	?topic esw:partOf ?track.
+    ?work esw:hasPart ?part.
+    ?work esw:implements ?topic.
+    ?part esw:queries ?o .
+    ?o rdf:rest*/rdf:first  ?query.
+    ?query lsqv:hasExec ?exec.
+    ?exec lsqv:evalDuration ?dur.
+    BIND(xsd:float(xsd:float(?dur) - xsd:float(?avgTrackDuration))*(xsd:float(?dur) - xsd:float(?avgTrackDuration)) AS ?thisVar)
+}
+GROUP BY ?track ?avgTrackDuration ?numTrackDuration ?parseErrors ?maxTrackDuration
+
+```
+
+
+10. Queries execution statistics by tracks
+
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?track ?macro ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?maxTrackDuration ?parseErrors WHERE{
+    {
+        SELECT ?track ?macro (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) (MAX(?dur) AS ?maxTrackDuration) where { 
+            ?topic esw:partOf ?track.
+            ?topic esw:macroTopic ?macro.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:hasExec ?exec.
+            ?exec lsqv:evalDuration ?dur.
+        } GROUP BY ?track ?macro
+    }
+    {
+        SELECT ?track ?macro (COUNT(*) AS ?parseErrors) where { 
+            ?topic esw:partOf ?track.
+            ?topic esw:macroTopic ?macro.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:parseError ?pErr.
+        } GROUP BY ?track ?macro
+    }
+	?topic esw:partOf ?track.
+    ?topic esw:macroTopic ?macro.
+    ?work esw:hasPart ?part.
+    ?work esw:implements ?topic.
+    ?part esw:queries ?o .
+    ?o rdf:rest*/rdf:first  ?query.
+    ?query lsqv:hasExec ?exec.
+    ?exec lsqv:evalDuration ?dur.
+    BIND(xsd:float(xsd:float(?dur) - xsd:float(?avgTrackDuration))*(xsd:float(?dur) - xsd:float(?avgTrackDuration)) AS ?thisVar)
+}
+GROUP BY ?track ?macro ?avgTrackDuration ?numTrackDuration ?parseErrors ?maxTrackDuration
+
 ```

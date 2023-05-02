@@ -1,6 +1,4 @@
-@prefix : <http://w3id.org/esw/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix sp: <http://spinrdf.org/sp#> .
 @prefix esw: <http://w3id.org/esw/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,7 +10,6 @@
 
 <http://w3id.org/esw/ontology> rdf:type owl:Ontology ;
                                 owl:imports <http://lsq.aksw.org/vocab#> ,
-                                            <http://spinrdf.org/sp> ,
                                             rdf: .
 
 #################################################################
@@ -88,8 +85,7 @@ esw:wroteBy rdf:type owl:ObjectProperty ,
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#first
-rdf:first rdf:type owl:ObjectProperty ;
-          rdfs:range <http://spinrdf.org/spin#Query> .
+rdf:first rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -98,7 +94,6 @@ rdf:first rdf:type owl:ObjectProperty ;
 
 ###  http://w3id.org/esw/ontology#accuracy
 esw:accuracy rdf:type owl:DatatypeProperty ;
-             rdfs:domain <http://spinrdf.org/spin#Query> ;
              rdfs:range xsd:float ;
              rdfs:comment "Represents the accuracy of the query output"@en ;
              rdfs:label "accuracy"@en .
@@ -119,7 +114,6 @@ esw:fscore rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/esw/ontology#index
 esw:index rdf:type owl:DatatypeProperty ;
-          rdfs:domain <http://spinrdf.org/spin#Query> ;
           rdfs:range xsd:integer ;
           rdfs:comment "Represents the index of the query in the Search Job"@en ;
           rdfs:label "index"@en .
@@ -134,7 +128,6 @@ esw:macroTopic rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/esw/ontology#narrative
 esw:narrative rdf:type owl:DatatypeProperty ;
-              rdfs:domain <http://spinrdf.org/spin#Query> ;
               rdfs:range xsd:string ;
               rdfs:comment "Represents the narrative (comments) of a query"@en ;
               rdfs:label "narrative"@en .
@@ -157,7 +150,6 @@ esw:numberOfQueries rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/esw/ontology#precision
 esw:precision rdf:type owl:DatatypeProperty ;
-              rdfs:domain <http://spinrdf.org/spin#Query> ;
               rdfs:range xsd:float ;
               rdfs:comment "Represents the precision of the query output"@en ;
               rdfs:label "precision"@en .
@@ -173,7 +165,6 @@ esw:quality rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/esw/ontology#recall
 esw:recall rdf:type owl:DatatypeProperty ;
-           rdfs:domain <http://spinrdf.org/spin#Query> ;
            rdfs:range xsd:float ;
            rdfs:comment "Represents the recall of the query output"@en ;
            rdfs:label "recall"@en .
@@ -182,10 +173,6 @@ esw:recall rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
-
-###  http://spinrdf.org/spin#Query
-<http://spinrdf.org/spin#Query> rdf:type owl:Class .
-
 
 ###  http://w3id.org/esw/ontology#GroundTruth
 esw:GroundTruth rdf:type owl:Class ;
