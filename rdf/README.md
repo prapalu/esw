@@ -225,3 +225,47 @@ SELECT ?worker ?quality ?workflows ?jobs ?avgFScore ?totQueries  WHERE{
 }
 ORDER BY ?worker
 ```
+
+9. 
+
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?track ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?parseErrors WHERE{
+    {
+        SELECT ?track (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) where { 
+            ?topic esw:partOf ?track.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:hasExec ?exec.
+            ?exec lsqv:evalDuration ?dur.
+        } GROUP BY ?track
+    }
+    {
+        SELECT ?track (COUNT(*) AS ?parseErrors) where { 
+            ?topic esw:partOf ?track.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:parseError ?pErr.
+        } GROUP BY ?track
+    }
+	?topic esw:partOf ?track.
+    ?work esw:hasPart ?part.
+    ?work esw:implements ?topic.
+    ?part esw:queries ?o .
+    ?o rdf:rest*/rdf:first  ?query.
+    ?query lsqv:hasExec ?exec.
+    ?exec lsqv:evalDuration ?dur.
+    BIND(xsd:float(xsd:float(?dur) - xsd:float(?avgTrackDuration))*(xsd:float(?dur) - xsd:float(?avgTrackDuration)) AS ?thisVar)
+}
+GROUP BY ?track ?avgTrackDuration ?numTrackDuration ?parseErrors
+
+```

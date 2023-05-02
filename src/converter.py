@@ -38,6 +38,8 @@ def main(config_file):
     conv.load_json_notebooks(verbose)
     # associate the logs to the json files
     conv.associate_logs(conv.people_dir,logs.code_list,verbose)
+    # associate the execution to the json files
+    conv.associate_execution(configs.get("json_executed_dir").data,verbose)
     
 
 if __name__ == "__main__":

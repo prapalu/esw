@@ -356,3 +356,67 @@ def query_extractor(notebook,goals):
                     container.append(it)
     ## at then end return the object
     return query_dict
+
+
+def load_execution(directory,verbose = False):
+    if verbose:
+        print("Start to load files from:",directory)
+    files={}
+    for folder in os.listdir(directory):
+        subdir = directory + os.sep + folder
+        if not os.path.isdir(subdir):
+            continue
+        for file in os.listdir(subdir):
+            filepath = subdir + os.sep + file
+            if filepath.endswith(".json"):
+                fd = open(filepath,"r")
+                tmp = json.load(fd)
+                fd.close()
+                if tmp['worker'] not in files:
+                    files[tmp['worker']] = []
+                files[tmp["worker"]].append(tmp)
+                
+    if verbose:
+        string = "Successfully load the json executions from the folder "+str(directory)+":\n"
+        string += "--> Total number of files: "+str(len(files))
+        print(string)
+    return files
+
+def associate_execution(execution_dir,verbose = False):
+    global json_dir
+    # load the current json
+    work_conv = load_execution(json_dir)
+    # load the execution
+    work_exec = load_execution(execution_dir)
+
+    c=0
+    notc=0
+    for worker in work_conv:
+        for f in work_conv[worker]:
+            ref = None
+            if worker in work_exec and f['name'] in [x['name'] for x in work_exec[worker]]:
+                for x in work_exec[worker]:
+                    if x['name'] == f['name']:
+                        ref = x
+
+            for g in f['search_workflow']:
+                for index in range(len(f['search_workflow'][g])):
+                    if 'execution' not in f['search_workflow'][g][index]:
+                        f['search_workflow'][g][index]['execution'] = []
+                        
+                    if ref is not None and ref['search_workflow'][g][index]['query'] == f['search_workflow'][g][index]['query']:
+                        execu = ref['search_workflow'][g][index]['execution']
+                        if execu['execution_time'] > 0.0:
+                            c+=1
+                            new_obj = {'datetime':execu['execution_timestamp'],'duration':execu['execution_time']}
+                        else:
+                            notc+=1
+                            new_obj = {'datetime':execu['execution_timestamp']}
+                        f['search_workflow'][g][index]['execution'].append(new_obj)
+                        f['search_workflow'][g][index]['execution_error'] = execu['execution_error']
+                        f['search_workflow'][g][index]['execution_output'] = execu['execution_output']
+            filepath = json_dir+os.sep+worker+os.sep+f['name']+".json"
+            fd = open(filepath,"w")
+            json.dump(f, fd)
+            fd.close()
+    print(c,notc)
