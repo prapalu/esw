@@ -9,6 +9,7 @@ Furthermore we report here some statistics for this track.
 - [search workflows](#search-workflows)
 - [keywords analysis](#keywords-analysis)
 - [evaluation results](#evaluation-results)
+- [runtime analysis](#runtime-analysis)
 
 ### Statistics
 
@@ -127,3 +128,48 @@ You can get these statistics querying the RDF Graph. [Execute query](http://grac
 | [daa4ae72bf](http://w3id.org/esw/resource/daa4ae72bf) | Directors  | 0.29 | 83 | [workflow5_0](http://w3id.org/esw/resource/workflow5_0) |
 | [d000799b39](http://w3id.org/esw/resource/d000799b39) | The Batman movies  | 0.34 | 12 | [workflow5_1](http://w3id.org/esw/resource/workflow5_1) |
 | [28dde04e63](http://w3id.org/esw/resource/28dde04e63) | Horror Franchises  | 0.38 | 53 | [workflow5_2](http://w3id.org/esw/resource/workflow5_2) |
+
+
+### Runtime Analysis
+
+#### Macro Topic Execution Analysis
+
+The table below shows, for each macro topic the statistics for the execution time of the queries in that macro topic.
+
+You can get these statistics querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0APREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Fmacro+%3FavgTrackDuration+%28%28SUM%28%3FthisVar%29%2F%3FnumTrackDuration%29+AS+%3Fvariance%29+%3FmaxTrackDuration+%3FexecutionErrors+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fmacro+%28AVG%28%3Fdur%29+AS+%3FavgTrackDuration%29+%28COUNT%28%3Fdur%29+AS+%3FnumTrackDuration%29+%28MAX%28%3Fdur%29+AS+%3FmaxTrackDuration%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3AInformative2021Track.%0D%0A++++++++++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++++++++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++++++%7D+GROUP+BY+%3Fmacro%0D%0A++++%7D%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fmacro+%28COUNT%28*%29+AS+%3FexecutionErrors%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3AInformative2021Track.%0D%0A++++++++++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AparseError+%3FpErr.%0D%0A++++++++%7D+GROUP+BY+%3Fmacro%0D%0A++++%7D%0D%0A%09%3Ftopic+esw%3ApartOf+eswr%3AInformative2021Track.%0D%0A++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++BIND%28xsd%3Afloat%28xsd%3Afloat%28%3Fdur%29+-+xsd%3Afloat%28%3FavgTrackDuration%29%29*%28xsd%3Afloat%28%3Fdur%29+-+xsd%3Afloat%28%3FavgTrackDuration%29%29+AS+%3FthisVar%29%0D%0A%7D%0D%0AGROUP+BY+%3Fmacro+%3FavgTrackDuration+%3FnumTrackDuration+%3FexecutionErrors+%3FmaxTrackDuration%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on)
+
+
+| Keyword | Mean | Variance | Max Time | Execution Errors |
+| ---------- | ---------- | --------- | -------- |  -------- | 
+| History 	| 0.62 	| 42.37 	| 137.0 	| 8 |
+| Sport 	| 0.86 	| 121.09 	| 232.51 	| 17 |
+| Movie 	| 0.87 	| 48.94 	| 152.18 	| 18 |
+| Total     | 0.79  | 75.79     | 232.52    | 43 |
+
+
+#### Keywords Execution Statistics
+The table below shows, for each keyword the statistics for the execution time of the queries containing such keyword.
+
+You can get these statistics querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%3FavgKeywordDuration+%28%28SUM%28%3FthisVar%29%2F%3FnumKeywordDuration%29+AS+%3Fvariance%29+%3FmaxKeywordDuration+%3FparseErrors+%28%3FnumKeywordDuration+AS+%3FnumQueries+%29+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fkeyword+%28AVG%28%3Fdur%29+AS+%3FavgKeywordDuration%29+%28COUNT%28%3Fdur%29+AS+%3FnumKeywordDuration%29+%28MAX%28%3Fdur%29+AS+%3FmaxKeywordDuration%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3AInformative2021Track.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++++++++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++++++++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++++++%7D+GROUP+BY+%3Fkeyword%0D%0A++++%7D%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3FparseErrors%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3AInformative2021Track.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++++++++++%3Fquery+lsqv%3AparseError+%3FpErr.%0D%0A++++++++%7D+GROUP+BY+%3Fkeyword%0D%0A++++%7D%0D%0A%09%3Ftopic+esw%3ApartOf+eswr%3AInformative2021Track.%0D%0A++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++BIND%28xsd%3Afloat%28xsd%3Afloat%28%3Fdur%29+-+xsd%3Afloat%28%3FavgKeywordDuration%29%29*%28xsd%3Afloat%28%3Fdur%29+-+xsd%3Afloat%28%3FavgKeywordDuration%29%29+AS+%3FthisVar%29%0D%0A%7D%0D%0AGROUP+BY+%3Fkeyword+%3FavgKeywordDuration+%3FnumKeywordDuration+%3FparseErrors+%3FmaxKeywordDuration%0D%0AORDER+BY+%3Fkeyword&format=text%2Fhtml&timeout=0&signal_void=on)
+
+
+| Keyword | Mean | Variance | Max Time | Execution Errors | # queries|
+| ---------- | ---------- | --------- | -------- |  -------- | -------- | 
+| AVG 	| 0.54 	| 2.35 	| 8.22 	| 1 	| 56 |
+| COUNT 	| 1.91 	| 141.05 	| 190.66 	| 12 	| 1230 |
+| DISTINCT 	| 2.0 	| 196.03 	| 250.3 	| 42 	| 3370 |
+| EXISTS 	| 5.06 	| 216.02 	| 73.77 	| 3 	| 38 |
+| FILTER 	| 4.73 	| 576.52 	| 292.23 	| 32 	| 1450 |
+| GROUP BY 	| 3.49 	| 440.0 	| 250.3 	| 16 	| 1034 |
+| GROUP_CONCAT 	| 7.15 	| 1344.86 	| 250.3 	| 2 	| 199 |
+| HAVING 	| 0.17 	| 0.16 	| 2.28 	| 2 	| 54 |
+| LIMIT 	| 1.89 	| 203.07 	| 292.23 	| 26 	| 2323 |
+| MAX 	| 6.74 	| 588.44 	| 190.66 	| 4 	| 110 |
+| MIN 	| 4.87 	| 486.59 	| 181.77 	| 3 	| 82 |
+| NESTED QUERY 	| 4.42 	| 361.49 	| 190.66 	| 15 	| 401 |
+| NOT EXISTS 	| 6.75 	| 498.89 	| 119.19 	| 10 	| 127 |
+| OPTIONAL 	| 7.05 	| 935.94 	| 250.3 	| 4 	| 339 |
+| ORDER BY 	| 2.73 	| 301.28 	| 250.3 	| 23 	| 1840 |
+| REGEX 	| 6.57 	| 974.82 	| 282.55 	| 4 	| 481 |
+| SELECT 	| 1.85 	| 204.77 	| 292.23 	| 59 	| 4782 |
+| UNION 	| 2.1 	| 75.07 	| 90.12 	| 4 	| 255 |

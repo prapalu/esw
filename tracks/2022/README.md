@@ -9,6 +9,7 @@ Furthermore we report here some statistics for this track.
 - [search workflows](#search-workflows)
 - [keywords analysis](#keywords-analysis)
 - [evaluation results](#evaluation-results)
+- [runtime analysis](#runtime-analysis)
 
 ### Statistics
 
@@ -65,14 +66,14 @@ You can get the statistics below querying the RDF Graph. [Execute query](http://
 | LIMIT 	| 5234 	    | 90.45% |
 | FILTER 	| 1557 	    | 26.9%  |
 | COUNT 	| 881 	    | 15.22% |
-| GROUPBY 	| 864 	    | 14.93% |
-| ORDERBY 	| 746 	    | 12.89% |
+| GROUP BY 	| 864 	    | 14.93% |
+| ORDER BY 	| 746 	    | 12.89% |
 | REGEX 	| 671 	    | 11.59% |
 | OPTIONAL 	| 348 	    | 6.01% |
 | HAVING 	| 250 	    | 4.32% |
-| NESTEDQUERY 	| 243 	| 4.19% |
+| NESTED QUERY 	| 243 	| 4.19% |
 | UNION 	| 199 	| 3.43% |
-| NOTEXISTS 	| 82 	| 1.41% |
+| NOT EXISTS 	| 82 	| 1.41% |
 | GROUP_CONCAT 	| 71 	| 1.22% |
 | MAX 	    | 46 	    | 0.79% |
 | MINUS 	| 42 	    | 0.72% |
@@ -149,3 +150,50 @@ You can get these statistics querying the RDF Graph. [Execute query](http://grac
 | [080ba229ef](http://w3id.org/esw/resource/080ba229ef) | Basketball and NBA seasons  | 0.96 | 91 | [workflow0_3](http://w3id.org/esw/resource/workflow0_3) |
 | [c19f714ccc](http://w3id.org/esw/resource/c19f714ccc) | Association Football Club  | 0.93 | 49 | [workflow0_0](http://w3id.org/esw/resource/workflow0_0) |
 | [95820d24bc](http://w3id.org/esw/resource/95820d24bc) | Basketball and NBA finals  | 0.99 | 43 | [workflow0_1](http://w3id.org/esw/resource/workflow0_1) |
+
+### Runtime Analysis
+
+#### Macro Topic Execution Analysis
+
+The table below shows, for each macro topic the statistics for the execution time of the queries in that macro topic.
+
+You can get these statistics querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0APREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Fmacro+%3FavgTrackDuration+%28%28SUM%28%3FthisVar%29%2F%3FnumTrackDuration%29+AS+%3Fvariance%29+%3FmaxTrackDuration+%3FexecutionErrors+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fmacro+%28AVG%28%3Fdur%29+AS+%3FavgTrackDuration%29+%28COUNT%28%3Fdur%29+AS+%3FnumTrackDuration%29+%28MAX%28%3Fdur%29+AS+%3FmaxTrackDuration%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++++++++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++++++++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++++++%7D+GROUP+BY+%3Fmacro%0D%0A++++%7D%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fmacro+%28COUNT%28*%29+AS+%3FexecutionErrors%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++++++++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AparseError+%3FpErr.%0D%0A++++++++%7D+GROUP+BY+%3Fmacro%0D%0A++++%7D%0D%0A%09%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++BIND%28xsd%3Afloat%28xsd%3Afloat%28%3Fdur%29+-+xsd%3Afloat%28%3FavgTrackDuration%29%29*%28xsd%3Afloat%28%3Fdur%29+-+xsd%3Afloat%28%3FavgTrackDuration%29%29+AS+%3FthisVar%29%0D%0A%7D%0D%0AGROUP+BY+%3Fmacro+%3FavgTrackDuration+%3FnumTrackDuration+%3FexecutionErrors+%3FmaxTrackDuration%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on)
+
+| Keyword | Mean | Variance | Max Time | Execution Errors |
+| ---------- | ---------- | --------- | -------- |  -------- | 
+| Movie 	| 0.6 	| 12.71 	| 53.54 	| 4 |
+| Sport 	| 2.38 	| 297.63 	| 292.23 	| 10 |
+| Politics 	| 1.49 	| 105.31 	| 181.77 	| 24 |
+| Book 	    | 3.75 	| 587.38 	| 282.55 	| 14 |
+| GEO 	    | 1.01 	| 68.05 	| 184.59 	| 1 |
+| Companies | 1.72 	| 94.3 	    | 151.06 	| 7 |
+| Total     | 1.88  | 208.32    | 292.23    | 60 |
+
+
+
+#### Keywords Execution Analysis
+
+The table below shows, for each keyword the statistics for the execution time of the queries containing such keyword.
+
+You can get these statistics querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%3FavgKeywordDuration+%28%28SUM%28%3FthisVar%29%2F%3FnumKeywordDuration%29+AS+%3Fvariance%29+%3FmaxKeywordDuration+%3FparseErrors+%28%3FnumKeywordDuration+AS+%3FnumQueries+%29+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fkeyword+%28AVG%28%3Fdur%29+AS+%3FavgKeywordDuration%29+%28COUNT%28%3Fdur%29+AS+%3FnumKeywordDuration%29+%28MAX%28%3Fdur%29+AS+%3FmaxKeywordDuration%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++++++++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++++++++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++++++%7D+GROUP+BY+%3Fkeyword%0D%0A++++%7D%0D%0A++++%7B%0D%0A++++++++SELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3FparseErrors%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++++++++++%3Fquery+lsqv%3AparseError+%3FpErr.%0D%0A++++++++%7D+GROUP+BY+%3Fkeyword%0D%0A++++%7D%0D%0A%09%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++BIND%28xsd%3Afloat%28xsd%3Afloat%28%3Fdur%29+-+xsd%3Afloat%28%3FavgKeywordDuration%29%29*%28xsd%3Afloat%28%3Fdur%29+-+xsd%3Afloat%28%3FavgKeywordDuration%29%29+AS+%3FthisVar%29%0D%0A%7D%0D%0AGROUP+BY+%3Fkeyword+%3FavgKeywordDuration+%3FnumKeywordDuration+%3FparseErrors+%3FmaxKeywordDuration%0D%0AORDER+BY+%3Fkeyword&format=text%2Fhtml&timeout=0&signal_void=on)
+
+
+| Keyword | Mean | Variance | Max Time | Execution Errors | # queries|
+| ---------- | ---------- | --------- | -------- |  -------- | -------- | 
+| COUNT 	| 1.44 	| 204.95 	| 232.51 	| 20 	| 861 |
+| DISTINCT 	| 0.83 	| 79.55 	| 232.51 	| 35 	| 5284 |
+| EXISTS 	| 1.34 	| 14.28 	| 13.0 	| 1 	| 21 |
+| FILTER 	| 2.02 	| 196.5 	| 170.07 	| 24 	| 1533 |
+| GROUP BY 	| 1.26 	| 146.25 	| 170.07 	| 20 	| 844 |
+| HAVING 	| 1.24 	| 129.25 	| 170.02 	| 7 	| 243 |
+| LIMIT 	| 0.81 	| 78.55 	| 232.51 	| 41 	| 5193 |
+| MAX 	| 17.98 	| 2461.39 	| 170.07 	| 3 	| 43 |
+| MIN 	| 0.61 	| 2.82 	| 6.0 	| 1 	| 34 |
+| NESTED QUERY 	| 3.95 	| 508.72 	| 170.07 	| 9 	| 234 |
+| NOTEXISTS 	| 0.31 	| 6.03 	| 22.26 	| 1 	| 81 |
+| OPTIONAL 	| 0.05 	| 0.24 	| 8.89 	| 2 	| 346 |
+| ORDER BY 	| 1.31 	| 163.05 	| 170.07 	| 6 	| 740 |
+| REGEX 	| 4.02 	| 426.27 	| 170.07 	| 8 	| 663 |
+| SELECT 	| 0.79 	| 75.8 	| 232.51 	| 41 	| 5742 |
+| SUM 	| 2.7 	| 191.57 	| 75.93 	| 5 	| 29 |
+| UNION 	| 1.74 	| 94.53 	| 92.93 	| 2 	| 197 |
