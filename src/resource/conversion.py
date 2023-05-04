@@ -334,23 +334,26 @@ def query_extractor(notebook,goals):
                     param = get_function_parameter(it)
                     query_str = get_query_text(container,param)
                     query_narrative = get_query_narrative(container,param)
-                    query_exp = {"narrative":query_narrative,"query":query_str,"output":new_output,"parseError":parseError}
-                    #append the string in the list of queries of the related goal
-                    if actual_goal not in query_dict:
-                        query_dict[actual_goal] = [query_exp]
-                    else:
-                        query_dict[actual_goal].append(query_exp)
+                    if "{" in query_str and "}" in query_str:
+                        query_exp = {"narrative":query_narrative,"query":query_str,"output":new_output,"parseError":parseError}
+                        #append the string in the list of queries of the related goal
+                        if actual_goal not in query_dict:
+                            query_dict[actual_goal] = [query_exp]
+                        else:
+                            query_dict[actual_goal].append(query_exp)
                     container = []
                 elif "run_ask_query" in str(it).lower():
                     ##run ask query command --> extract the query
                     param = get_function_parameter(it,True)
                     query_str = get_query_text(container,param)
-                    query_exp = {"query":query_str,"output":new_output,"parseError":parseError}
-                    #append the string in the list of queries of the related goal
-                    if actual_goal not in query_dict:
-                        query_dict[actual_goal] = [query_exp]
-                    else:
-                        query_dict[actual_goal].append(query_exp)
+                    query_narrative = get_query_narrative(container,param)
+                    if "{" in query_str and "}" in query_str:
+                        query_exp = {"narrative":query_narrative,"query":query_str,"output":new_output,"parseError":parseError}
+                        #append the string in the list of queries of the related goal
+                        if actual_goal not in query_dict:
+                            query_dict[actual_goal] = [query_exp]
+                        else:
+                            query_dict[actual_goal].append(query_exp)
                     container = []
                 else:
                     container.append(it)
