@@ -182,6 +182,7 @@ esw:ExploratoryWorkflow rdf:type owl:Class ;
 
 ###  http://w3id.org/esw/ontology#GroundTruth
 esw:GroundTruth rdf:type owl:Class ;
+                rdfs:subClassOf esw:ExploratoryWorkflow ;
                 rdfs:comment "Represent the class of Ground Truth"@en ;
                 rdfs:label "Ground Truth"@en .
 

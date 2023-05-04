@@ -373,27 +373,29 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX lsqv: <http://lsq.aksw.org/vocab#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?topic ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?maxTrackDuration ?executionErrors WHERE{
+SELECT ?keyword ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?maxTrackDuration ?executionErrors WHERE{
     {
-        SELECT ?topic (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) (MAX(?dur) AS ?maxTrackDuration) where { 
+        SELECT ?keyword (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) (MAX(?dur) AS ?maxTrackDuration) where { 
             ?topic esw:partOf eswr:Informative2021Track.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             ?query lsqv:hasExec ?exec.
+            ?query lsqv:usesFeature ?keyword.
             ?exec lsqv:evalDuration ?dur.
-        } GROUP BY ?topic
+        } GROUP BY ?keyword
     }
     {
-        SELECT ?topic (COUNT(*) AS ?executionErrors) where { 
+        SELECT ?keyword (COUNT(?pErr) AS ?executionErrors) where { 
             ?topic esw:partOf eswr:Informative2021Track.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
-            ?query lsqv:parseError ?pErr.
-        } GROUP BY ?topic
+            ?query lsqv:usesFeature ?keyword.
+            OPTIONAL{?query lsqv:parseError ?pErr.}
+        } GROUP BY ?keyword
     }
 	?topic esw:partOf eswr:Informative2021Track.
     ?work esw:hasPart ?part.
@@ -402,6 +404,8 @@ SELECT ?topic ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance)
     ?o rdf:rest*/rdf:first  ?query.
     ?query lsqv:hasExec ?exec.
     ?exec lsqv:evalDuration ?dur.
+    ?query lsqv:usesFeature ?keyword.
     BIND(xsd:float(xsd:float(?dur) - xsd:float(?avgTrackDuration))*(xsd:float(?dur) - xsd:float(?avgTrackDuration)) AS ?thisVar)
 }
-GROUP BY ?topic ?avgTrackDuration ?numTrackDuration ?executionErrors ?maxTrackDuration
+GROUP BY ?keyword ?avgTrackDuration ?numTrackDuration ?executionErrors ?maxTrackDuration
+ORDER BY ?keyword
