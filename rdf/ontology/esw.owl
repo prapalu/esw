@@ -108,7 +108,7 @@ esw:description rdf:type owl:DatatypeProperty ;
 ###  http://w3id.org/esw/ontology#fscore
 esw:fscore rdf:type owl:DatatypeProperty ;
            rdfs:range xsd:float ;
-           rdfs:comment "Represent the fscore of a query or the fscore of a Search Job"@en ;
+           rdfs:comment "Represent the f-score of a query"@en ;
            rdfs:label "fscore"@en .
 
 
