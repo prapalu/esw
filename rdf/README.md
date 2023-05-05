@@ -37,7 +37,8 @@ SELECT ?track (COUNT (DISTINCT ?macro) AS ?macroTopics)
 GROUP BY ?track
 ```
 
-2. Get the best workflow for topics of which there is a ground truth.
+2. Get the best workflow (with the best f-score) for topics of which there is a ground truth.
+For this example, the f-score of the workflow is calculated averaging the f-scores of the Search Jobs, which is in turn computes as the maximum f-score of the queries in such Search Job.
 
 The query returns a list of 4-tuples (workflow IRI, topic IRI, score, ground truth IRI).
 
@@ -52,14 +53,23 @@ SELECT ?workflow ?topicLabel ?avgFscore ?groundTruth WHERE{
         SELECT ?topic ?macro (MAX(?fscore) AS ?max_score) WHERE
         {
             {
-                select ?work (AVG(?score) AS ?fscore) WHERE{
+                SELECT ?work (AVG(?score) AS ?fscore) WHERE{
+                    {
+                        SELECT ?work ?part (MAX(?score) AS ?score) WHERE{
+                            ?work a esw:ExploratoryWorkflow;
+                                esw:hasPart ?part.
+                            ?part esw:queries ?queries.
+                            ?queries rdf:rest*/rdf:first ?query.
+                            OPTIONAL{ ?query esw:fscore ?score. }
+                        }
+                        GROUP BY ?work ?part
+                    }
                     ?work a esw:ExploratoryWorkflow;
                           esw:hasPart ?part.
-                    ?part esw:fscore ?score.
                 }
                 GROUP BY ?work 
             }
-            FILTER(?fscore > 0.1).
+            FILTER(?fscore > 0.0).
             ?work esw:implements ?topic.
             ?topic esw:description ?macro.
         }
@@ -68,14 +78,22 @@ SELECT ?workflow ?topicLabel ?avgFscore ?groundTruth WHERE{
         }
     
     {
-        select ?workflow ?t (AVG(?s) AS ?avgFscore) WHERE{
+        SELECT ?workflow ?t (AVG(?score) AS ?avgFscore) WHERE{
+            {
+                SELECT ?workflow ?part (MAX(?score) AS ?score) WHERE{
+                    ?workflow a esw:ExploratoryWorkflow;
+                        esw:hasPart ?part.
+                    ?part esw:queries ?queries.
+                    ?queries rdf:rest*/rdf:first ?query.
+                    OPTIONAL{?query esw:fscore ?score.}
+                }
+                GROUP BY ?workflow ?part
+            }
             ?workflow a esw:ExploratoryWorkflow;
-                esw:hasPart ?p.
-                ?p esw:fscore ?s.
-            ?workflow esw:implements ?t.
-            
+                esw:implements ?t;
+                esw:hasPart ?part.
         }
-        GROUP BY ?workflow ?t 
+        GROUP BY ?workflow ?t
     }
     FILTER(?avgFscore = ?max_score).
     FILTER(?t = ?topic).
