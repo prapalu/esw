@@ -193,8 +193,9 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                 
             # add the information of the score of the job (fscore max and #queries)
             
-            max_fscore = max([ q['fscore'] if 'fscore' in q else 0.0 for q in exploratory_workflow[job] ])
-            h.add((Job, ESW['fscore'], Literal(max_fscore, datatype=XSD.float)))
+            # not add the max f-score directly in the SearchJob
+            #max_fscore = max([ q['fscore'] if 'fscore' in q else 0.0 for q in exploratory_workflow[job] ])
+            #h.add((Job, ESW['fscore'], Literal(max_fscore, datatype=XSD.float)))
             h.add((Job, ESW['numberOfQueries'], Literal(len(exploratory_workflow[job]), datatype=XSD.integer)))
                 
                 
