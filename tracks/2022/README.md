@@ -17,7 +17,7 @@ The 2022 track is composed of:
 - 36 workers
 - 21 Search Topics
 - 108 Search Workflows (each worker was assigned to implement a search workflow for each macro topic)
-- 5786 queries
+- 5784 queries
 
 ### Search Workflows
 
@@ -56,33 +56,32 @@ You can get the statistics below querying the RDF Graph. [Execute query](http://
 
 The table below shows the distribution of the SPARQL keywords in the track.
 
-You can get the statistics below querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Fcount%29+where%7B%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7D%0D%0AGROUP+BY+%3Fkeyword%0D%0AORDER+BY+DESC+%28%3Fcount%29&format=text%2Fhtml&timeout=0&signal_void=on)
+You can get the statistics below querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Ffrequency%29+%28%28COUNT%28*%29%2Fxsd%3Afloat%28%3FtotQuery%29*100.0+AS+%3Fpercentage%29%29+where%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%28+COUNT%28%3Fquery%29+AS+%3FtotQuery%29%7B%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++++++++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++++++++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++%7D%0D%0A++++%7D%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7D%0D%0AGROUP+BY+%3Fkeyword+%3FtotQuery%0D%0AORDER+BY+DESC+%28%3Ffrequency%29&format=text%2Fhtml&timeout=0&signal_void=on)
 
 | Keyword   | # queries | % queries |
 | ----------| --------- | -------- | 
-| SELECT 	| 5783 	    | 99.94% |
-| DISTINCT 	| 5319 	    | 91.92% |
-| LIMIT 	| 5234 	    | 90.45% |
-| FILTER 	| 1557 	    | 26.9%  |
-| COUNT 	| 881 	    | 15.22% |
-| GROUPBY 	| 864 	    | 14.93% |
-| ORDERBY 	| 746 	    | 12.89% |
-| REGEX 	| 671 	    | 11.59% |
-| OPTIONAL 	| 348 	    | 6.01% |
-| HAVING 	| 250 	    | 4.32% |
-| NESTEDQUERY 	| 243 	| 4.19% |
-| UNION 	| 199 	| 3.43% |
-| NOTEXISTS 	| 82 	| 1.41% |
-| GROUP_CONCAT 	| 71 	| 1.22% |
-| MAX 	    | 46 	    | 0.79% |
-| MINUS 	| 42 	    | 0.72% |
-| MIN 	    | 35 	    | 0.6% |
-| SUM 	    | 34 	    | 0.58% |
-| EXISTS 	| 22 	    | 0.38% |
-| AVG 	    | 6 	    | 0.1% |
-| DESCRIBE 	| 1 	    | 0.01% |
+| SELECT	| 5783	| 99.98% |
+| DISTINCT	| 5319	| 91.96% |
+| LIMIT	    | 5234	| 90.49% |
+| FILTER	| 1557	| 26.91% |
+| COUNT	    | 881	| 15.23% |
+| GROUPBY	| 864	| 14.93% |
+| ORDERBY	| 746	| 12.89% |
+| REGEX	    | 671	| 11.6% |
+| OPTIONAL	| 348	| 6.01% |
+| HAVING	| 250	| 4.32% |
+| UNION	    | 199	| 3.44% |
+| NOTEXISTS	| 82	| 1.41% |
+| GROUP_CONCAT	    | 71	| 1.22% |
+| MAX	    | 46	| 0.79% |
+| MINUS	    | 42	| 0.72% |
+| MIN	    | 35	| 0.6% |
+| SUM	    | 34	| 0.58% |
+| EXISTS	| 22	| 0.38% |
+| AVG	    | 6	    | 0.1% |
+| DESCRIBE	| 1	    | 0.01% |
 | ----------| --------- | -------- | 
-| TOTAL     | 4862      | 100%  | 
+| TOTAL     | 5784      | 100%  | 
 
 For more statistics on the SPARQL keywords usage in specific Search Workflows, Search Topics, Macro Topics, you can query the [SPARQL endpoint](http://w3id.org/esw/sparql) binding the variables you want.
 
