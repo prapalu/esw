@@ -25,3 +25,5 @@ charts/
 # ignore scripts
 scripts/ 
 
+zenodo/
+

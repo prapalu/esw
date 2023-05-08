@@ -34,7 +34,7 @@ python clean-dump-gz.py wikidata-20210922-truthy-BETA.nt.gz >> parsed.log
 
 docker pull openlink/virtuoso-opensource-7:latest
 mkdir -p virtuoso/database
-cp  files/virtuoso.ini virtuoso/database/virtuoso.ini
+cp  virtuoso.ini virtuoso/database/virtuoso.ini
 
 mkdir -p virtuoso/settings
 
