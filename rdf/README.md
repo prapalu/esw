@@ -356,6 +356,11 @@ GROUP BY ?track ?macro ?totExecutionTime ?avgQueryDuration ?numQuery ?executionE
 
 10. Queries execution statistics by keywords
 
+    The query returns a list of triples (keyword, AVG(query duration), MAX(query duration)).
+
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=http%3A%2F%2Fw3id.org%2Fesw%2F&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28AVG%28%3Fdur%29+AS+%3FavgKeywordDuration%29+%28MAX%28%3Fdur%29+AS+%3FmaxKeywordDuration%29+where+%7B+%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A%7D+GROUP+BY+%3Fkeyword&format=text%2Fhtml&timeout=0&signal_void=on)
+
+
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
@@ -364,31 +369,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX lsqv: <http://lsq.aksw.org/vocab#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?keyword ?avgKeywordDuration ((SUM(?thisVar)/?numKeywordDuration) AS ?variance) ?maxKeywordDuration ?executionErrors ?numKeywordDuration WHERE{
-    {
-        SELECT ?keyword (AVG(?dur) AS ?avgKeywordDuration) (COUNT(?dur) AS ?numKeywordDuration) (MAX(?dur) AS ?maxKeywordDuration) where { 
-            ?topic esw:partOf eswr:Completeness2022Track.
-            ?work esw:hasPart ?part.
-            ?work esw:implements ?topic.
-            ?part esw:queries ?o .
-            ?o rdf:rest*/rdf:first  ?query.
-            ?query lsqv:hasExec ?exec.
-            ?query lsqv:usesFeature ?keyword.
-            ?exec lsqv:evalDuration ?dur.
-        } GROUP BY ?keyword
-    }
-    {
-        SELECT ?keyword (COUNT(*) AS ?executionErrors) where { 
-            ?topic esw:partOf eswr:Completeness2022Track.
-            ?work esw:hasPart ?part.
-            ?work esw:implements ?topic.
-            ?part esw:queries ?o .
-            ?o rdf:rest*/rdf:first  ?query.
-            ?query lsqv:usesFeature ?keyword.
-            ?query lsqv:parseError ?pErr.
-        } GROUP BY ?keyword
-    }
-	?topic esw:partOf eswr:Completeness2022Track.
+SELECT ?keyword (AVG(?dur) AS ?avgKeywordDuration) (MAX(?dur) AS ?maxKeywordDuration) where { 
+    ?topic esw:partOf eswr:Completeness2022Track.
     ?work esw:hasPart ?part.
     ?work esw:implements ?topic.
     ?part esw:queries ?o .
@@ -396,51 +378,6 @@ SELECT ?keyword ?avgKeywordDuration ((SUM(?thisVar)/?numKeywordDuration) AS ?var
     ?query lsqv:hasExec ?exec.
     ?query lsqv:usesFeature ?keyword.
     ?exec lsqv:evalDuration ?dur.
-    BIND(xsd:float(xsd:float(?dur) - xsd:float(?avgKeywordDuration))*(xsd:float(?dur) - xsd:float(?avgKeywordDuration)) AS ?thisVar)
-}
-GROUP BY ?keyword ?avgKeywordDuration ?numKeywordDuration ?executionErrors ?maxKeywordDuration
+} GROUP BY ?keyword
 
 ```
-
-PREFIX eswr: <http://w3id.org/esw/resource/>
-PREFIX esw: <http://w3id.org/esw/ontology#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX lsqv: <http://lsq.aksw.org/vocab#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-SELECT ?keyword ?avgTrackDuration ((SUM(?thisVar)/?numTrackDuration) AS ?variance) ?maxTrackDuration ?executionErrors WHERE{
-    {
-        SELECT ?keyword (AVG(?dur) AS ?avgTrackDuration) (COUNT(?dur) AS ?numTrackDuration) (MAX(?dur) AS ?maxTrackDuration) where { 
-            ?topic esw:partOf eswr:Informative2021Track.
-            ?work esw:hasPart ?part.
-            ?work esw:implements ?topic.
-            ?part esw:queries ?o .
-            ?o rdf:rest*/rdf:first  ?query.
-            ?query lsqv:hasExec ?exec.
-            ?query lsqv:usesFeature ?keyword.
-            ?exec lsqv:evalDuration ?dur.
-        } GROUP BY ?keyword
-    }
-    {
-        SELECT ?keyword (COUNT(?pErr) AS ?executionErrors) where { 
-            ?topic esw:partOf eswr:Informative2021Track.
-            ?work esw:hasPart ?part.
-            ?work esw:implements ?topic.
-            ?part esw:queries ?o .
-            ?o rdf:rest*/rdf:first  ?query.
-            ?query lsqv:usesFeature ?keyword.
-            OPTIONAL{?query lsqv:parseError ?pErr.}
-        } GROUP BY ?keyword
-    }
-	?topic esw:partOf eswr:Informative2021Track.
-    ?work esw:hasPart ?part.
-    ?work esw:implements ?topic.
-    ?part esw:queries ?o .
-    ?o rdf:rest*/rdf:first  ?query.
-    ?query lsqv:hasExec ?exec.
-    ?exec lsqv:evalDuration ?dur.
-    ?query lsqv:usesFeature ?keyword.
-    BIND(xsd:float(xsd:float(?dur) - xsd:float(?avgTrackDuration))*(xsd:float(?dur) - xsd:float(?avgTrackDuration)) AS ?thisVar)
-}
-GROUP BY ?keyword ?avgTrackDuration ?numTrackDuration ?executionErrors ?maxTrackDuration
-ORDER BY ?keyword
