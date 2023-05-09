@@ -1,6 +1,6 @@
-# Exploratory Search Workloads collection (ESW)
+# Exploratory Search Workflows collection (ESW)
 
-This repository contains the data and the scripts for the Exploratory Search Workloads collection  
+This repository contains the data and the scripts for the Exploratory Search Workflows collection  
 
 ## Scope
 
