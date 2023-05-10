@@ -1,11 +1,13 @@
-## Useful queries 
-Try yourself the queries in the SPARQL endpoint http://w3id.org/esw/sparql
+Using the SPARQL endpoint (http://w3id.org/esw/sparql) it is possible to queries the RDF graph.
+Some useful queries are given below with both the SPARQL code and a direct link to its execution.
 
-1. Get general statistics for the Tracks
-The query returns a list of 5-tuples (track IRI, #macroTopics, #topics, #workflows, #workers, #queries)
+1. Get general statistics for the Tracks.
 
-Query text:
+The query returns a list of 5-tuples (track IRI, #macroTopics, #topics, #workflows, #workers, #queries).
 
+SPARQL Query text:
+
+```
 PREFIX esw: <http://w3id.org/esw/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 SELECT ?track (COUNT (DISTINCT ?macro) AS ?macroTopics) 
@@ -19,33 +21,45 @@ SELECT ?track (COUNT (DISTINCT ?macro) AS ?macroTopics)
     ?work esw:implements ?topic;
           esw:wroteBy ?worker;
           esw:hasPart ?part.
-    ?part esw:queries ?q.
-    ?q rdf:rest*/rdf:first ?query.
-}GROUP BY ?track
+    ?part esw:queries ?queriesList.
+    ?queriesList rdf:rest*/rdf:first ?query.
+}
+GROUP BY ?track
+```
 
+2. Get the best workflow (with the best f-score) for topics of which there is a ground truth.
+For this example, the f-score of the workflow is calculated averaging the f-scores of the Search Jobs, which is in turn computes as the maximum f-score of the queries in such Search Job.
 
+The query returns a list of 4-tuples (workflow IRI, topic IRI, score, ground truth IRI).
 
-2. Get the best workflow for topics of which there is a ground truth
-The query returns a list of 4-tuples (workflow IRI, topic IRI, score, ground truth IRI)
+SPARQL Query text:
 
-Query text:
-
+```
 PREFIX esw: <http://w3id.org/esw/ontology#>
 
-SELECT ?w ?t ?fs ?gt WHERE{
+SELECT ?workflow ?topicLabel ?avgFscore ?groundTruth WHERE{
     
     {
         SELECT ?topic ?macro (MAX(?fscore) AS ?max_score) WHERE
         {
             {
-                select ?work (AVG(?score) AS ?fscore) WHERE{
-                    ?work a esw:SearchWorkflow;
+                SELECT ?work (AVG(?score) AS ?fscore) WHERE{
+                    {
+                        SELECT ?work ?part (MAX(?score) AS ?score) WHERE{
+                            ?work a esw:ExploratoryWorkflow;
+                                esw:hasPart ?part.
+                            ?part esw:queries ?queries.
+                            ?queries rdf:rest*/rdf:first ?query.
+                            OPTIONAL{ ?query esw:fscore ?score. }
+                        }
+                        GROUP BY ?work ?part
+                    }
+                    ?work a esw:ExploratoryWorkflow;
                           esw:hasPart ?part.
-                    ?part esw:fscore ?score.
                 }
                 GROUP BY ?work 
             }
-            FILTER(?fscore > 0.1).
+            FILTER(?fscore > 0.0).
             ?work esw:implements ?topic.
             ?topic esw:description ?macro.
         }
@@ -54,140 +68,303 @@ SELECT ?w ?t ?fs ?gt WHERE{
         }
     
     {
-        select ?w ?t (AVG(?s) AS ?fs) WHERE{
-            ?w a esw:SearchWorkflow;
-                esw:hasPart ?p.
-                ?p esw:fscore ?s.
-            ?w esw:implements ?t.
-            
+        SELECT ?workflow ?t (AVG(?score) AS ?avgFscore) WHERE{
+            {
+                SELECT ?workflow ?part (MAX(?score) AS ?score) WHERE{
+                    ?workflow a esw:ExploratoryWorkflow;
+                        esw:hasPart ?part.
+                    ?part esw:queries ?queries.
+                    ?queries rdf:rest*/rdf:first ?query.
+                    OPTIONAL{?query esw:fscore ?score.}
+                }
+                GROUP BY ?workflow ?part
+            }
+            ?workflow a esw:ExploratoryWorkflow;
+                esw:implements ?t;
+                esw:hasPart ?part.
         }
-        GROUP BY ?w ?t 
+        GROUP BY ?workflow ?t
     }
-    FILTER(?fs = ?max_score).
+    FILTER(?avgFscore = ?max_score).
     FILTER(?t = ?topic).
-    ?t esw:hasGroundTruth ?gt;
-        esw:description ?m.
+    ?t esw:hasGroundTruth ?groundTruth;
+        rdfs:label ?topicLabel.
 }
+```
 
 3. Given a specific topic, return the workflows on that topic with their average fscore 
    and the total number of queries. (For the example we use the topic 
    History Workflow Series (Cultural Movements explorative search) 
-   with IRI http://w3id.org/esw/resource/TOPICd1c898149d)
-The query returns a list of 3-tuples (workflow IRI, score, numberOfQueries)
+   with IRI http://w3id.org/esw/resource/TOPICd1c898149d).
 
-Query text:
+The query returns a list of 3-tuples (workflow IRI, score, numberOfQueries).
 
+SPARQL Query text:
+
+```
 PREFIX esw: <http://w3id.org/esw/ontology#>
 PREFIX eswr: <http://w3id.org/esw/resource/>
 
-SELECT DISTINCT ?work (AVG(?fscore) AS ?fs) (SUM(?numQueries) AS ?totQueries) where{
-    ?work esw:implements eswr:TOPICd1c898149d;
+SELECT DISTINCT ?workflow ?avgfscore (SUM(?numQueries) AS ?totQueries) where{
+    {
+        SELECT ?workflow ?t (AVG(?score) AS ?avgfscore) WHERE{
+            {
+                SELECT ?workflow ?part (MAX(?score) AS ?score) WHERE{
+                    ?workflow a esw:ExploratoryWorkflow;
+                        esw:hasPart ?part.
+                    ?part esw:queries ?queries.
+                    ?queries rdf:rest*/rdf:first ?query.
+                    OPTIONAL{?query esw:fscore ?score.}
+                }
+                GROUP BY ?workflow ?part
+            }
+            ?workflow a esw:ExploratoryWorkflow;
+                esw:implements ?t.
+        }
+        GROUP BY ?workflow ?t
+    }
+    ?workflow esw:implements eswr:TOPICd1c898149d;
     	  esw:hasPart ?part.
-   	?part esw:fscore ?fscore;
-          esw:numberOfQueries ?numQueries.
-}GROUP BY ?work
+   	?part esw:numberOfQueries ?numQueries.
+}
+GROUP BY ?workflow ?avgfscore
+```
 
-4. Return the tasks with more queries
-   The query returns a list 4-tuples (task IRI, task label, numberOfQueries, numberOfWorkflows)
+4. Return the top-10 workflows with more query executions.
 
-Query text:
+The query returns a list of 3-tuples (workflow IRI, numberOfQueries, numberOfExecutions).
 
-PREFIX esw: <http://w3id.org/esw/ontology#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SPARQL Query text:
 
-SELECT DISTINCT ?task ?label (SUM(?numQueries) AS ?totQueries) (COUNT(DISTINCT ?job) AS ?works) where{
-    ?job a esw:SearchJob;
-         esw:performs ?task;
-         esw:numberOfQueries ?numQueries.
-     ?task rdfs:label ?label.
-}GROUP BY ?task ?label
-ORDER BY DESC(?totQueries)
-LIMIT 10
-
-5. Return the top-10 workflows with more query executions
-The query returns a list of 3-tuples (workflow IRI, numberOfQueries, numberOfExecutions)
-
-Query text:
-
+```
 PREFIX esw: <http://w3id.org/esw/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX lsqv: <http://lsq.aksw.org/vocab#>
 
-SELECT DISTINCT ?work (COUNT( DISTINCT ?query) AS ?totQueries) (COUNT( ?exec) AS ?totExecs) where{
-    ?work a esw:SearchWorkflow;
+SELECT DISTINCT ?workflow (COUNT( DISTINCT ?query) AS ?totQueries) (COUNT( ?execution) AS ?totExecutions) where{
+    ?workflow a esw:ExploratoryWorkflow;
          esw:hasPart ?job.
     ?job esw:queries ?queries.
     ?queries rdf:rest*/rdf:first  ?query.
-    ?query lsqv:hasExec ?exec.
-}GROUP BY ?work
-ORDER BY DESC(?totExecs)
+    ?query lsqv:hasExec ?execution.
+}
+GROUP BY ?workflow
+ORDER BY DESC(?totExecutions)
 LIMIT 10
+```
 
+5.  Return the keywords usage for the 2022 collection.
 
-6. Return the keywords usage for the 2022 collection
-   The query returns a list of couples (keyword IRI, frequency) 
+   The query returns a list of triples (keyword IRI, frequency, percentage).
 
-Query text:
+SPARQL Query text:
 
+```
 PREFIX esw: <http://w3id.org/esw/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX lsqv: <http://lsq.aksw.org/vocab#>
 PREFIX eswr: <http://w3id.org/esw/resource/>
 
-SELECT ?keyword (COUNT(*) AS ?count) where{
+SELECT ?keyword (COUNT(*) AS ?frequency) ((COUNT(*)/xsd:float(?totQuery)*100.0 AS ?percentage)) where{
+    {
+        SELECT ( COUNT(?query) AS ?totQuery){
+            ?topic esw:partOf eswr:Completeness2022Track.
+            ?work esw:implements ?topic;
+                esw:hasPart ?job.
+            ?job esw:queries ?queries.
+            ?queries rdf:rest*/rdf:first  ?query.
+        }
+    }
     ?topic esw:partOf eswr:Completeness2022Track.
     ?work esw:implements ?topic;
           esw:hasPart ?job.
     ?job esw:queries ?queries.
     ?queries rdf:rest*/rdf:first  ?query.
     ?query lsqv:usesFeature ?keyword.
-}GROUP BY ?keyword
-ORDER BY DESC (?count)
-
-
-
-7. Get for each topic the average fscore of the workflows, the average number of queries per workflow and the total number of queries.
-   The query returns a list of 5-tuples (topic IRI, topic label, AVG(fscore), AVG(queries), #queries).
-
-Query Text:
-
-PREFIX esw: <http://w3id.org/esw/ontology#>
-
-SELECT ?topic ?lab (AVG(?fs) AS ?avgFscore) (ROUND(AVG(?qs)) AS ?avgQueries) (SUM(?qs) AS ?totQueries) WHERE{ 
-    {
-        SELECT ?work (AVG(?fscore) AS ?fs) (SUM(?queries) AS ?qs) WHERE{
-            ?work esw:implements ?t;
-                  esw:wroteBy ?worker;
-                  esw:hasPart ?part.
-            ?part esw:fscore ?fscore;
-                  esw:numberOfQueries ?queries.
-        }GROUP BY ?work
-    }
-    ?work esw:implements ?topic.
-    ?topic rdfs:label ?lab.
 }
-GROUP BY ?topic ?lab
-HAVING (AVG(?fs)> 0.0)
-ORDER BY ?lab
+GROUP BY ?keyword ?totQuery
+ORDER BY DESC (?frequency)
+```
 
-8. Workers statistics
+6. Get for each topic the average fscore of the workflows.
 
-   The query returns a list of 5-tuples (worker IRI, quality, #workflows, #jobs, AVG(fscore)).
+   The query returns a list of triples (topic IRI, topic label, AVG(fscore)).
 
-Query Text:
+SPARQL Query text:
 
+``` 
 PREFIX esw: <http://w3id.org/esw/ontology#>
-SELECT ?worker ?quality ?workflows ?jobs ?avgFScore WHERE{
+
+
+SELECT DISTINCT ?topic ?topicLabel (AVG(?avgfscore) AS ?avgfscore) where{
+    {
+        SELECT ?workflow ?topic (AVG(?score) AS ?avgfscore) WHERE{
+            {
+                SELECT ?workflow ?part (MAX(?score) AS ?score)WHERE{
+                    ?workflow a esw:ExploratoryWorkflow;
+                        esw:hasPart ?part.
+                    ?part esw:queries ?queries.
+                    ?queries rdf:rest*/rdf:first ?query.
+                    OPTIONAL{?query esw:fscore ?score.}
+                }
+                GROUP BY ?workflow ?part
+            }
+            ?workflow a esw:ExploratoryWorkflow;
+                esw:implements ?topic.
+        }
+        GROUP BY ?workflow ?topic
+    }
+    ?topic rdfs:label ?topicLabel.
+}
+GROUP BY ?topic ?topicLabel
+ORDER BY ?topicLabel
+```
+
+7. Workers statistics
+
+   The query returns a list of 6-tuples (worker IRI, quality, #workflows, #jobs, AVG(fscore), #queries).
+
+SPARQL Query text:
+
+```
+PREFIX esw: <http://w3id.org/esw/ontology#>
+SELECT ?worker ?quality ?workflows ?jobs ?avgFScore ?totQueries  WHERE{
     {
         SELECT ?worker (COUNT(DISTINCT ?workflow) AS ?workflows) 
-        (COUNT(DISTINCT ?job) AS ?jobs)  (AVG(?fscore) AS ?avgFScore)  WHERE{
+        (COUNT(DISTINCT ?job) AS ?jobs) (SUM(?numQueries) AS ?totQueries)  WHERE{
             ?workflow esw:wroteBy ?worker;
                       esw:hasPart ?job.
-            ?job esw:fscore ?fscore;
-                 esw:numberOfQueries ?numQueries.
+            ?job esw:numberOfQueries ?numQueries.
+        }
+        GROUP BY ?worker
+    }
+    {
+        SELECT ?worker (AVG(?score) AS ?avgFScore) WHERE{
+            {
+                SELECT ?workflow ?part (MAX(?score) AS ?score)WHERE{
+                    ?workflow a esw:ExploratoryWorkflow;
+                        esw:hasPart ?part.
+                    ?part esw:queries ?queries.
+                    ?queries rdf:rest*/rdf:first ?query.
+                    OPTIONAL{?query esw:fscore ?score.}
+                }
+                GROUP BY ?workflow ?part
+            }
+            ?workflow a esw:ExploratoryWorkflow;
+                esw:wroteBy ?worker.
         }
         GROUP BY ?worker
     }
     ?worker esw:quality ?quality.
 }
 ORDER BY ?worker
+```
+
+8. Queries execution statistics by tracks
+
+    The query returns a list of 5-tuples (track IRI, totExecutionTime, AVG(query duration), MAX(query duration), execution errors).
+
+SPARQL Query text:
+
+```
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?track ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?executionErrors WHERE{
+    {
+        SELECT ?track (SUM(?dur) AS ?totExecutionTime) (AVG(?dur) AS ?avgQueryDuration) (COUNT(?dur) AS ?numQuery) (MAX(?dur) AS ?maxQueryDuration) where { 
+            ?topic esw:partOf ?track.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:hasExec ?exec.
+            ?exec lsqv:evalDuration ?dur.
+        } GROUP BY ?track
+    }
+    {
+        SELECT ?track (COUNT(?pErr) AS ?executionErrors) where { 
+            ?topic esw:partOf ?track.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:parseError ?pErr.
+        } GROUP BY ?track
+    }
+}
+GROUP BY ?track ?totExecutionTime ?avgQueryDuration ?numQuery ?executionErrors ?maxQueryDuration
+
+```
+
+
+9. Queries execution statistics by tracks and macro topic
+
+ The query returns a list of 6-tuples (track IRI, macro topic, totExecutionTime, AVG(query duration), MAX(query duration), execution errors).
+
+SPARQL Query text:
+
+```
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+SELECT ?track ?macro ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?executionErrors WHERE{
+    {
+        SELECT ?track ?macro (SUM(?dur) AS ?totExecutionTime) (AVG(?dur) AS ?avgQueryDuration) (COUNT(?dur) AS ?numQuery) (MAX(?dur) AS ?maxQueryDuration) where { 
+            ?topic esw:partOf ?track.
+            ?topic esw:macroTopic ?macro.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            ?query lsqv:hasExec ?exec.
+            ?exec lsqv:evalDuration ?dur.
+        } GROUP BY ?track ?macro
+    }
+    {
+        SELECT ?track ?macro (COUNT(?pErr) AS ?executionErrors) where { 
+            ?topic esw:partOf ?track.
+            ?topic esw:macroTopic ?macro.
+            ?work esw:hasPart ?part.
+            ?work esw:implements ?topic.
+            ?part esw:queries ?o .
+            ?o rdf:rest*/rdf:first  ?query.
+            OPTIONAL{?query lsqv:parseError ?pErr.}
+        } GROUP BY ?track ?macro
+    }
+}
+GROUP BY ?track ?macro ?totExecutionTime ?avgQueryDuration ?numQuery ?executionErrors ?maxQueryDuration
+
+```
+
+
+10. Queries execution statistics by keywords
+
+    The query returns a list of triples (keyword, AVG(query duration), MAX(query duration)).
+
+SPARQL Query text:
+
+```
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX eswr: <http://w3id.org/esw/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lsqv: <http://lsq.aksw.org/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?keyword (AVG(?dur) AS ?avgKeywordDuration) (MAX(?dur) AS ?maxKeywordDuration) where { 
+    ?topic esw:partOf eswr:Completeness2022Track.
+    ?work esw:hasPart ?part.
+    ?work esw:implements ?topic.
+    ?part esw:queries ?o .
+    ?o rdf:rest*/rdf:first  ?query.
+    ?query lsqv:hasExec ?exec.
+    ?query lsqv:usesFeature ?keyword.
+    ?exec lsqv:evalDuration ?dur.
+} GROUP BY ?keyword
+
+```

@@ -48,14 +48,14 @@ Ground Truths are available for all the Search Topics of the 2022 track, while f
 
 
 About 2021 track (more information [here](tracks/2021)):
-- 6 macro topic (Geography, Politics, Movies, Book, Sport, Companies)
+- 6 macro topic (Geography, Politics, Movies, Books, Sports, Companies)
 - 21 workers
 - 24 Search Topics
 - 126 Exploratory Workflows (each worker was assigned to implement an exploratory workflow for each macro topic)
 - 4861 queries
 
 About 2022 track (more information [here](tracks/2022)):
-- 3 macro topic (Movies, Sport, History)
+- 3 macro topic (Movies, Sports, History)
 - 36 workers
 - 21 Search Topics
 - 108 Exploratory Workflows (each worker was assigned to implement an exploratory workflow for each macro topic)
