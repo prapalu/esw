@@ -21,7 +21,7 @@ The 2022 track is composed of:
 
 ### Exploratory Workflows
 
-Each Search Topic was implemented from 4 to 6 workers in order to obtain different points of view. The table below shows the distribution of the Exploratory Workflows.
+Each Search Topic was implemented by 4 to 6 workers in order to obtain different points of view. The table below shows the distribution of the Exploratory Workflows.
 
 You can get the statistics below querying the RDF Graph. [Execute query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3FtopicLabel+%28COUNT%28DISTINCT+%3Fworkflow%29+AS+%3Fworkflows%29+%28SUM%28%3FnumQueries%29%2FCOUNT%28DISTINCT+%3Fworkflow%29+AS+%3FavgQueries%29+%28SUM%28%3FnumQueries%29+AS+%3FtotQueries%29+where%7B%0D%0A++++%3Fworkflow+esw%3Aimplements+%3Ftopic%3B%0D%0A++++%09esw%3AhasPart+%3Fpart.%0D%0A+++%09%3Fpart+esw%3AnumberOfQueries+%3FnumQueries.%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track%3B%0D%0A+++++++++++rdfs%3Alabel+%3FtopicLabel.%0D%0A%7D%0D%0AGROUP+BY+%3Ftopic+%3FtopicLabel%0D%0AORDER+BY+%3FtopicLabel&format=text%2Fhtml&timeout=0&signal_void=on)
 
