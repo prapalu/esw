@@ -1,0 +1,1724 @@
+@prefix esw: <http://w3id.org/esw/ontology#> .
+@prefix eswr: <http://w3id.org/esw/resource/> .
+@prefix lsqv: <http://lsq.aksw.org/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eswr:workflow5_0 a esw:GroundTruth ;
+    esw:hasPart eswr:JOB1Wworkflow5_0,
+        eswr:JOB2Wworkflow5_0,
+        eswr:JOB3Wworkflow5_0,
+        eswr:JOB4Wworkflow5_0,
+        eswr:JOB5Wworkflow5_0,
+        eswr:JOB6Wworkflow5_0,
+        eswr:JOB71Wworkflow5_0,
+        eswr:JOB72Wworkflow5_0,
+        eswr:JOB73Wworkflow5_0,
+        eswr:JOB7Wworkflow5_0 ;
+    esw:implements eswr:TOPIC5c2cbb34bd .
+
+eswr:workflow5_1 a esw:GroundTruth ;
+    esw:hasPart eswr:JOB1Wworkflow5_1,
+        eswr:JOB2Wworkflow5_1,
+        eswr:JOB3Wworkflow5_1,
+        eswr:JOB4Wworkflow5_1,
+        eswr:JOB5Wworkflow5_1 ;
+    esw:implements eswr:TOPIC92d217266f .
+
+eswr:workflow5_2 a esw:GroundTruth ;
+    esw:hasPart eswr:JOB1Wworkflow5_2,
+        eswr:JOB2Wworkflow5_2,
+        eswr:JOB3Wworkflow5_2,
+        eswr:JOB4Wworkflow5_2,
+        eswr:JOB5Wworkflow5_2,
+        eswr:JOB6Wworkflow5_2,
+        eswr:JOB7Wworkflow5_2 ;
+    esw:implements eswr:TOPICddde7987fe .
+
+eswr:workflow5_3 a esw:GroundTruth ;
+    esw:hasPart eswr:JOB1Wworkflow5_3,
+        eswr:JOB2Wworkflow5_3,
+        eswr:JOB3Wworkflow5_3,
+        eswr:JOB5Wworkflow5_3 ;
+    esw:implements eswr:TOPIC1aadd27945 .
+
+eswr:JOB1Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 3 ;
+    esw:performs eswr:TASK027f92f957 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_22 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_23 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_24 ;
+                            rdf:rest () ] ] ] .
+
+eswr:JOB1Wworkflow5_1 a esw:SearchJob ;
+    esw:numberOfQueries 10 ;
+    esw:performs eswr:TASKce85296ad2 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_0 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_1 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_2 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_3 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_4 ;
+                                            rdf:rest [ a rdf:List ;
+                                                    rdf:first eswr:Q_GT2021_5 ;
+                                                    rdf:rest [ a rdf:List ;
+                                                            rdf:first eswr:Q_GT2021_6 ;
+                                                            rdf:rest [ a rdf:List ;
+                                                                    rdf:first eswr:Q_GT2021_7 ;
+                                                                    rdf:rest [ a rdf:List ;
+                                                                            rdf:first eswr:Q_GT2021_8 ;
+                                                                            rdf:rest [ a rdf:List ;
+                                                                                    rdf:first eswr:Q_GT2021_9 ;
+                                                                                    rdf:rest () ] ] ] ] ] ] ] ] ] ] .
+
+eswr:JOB1Wworkflow5_2 a esw:SearchJob ;
+    esw:numberOfQueries 5 ;
+    esw:performs eswr:TASK3a0801ef39 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_85 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_86 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_87 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_88 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_89 ;
+                                            rdf:rest () ] ] ] ] ] .
+
+eswr:JOB1Wworkflow5_3 a esw:SearchJob ;
+    esw:numberOfQueries 7 ;
+    esw:performs eswr:TASK6afdcaa0b3 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_56 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_57 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_58 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_59 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_60 ;
+                                            rdf:rest [ a rdf:List ;
+                                                    rdf:first eswr:Q_GT2021_61 ;
+                                                    rdf:rest [ a rdf:List ;
+                                                            rdf:first eswr:Q_GT2021_62 ;
+                                                            rdf:rest () ] ] ] ] ] ] ] .
+
+eswr:JOB2Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 1 ;
+    esw:performs eswr:TASKfb04a99027 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_25 ;
+            rdf:rest () ] .
+
+eswr:JOB2Wworkflow5_1 a esw:SearchJob ;
+    esw:numberOfQueries 6 ;
+    esw:performs eswr:TASKe27375c201 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_10 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_11 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_12 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_13 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_14 ;
+                                            rdf:rest [ a rdf:List ;
+                                                    rdf:first eswr:Q_GT2021_15 ;
+                                                    rdf:rest () ] ] ] ] ] ] .
+
+eswr:JOB2Wworkflow5_2 a esw:SearchJob ;
+    esw:numberOfQueries 1 ;
+    esw:performs eswr:TASKea9872622d ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_90 ;
+            rdf:rest () ] .
+
+eswr:JOB2Wworkflow5_3 a esw:SearchJob ;
+    esw:numberOfQueries 9 ;
+    esw:performs eswr:TASKaa0d74b3b4 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_63 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_64 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_65 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_66 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_67 ;
+                                            rdf:rest [ a rdf:List ;
+                                                    rdf:first eswr:Q_GT2021_68 ;
+                                                    rdf:rest [ a rdf:List ;
+                                                            rdf:first eswr:Q_GT2021_69 ;
+                                                            rdf:rest [ a rdf:List ;
+                                                                    rdf:first eswr:Q_GT2021_70 ;
+                                                                    rdf:rest [ a rdf:List ;
+                                                                            rdf:first eswr:Q_GT2021_71 ;
+                                                                            rdf:rest () ] ] ] ] ] ] ] ] ] .
+
+eswr:JOB3Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 2 ;
+    esw:performs eswr:TASK04bae680c2 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_26 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_27 ;
+                    rdf:rest () ] ] .
+
+eswr:JOB3Wworkflow5_1 a esw:SearchJob ;
+    esw:numberOfQueries 1 ;
+    esw:performs eswr:TASKa11387df97 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_16 ;
+            rdf:rest () ] .
+
+eswr:JOB3Wworkflow5_2 a esw:SearchJob ;
+    esw:numberOfQueries 1 ;
+    esw:performs eswr:TASK8e67d01743 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_91 ;
+            rdf:rest () ] .
+
+eswr:JOB3Wworkflow5_3 a esw:SearchJob ;
+    esw:numberOfQueries 8 ;
+    esw:performs eswr:TASK76baaafef1 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_72 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_73 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_74 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_75 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_76 ;
+                                            rdf:rest [ a rdf:List ;
+                                                    rdf:first eswr:Q_GT2021_77 ;
+                                                    rdf:rest [ a rdf:List ;
+                                                            rdf:first eswr:Q_GT2021_78 ;
+                                                            rdf:rest [ a rdf:List ;
+                                                                    rdf:first eswr:Q_GT2021_79 ;
+                                                                    rdf:rest () ] ] ] ] ] ] ] ] .
+
+eswr:JOB4Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 2 ;
+    esw:performs eswr:TASK15a6a10e8b ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_28 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_29 ;
+                    rdf:rest () ] ] .
+
+eswr:JOB4Wworkflow5_1 a esw:SearchJob ;
+    esw:numberOfQueries 2 ;
+    esw:performs eswr:TASK3ff05000aa ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_17 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_18 ;
+                    rdf:rest () ] ] .
+
+eswr:JOB4Wworkflow5_2 a esw:SearchJob ;
+    esw:numberOfQueries 2 ;
+    esw:performs eswr:TASK54af6a7342 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_92 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_93 ;
+                    rdf:rest () ] ] .
+
+eswr:JOB5Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 6 ;
+    esw:performs eswr:TASK10bf2bf780 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_30 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_31 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_32 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_33 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_34 ;
+                                            rdf:rest [ a rdf:List ;
+                                                    rdf:first eswr:Q_GT2021_35 ;
+                                                    rdf:rest () ] ] ] ] ] ] .
+
+eswr:JOB5Wworkflow5_1 a esw:SearchJob ;
+    esw:numberOfQueries 3 ;
+    esw:performs eswr:TASK87f77a8010 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_19 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_20 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_21 ;
+                            rdf:rest () ] ] ] .
+
+eswr:JOB5Wworkflow5_2 a esw:SearchJob ;
+    esw:numberOfQueries 1 ;
+    esw:performs eswr:TASKb0f9bf1239 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_94 ;
+            rdf:rest () ] .
+
+eswr:JOB5Wworkflow5_3 a esw:SearchJob ;
+    esw:numberOfQueries 5 ;
+    esw:performs eswr:TASKdd38064041 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_80 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_81 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_82 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_83 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_84 ;
+                                            rdf:rest () ] ] ] ] ] .
+
+eswr:JOB6Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 5 ;
+    esw:performs eswr:TASK0b0a775c88 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_36 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_37 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_38 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_39 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_40 ;
+                                            rdf:rest () ] ] ] ] ] .
+
+eswr:JOB6Wworkflow5_2 a esw:SearchJob ;
+    esw:numberOfQueries 1 ;
+    esw:performs eswr:TASK5d6cb03de0 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_95 ;
+            rdf:rest () ] .
+
+eswr:JOB71Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 4 ;
+    esw:performs eswr:TASKc4da274eca ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_41 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_42 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_43 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_44 ;
+                                    rdf:rest () ] ] ] ] .
+
+eswr:JOB72Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 2 ;
+    esw:performs eswr:TASKa0babb70eb ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_45 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_46 ;
+                    rdf:rest () ] ] .
+
+eswr:JOB73Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 2 ;
+    esw:performs eswr:TASK481acd9c34 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_47 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_48 ;
+                    rdf:rest () ] ] .
+
+eswr:JOB7Wworkflow5_0 a esw:SearchJob ;
+    esw:numberOfQueries 7 ;
+    esw:performs eswr:TASK4caaa95d4e ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_49 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_50 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_51 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_52 ;
+                                    rdf:rest [ a rdf:List ;
+                                            rdf:first eswr:Q_GT2021_53 ;
+                                            rdf:rest [ a rdf:List ;
+                                                    rdf:first eswr:Q_GT2021_54 ;
+                                                    rdf:rest [ a rdf:List ;
+                                                            rdf:first eswr:Q_GT2021_55 ;
+                                                            rdf:rest () ] ] ] ] ] ] ] .
+
+eswr:JOB7Wworkflow5_2 a esw:SearchJob ;
+    esw:numberOfQueries 4 ;
+    esw:performs eswr:TASK2ae59e8645 ;
+    esw:queries [ a rdf:List ;
+            rdf:first eswr:Q_GT2021_96 ;
+            rdf:rest [ a rdf:List ;
+                    rdf:first eswr:Q_GT2021_97 ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first eswr:Q_GT2021_98 ;
+                            rdf:rest [ a rdf:List ;
+                                    rdf:first eswr:Q_GT2021_99 ;
+                                    rdf:rest () ] ] ] ] .
+
+eswr:Q_GT2021_0 a lsqv:Query ;
+    lsqv:resultCount "32"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?obj ?pName WHERE { wd:Q2695156 wdt:P4969 ?obj . ?obj <http://schema.org/name> ?pName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.2"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative """startup the evaluation
+setup the file and create the empty json
+show all the derivative works related to the batman"""^^xsd:string ;
+    esw:precision "0.125"^^xsd:float ;
+    esw:recall "0.5"^^xsd:float .
+
+eswr:Q_GT2021_1 a lsqv:Query ;
+    lsqv:resultCount "14"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?inst ?iName WHERE { wd:Q2695156 wdt:P4969 ?obj . ?obj wdt:P31 ?inst. ?inst <http://schema.org/name> ?iName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "find the instances of this derivative works"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_10 a lsqv:Query ;
+    lsqv:resultCount "192"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?prop ?name WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film ?prop ?series. ?prop <http://schema.org/name> ?name . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative """more elements mixed between URI and literals
+add the year element
+add the director element
+find something that tells me that a film is part of a series"""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_11 a lsqv:Query ;
+    lsqv:resultCount "4"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?series ?name WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film wdt:P179 ?series. ?series <http://schema.org/name> ?name . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.16666666666666666"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "show all the movie series"^^xsd:string ;
+    esw:precision "0.125"^^xsd:float ;
+    esw:recall "0.25"^^xsd:float .
+
+eswr:Q_GT2021_12 a lsqv:Query ;
+    lsqv:resultCount "36"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?prop ?name WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film wdt:P179 ?series. ?series ?prop ?o. ?prop sc:name ?name. }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative "find the date of production or publication"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_13 a lsqv:Query ;
+    lsqv:resultCount "4"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?series ?name ?date ?start WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film wdt:P179 ?series. OPTIONAL{?series wdt:P577 ?date.} OPTIONAL{?series wdt:P580 ?start.} ?series sc:name ?name. }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:OPTIONAL,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.16666666666666666"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative "show publication date and start time"^^xsd:string ;
+    esw:precision "0.125"^^xsd:float ;
+    esw:recall "0.25"^^xsd:float .
+
+eswr:Q_GT2021_14 a lsqv:Query ;
+    lsqv:resultCount "3"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?series ?name ?date ?start WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film wdt:P179 ?series. ?series wdt:P577 ?date. BIND(year(xsd:dateTime(?date)) AS ?year). FILTER(?year > 1982). ?series sc:name ?name. }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.2"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative "show publication date and start time"^^xsd:string ;
+    esw:precision "0.16666666666666666"^^xsd:float ;
+    esw:recall "0.25"^^xsd:float .
+
+eswr:Q_GT2021_15 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?series ?name (COUNT(DISTINCT ?film) AS ?num_film) (COUNT(DISTINCT ?cast) AS ?actors) (sum(?duration) AS ?tot_len) (sum(?cost) AS ?tot_cost) WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film wdt:P179 ?series. ?series wdt:P577 ?date. BIND(year(xsd:dateTime(?date)) AS ?year). FILTER(?year > 1982). ?film wdt:P161 ?cast; wdt:P2047 ?duration; wdt:P2130 ?cost. ?series sc:name ?name. } GROUP BY ?series ?name"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:SELECT,
+        eswr:SUM ;
+    esw:accuracy "0.25"^^xsd:float ;
+    esw:fscore "0.25"^^xsd:float ;
+    esw:index 5 ;
+    esw:narrative "show all together filtering for series of the last 4 decades"^^xsd:string ;
+    esw:precision "0.25"^^xsd:float ;
+    esw:recall "0.25"^^xsd:float .
+
+eswr:Q_GT2021_16 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?worker ?name (COUNT(DISTINCT ?film) AS ?films) WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film ?prop ?worker. ?worker wdt:P31 wd:Q5. ?worker sc:name ?name. } GROUP BY ?worker ?name ORDER BY DESC (?films) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative """more literals associated to the same element
+show the workers who worked on more films"""^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_17 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?prop ?pName WHERE { ?film wdt:P31 wd:Q11424. ?film ?prop ?obj. ?prop sc:name ?pName. FILTER(REGEX(?pName,\"score\")). }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:index 0 ;
+    esw:narrative """single literal associated to an URI
+This query in the endpoint of wikidata returns exactly what we want, but here data is missing"""^^xsd:string .
+
+eswr:Q_GT2021_18 a lsqv:Query ;
+    lsqv:resultCount "0"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?film ?obj WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film wdt:P444 ?obj. }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:index 1 ;
+    esw:narrative "This query in the endpoint of wikidata returns exactly what we want, but here data is missing"^^xsd:string .
+
+eswr:Q_GT2021_19 a lsqv:Query ;
+    lsqv:resultCount "15"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?person ?personName WHERE { ?person wdt:P31 wd:Q5 . ?person <http://schema.org/name> ?personName . FILTER EXISTS{ ?film wdt:P31 wd:Q11424 ; wdt:P161 ?person . } FILTER(REGEX(?personName, \"Bacon\")) }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:EXISTS,
+        eswr:FILTER,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "find Kevin Bacon"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_2 a lsqv:Query ;
+    lsqv:resultCount "8"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?film ?name WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424. ?film <http://schema.org/name> ?name . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.5"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative "show the batman movies"^^xsd:string ;
+    esw:precision "0.5"^^xsd:float ;
+    esw:recall "0.5"^^xsd:float .
+
+eswr:Q_GT2021_20 a lsqv:Query ;
+    lsqv:resultCount "87"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?actor ?actorName WHERE { wd:Q12859908 wdt:P527 ?f. ?f wdt:P161 ?actor . ?filmMiddle wdt:P161 ?actor ; wdt:P161 ?actorMiddle . ?film wdt:P161 ?actorMiddle ; wdt:P161 wd:Q3454165 . FILTER NOT EXISTS{ ?film3 wdt:P161 ?actor ; wdt:P161 wd:Q3454165 . } ?actor <http://schema.org/name> ?actorName . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:NOTEXISTS,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "actors of Dark Knight Trilogy with Kevin Bacon equal to 2"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_21 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT COUNT(DISTINCT ?actor) AS ?bacon_2_actors WHERE { wd:Q12859908 wdt:P527 ?f. ?f wdt:P161 ?actor . ?filmMiddle wdt:P161 ?actor ; wdt:P161 ?actorMiddle . ?film wdt:P161 ?actorMiddle ; wdt:P161 wd:Q3454165 . FILTER NOT EXISTS{ ?film3 wdt:P161 ?actor ; wdt:P161 wd:Q3454165 . } ?actor <http://schema.org/name> ?actorName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:NOTEXISTS,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative "number of actors of Dark Knight Trilogy with Kevin Bacon equal to 2"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_22 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?pr ?name WHERE { ?o ?pr wd:Q25089. ?pr <http://schema.org/name> ?name . FILTER(REGEX(?name,\".*irect.*\")) } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative """startup the evaluation
+setup the file and create the empty json
+Starting from Woody Allen, look to his properties with a regex to find something like 'director'"""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_23 a lsqv:Query ;
+    lsqv:resultCount "5"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?ist ?ista WHERE { ?o wdt:P57 wd:Q25089; wdt:P31 ?ist. ?ist <http://schema.org/name> ?ista . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.33333333333333337"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.2"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_24 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT wd:Q11424 ?name WHERE { wd:Q11424 <http://schema.org/name> ?name . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_25 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?pr ?name WHERE { ?o wdt:P31 wd:Q11424; wdt:P57 ?x. ?x wdt:P31/wdt:P279* ?pr. ?pr <http://schema.org/name> ?name . FILTER(REGEX(?name,\".*irect.*\")) } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "insert the result of TASK 1 in the file"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_26 a lsqv:Query ;
+    lsqv:resultCount "12"^^xsd:long ;
+    lsqv:text "SELECT ?p ?pName ?obj ?objName WHERE { wd:Q2526255 ?p ?obj. ?obj <http://schema.org/name> ?objName . ?p <http://schema.org/name> ?pName . } limit 30"^^xsd:string ;
+    lsqv:usesFeature eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.024390243902439022"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "insert the result of TASK 1 in the file"^^xsd:string ;
+    esw:precision "0.08333333333333333"^^xsd:float ;
+    esw:recall "0.014285714285714285"^^xsd:float .
+
+eswr:Q_GT2021_27 a lsqv:Query ;
+    lsqv:resultCount "70"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?p ?role WHERE { ?film wdt:P31 wd:Q11424 . ?film ?p ?worker . ?worker wdt:P31 wd:Q5 ; wdt:P106/wdt:P31/wdt:279* wd:Q4220920 . ?p <http://schema.org/name> ?role . FILTER(!isLiteral(?worker)) } ORDER BY ASC(?role)"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_28 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT ?film ?director (COUNT(DISTINCT ?worker) AS ?all) WHERE { VALUES ?dir {wd:Q25089 wd:Q3772} ?o wdt:P31 wd:Q11424 . ?o ?p ?worker . ?o wdt:P57 ?dir. ?worker wdt:P31 wd:Q5 ; wdt:P106/wdt:P31/wdt:279* wd:Q4220920 . ?o sc:name ?film . ?dir sc:name ?director . } GROUP BY ?o ?film ?director ?dir ORDER BY DESC (?all) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:index 0 ;
+    esw:narrative """TOP-10 films with director and people
+values ?work {wd:P57 wd:P161}"""^^xsd:string .
+
+eswr:Q_GT2021_29 a lsqv:Query ;
+    lsqv:resultCount "14"^^xsd:long ;
+    lsqv:text "SELECT ?worker ?name WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 ?dir. ?film ?p ?worker . ?worker wdt:P31 wd:Q5 ; wdt:P106/wdt:P31/wdt:279* wd:Q4220920 . FILTER(?dir = wd:Q3772 || ?dir = wd:Q25089) . FILTER(!isLiteral(?worker)) . ?worker sc:name ?name } GROUP BY ?worker ?name HAVING (COUNT(DISTINCT ?dir) = 2)"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:HAVING,
+        eswr:SELECT ;
+    esw:index 1 ;
+    esw:narrative "list of common workers"^^xsd:string .
+
+eswr:Q_GT2021_3 a lsqv:Query ;
+    lsqv:resultCount "126"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?prop ?name WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424; ?prop ?o. ?prop sc:name ?name. FILTER(isLiteral(?o)). } ORDER BY DESC (?name)"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative "find the year of production"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_30 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT COUNT(*) AS ?common_workers WHERE{ SELECT ?worker ?name WHERE { VALUES ?dir {wd:Q3772 wd:Q25089} ?film wdt:P31 wd:Q11424 . ?film wdt:P57 ?dir. ?film ?p ?worker . ?worker wdt:P31 wd:Q5 ; wdt:P106/wdt:P31/wdt:279* wd:Q4220920 . FILTER(!isLiteral(?worker)) . ?worker sc:name ?name } GROUP BY ?worker ?name HAVING (COUNT(DISTINCT ?dir) = 2) }"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:HAVING,
+        eswr:NESTEDQUERY,
+        eswr:SELECT ;
+    esw:index 0 ;
+    esw:narrative "how many common workers?"^^xsd:string .
+
+eswr:Q_GT2021_31 a lsqv:Query ;
+    lsqv:resultCount "12"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?name AS ?shared WHERE { ?filmA wdt:P31 wd:Q11424 . ?filmA wdt:P57 wd:Q25089. ?filmA wdt:P161 ?actors . ?filmT wdt:P31 wd:Q11424 . ?filmT wdt:P57 wd:Q3772 . ?filmT wdt:P161 ?actors . ?actors sc:name ?name. }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:index 1 ;
+    esw:narrative "list of shared actors"^^xsd:string .
+
+eswr:Q_GT2021_32 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?f ?film (COUNT(DISTINCT ?actor) AS ?more) WHERE{ { SELECT DISTINCT ?actors AS ?shared WHERE { ?filmA wdt:P31 wd:Q11424 . ?filmA wdt:P57 wd:Q25089. ?filmA wdt:P161 ?actors . ?filmT wdt:P31 wd:Q11424 . ?filmT wdt:P57 wd:Q3772 . ?filmT wdt:P161 ?actors . } } ?f wdt:P31 wd:Q11424; wdt:P161 ?x. ?f sc:name ?film. ?shared sc:name ?actor. FILTER(?x = ?shared) } GROUP BY ?f ?film ORDER BY DESC (?more) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:NESTEDQUERY,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:index 2 ;
+    esw:narrative "films with more shared actors"^^xsd:string .
+
+eswr:Q_GT2021_33 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?film ?director (COUNT(DISTINCT ?actor) AS ?more) (GROUP_CONCAT(?actor;separator=\",\") AS ?actors) WHERE{ { SELECT DISTINCT ?actors AS ?shared WHERE { ?filmA wdt:P31 wd:Q11424 . ?filmA wdt:P57 wd:Q25089. ?filmA wdt:P161 ?actors . ?filmT wdt:P31 wd:Q11424 . ?filmT wdt:P57 wd:Q3772 . ?filmT wdt:P161 ?actors . } } ?f wdt:P31 wd:Q11424; wdt:P57 ?dir; wdt:P161 ?x. ?f sc:name ?film. ?dir sc:name ?director. ?shared sc:name ?actor. FILTER(?x = ?shared) } GROUP BY ?f ?director ?film ORDER BY DESC (?more) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:GROUP_CONCAT,
+        eswr:LIMIT,
+        eswr:NESTEDQUERY,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:index 3 ;
+    esw:narrative "films with more shared actors with their names"^^xsd:string .
+
+eswr:Q_GT2021_34 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?director ?actor (COUNT(DISTINCT ?f) AS ?films) WHERE{ { SELECT DISTINCT ?actors AS ?shared WHERE { ?filmA wdt:P31 wd:Q11424 . ?filmA wdt:P57 wd:Q25089. ?filmA wdt:P161 ?actors . ?filmT wdt:P31 wd:Q11424 . ?filmT wdt:P57 wd:Q3772 . ?filmT wdt:P161 ?actors . } } ?f wdt:P31 wd:Q11424; wdt:P57 ?dir; wdt:P161 ?x. ?f sc:name ?film. ?dir sc:name ?director. ?shared sc:name ?actor. FILTER((?dir = wd:Q25089 || ?dir = wd:Q3772) && (?x = ?shared)) } GROUP BY ?common ?actor ?dir ?director ORDER BY DESC (?films) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:NESTEDQUERY,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:index 4 ;
+    esw:narrative ""^^xsd:string .
+
+eswr:Q_GT2021_35 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?actor (COUNT(DISTINCT ?f) AS ?films) WHERE{ { SELECT DISTINCT ?actors AS ?shared WHERE { ?filmA wdt:P31 wd:Q11424 . ?filmA wdt:P57 wd:Q25089. ?filmA wdt:P161 ?actors . ?filmT wdt:P31 wd:Q11424 . ?filmT wdt:P57 wd:Q3772 . ?filmT wdt:P161 ?actors . } } ?f wdt:P31 wd:Q11424; wdt:P57 ?dir; wdt:P161 ?x. ?f sc:name ?film. ?dir sc:name ?director. ?shared sc:name ?actor. FILTER((?dir = wd:Q25089 || ?dir = wd:Q3772) && (?x = ?shared)) } GROUP BY ?common ?actor ORDER BY DESC (?films) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:NESTEDQUERY,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:index 5 ;
+    esw:narrative ""^^xsd:string .
+
+eswr:Q_GT2021_36 a lsqv:Query ;
+    lsqv:resultCount "4"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?pr ?name WHERE { ?film wdt:P31 wd:Q11424; wdt:P57 wd:Q25089; ?pr ?x. ?pr <http://schema.org/name> ?name . FILTER(isNumeric(?x)) } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "look for the budget"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_37 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT ?dir MAX( ?cost ) AS ?costT WHERE { ?film wdt:P31 wd:Q11424 ; wdt:P57 ?dir ; wdt:P2769 ?cost . FILTER(?dir = wd:Q25089 || ?dir = wd:Q3772 ). } GROUP BY ?dir"^^xsd:string ;
+    lsqv:usesFeature eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:MAX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "result with only numbers using property budget (P2769)"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_38 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT ?dir MAX( ?cost ) AS ?costT WHERE { ?film wdt:P31 wd:Q11424 ; wdt:P57 ?dir ; wdt:P2130 ?cost . FILTER(?dir = wd:Q25089 || ?dir = wd:Q3772 ). } GROUP BY ?dir"^^xsd:string ;
+    lsqv:usesFeature eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:MAX,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative "result with only numbers using property cost (P2130)"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_39 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT ?dir ?dir_name ?film_name (?c AS ?max_cost) WHERE{ { SELECT ?dir MAX( ?cost ) AS ?costT WHERE { ?film wdt:P31 wd:Q11424 ; wdt:P57 ?dir ; wdt:P2130 ?cost . FILTER(?dir = wd:Q25089 || ?dir = wd:Q3772 ). }GROUP BY ?dir } ?f wdt:P31 wd:Q11424 ; wdt:P57 ?d ; wdt:P2130 ?c . FILTER(?d = ?dir && ?c = ?costT). ?f sc:name ?film_name. ?d sc:name ?dir_name. }"^^xsd:string ;
+    lsqv:usesFeature eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:MAX,
+        eswr:NESTEDQUERY,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative "result with film name"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_4 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?film ?name ?date WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424; wdt:P2754 ?date. ?film sc:name ?name. }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.1111111111111111"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative "print the year of production"^^xsd:string ;
+    esw:precision "0.5"^^xsd:float ;
+    esw:recall "0.0625"^^xsd:float .
+
+eswr:Q_GT2021_40 a lsqv:Query ;
+    lsqv:parseError "Output not found"^^xsd:string ;
+    lsqv:text "ASK WHERE { { SELECT MAX( ?cost ) AS ?costT WHERE { ?film wdt:P31 wd:Q11424 ; wdt:P57 wd:Q3772 ; wdt:P2130 ?cost . } } { SELECT MAX(?cost) AS ?costA WHERE { ?film wdt:P31 wd:Q11424 ; wdt:P57 wd:Q25089 ; wdt:P2130 ?cost . } } FILTER(?costT > ?costA) }"^^xsd:string ;
+    lsqv:usesFeature eswr:ASK,
+        eswr:FILTER,
+        eswr:MAX,
+        eswr:NESTEDQUERY,
+        eswr:SELECT ;
+    esw:accuracy "0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative "insert the result of TASK 6 in the file"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_41 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?pr ?name WHERE { ?f wdt:P31 wd:Q11424; ?pr ?a. ?pr sc:name ?name . FILTER(REGEX(?name,\".*nominated.*\")) } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_42 a lsqv:Query ;
+    lsqv:resultCount "48"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?x ?name WHERE { ?f wdt:P31 wd:Q11424; wdt:P1411 ?a. ?a wdt:P31 ?x. ?x sc:name ?name . FILTER(REGEX(?name,\".*award.*\")) } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "looking for what are the instances of these objects"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_43 a lsqv:Query ;
+    lsqv:resultCount "9"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?a ?name WHERE { ?a wdt:P279+ wd:Q4220917. ?a sc:name ?name . FILTER(REGEX(?name,\".*cadem.*\")) } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.19999999999999998"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.1111111111111111"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_44 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT wd:Q19020 ?name WHERE { wd:Q19020 sc:name ?name . }"^^xsd:string ;
+    lsqv:usesFeature eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_45 a lsqv:Query ;
+    lsqv:resultCount "32"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?pr ?name WHERE { ?a wdt:P31 wd:Q19020. ?a ?pr ?o. ?pr sc:name ?name . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative """insert the result of TASK 7.1 in the file
+look for some properties"""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_46 a lsqv:Query ;
+    lsqv:resultCount "63"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?a ?name WHERE { ?a wdt:P31 wd:Q19020. ?a sc:name ?name . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "look for something istance of academy awards"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_47 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?pr ?name WHERE { ?sub wdt:P279* wd:Q3455803. wd:Q3772 ?pr ?sub. ?pr sc:name ?name . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "find all people who are connected with the class director"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_48 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?pr ?name WHERE { ?award wdt:P31 wd:Q19020. ?x wdt:P106 wd:Q3455803. ?x ?pr ?award. ?pr sc:name ?name . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "from the directors find the relations to the academy award"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_49 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?dir_wins ?director ?nominations ?wins WHERE { { SELECT DISTINCT ?dir AS ?dir_nom (COUNT(*) AS ?nominations) WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 ?dir. ?film wdt:P1411 ?nomination . ?nomination wdt:P31 wd:Q19020 . FILTER(?dir = wd:Q25089 || ?dir = wd:Q3772 ). } GROUP BY ?dir } { SELECT DISTINCT ?dir AS ?dir_wins (COUNT(*) AS ?wins) WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 ?dir. ?film wdt:P166 ?win . ?win wdt:P31 wd:Q19020 . FILTER(?dir = wd:Q25089 || ?dir = wd:Q3772 ). } GROUP BY ?dir } FILTER(?dir_wins=?dir_nom) ?dir_wins sc:name ?director } ORDER BY DESC ( ?nominations) DESC (?wins) LIMIT 20"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:NESTEDQUERY,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.5"^^xsd:float ;
+    esw:fscore "0.5"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "academy award nominations and wins by directors"^^xsd:string ;
+    esw:precision "0.5"^^xsd:float ;
+    esw:recall "0.5"^^xsd:float .
+
+eswr:Q_GT2021_5 a lsqv:Query ;
+    lsqv:resultCount "26"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?film ?name ?date WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424; wdt:P577 ?date. ?film sc:name ?name. }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.23529411764705882"^^xsd:float ;
+    esw:index 5 ;
+    esw:narrative "print the year of publication"^^xsd:string ;
+    esw:precision "0.15384615384615385"^^xsd:float ;
+    esw:recall "0.5"^^xsd:float .
+
+eswr:Q_GT2021_50 a lsqv:Query ;
+    lsqv:resultCount "52"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?filmName ?nomination ?nomName WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 wd:Q25089. ?film wdt:P1411 ?nomination . ?nomination wdt:P31 wd:Q19020 . ?film <http://schema.org/name> ?filmName . ?nomination <http://schema.org/name> ?nomName . } ORDER BY ASC(?filmName)"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "more literals associated to the same element"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_51 a lsqv:Query ;
+    lsqv:resultCount "12"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?filmName ?win ?winName WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 wd:Q25089. ?film wdt:P166 ?win . ?win wdt:P31 wd:Q19020 . ?film <http://schema.org/name> ?filmName . ?win <http://schema.org/name> ?winName . } ORDER BY ASC(?filmName)"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_52 a lsqv:Query ;
+    lsqv:resultCount "24"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?filmName ?nomination ?nomName WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 wd:Q3772. ?film wdt:P1411 ?nomination . ?nomination wdt:P31 wd:Q19020 . ?film <http://schema.org/name> ?filmName . ?nomination <http://schema.org/name> ?nomName . } ORDER BY ASC(?filmName)"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_53 a lsqv:Query ;
+    lsqv:resultCount "7"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?filmName ?win ?winName WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 wd:Q3772. ?film wdt:P166 ?win . ?win wdt:P31 wd:Q19020 . ?film <http://schema.org/name> ?filmName . ?win <http://schema.org/name> ?winName . } ORDER BY ASC(?filmName)"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_54 a lsqv:Query ;
+    lsqv:parseError "Output not found"^^xsd:string ;
+    lsqv:text "ASK WHERE { { SELECT COUNT(?nomination) AS ?wa_nom WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 wd:Q25089. ?film wdt:P1411 ?nomination . ?nomination wdt:P31 wd:Q19020 . } } { SELECT COUNT(?nomination) AS ?qt_nom WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 wd:Q3772. ?film wdt:P1411 ?nomination . ?nomination wdt:P31 wd:Q19020 . } } FILTER(?wa_nom > ?qt_nom) }"^^xsd:string ;
+    lsqv:usesFeature eswr:ASK,
+        eswr:COUNT,
+        eswr:FILTER,
+        eswr:NESTEDQUERY,
+        eswr:SELECT ;
+    esw:accuracy "0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 5 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_55 a lsqv:Query ;
+    lsqv:parseError "Output not found"^^xsd:string ;
+    lsqv:text "ASK WHERE { { SELECT COUNT(?nomination) AS ?wa_win WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 wd:Q25089. ?film wdt:P166 ?nomination . ?nomination wdt:P31 wd:Q19020 . } } { SELECT COUNT(?nomination) AS ?qt_win WHERE { ?film wdt:P31 wd:Q11424 . ?film wdt:P57 wd:Q3772. ?film wdt:P166 ?nomination . ?nomination wdt:P31 wd:Q19020 . } } FILTER(?wa_win > ?qt_win) }"^^xsd:string ;
+    lsqv:usesFeature eswr:ASK,
+        eswr:COUNT,
+        eswr:FILTER,
+        eswr:NESTEDQUERY,
+        eswr:SELECT ;
+    esw:accuracy "0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 6 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_56 a lsqv:Query ;
+    lsqv:resultCount "55"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?p ?pName WHERE { wd:Q147235 ?p ?o. ?p <http://schema.org/name> ?pName . FILTER(isLiteral(?o)) }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative """startup the evaluation
+setup the file and create the empty json"""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_57 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT ?numEpisodes ?numSeasons WHERE { wd:Q147235 wdt:P1113 ?numEpisodes ; wdt:P2437 ?numSeasons . }"^^xsd:string ;
+    lsqv:usesFeature eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_58 a lsqv:Query ;
+    lsqv:resultCount "33"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?p ?pName WHERE { wd:Q147235 ?p ?o. ?p <http://schema.org/name> ?pName . FILTER(!isLiteral(?o)) }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_59 a lsqv:Query ;
+    lsqv:resultCount "9"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?part ?partName WHERE { wd:Q147235 wdt:P527 ?part . ?part <http://schema.org/name> ?partName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_6 a lsqv:Query ;
+    lsqv:resultCount "8"^^xsd:long ;
+    lsqv:text "SELECT ?film ?name (year(xsd:dateTime(min(?date))) as ?year) WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424; wdt:P577 ?date. ?film sc:name ?name. } GROUP BY ?film ?name"^^xsd:string ;
+    lsqv:usesFeature eswr:GROUPBY,
+        eswr:MIN,
+        eswr:SELECT ;
+    esw:accuracy "0.25"^^xsd:float ;
+    esw:fscore "0.5"^^xsd:float ;
+    esw:index 6 ;
+    esw:narrative "show the minimum year of publication (the first publication ever)"^^xsd:string ;
+    esw:precision "0.5"^^xsd:float ;
+    esw:recall "0.5"^^xsd:float .
+
+eswr:Q_GT2021_60 a lsqv:Query ;
+    lsqv:resultCount "19"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?p ?pName WHERE { wd:Q2715578 ?p ?o. ?p <http://schema.org/name> ?pName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_61 a lsqv:Query ;
+    lsqv:resultCount "9"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?part ?partName ?numEpisodes WHERE { wd:Q147235 wdt:P527 ?part . ?part wdt:P1113 ?numEpisodes. ?part <http://schema.org/name> ?partName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 5 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_62 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT ?tv_series ?name ?numEpisodes ?numSeasons WHERE { VALUES ?tv_series { wd:Q147235 wd:Q23831 } ?tv_series wdt:P1113 ?numEpisodes ; wdt:P2437 ?numSeasons . ?tv_series sc:name ?name } GROUP BY ?tv_series ?name"^^xsd:string ;
+    lsqv:usesFeature eswr:GROUPBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 6 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_63 a lsqv:Query ;
+    lsqv:resultCount "22"^^xsd:long ;
+    lsqv:text "SELECT ?episode ?episodeName WHERE { wd:Q2715578 wdt:P527 ?episode . ?episode <http://schema.org/name> ?episodeName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_64 a lsqv:Query ;
+    lsqv:resultCount "16"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?p ?pName ?o ?oName WHERE { wd:Q7757165 ?p ?o. ?p <http://schema.org/name> ?pName . ?o <http://schema.org/name> ?oName . } ORDER BY ?pName"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.5454545454545454"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.375"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_65 a lsqv:Query ;
+    lsqv:resultCount "6"^^xsd:long ;
+    lsqv:text "SELECT ?actor ?actorName COUNT(DISTINCT ?episode) AS ?numEpisodes WHERE { wd:Q147235 wdt:P527/wdt:P527 ?episode . ?episode wdt:P161 ?actor . ?actor <http://schema.org/name> ?actorName . } GROUP BY ?actor ?actorName ORDER BY DESC(?numEpisodes) LIMIT 6"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_66 a lsqv:Query ;
+    lsqv:resultCount "7"^^xsd:long ;
+    lsqv:text "SELECT ?actor ?actorName COUNT(DISTINCT ?episode) AS ?numEpisodes WHERE { wd:Q23831 wdt:P527{2} ?episode . ?episode wdt:P161 ?actor . ?actor <http://schema.org/name> ?actorName . } GROUP BY ?actor ?actorName ORDER BY DESC(?numEpisodes) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative "more literals associated to the same element"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_67 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT ?episode ?episodeName WHERE { wd:Q23831 wdt:P527{2} ?episode . ?episode <http://schema.org/name> ?episodeName . } LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_68 a lsqv:Query ;
+    lsqv:resultCount "12"^^xsd:long ;
+    lsqv:text "SELECT ?p ?pName ?o ?oName WHERE { wd:Q7880294 ?p ?o . ?p <http://schema.org/name> ?pName . ?o <http://schema.org/name> ?oName . } ORDER BY ?pName"^^xsd:string ;
+    lsqv:usesFeature eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 5 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_69 a lsqv:Query ;
+    lsqv:resultCount "25"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?actor ?actorName WHERE { wd:Q23831 wdt:P161 ?actor . ?actor <http://schema.org/name> ?actorName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 6 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_7 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?prop ?name WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424; ?prop ?obj. ?prop sc:name ?name. FILTER(REGEX(?name,\"director\")). }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 7 ;
+    esw:narrative "find the property director"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_70 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT ?tv_series ?name (COUNT(DISTINCT ?actor) AS ?numActors) WHERE { VALUES ?tv_series { wd:Q147235 wd:Q23831 } ?tv_series wdt:P161 ?actor . ?tv_series sc:name ?name. } GROUP BY ?tv_series ?name"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 7 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_71 a lsqv:Query ;
+    lsqv:resultCount "0"^^xsd:long ;
+    lsqv:text "SELECT ?actor WHERE { wd:Q147235 wdt:P161 ?actor . wd:Q23831 wdt:P161 ?actor . ?actor <http://schema.org/name> ?actorName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 8 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_72 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT ?startTime ?endTime WHERE { wd:Q147235 wdt:P580 ?startTime ; wdt:P582 ?endTime . }"^^xsd:string ;
+    lsqv:usesFeature eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "single literal associated to an URI"^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_73 a lsqv:Query ;
+    lsqv:resultCount "15"^^xsd:long ;
+    lsqv:text "SELECT ?p ?pName ?o ?oName WHERE { wd:Q200566 ?p ?o . ?p <http://schema.org/name> ?pName . ?o <http://schema.org/name> ?oName . } ORDER BY ?pName"^^xsd:string ;
+    lsqv:usesFeature eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_74 a lsqv:Query ;
+    lsqv:resultCount "20"^^xsd:long ;
+    lsqv:text "SELECT ?s ?sName ?p ?pName WHERE { ?s ?p wd:Q200566 . ?p <http://schema.org/name> ?pName . ?s <http://schema.org/name> ?sName . } ORDER BY ?pName LIMIT 20"^^xsd:string ;
+    lsqv:usesFeature eswr:LIMIT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_75 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT ?class ?className WHERE { wd:Q23780914 wdt:P31 ?class . ?class <http://schema.org/name> ?className . }"^^xsd:string ;
+    lsqv:usesFeature eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_76 a lsqv:Query ;
+    lsqv:resultCount "19"^^xsd:long ;
+    lsqv:text "SELECT ?film ?filmName WHERE { ?film wdt:P161 wd:Q200566 ; wdt:P31 wd:Q11424 . ?film <http://schema.org/name> ?filmName . } ORDER BY ?filmName"^^xsd:string ;
+    lsqv:usesFeature eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_77 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?p ?pName WHERE { wd:Q23780914 ?p ?o. ?p <http://schema.org/name> ?pName . FILTER(REGEX(?pName, \"date\")) }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 5 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_78 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT ?actor ?actorName COUNT(DISTINCT ?film) AS ?numFilms WHERE { wd:Q147235 wdt:P161 ?actor . ?film wdt:P31 wd:Q11424 ; wdt:P161 ?actor ; wdt:P577 ?publicationDate . ?actor <http://schema.org/name> ?actorName . FILTER (?publicationDate > \"2005-09-19\"^^xsd:date AND ?publicationDate < \"2014-03-31\"^^xsd:date ) } GROUP BY ?actor ?actorName ORDER BY DESC(?numFilms) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:AND,
+        eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.18181818181818182"^^xsd:float ;
+    esw:index 6 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.1"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_79 a lsqv:Query ;
+    lsqv:resultCount "10"^^xsd:long ;
+    lsqv:text "SELECT ?actor ?actorName COUNT(DISTINCT ?film) AS ?numFilms WHERE { wd:Q147235 wdt:P161 ?actor . ?film wdt:P31 wd:Q11424 ; wdt:P161 ?actor ; wdt:P577 ?publicationDate . ?actor <http://schema.org/name> ?actorName . FILTER (?publicationDate > \"2014-03-31\"^^xsd:date ) } GROUP BY ?actor ?actorName ORDER BY DESC(?numFilms) LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.18181818181818182"^^xsd:float ;
+    esw:index 7 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.1"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_8 a lsqv:Query ;
+    lsqv:resultCount "8"^^xsd:long ;
+    lsqv:text "SELECT ?name (year(xsd:dateTime(min(?date))) as ?year) ?director WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424; wdt:P57 ?dir; wdt:P577 ?date. ?film sc:name ?name. ?dir sc:name ?director. }"^^xsd:string ;
+    lsqv:usesFeature eswr:MIN,
+        eswr:SELECT ;
+    esw:accuracy "0.5"^^xsd:float ;
+    esw:fscore "0.5"^^xsd:float ;
+    esw:index 8 ;
+    esw:narrative "show all together"^^xsd:string ;
+    esw:precision "0.5"^^xsd:float ;
+    esw:recall "0.5"^^xsd:float .
+
+eswr:Q_GT2021_80 a lsqv:Query ;
+    lsqv:resultCount "15"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?person ?personName ?personSurname WHERE { ?person wdt:P734 ?surname . ?person <http://schema.org/name> ?personName . ?surname <http://schema.org/name> ?personSurname . FILTER EXISTS{ ?film wdt:P31 wd:Q11424 ; wdt:P161 ?person . } FILTER(REGEX(?personSurname, \"Bacon\")) } LIMIT 10"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:EXISTS,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:REGEX,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_81 a lsqv:Query ;
+    lsqv:resultCount "17"^^xsd:long ;
+    lsqv:text "SELECT ?actor ?actorName ?film ?filmName WHERE { wd:Q147235 wdt:P161 ?actor . ?film wdt:P161 ?actor ; wdt:P161 wd:Q3454165 . ?actor <http://schema.org/name> ?actorName . ?film <http://schema.org/name> ?filmName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_82 a lsqv:Query ;
+    lsqv:resultCount "464"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?actor ?actorName WHERE { wd:Q147235 wdt:P161 ?actor . ?filmMiddle wdt:P161 ?actor ; wdt:P161 ?actorMiddle . ?film wdt:P161 ?actorMiddle ; wdt:P161 wd:Q3454165 . FILTER NOT EXISTS{ ?film3 wdt:P161 ?actor ; wdt:P161 wd:Q3454165 . } ?actor <http://schema.org/name> ?actorName . } LIMIT 500"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:NOTEXISTS,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_83 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT COUNT(DISTINCT ?actor) WHERE { wd:Q147235 wdt:P161 ?actor . ?filmMiddle wdt:P161 ?actor ; wdt:P161 ?actorMiddle . ?film wdt:P161 ?actorMiddle ; wdt:P161 wd:Q3454165 . FILTER NOT EXISTS{ ?film3 wdt:P161 ?actor ; wdt:P161 wd:Q3454165 . } ?actor <http://schema.org/name> ?actorName . }"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:NOTEXISTS,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_84 a lsqv:Query ;
+    lsqv:resultCount "1"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?actorName ?filmMiddleName ?actorMiddleName ?filmName WHERE { wd:Q147235 wdt:P161 ?actor . ?filmMiddle wdt:P161 ?actor ; wdt:P161 ?actorMiddle . ?film wdt:P161 ?actorMiddle ; wdt:P161 wd:Q3454165 . FILTER NOT EXISTS{ ?film3 wdt:P161 ?actor ; wdt:P161 wd:Q3454165 . } ?actor <http://schema.org/name> ?actorName . ?film <http://schema.org/name> ?filmName . ?actorMiddle <http://schema.org/name> ?actorMiddleName . ?filmMiddle <http://schema.org/name> ?filmMiddleName . } LIMIT 1"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:LIMIT,
+        eswr:NOTEXISTS,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_85 a lsqv:Query ;
+    lsqv:resultCount "6"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?work ?pname WHERE { wd:Q1243029 ?p ?obj . ?obj wdt:P31 wd:Q5; wdt:P106 ?job. ?job wdt:P31 ?work. ?work sc:name ?pname . }"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative """startup the evaluation
+setup the file and create the empty json
+find workers in a film"""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_86 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?film ?name COUNT(DISTINCT ?worker) AS ?workers WHERE { VALUES ?film {wd:Q1243029 wd:Q221103} ?film ?p ?worker . ?worker wdt:P31 wd:Q5 ; wdt:P106/wdt:P31 wd:Q4220920 . ?film sc:name ?name . } GROUP BY ?film ?name"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "compare all workers"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_87 a lsqv:Query ;
+    lsqv:resultCount "0"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?worker ?name WHERE { VALUES ?film {wd:Q1243029 wd:Q221103} ?film ?p ?worker . ?worker wdt:P31 wd:Q5 ; wdt:P106/wdt:P31 wd:Q4220920 . ?worker sc:name ?name . } GROUP BY ?worker ?name HAVING (COUNT(DISTINCT ?film)>1)"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:HAVING,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.0"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative """single literal associated to an URI
+check if someone worked on both films"""^^xsd:string ;
+    esw:precision "0.0"^^xsd:float ;
+    esw:recall "0.0"^^xsd:float .
+
+eswr:Q_GT2021_88 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?film ?name COUNT(?worker) AS ?cast WHERE { VALUES ?film {wd:Q1243029 wd:Q221103} ?film wdt:P161 ?worker . ?film sc:name ?name . } GROUP BY ?film ?name"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "1.0"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative "compare cast member"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_89 a lsqv:Query ;
+    lsqv:resultCount "5"^^xsd:long ;
+    lsqv:text "SELECT ?film ?name ?country ?cname COUNT(DISTINCT ?worker) AS ?howMany WHERE { VALUES ?film {wd:Q1243029 wd:Q221103} ?film ?p ?worker . ?worker wdt:P31 wd:Q5 ; wdt:P27 ?country; wdt:P106/wdt:P31 wd:Q4220920 . ?film sc:name ?name . ?country sc:name ?cname . } GROUP BY ?film ?name ?country ?cname ORDER BY DESC (?howMany)"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.5714285714285715"^^xsd:float ;
+    esw:index 4 ;
+    esw:narrative "compare countries"^^xsd:string ;
+    esw:precision "0.4"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_9 a lsqv:Query ;
+    lsqv:resultCount "8"^^xsd:long ;
+    lsqv:text "SELECT ?film ?name ?dir ?director (year(xsd:dateTime(min(?date))) as ?year) WHERE { wd:Q2695156 wdt:P4969 ?film . ?film wdt:P31 wd:Q11424; wdt:P57 ?dir; wdt:P577 ?date. ?film sc:name ?name. ?dir sc:name ?director. }"^^xsd:string ;
+    lsqv:usesFeature eswr:MIN,
+        eswr:SELECT ;
+    esw:accuracy "0.5"^^xsd:float ;
+    esw:fscore "0.5"^^xsd:float ;
+    esw:index 9 ;
+    esw:narrative "show all together with the respective URI for the films and the directors, for evaluation purpose"^^xsd:string ;
+    esw:precision "0.5"^^xsd:float ;
+    esw:recall "0.5"^^xsd:float .
+
+eswr:Q_GT2021_90 a lsqv:Query ;
+    lsqv:resultCount "22"^^xsd:long ;
+    lsqv:text "SELECT ?f ?name ?actor ?aName (COUNT(DISTINCT ?film) AS ?films) WHERE { VALUES ?f {wd:Q1243029 wd:Q221103}. ?f wdt:P161 ?actor; wdt:P577 ?datef. ?film wdt:P161 ?actor; wdt:P577 ?date. FILTER(?date<?datef). ?f sc:name ?name. ?actor sc:name ?aName. } GROUP BY ?f ?name ?actor ?aName ORDER BY DESC(?films)"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "0.16666666666666669"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "count in how many films the actors of friday 13th and halloween acted before the release, counting them separately"^^xsd:string ;
+    esw:precision "0.09090909090909091"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_91 a lsqv:Query ;
+    lsqv:resultCount "22"^^xsd:long ;
+    lsqv:text "SELECT ?f ?name ?actor ?aName (COUNT(DISTINCT ?film) AS ?films) WHERE { VALUES ?f {wd:Q1243029 wd:Q221103}. ?f wdt:P161 ?actor; wdt:P577 ?datef. ?film wdt:P161 ?actor; wdt:P577 ?date. FILTER(?date>?datef). ?f sc:name ?name. ?actor sc:name ?aName. } GROUP BY ?f ?name ?actor ?aName ORDER BY DESC(?films)"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:FILTER,
+        eswr:GROUPBY,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "0.16666666666666669"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "insert the result of TASK 2 in the file"^^xsd:string ;
+    esw:precision "0.09090909090909091"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_92 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?franchise ?name WHERE{ VALUES ?f {wd:Q221103 wd:Q1243029 }. ?f wdt:P179 ?franchise. ?franchise sc:name ?name . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.1142857142857143"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "insert the result of TASK 3 in the file"^^xsd:string ;
+    esw:precision "0.5"^^xsd:float ;
+    esw:recall "0.06451612903225806"^^xsd:float .
+
+eswr:Q_GT2021_93 a lsqv:Query ;
+    lsqv:resultCount "31"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?film ?fName ?dir ?director ?year WHERE{ VALUES ?f {wd:Q221103 wd:Q1243029 }. ?f wdt:P179 ?o. ?film wdt:P179 ?o; wdt:P57 ?dir; wdt:P577 ?date. BIND(year(xsd:dateTime(?date)) as ?year). ?dir sc:name ?director . ?film sc:name ?fName . } LIMIT 100"^^xsd:string ;
+    lsqv:usesFeature eswr:DISTINCT,
+        eswr:LIMIT,
+        eswr:SELECT ;
+    esw:accuracy "0.41935483870967744"^^xsd:float ;
+    esw:fscore "0.35483870967741943"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative ""^^xsd:string ;
+    esw:precision "0.3548387096774194"^^xsd:float ;
+    esw:recall "0.3548387096774194"^^xsd:float .
+
+eswr:Q_GT2021_94 a lsqv:Query ;
+    lsqv:resultCount "6"^^xsd:long ;
+    lsqv:text "SELECT ?franchise ?fName ?worker ?wName (COUNT(DISTINCT ?film) AS ?Appearances) { VALUES ?f {wd:Q221103 wd:Q1243029 }. ?f wdt:P179 ?franchise. ?film wdt:P179 ?franchise. ?film ?p ?worker. ?worker wdt:P31 wd:Q5 ; wdt:P106/wdt:P31 wd:Q4220920 . ?worker sc:name ?wName. ?franchise sc:name ?fName . } GROUP BY ?franchise ?fName ?worker ?wName ORDER BY DESC(?Appearances) LIMIT 6"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:LIMIT,
+        eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "1.0"^^xsd:float ;
+    esw:fscore "0.5"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative """add the year element
+add the director element"""^^xsd:string ;
+    esw:precision "0.3333333333333333"^^xsd:float ;
+    esw:recall "1.0"^^xsd:float .
+
+eswr:Q_GT2021_95 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT DISTINCT ?franchise ?name (COUNT(?o) AS ?wins) (COUNT(?x) AS ?nominations) { VALUES ?f {wd:Q221103 wd:Q1243029 }. ?f wdt:P179 ?franchise. ?film wdt:P179 ?franchise. OPTIONAL{?film wdt:P166 ?o.} OPTIONAL{?film wdt:P1411 ?x.} ?franchise sc:name ?name } GROUP BY ?franchise ?name"^^xsd:string ;
+    lsqv:usesFeature eswr:COUNT,
+        eswr:DISTINCT,
+        eswr:GROUPBY,
+        eswr:OPTIONAL,
+        eswr:SELECT ;
+    esw:index 0 ;
+    esw:narrative "insert the result of TASK 5 in the file"^^xsd:string .
+
+eswr:Q_GT2021_96 a lsqv:Query ;
+    lsqv:resultCount "6"^^xsd:long ;
+    lsqv:text "SELECT ?film ?name ?cost WHERE { VALUES ?franchise {wd:Q1364022 wd:Q1138878}. ?film wdt:P179 ?franchise. ?film wdt:P2130 ?cost. ?film <http://schema.org/name> ?name . } ORDER BY DESC(?cost)"^^xsd:string ;
+    lsqv:usesFeature eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.2028985507246377"^^xsd:float ;
+    esw:index 0 ;
+    esw:narrative "check how many movies have cost (P2130)"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "0.11290322580645161"^^xsd:float .
+
+eswr:Q_GT2021_97 a lsqv:Query ;
+    lsqv:resultCount "5"^^xsd:long ;
+    lsqv:text "SELECT ?film ?name ?budget WHERE { VALUES ?franchise {wd:Q1364022 wd:Q1138878}. ?film wdt:P179 ?franchise. ?film wdt:P2769 ?budget. ?film <http://schema.org/name> ?name . } ORDER BY DESC(?budget)"^^xsd:string ;
+    lsqv:usesFeature eswr:ORDERBY,
+        eswr:SELECT ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.17647058823529413"^^xsd:float ;
+    esw:index 1 ;
+    esw:narrative "check how many movies have bugdet (P2769)"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "0.0967741935483871"^^xsd:float .
+
+eswr:Q_GT2021_98 a lsqv:Query ;
+    lsqv:resultCount "11"^^xsd:long ;
+    lsqv:text "SELECT ?film ?name ?cost ?budget WHERE { VALUES ?franchise {wd:Q1364022 wd:Q1138878}. ?film wdt:P179 ?franchise. {{?film wdt:P2130 ?cost.} UNION {?film wdt:P2769 ?budget.}} ?film <http://schema.org/name> ?name . } ORDER BY DESC (?cost) DESC (?budget)"^^xsd:string ;
+    lsqv:usesFeature eswr:ORDERBY,
+        eswr:SELECT,
+        eswr:UNION ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.3013698630136986"^^xsd:float ;
+    esw:index 2 ;
+    esw:narrative "print movie with cost/budget"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "0.1774193548387097"^^xsd:float .
+
+eswr:Q_GT2021_99 a lsqv:Query ;
+    lsqv:resultCount "2"^^xsd:long ;
+    lsqv:text "SELECT ?franchise ?name (SUM(?cost) AS ?t_cost) (SUM(?budget) AS ?t_budget) WHERE { VALUES ?franchise {wd:Q1364022 wd:Q1138878}. ?film wdt:P179 ?franchise. {{?film wdt:P2130 ?cost.} UNION {?film wdt:P2769 ?budget.}} ?franchise sc:name ?name . } GROUP BY ?franchise ?name"^^xsd:string ;
+    lsqv:usesFeature eswr:GROUPBY,
+        eswr:SELECT,
+        eswr:SUM,
+        eswr:UNION ;
+    esw:accuracy "0.0"^^xsd:float ;
+    esw:fscore "0.12121212121212122"^^xsd:float ;
+    esw:index 3 ;
+    esw:narrative "final result"^^xsd:string ;
+    esw:precision "1.0"^^xsd:float ;
+    esw:recall "0.06451612903225806"^^xsd:float .
+
