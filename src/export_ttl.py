@@ -74,7 +74,7 @@ def load_gt_map(file,verbose = False):
         print("Successfully loaded ground truths map from",file)
     return gts
     
-def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_type,year):
+def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,gt_files,track_type,year):
     #create the graph for the topics and tasks
     g = Graph()
 
@@ -267,6 +267,144 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
                 else:
                     h.add((Queries, RDF.rest, RDF.nil))
                 index+=1
+    ## same things for ground truths
+    #create the graph for the ground truths
+    gt_graph = Graph()
+
+    # Bind the namespaces to a prefix for more readable output
+    gt_graph.bind("xsd", XSD)
+    gt_graph.bind("esw", ESW)
+    gt_graph.bind("eswr", ESWR)
+    gt_graph.bind("lsqv", LSQV)
+    gt_graph.bind("dct",DCT)
+    gt_graph.bind("sd",SD)
+    index=0
+    executions = 0
+    for filename in gt_files:
+        topic = gt_files[filename]['topic'].replace("\"","")
+        name = gt_files[filename]['name']
+        macro_topic = gt_files[filename]['macro_topic']
+        hash_topic = hashlib.md5(topic.encode()).hexdigest()[:10]
+        # create the URI for the current topic
+        Topic = URIRef(ESWR["TOPIC"+hash_topic])
+        # add the topic with all the tasks to the graph G
+        topics.append(topic)
+        # Add triples using store's add() method.
+        g.add((Topic, RDF.type, ESW['SearchTopic']))
+        # add the description
+        g.add((Topic, ESW['description'], Literal(topic, datatype=XSD.string)))
+        g.add((Topic, RDFS.label, Literal(topic, 'en')))
+        # add the macro topic
+        g.add((Topic, ESW['macroTopic'], Literal(macro_topic, datatype=XSD.string)))
+        # add the link to the Track
+        g.add((Topic, ESW['partOf'], Track))
+    
+        
+        # add the search tasks
+        goals = gt_files[filename]['goals']
+        # keep the URI of the Tasks saved to use later
+        tasks = {}
+        for goal in goals:
+            no_hashed_goal = topic+goal
+            hash_goal = hashlib.md5(no_hashed_goal.encode()).hexdigest()[:10]
+            Task = URIRef(ESWR["TASK"+str(hash_goal)])
+            tasks[goal] = Task
+
+
+        ## add the search workflow
+        Workflow = URIRef(ESWR[name])
+        gt_graph.add((Workflow, RDF.type, ESW['GroundTruth']))
+        # add the related topic
+        gt_graph.add((Workflow, ESW['implements'], Topic))
+
+        exploratory_workflow = gt_files[filename]['exploratory_workflow']
+        for job in exploratory_workflow:
+            # the Job's URI is the concatenation of [JOB, number of the task, W, name of the file]
+            Job = URIRef(ESWR['JOB'+str(job).replace(".","")+'W'+name])
+            gt_graph.add((Job, RDF.type, ESW['SearchJob']))
+            # add the relation hasPart to the search workflow
+            gt_graph.add((Workflow, ESW['hasPart'], Job))
+            # add the relation performs to the search task if it is not on the 'zero task'
+            if job != '':
+                gt_graph.add((Job, ESW['performs'], tasks[job]))
+                
+            # add the information of the score of the job (fscore max and #queries)
+            
+            # not add the max f-score directly in the SearchJob
+            #max_fscore = max([ q['fscore'] if 'fscore' in q else 0.0 for q in exploratory_workflow[job] ])
+            #gt_graph.add((Job, ESW['fscore'], Literal(max_fscore, datatype=XSD.float)))
+            gt_graph.add((Job, ESW['numberOfQueries'], Literal(len(exploratory_workflow[job]), datatype=XSD.integer)))
+                
+                
+            # add the query list
+            Queries = BNode()
+            gt_graph.add((Queries, RDF.type, RDF.List))
+            gt_graph.add((Job, ESW['queries'], Queries))
+
+
+            ## create the list of the query
+
+            for i in range(len(exploratory_workflow[job])):
+                query = exploratory_workflow[job][i]
+                if 'narrative' in query:
+                    narrative = query['narrative']
+                text = query['query']
+                Query = URIRef(ESWR['Q_GT'+str(year)+'_'+str(index)])
+                gt_graph.add((Query, RDF.type, LSQV['Query']))
+                gt_graph.add((Query, LSQV['text'], Literal(text, datatype=XSD.string)))
+                # add the parse Error if it exists
+                if 'parseError' in query and query['parseError'] is not None:
+                    gt_graph.add((Query, LSQV['parseError'], Literal(query['parseError'], datatype=XSD.string)))
+                # add the narrative if it exists
+                if 'narrative' in query and query['narrative'] is not None:
+                    gt_graph.add((Query, ESW['narrative'], Literal(query['narrative'], datatype=XSD.string)))
+                # add the size of the result set if it exists
+                if 'output' in query and query['output'] is not None:
+                    gt_graph.add((Query, LSQV['resultCount'], Literal(str(len(query['output'])), datatype=XSD.long)))
+                # add the index of the query if it exists
+                if 'index' in query:
+                    gt_graph.add((Query, ESW['index'], Literal(query['index'], datatype=XSD.integer)))
+                
+
+                # add the metrics
+                metrics = ['recall','precision','accuracy','fscore']
+                for m in metrics:
+                    if m in query and query[m] is not None:
+                        gt_graph.add((Query, ESW[m], Literal(query[m], datatype=XSD.float)))
+                # add the executions
+                # example: "22/Dec/2022:19:41:16"
+                if 'execution' in query:
+                    for ex in query['execution']:
+                        t_ex = datetime.strptime(ex['datetime'],'%d/%b/%Y:%H:%M:%S',).strftime('%Y-%m-%dT%H:%M:%S')
+                        Execution = URIRef(ESWR['EX_'+str(year)+'_'+str(executions)])
+                        # add type execution
+                        gt_graph.add((Execution, RDF.type, LSQV['QueryExec']))
+                        # add execution timestamp
+                        gt_graph.add((Execution, DCT['issued'], Literal(t_ex, datatype=XSD.dateTime)))
+                        # add execution duration if it exists
+                        if 'duration' in ex:
+                            gt_graph.add((Execution, LSQV['evalDuration'], Literal(ex['duration'], datatype=XSD.decimal)))
+                        # add property has execution from query to its execution
+                        gt_graph.add((Query, LSQV['hasExec'], Execution))
+                        executions+=1
+                ## add the keywords
+                if 'keywords' in query:
+                    for key in query['keywords']:
+                        if query['keywords'][key]==1:
+                            ## add the edge
+                            Keyword = URIRef(ESWR["".join(key.split())])
+                            gt_graph.add((Query, LSQV['usesFeature'], Keyword))
+
+                gt_graph.add((Queries, RDF.first, Query))
+                if i < len(exploratory_workflow[job])-1:
+                    Next = BNode()
+                    gt_graph.add((Next, RDF.type, RDF.List))
+                    gt_graph.add((Queries, RDF.rest, Next))
+                    Queries = Next
+                else:
+                    gt_graph.add((Queries, RDF.rest, RDF.nil))
+                index+=1
+
     # print the data for the topics in the Turtle format
     ttlname = rdf_folder+str(year)+'topics.ttl'
     print("--- saving serialization for the topics ---")
@@ -275,6 +413,10 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,track_t
     ttlname = rdf_folder+str(year)+'workflows.ttl'
     print("--- saving serialization for the workflows ---")
     h.serialize(destination=ttlname, format='turtle')
+
+    ttlname = rdf_folder+str(year)+'ground_truths.ttl'
+    print("--- saving serialization for the ground truths ---")
+    gt_graph.serialize(destination=ttlname, format='turtle')
 
 
     
@@ -291,11 +433,14 @@ def main(config_file):
     elif verbose.lower() == 'false':
         verbose = False
     print(verbose)
+    # load json evaluated file for workers
     files = load_json(configs.get("evaluations").data,True)
+    # load json evaluated file for ground truths
+    gt_files = load_json(configs.get("gt_converted").data,True)
     rdf_folder = configs.get("rdf").data
     if not os.path.exists(rdf_folder):
         os.makedirs(rdf_folder)
-    export_turtle(configs.get("keywords").data,configs.get("workers").data,configs.get("gt_map").data,rdf_folder,files,configs.get("track_type").data,configs.get("year").data)
+    export_turtle(configs.get("keywords").data,configs.get("workers").data,configs.get("gt_map").data,rdf_folder,files,gt_files,configs.get("track_type").data,configs.get("year").data)
 
 if __name__ == "__main__":
     if len(sys.argv)!=2 or not sys.argv[1].endswith(".properties"):

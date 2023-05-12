@@ -6,6 +6,9 @@ def main(config_file):
     configs = Properties()
     with open(config_file, 'rb') as config_file:
         configs.load(config_file)
+    if os.path.exists(configs.get('gt_converted').data):
+        print("--> Clean ground_truths/converted folder for",config_file)
+        os.system('rm -r '+configs.get('gt_converted').data)
     if os.path.exists(configs.get('json_notebook_dir').data):
         print("--> Clean workflows_json folder for",config_file)
         os.system('rm -r '+configs.get('json_notebook_dir').data)

@@ -4,9 +4,16 @@ from jproperties import Properties
 import datetime
 import sys
 
-def setup(configs, verbose = False):
+def setup_worker(configs, verbose = False):
     evaluation.setup_evaluation_folder(configs.get("evaluations").data,verbose )
     evaluation.load_json_notebooks(configs.get("json_notebook_dir").data,verbose )
+    evaluation.load_ground_truths(configs.get("results").data,verbose )
+    keywords.setup_keywords(configs.get("keywords").data,verbose )
+
+
+def setup_ground_truth(configs, verbose = False):
+    evaluation.setup_evaluation_folder(configs.get("gt_converted").data,verbose )
+    evaluation.load_json_notebooks(configs.get("gt_converted").data,verbose )
     evaluation.load_ground_truths(configs.get("results").data,verbose )
     keywords.setup_keywords(configs.get("keywords").data,verbose )
 
@@ -24,9 +31,13 @@ def main(config_file):
         verbose = False
     print(verbose)
     # setup configs
-    setup(configs,verbose)
+    setup_worker(configs,verbose)
     # load the python notebook's filepaths
-    evaluation.run_evaluation(verbose)
+    evaluation.run_evaluation(True,verbose)
+    # setup configs
+    setup_ground_truth(configs,verbose)
+    # load the python notebook's filepaths
+    evaluation.run_evaluation(False,verbose)
     
 
 if __name__ == "__main__":
