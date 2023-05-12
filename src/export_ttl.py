@@ -279,7 +279,6 @@ def export_turtle(keyword_file,workers_file,gt_map_file,rdf_folder,files,gt_file
     gt_graph.bind("dct",DCT)
     gt_graph.bind("sd",SD)
     index=0
-    executions = 0
     for filename in gt_files:
         topic = gt_files[filename]['topic'].replace("\"","")
         name = gt_files[filename]['name']
