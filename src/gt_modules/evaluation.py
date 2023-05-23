@@ -33,6 +33,10 @@ work_filepath = parent+os.sep+"indexes/workflows.csv"
 #work_filepath = "/locale/data/jupyter/prando/notebook/sparqlthesis/indexes/workflows.csv"
 result_path = parent+"/gt_json"
 
+def setup_indexes(index):
+    global work_filepath
+    work_filepath = index
+
 def setup(filepath):
     #create the directory results if not exist
     if not os.path.exists(result_path):

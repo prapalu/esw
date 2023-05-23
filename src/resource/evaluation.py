@@ -270,8 +270,10 @@ def convert_multiple_set(values):
         if x not in tmp:
             tmp.append(x)
     return tmp
+
+## worker = True means that I am processing a worker's workflow, False means that I am processing a ground truth workflow
         
-def evaluate_notebook(nb,eval_dir,want_execution = False,verbose = False):
+def evaluate_notebook(nb,eval_dir,worker = True, want_execution = False,verbose = False):
     global ground_truth
     global TYPE_SET
     global TYPE_SINGLE
@@ -381,21 +383,25 @@ def evaluate_notebook(nb,eval_dir,want_execution = False,verbose = False):
     # create the main directory if it no exists
     if not os.path.exists(eval_dir):
         os.mkdir(eval_dir)
-    # create the directory for this student
-    eval_dir = eval_dir+os.sep+file['worker']
-    if not os.path.exists(eval_dir):
-        os.mkdir(eval_dir)
-    eval_filepath = eval_dir+os.sep+nb.split("/")[-1]
+    # handle workers/gt
+    if worker:
+        # create the directory for this student
+        eval_dir = eval_dir+os.sep+file['worker']
+        if not os.path.exists(eval_dir):
+            os.mkdir(eval_dir)
+        eval_filepath = eval_dir+os.sep+nb.split("/")[-1]
+    else:
+        eval_filepath = nb
     fd = open(eval_filepath,"w")
     json.dump(file, fd)
     fd.close()
     if verbose:
         print("-> Complete evaluation computation of",nb)
     
-def run_evaluation(verbose):
+def run_evaluation(worker,verbose):
     global people_dir
     global eval_dir
     for x in people_dir:
         for nb in people_dir[x]:
-            evaluate_notebook(nb,eval_dir,False,False)
+            evaluate_notebook(nb,eval_dir,worker,False,False)
     

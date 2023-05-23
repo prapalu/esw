@@ -322,7 +322,7 @@ def query_extractor(notebook,goals):
                             output = output[1:-1]
                             new_output = [eval(x) for x in output]
                         except:
-                            print("Error on file ",notebook,": Probably more queries in the same cell")
+                            print("Error on file ",notebook,": Probably more queries in the same cell or this is not a query")
             if parseError is not None:
                 new_output = None
             # code cells. Looking for the queries

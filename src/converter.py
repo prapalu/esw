@@ -1,4 +1,5 @@
 import resource.conversion as conv
+import resource.gt_conversion as gt_conv
 import resource.logs as logs
 from jproperties import Properties
 import datetime
@@ -8,6 +9,9 @@ def setup(configs, verbose = False):
     conv.setup_nb_folder(configs.get("notebook").data,verbose )
     conv.setup_json_folder(configs.get("json_notebook_dir").data,verbose )
     logs.setup_logs_folder(configs.get("logs").data,verbose )
+    gt_conv.setup_nb_folder(configs.get("gt_nbks_dir").data,verbose )
+    gt_conv.setup_json_folder(configs.get("gt_converted").data,verbose )
+    gt_conv.setup_indexes(configs.get("topic_index").data,verbose )
 
 def main(config_file):
     #load properties
@@ -40,6 +44,12 @@ def main(config_file):
     conv.associate_logs(conv.people_dir,logs.code_list,verbose)
     # associate the execution to the json files
     conv.associate_execution(configs.get("json_executed_dir").data,verbose)
+
+    ### convert ground truths
+    # load the python notebook's filepaths
+    gt_conv.load_gt_notebooks(verbose)
+    # convert the notebooks in json files, and store them in the folder specified in the properties
+    gt_conv.convert_gt_nb(verbose)
     
 
 if __name__ == "__main__":
