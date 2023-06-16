@@ -88,4 +88,11 @@ or simply
 python main.py
 ```
 
-The entire process should take 2-3 minutes  
+The entire process should take 2-3 minutes.
+
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+Distributed under the MIT License. See [LICENSE-MIT](../LICENSE-MIT) for more information.

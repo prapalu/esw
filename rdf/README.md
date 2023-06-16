@@ -381,3 +381,16 @@ SELECT ?keyword (AVG(?dur) AS ?avgKeywordDuration) (MAX(?dur) AS ?maxKeywordDura
 } GROUP BY ?keyword
 
 ```
+
+## License
+
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
+Distributed under a [Creative Commons Attribution 4.0 International License][cc-by]. See [LICENSE-CC-BY](../LICENSE-CC-BY) for more information.
+
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg

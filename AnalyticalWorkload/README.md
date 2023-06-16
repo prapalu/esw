@@ -47,3 +47,10 @@ docker run -t -d --name virtuoso \
         openlink/virtuoso-opensource-7:latest
 
 ```
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+
+Distributed under the MIT License. See [LICENSE-MIT](../LICENSE-MIT) for more information. 

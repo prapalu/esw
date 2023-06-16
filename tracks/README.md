@@ -41,3 +41,20 @@ The structure of the query is the following:
 - `precision`: is the precision value associated to the query according to the ground truth. 
 - `accuracy`: is the accuracy value associated to the query according to the ground truth. 
 - `fscore`: is the fscore value associated to the query according to the ground truth. 
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![CC BY 4.0][cc-by-shield]][cc-by]
+
+The code inside this folder is distributed under the MIT License. In particular, for each track, the folder with this license are:
+- notebooks
+- querylogs
+
+The other data are distributed under a [Creative Commons Attribution 4.0 International License][cc-by]. See [LICENSE-MIT](LICENSE-MIT) and [LICENSE-CC-BY](LICENSE-CC-BY) for more information.
+
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
