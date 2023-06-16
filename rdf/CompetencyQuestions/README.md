@@ -234,11 +234,33 @@ WHERE{
  ?workflow esw:hasPart eswr:JOB1W1181ce72bf .
 }
 ```
-| ?numberOfQueries |
+| ?workflow |
 |---------------|
 | http://w3id.org/esw/resource/1181ce72bf   |
 
-**CQ12. For each query in the Search Job, which is the text, the precision, the recall and the result set count?**
+
+**CQ12. How many queries the Search Job contains?**
+
+
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT+%28COUNT%28%3Fquery%29+AS+%3FnumberOfQueries%29%0D%0AWHERE%7B%0D%0A++++eswr%3AJOB1W1181ce72bf+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX eswr: <http://w3id.org/esw/resource/>
+SELECT (COUNT(?query) AS ?numberOfQueries)
+WHERE{
+    eswr:JOB1W1181ce72bf esw:queries ?queries.
+    ?queries rdf:rest*/rdf:first  ?query.
+}
+```
+| ?numberOfQueries |
+|---------------|
+| 12   |
+
+
+
+
+**CQ13. For each query in the Search Job, which is the text, the precision, the recall and the result set count?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT+%3Fquery+%3Ftext+%3Frecall+%3Fprecision+%3FresultCount%0D%0AWHERE%7B%0D%0A++++eswr%3AJOB1W1181ce72bf+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3Atext+%3Ftext%3B%0D%0A++++++++++++esw%3Arecall+%3Frecall%3B%0D%0A++++++++++++esw%3Aprecision+%3Fprecision%3B%0D%0A++++++++++++lsqv%3AresultCount+%3FresultCount.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
