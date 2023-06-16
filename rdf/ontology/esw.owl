@@ -10,7 +10,12 @@
 
 <http://w3id.org/esw/ontology> rdf:type owl:Ontology ;
                                 owl:imports <http://lsq.aksw.org/vocab#> ,
-                                            rdf: .
+                                            rdf: ;
+                                dc:date "9 May 2023" ;
+                                dc:description "Ontology to describe Exploratory Search Workflow data and their relationships" ;
+                                dc:title "ESW Ontology" ;
+                                terms:creator "Matteo Lissandrini, Gianmarco Prando, Gianmaria Silvello";
+                                terms:license <https://creativecommons.org/licenses/by/4.0/> .
 
 #################################################################
 #    Object Properties
