@@ -11,7 +11,7 @@
 <http://w3id.org/esw/ontology> rdf:type owl:Ontology ;
                                 owl:imports <http://lsq.aksw.org/vocab#> ,
                                             rdf: ;
-                                dc:date "9 May 2023" ;
+                                dc:date "25 April 2023" ;
                                 dc:description "Ontology to describe Exploratory Search Workflow data and their relationships" ;
                                 dc:title "ESW Ontology" ;
                                 terms:creator "Matteo Lissandrini, Gianmarco Prando, Gianmaria Silvello";
