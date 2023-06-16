@@ -94,11 +94,32 @@ SELECT  ?task
 | http://w3id.org/esw/resource/TASKd5203cafed |
 | http://w3id.org/esw/resource/TASKfb04a99027 |
 
+
+
+**CQ4. How many different Search Workflows implement the Search Topic?**
+
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%28COUNT%28%3Fwork%29+AS+%3FnumberOfWorkflows%29%0D%0A+WHERE%7B%0D%0A++++%3Fwork+esw%3Aimplements+eswr%3ATOPIC5c2cbb34bd+.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
+
+```SPARQL
+PREFIX esw: <http://w3id.org/esw/ontology#>
+PREFIX eswr: <http://w3id.org/esw/resource/>
+SELECT  (COUNT(?work) AS ?numberOfWorkflows)
+ WHERE{
+    ?work esw:implements eswr:TOPIC5c2cbb34bd .
+}
+```
+| ?numberOfWorkflows                     |
+|---------------------------------------------|
+|              7             |
+
+
+
+
 ### Search Workflow CQ
 
 All the CQs presented below referring to the Search Workflow http://w3id.org/esw/resource/1181ce72bf (eswr:1181ce72bf)
 
-**CQ5. Which is the Workflow’s topic?**
+**CQ6. Which is the Workflow’s topic?**
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Ftopic%0D%0A+WHERE%7B%0D%0A++++eswr%3A1181ce72bf+esw%3Aimplements+%3Ftopic.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
 
@@ -115,7 +136,7 @@ SELECT  ?topic
 | http://w3id.org/esw/resource/TOPIC5c2cbb34bd      |
 
 
-**CQ6. Which are the Search Jobs that composed the Workflow?**
+**CQ7. Which are the Search Jobs that composed the Workflow?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Fjob%0D%0A+WHERE%7B%0D%0A++++eswr%3A1181ce72bf+esw%3AhasPart+%3Fjob.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
@@ -143,7 +164,7 @@ SELECT  ?job
 | http://w3id.org/esw/resource/JOB7W1181ce72bf |
 
 
-**CQ7. Who wrote the Workflow?**
+**CQ8. Who wrote the Workflow?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Fjob%0D%0A+WHERE%7B%0D%0A++++eswr%3A1181ce72bf+esw%3AhasPart+%3Fjob.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
@@ -165,7 +186,7 @@ SELECT  ?worker
 
 All the CQs presented below referring to the Search Workflow http://w3id.org/esw/resource/TASK027f92f957 (eswr:TASK027f92f957)
 
-**CQ8. Which is the task's Search Topic?**
+**CQ9. Which is the task's Search Topic?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Ftopic%0D%0A+WHERE%7B%0D%0A++++eswr%3ATASK027f92f957+esw%3AbelongsTo+%3Ftopic.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
@@ -182,7 +203,7 @@ SELECT  ?topic
 |---------------|
 | http://w3id.org/esw/resource/TOPIC5c2cbb34bd      |
 
-**CQ9. Which is the task's requirement?**
+**CQ10. Which is the task's requirement?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Fdescription%0D%0A+WHERE%7B%0D%0A++++eswr%3ATASK027f92f957+esw%3Adescription+%3Fdescription.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
@@ -204,7 +225,7 @@ SELECT  ?description
 
 All the CQs presented below referring to the Search Workflow http://w3id.org/esw/resource/JOB1W1181ce72bf (eswr:JOB1W1181ce72bf)
 
-**CQ10. Which Search Task is the Search Job performing?**
+**CQ11. Which Search Task is the Search Job performing?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Ftask%0D%0A+WHERE%7B%0D%0A++++eswr%3AJOB1W1181ce72bf+esw%3Aperforms+%3Ftask.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
@@ -221,7 +242,7 @@ SELECT  ?task
 |---------------|
 | http://w3id.org/esw/resource/TASK027f92f957      |
 
-**CQ11. Which is the Search Job's workflow?**
+**CQ12. Which is the Search Job's workflow?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT+%3Fworkflow%0D%0AWHERE%7B%0D%0A+%3Fworkflow+++esw%3AhasPart+eswr%3AJOB1W1181ce72bf+.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
@@ -239,7 +260,7 @@ WHERE{
 | http://w3id.org/esw/resource/1181ce72bf   |
 
 
-**CQ12. How many queries the Search Job contains?**
+**CQ13. How many queries the Search Job contains?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT+%28COUNT%28%3Fquery%29+AS+%3FnumberOfQueries%29%0D%0AWHERE%7B%0D%0A++++eswr%3AJOB1W1181ce72bf+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
@@ -260,7 +281,7 @@ WHERE{
 
 
 
-**CQ13. For each query in the Search Job, which is the text, the precision, the recall and the result set count?**
+**CQ14. For each query in the Search Job, which is the text, the precision, the recall and the result set count?**
 
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT+%3Fquery+%3Ftext+%3Frecall+%3Fprecision+%3FresultCount%0D%0AWHERE%7B%0D%0A++++eswr%3AJOB1W1181ce72bf+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3Atext+%3Ftext%3B%0D%0A++++++++++++esw%3Arecall+%3Frecall%3B%0D%0A++++++++++++esw%3Aprecision+%3Fprecision%3B%0D%0A++++++++++++lsqv%3AresultCount+%3FresultCount.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
