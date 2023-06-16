@@ -63,5 +63,15 @@ About 2022 track (more information [here](tracks/2022)):
 
 
 
+## License
+
+Since this work is a mixture of code and datasets, the code is distributed under the MIT License while the datasets are distributed under a [Creative Commons Attribution 4.0 International License][cc-by]. See [LICENSE-MIT](LICENSE-MIT) and [LICENSE-CC-BY](LICENSE-CC-BY) for more information.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![CC BY 4.0][cc-by-shield]][cc-by]
 
 
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
