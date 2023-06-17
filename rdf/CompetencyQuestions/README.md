@@ -64,7 +64,7 @@ GROUP BY ?track
 ```
 
 | ?track |	?queries |
-|--|--|--|--|
+|--|--|
 | http://w3id.org/esw/resource/Informative2021Track	| 4861 |
 | http://w3id.org/esw/resource/Completeness2022Track | 5784 |
 
