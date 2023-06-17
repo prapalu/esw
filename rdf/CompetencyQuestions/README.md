@@ -303,13 +303,13 @@ WHERE{
 | ?query | ?text| ?recall | ?precision | ?resultCount |
 |--|--|--|--|--|
 | http://w3id.org/esw/resource/Q_2021_149	|SELECT * WHERE { wd:Q25089 ?p ?obj . }|0.0|0.0|333 |
-| http://w3id.org/esw/resource/Q_2021_151	|SELECT ?name WHERE { wd:Q25089 ?p wd:Q5 . wdt:P166 \<http://schema.org/name\> ?name . }|0.0|0.0|0 |
-| http://w3id.org/esw/resource/Q_2021_152	|SELECT ?name WHERE { wd:Q25089 ?p wd:Q5 . wdt:P800 \<http://schema.org/name\> ?name . }|0.0|0.0|0 |
-| http://w3id.org/esw/resource/Q_2021_153	|SELECT ?name WHERE { wd:Q25089 ?p wd:Q5 . wdt:P106 \<http://schema.org/name\> ?name . }|0.0|0.0|0 |
-| http://w3id.org/esw/resource/Q_2021_154	|SELECT ?obj ?name WHERE { wd:Q25089 wdt:P106 ?obj . ?obj \<http://schema.org/name\> ?name . }|0.0|0.0|14 |
-| http://w3id.org/esw/resource/Q_2021_155	|SELECT ?person ?personName ?p ?pName WHERE { ?person ?p wd:Q2526255. ?person \<http://schema.org/name\> ?personName . ?p \<http://schema.org/name\> ?pName . } limit 30|0.0|0.0|29 |
-| http://w3id.org/esw/resource/Q_2021_156 |SELECT ?obj ?name WHERE { wd:Q25089 wdt:P800 ?obj . ?obj \<http://schema.org/name\> ?name . }|0.0|0.0|48 |
-| http://w3id.org/esw/resource/Q_2021_157	|SELECT ?pName ?objName ?name WHERE { wd:Q25089 ?p ?obj . ?obj \<http://schema.org/name\> ?objName . ?p \<http://schema.org/name\> ?pName . FILTER (?p = wdt:P800 \|\| ?p = wdt:P106) }|0.0|0.0|63 |
-| http://w3id.org/esw/resource/Q_2021_158	|SELECT ?p ?pName ?obj ?objName WHERE { wd:Q25089 ?p ?obj . ?obj \<http://schema.org/name\> ?objName . ?p \<http://schema.org/name\> ?pName . }|0.0|0.0|133 |
-| http://w3id.org/esw/resource/Q_2021_159	|SELECT DISTINCT ?work ?workName ?p ?pName ?obj ?objName WHERE { wd:Q25089 wdt:P800 ?work . ?work ?p ?obj . ?work \<http://schema.org/name\> ?workName . ?obj \<http://schema.org/name\> ?objName . ?p \<http://schema.org/name\> ?pName . }|1.0|0.000413565|2418 |
-| http://w3id.org/esw/resource/Q_2021_160	|SELECT DISTINCT ?p ?pName ?obj ?objName WHERE { wd:Q17417520 ?p ?obj . ?p \<http://schema.org/name\> ?pName . OPTIONAL{?obj \<http://schema.org/name\> ?objName .} } LIMIT 15|1.0|0.0714286|14 |
+| http://w3id.org/esw/resource/Q_2021_151	|SELECT ?name WHERE { wd:Q25089 ?p wd:Q5 . wdt:P166 \<http://schema.org/name> ?name . }|0.0|0.0|0 |
+| http://w3id.org/esw/resource/Q_2021_152	|SELECT ?name WHERE { wd:Q25089 ?p wd:Q5 . wdt:P800 \<http://schema.org/name> ?name . }|0.0|0.0|0 |
+| http://w3id.org/esw/resource/Q_2021_153	|SELECT ?name WHERE { wd:Q25089 ?p wd:Q5 . wdt:P106 \<http://schema.org/name> ?name . }|0.0|0.0|0 |
+| http://w3id.org/esw/resource/Q_2021_154	|SELECT ?obj ?name WHERE { wd:Q25089 wdt:P106 ?obj . ?obj \<http://schema.org/name> ?name . }|0.0|0.0|14 |
+| http://w3id.org/esw/resource/Q_2021_155	|SELECT ?person ?personName ?p ?pName WHERE { ?person ?p wd:Q2526255. ?person \<http://schema.org/name> ?personName . ?p \<http://schema.org/name> ?pName . } limit 30|0.0|0.0|29 |
+| http://w3id.org/esw/resource/Q_2021_156 |SELECT ?obj ?name WHERE { wd:Q25089 wdt:P800 ?obj . ?obj \<http://schema.org/name> ?name . }|0.0|0.0|48 |
+| http://w3id.org/esw/resource/Q_2021_157	|SELECT ?pName ?objName ?name WHERE { wd:Q25089 ?p ?obj . ?obj \<http://schema.org/name> ?objName . ?p \<http://schema.org/name> ?pName . FILTER (?p = wdt:P800 \|\| ?p = wdt:P106) }|0.0|0.0|63 |
+| http://w3id.org/esw/resource/Q_2021_158	|SELECT ?p ?pName ?obj ?objName WHERE { wd:Q25089 ?p ?obj . ?obj \<http://schema.org/name> ?objName . ?p \<http://schema.org/name> ?pName . }|0.0|0.0|133 |
+| http://w3id.org/esw/resource/Q_2021_159	|SELECT DISTINCT ?work ?workName ?p ?pName ?obj ?objName WHERE { wd:Q25089 wdt:P800 ?work . ?work ?p ?obj . ?work \<http://schema.org/name> ?workName . ?obj \<http://schema.org/name> ?objName . ?p \<http://schema.org/name> ?pName . }|1.0|0.000413565|2418 |
+| http://w3id.org/esw/resource/Q_2021_160	|SELECT DISTINCT ?p ?pName ?obj ?objName WHERE { wd:Q17417520 ?p ?obj . ?p \<http://schema.org/name> ?pName . OPTIONAL{?obj \<http://schema.org/name> ?objName .} } LIMIT 15|1.0|0.0714286|14 |
