@@ -171,7 +171,7 @@ SELECT  (COUNT(?work) AS ?numberOfWorkflows)
 
 
 
-**CQ8. How many different Search Tasks are there?**
+**CQ8. How many different Search Topics are there?**
 
 [Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%28COUNT%28DISTINCT+%3Fs%29+AS+%3FsearchTopics%29%0D%0A+WHERE%7B%0D%0A++++%3Fs+a+esw%3ASearchTopic.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
 
@@ -192,21 +192,22 @@ SELECT  (COUNT(DISTINCT ?s) AS ?searchTopics)
 
 All the CQs presented below refers to the Search Workflow http://w3id.org/esw/resource/1181ce72bf (eswr:1181ce72bf)
 
-**CQ9. Which is the Workflow’s topic?**
+**CQ9. Which is the Workflow’s topic with its description?**
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Ftopic%0D%0A+WHERE%7B%0D%0A++++eswr%3A1181ce72bf+esw%3Aimplements+%3Ftopic.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Ftopic+%3Fdescription%0D%0A+WHERE%7B%0D%0A++++eswr%3A1181ce72bf+esw%3Aimplements+%3Ftopic.%0D%0A%3Ftopic+esw%3Adescription+%3Fdescription.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
 PREFIX eswr: <http://w3id.org/esw/resource/>
-SELECT  ?topic
+SELECT  ?topic ?description
  WHERE{
     eswr:1181ce72bf esw:implements ?topic.
+    ?topic esw:description ?description.
 }
 ```
-| ?topic |
-|---------------|
-| http://w3id.org/esw/resource/TOPIC5c2cbb34bd      |
+| ?topic | ?description |
+|---------------|---------------|
+| http://w3id.org/esw/resource/TOPIC5c2cbb34bd      | Movie Workflow Series (Directors explorative search)|
 
 
 **CQ10. Which are the Search Jobs that composed the Workflow?**
@@ -277,24 +278,25 @@ SELECT  (COUNT(DISTINCT ?s) AS ?exploratoryWorkflows)
 
 ### Search Task CQ
 
-All the CQs presented below refers to the Search Workflow http://w3id.org/esw/resource/TASK027f92f957 (eswr:TASK027f92f957)
+All the CQs presented below refers to the Search Task http://w3id.org/esw/resource/TASK027f92f957 (eswr:TASK027f92f957)
 
-**CQ13. Which is the task's Search Topic?**
+**CQ13. Which is the task's Search Topic with its description?**
 
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Ftopic%0D%0A+WHERE%7B%0D%0A++++eswr%3ATASK027f92f957+esw%3AbelongsTo+%3Ftopic.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0ASELECT++%3Ftopic+%3Fdescription%0D%0A+WHERE%7B%0D%0A++++eswr%3ATASK027f92f957+esw%3AbelongsTo+%3Ftopic.%0D%0A++++%3Ftopic+esw%3Adescription+%3Fdescription.%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
 PREFIX eswr: <http://w3id.org/esw/resource/>
-SELECT  ?topic
+SELECT  ?topic ?description
  WHERE{
     eswr:TASK027f92f957 esw:belongsTo ?topic.
+    ?topic esw:description ?description.
 }
 ```
-| ?topic |
-|---------------|
-| http://w3id.org/esw/resource/TOPIC5c2cbb34bd      |
+| ?topic | ?description |
+|---------------|---------------|
+| http://w3id.org/esw/resource/TOPIC5c2cbb34bd      | Movie Workflow Series (Directors explorative search)|
 
 **CQ14. Which is the task's requirement?**
 
@@ -335,7 +337,7 @@ SELECT  (COUNT(DISTINCT ?s) AS ?searchTasks)
 ## Search Job CQ
 
 
-All the CQs presented below refers to the Search Workflow http://w3id.org/esw/resource/JOB1W1181ce72bf (eswr:JOB1W1181ce72bf)
+All the CQs presented below refers to the Search Job http://w3id.org/esw/resource/JOB1W1181ce72bf (eswr:JOB1W1181ce72bf)
 
 **CQ16. Which Search Task is the Search Job performing?**
 
