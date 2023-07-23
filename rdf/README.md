@@ -167,7 +167,7 @@ LIMIT 10
 
    The query returns a list of triples (keyword IRI, frequency, percentage).
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Ffrequency%29+%28%28COUNT%28*%29%2Fxsd%3Afloat%28%3FtotQuery%29*100.0+AS+%3Fpercentage%29%29+where%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%28+COUNT%28%3Fquery%29+AS+%3FtotQuery%29%7B%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++++++++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++++++++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++%7D%0D%0A++++%7D%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7D%0D%0AGROUP+BY+%3Fkeyword+%3FtotQuery%0D%0AORDER+BY+DESC+%28%3Ffrequency%29&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28COUNT%28*%29+AS+%3Ffrequency%29+%28%28COUNT%28*%29%2Fxsd%3Afloat%28%3FtotQuery%29*100.0+AS+%3Fpercentage%29%29+where%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%28+COUNT%28%3Fquery%29+AS+%3FtotQuery%29%7B%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++++++++++%3Fwork+a+esw%3AExploratoryWorkflow%3B%0D%0A++++++++++++++++esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++++++++++esw%3AhasPart+%3Fjob.%0D%0A++++++++++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++++++++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++%7D%0D%0A++++%7D%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork++a+esw%3AExploratoryWorkflow%3B%0D%0A++++++++esw%3Aimplements+%3Ftopic%3B%0D%0A++++++++esw%3AhasPart+%3Fjob.%0D%0A++++%3Fjob+esw%3Aqueries+%3Fqueries.%0D%0A++++%3Fqueries+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A%7D%0D%0AGROUP+BY+%3Fkeyword+%3FtotQuery%0D%0AORDER+BY+DESC+%28%3Ffrequency%29&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
@@ -179,15 +179,17 @@ SELECT ?keyword (COUNT(*) AS ?frequency) ((COUNT(*)/xsd:float(?totQuery)*100.0 A
     {
         SELECT ( COUNT(?query) AS ?totQuery){
             ?topic esw:partOf eswr:Completeness2022Track.
-            ?work esw:implements ?topic;
+            ?work a esw:ExploratoryWorkflow;
+                esw:implements ?topic;
                 esw:hasPart ?job.
             ?job esw:queries ?queries.
             ?queries rdf:rest*/rdf:first  ?query.
         }
     }
     ?topic esw:partOf eswr:Completeness2022Track.
-    ?work esw:implements ?topic;
-          esw:hasPart ?job.
+    ?work  a esw:ExploratoryWorkflow;
+        esw:implements ?topic;
+        esw:hasPart ?job.
     ?job esw:queries ?queries.
     ?queries rdf:rest*/rdf:first  ?query.
     ?query lsqv:usesFeature ?keyword.
@@ -275,7 +277,7 @@ ORDER BY ?worker
 
     The query returns a list of 5-tuples (track IRI, totExecutionTime, AVG(query duration), MAX(query duration), execution errors).
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Ftrack+%3FtotExecutionTime+%3FavgQueryDuration+%3FmaxQueryDuration+%3FexecutionErrors+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftrack+%28SUM%28%3Fdur%29+AS+%3FtotExecutionTime%29+%28AVG%28%3Fdur%29+AS+%3FavgQueryDuration%29+%28COUNT%28%3Fdur%29+AS+%3FnumQuery%29+%28MAX%28%3Fdur%29+AS+%3FmaxQueryDuration%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++++++++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++++++%7D+GROUP+BY+%3Ftrack%0D%0A++++%7D%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftrack+%28COUNT%28%3FpErr%29+AS+%3FexecutionErrors%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AparseError+%3FpErr.%0D%0A++++++++%7D+GROUP+BY+%3Ftrack%0D%0A++++%7D%0D%0A%7D%0D%0AGROUP+BY+%3Ftrack+%3FtotExecutionTime+%3FavgQueryDuration+%3FnumQuery+%3FexecutionErrors+%3FmaxQueryDuration%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Ftrack+%3FtotExecutionTime+%3FavgQueryDuration+%3FmaxQueryDuration+%3FexecutionErrors+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftrack+%28SUM%28%3Fdur%29+AS+%3FtotExecutionTime%29+%28AVG%28%3Fdur%29+AS+%3FavgQueryDuration%29+%28COUNT%28%3Fdur%29+AS+%3FnumQuery%29+%28MAX%28%3Fdur%29+AS+%3FmaxQueryDuration%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fwork+a+esw%3AExploratoryWorkflow.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++++++++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++++++%7D+GROUP+BY+%3Ftrack%0D%0A++++%7D%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftrack+%28COUNT%28%3FpErr%29+AS+%3FexecutionErrors%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fwork+a+esw%3AExploratoryWorkflow.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AparseError+%3FpErr.%0D%0A++++++++%7D+GROUP+BY+%3Ftrack%0D%0A++++%7D%0D%0A%7D%0D%0AGROUP+BY+%3Ftrack+%3FtotExecutionTime+%3FavgQueryDuration+%3FnumQuery+%3FexecutionErrors+%3FmaxQueryDuration%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
@@ -289,6 +291,7 @@ SELECT ?track ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?executionEr
             ?topic esw:partOf ?track.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
+            ?work a esw:ExploratoryWorkflow.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             ?query lsqv:hasExec ?exec.
@@ -300,6 +303,7 @@ SELECT ?track ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?executionEr
             ?topic esw:partOf ?track.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
+            ?work a esw:ExploratoryWorkflow.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             ?query lsqv:parseError ?pErr.
@@ -315,7 +319,7 @@ GROUP BY ?track ?totExecutionTime ?avgQueryDuration ?numQuery ?executionErrors ?
 
  The query returns a list of 6-tuples (track IRI, macro topic, totExecutionTime, AVG(query duration), MAX(query duration), execution errors).
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0A%0D%0ASELECT+%3Ftrack+%3Fmacro+%3FtotExecutionTime+%3FavgQueryDuration+%3FmaxQueryDuration+%3FexecutionErrors+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftrack+%3Fmacro+%28SUM%28%3Fdur%29+AS+%3FtotExecutionTime%29+%28AVG%28%3Fdur%29+AS+%3FavgQueryDuration%29+%28COUNT%28%3Fdur%29+AS+%3FnumQuery%29+%28MAX%28%3Fdur%29+AS+%3FmaxQueryDuration%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++++++++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++++++++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++++++%7D+GROUP+BY+%3Ftrack+%3Fmacro%0D%0A++++%7D%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftrack+%3Fmacro+%28COUNT%28%3FpErr%29+AS+%3FexecutionErrors%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++++++++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++OPTIONAL%7B%3Fquery+lsqv%3AparseError+%3FpErr.%7D%0D%0A++++++++%7D+GROUP+BY+%3Ftrack+%3Fmacro%0D%0A++++%7D%0D%0A%7D%0D%0AGROUP+BY+%3Ftrack+%3Fmacro+%3FtotExecutionTime+%3FavgQueryDuration+%3FnumQuery+%3FexecutionErrors+%3FmaxQueryDuration&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0A%0D%0ASELECT+%3Ftrack+%3Fmacro+%3FtotExecutionTime+%3FavgQueryDuration+%3FmaxQueryDuration+%3FexecutionErrors+WHERE%7B%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftrack+%3Fmacro+%28SUM%28%3Fdur%29+AS+%3FtotExecutionTime%29+%28AVG%28%3Fdur%29+AS+%3FavgQueryDuration%29+%28COUNT%28%3Fdur%29+AS+%3FnumQuery%29+%28MAX%28%3Fdur%29+AS+%3FmaxQueryDuration%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++++++++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fwork+a+esw%3AExploratoryWorkflow.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++++++++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A++++++++%7D+GROUP+BY+%3Ftrack+%3Fmacro%0D%0A++++%7D%0D%0A++++%7B%0D%0A++++++++SELECT+%3Ftrack+%3Fmacro+%28COUNT%28%3FpErr%29+AS+%3FexecutionErrors%29+where+%7B+%0D%0A++++++++++++%3Ftopic+esw%3ApartOf+%3Ftrack.%0D%0A++++++++++++%3Ftopic+esw%3AmacroTopic+%3Fmacro.%0D%0A++++++++++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++++++++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++++++++++%3Fwork+a+esw%3AExploratoryWorkflow.%0D%0A++++++++++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++++++++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++++++++++OPTIONAL%7B%3Fquery+lsqv%3AparseError+%3FpErr.%7D%0D%0A++++++++%7D+GROUP+BY+%3Ftrack+%3Fmacro%0D%0A++++%7D%0D%0A%7D%0D%0AGROUP+BY+%3Ftrack+%3Fmacro+%3FtotExecutionTime+%3FavgQueryDuration+%3FnumQuery+%3FexecutionErrors+%3FmaxQueryDuration&format=text%2Fhtml&timeout=0&signal_void=on)
 
 ```SPARQL
 PREFIX esw: <http://w3id.org/esw/ontology#>
@@ -331,6 +335,7 @@ SELECT ?track ?macro ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?exec
             ?topic esw:macroTopic ?macro.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
+            ?work a esw:ExploratoryWorkflow.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             ?query lsqv:hasExec ?exec.
@@ -343,6 +348,7 @@ SELECT ?track ?macro ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?exec
             ?topic esw:macroTopic ?macro.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
+            ?work a esw:ExploratoryWorkflow.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             OPTIONAL{?query lsqv:parseError ?pErr.}
@@ -358,7 +364,7 @@ GROUP BY ?track ?macro ?totExecutionTime ?avgQueryDuration ?numQuery ?executionE
 
     The query returns a list of triples (keyword, AVG(query duration), MAX(query duration)).
 
-[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=http%3A%2F%2Fw3id.org%2Fesw%2F&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28AVG%28%3Fdur%29+AS+%3FavgKeywordDuration%29+%28MAX%28%3Fdur%29+AS+%3FmaxKeywordDuration%29+where+%7B+%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A%7D+GROUP+BY+%3Fkeyword&format=text%2Fhtml&timeout=0&signal_void=on)
+[Execute the query](http://grace.dei.unipd.it/sparql/?default-graph-uri=&query=PREFIX+esw%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fontology%23%3E%0D%0APREFIX+eswr%3A+%3Chttp%3A%2F%2Fw3id.org%2Fesw%2Fresource%2F%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+lsqv%3A+%3Chttp%3A%2F%2Flsq.aksw.org%2Fvocab%23%3E%0D%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0D%0A%0D%0ASELECT+%3Fkeyword+%28AVG%28%3Fdur%29+AS+%3FavgKeywordDuration%29+%28MAX%28%3Fdur%29+AS+%3FmaxKeywordDuration%29+where+%7B+%0D%0A++++%3Ftopic+esw%3ApartOf+eswr%3ACompleteness2022Track.%0D%0A++++%3Fwork+esw%3AhasPart+%3Fpart.%0D%0A++++%3Fwork+esw%3Aimplements+%3Ftopic.%0D%0A++++%3Fwork+a+esw%3AExploratoryWorkflow.%0D%0A++++%3Fpart+esw%3Aqueries+%3Fo+.%0D%0A++++%3Fo+rdf%3Arest*%2Frdf%3Afirst++%3Fquery.%0D%0A++++%3Fquery+lsqv%3AhasExec+%3Fexec.%0D%0A++++%3Fquery+lsqv%3AusesFeature+%3Fkeyword.%0D%0A++++%3Fexec+lsqv%3AevalDuration+%3Fdur.%0D%0A%7D+GROUP+BY+%3Fkeyword%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on)
 
 
 
@@ -373,6 +379,7 @@ SELECT ?keyword (AVG(?dur) AS ?avgKeywordDuration) (MAX(?dur) AS ?maxKeywordDura
     ?topic esw:partOf eswr:Completeness2022Track.
     ?work esw:hasPart ?part.
     ?work esw:implements ?topic.
+    ?work a esw:ExploratoryWorkflow.
     ?part esw:queries ?o .
     ?o rdf:rest*/rdf:first  ?query.
     ?query lsqv:hasExec ?exec.

@@ -169,15 +169,17 @@ SELECT ?keyword (COUNT(*) AS ?frequency) ((COUNT(*)/xsd:float(?totQuery)*100.0 A
     {
         SELECT ( COUNT(?query) AS ?totQuery){
             ?topic esw:partOf eswr:Completeness2022Track.
-            ?work esw:implements ?topic;
+            ?work a esw:ExploratoryWorkflow;
+                esw:implements ?topic;
                 esw:hasPart ?job.
             ?job esw:queries ?queries.
             ?queries rdf:rest*/rdf:first  ?query.
         }
     }
     ?topic esw:partOf eswr:Completeness2022Track.
-    ?work esw:implements ?topic;
-          esw:hasPart ?job.
+    ?work  a esw:ExploratoryWorkflow;
+        esw:implements ?topic;
+        esw:hasPart ?job.
     ?job esw:queries ?queries.
     ?queries rdf:rest*/rdf:first  ?query.
     ?query lsqv:usesFeature ?keyword.
@@ -278,6 +280,7 @@ SELECT ?track ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?executionEr
             ?topic esw:partOf ?track.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
+            ?work a esw:ExploratoryWorkflow.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             ?query lsqv:hasExec ?exec.
@@ -289,6 +292,7 @@ SELECT ?track ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?executionEr
             ?topic esw:partOf ?track.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
+            ?work a esw:ExploratoryWorkflow.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             ?query lsqv:parseError ?pErr.
@@ -320,6 +324,7 @@ SELECT ?track ?macro ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?exec
             ?topic esw:macroTopic ?macro.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
+            ?work a esw:ExploratoryWorkflow.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             ?query lsqv:hasExec ?exec.
@@ -332,6 +337,7 @@ SELECT ?track ?macro ?totExecutionTime ?avgQueryDuration ?maxQueryDuration ?exec
             ?topic esw:macroTopic ?macro.
             ?work esw:hasPart ?part.
             ?work esw:implements ?topic.
+            ?work a esw:ExploratoryWorkflow.
             ?part esw:queries ?o .
             ?o rdf:rest*/rdf:first  ?query.
             OPTIONAL{?query lsqv:parseError ?pErr.}
@@ -360,6 +366,7 @@ SELECT ?keyword (AVG(?dur) AS ?avgKeywordDuration) (MAX(?dur) AS ?maxKeywordDura
     ?topic esw:partOf eswr:Completeness2022Track.
     ?work esw:hasPart ?part.
     ?work esw:implements ?topic.
+    ?work a esw:ExploratoryWorkflow.
     ?part esw:queries ?o .
     ?o rdf:rest*/rdf:first  ?query.
     ?query lsqv:hasExec ?exec.
